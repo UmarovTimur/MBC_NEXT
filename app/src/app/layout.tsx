@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Suspense } from "react";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,10 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        <main className="flex-1">{children}</main>
-      </body>
-    </html>
+    <Suspense>
+      <html lang="en">
+        <body className="flex flex-col justify-between min-h-screen">
+          <main className="flex-1 shrink">
+            <Suspense>{children}</Suspense>
+          </main>
+          <Footer />
+        </body>
+      </html>
+    </Suspense>
   );
 }

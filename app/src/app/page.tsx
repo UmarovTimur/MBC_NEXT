@@ -1,5 +1,4 @@
 import { Header } from '@/components/header';
-import Footer from '@/components/footer';
 import { Container } from '@/components/ui/container';
 
 export default function Home() {
@@ -25,7 +24,6 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <Footer />
     </>
   );
 }
