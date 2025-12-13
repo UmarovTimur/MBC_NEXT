@@ -1,55 +1,43 @@
-# 1. Зависимости (Deps)
-FROM node:24.5-slim AS deps
+# Используем образ Node.js, который вам нужен для разработки
+FROM node:24.5-slim AS dev
+
+# Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /app
 
-# Принимаем аргумент, переданный из docker-compose
-ARG DATABASE_URL
-
-# Копируем файлы для установки зависимостей
+# Копируем файлы манифеста и блокировки
 COPY package.json yarn.lock ./
-COPY prisma ./prisma
-# Используем yarn install --frozen-lockfile для детерминированной установки
-RUN yarn install --frozen-lockfile
 
-# 2. Сборка (Builder)
-FROM node:24.5-slim AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+# Копируем папку Prisma (необходимо для генерации клиента)
+COPY prisma ./prisma
+
+# Устанавливаем зависимости
+# В режиме dev обычно не используется --frozen-lockfile, 
+# чтобы была возможность устанавливать новые зависимости при необходимости,
+# но для консистентности образа мы можем оставить yarn install
+RUN yarn install
+
+# Копируем остальной исходный код
 COPY . .
 
+# Принимаем аргумент для DATABASE_URL
 ARG DATABASE_URL
 
+# Устанавливаем переменную окружения для DATABASE_URL
 ENV DATABASE_URL=$DATABASE_URL
+
+# Генерируем клиент Prisma
+# Этот шаг нужен, чтобы клиент Prisma был доступен при запуске в dev
 RUN npx prisma generate
 
-ENV NEXT_TELEMETRY_DISABLED 1
-# Используем yarn build
-RUN yarn build 
-
-# 3. Запуск (Runner)
-FROM node:24.5-slim AS runner
-WORKDIR /app
-
-ENV NODE_ENV production
+# Отключаем телеметрию Next.js
 ENV NEXT_TELEMETRY_DISABLED 1
 
-# Создаем пользователя для безопасности
-# RUN addgroup --system --gid 1001 nodejs
-# RUN adduser --system --uid 1001 nextjs
-
-# Копируем сбилженное приложение (Standalone Build)
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-
-# Копируем prisma schema и migrations для потенциального запуска миграций
-COPY --from=builder /app/prisma ./prisma
-
-# USER nextjs
-
+# Next.js Dev Mode использует порт 3000 по умолчанию
 EXPOSE 3000
-ENV PORT 3000
+
+# Устанавливаем HOSTNAME для корректной работы в контейнере
 ENV HOSTNAME "0.0.0.0"
 
-# В Production мы запускаем сбилженный сервер
-CMD ["node", "server.js"]
+# Команда для запуска Next.js в режиме разработки
+# 'yarn dev' или 'npm run dev' запустит сервер с hot-reloading
+CMD ["yarn", "dev"]

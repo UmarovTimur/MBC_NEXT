@@ -1,5 +1,4 @@
-
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <div className="space-y-10 pb-10">
