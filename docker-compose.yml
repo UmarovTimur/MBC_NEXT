@@ -4,7 +4,6 @@ services:
   db:
     container_name: postgres_mbc
     image: postgres:16
-    restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -13,7 +12,7 @@ services:
       - "${POSTGRES_PORT}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-  web: 
+  builder: 
     build: 
       context: ./app
       dockerfile: ./Dockerfile
@@ -37,6 +36,17 @@ services:
     command: yarn dev
     stdin_open: true
     tty: true
+  app-dev:
+    image: node:24.5-slim
+    working_dir: /app
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=${NODE_ENV}
+
 
 volumes:
   postgres_data:
