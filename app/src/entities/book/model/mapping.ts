@@ -1,4 +1,4 @@
-export const UZ_BOOKS_NAME = [
+export const UZ_BOOKS_NAMES = [
   "Ibtido",
   "Chiqish",
   "Levilar",
@@ -67,3 +67,6 @@ export const UZ_BOOKS_NAME = [
   "Yuhannoga ko‘rsatilgan vahiy",
 ];
 
+export const getBookIdBySlug = (slug: string) => {
+   return UZ_BOOKS_NAMES.find(book => book === slug);
+}
