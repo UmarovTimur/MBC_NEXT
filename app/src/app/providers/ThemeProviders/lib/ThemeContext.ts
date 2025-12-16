@@ -1,9 +1,12 @@
+"use client";
+
 import { createContext } from "react";
 
 
 export enum Theme {
   LIGHT = 'light',
   DARK = 'dark',
+  SYSTEM = 'system'
 }
 
 
