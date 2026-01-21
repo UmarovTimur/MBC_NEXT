@@ -6,10 +6,10 @@ import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "../lib/ThemeContex
 const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
 
-  useEffect(() => {
-    const saved = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
-    if (saved) setTheme(saved);
-  }, []);
+    // const saved = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
+  // useEffect(() => {
+    // if (saved) setTheme(saved);
+  // }, []);
 
   useEffect(() => {
     const root = document.documentElement;

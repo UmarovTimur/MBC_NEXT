@@ -13,5 +13,5 @@ export function getFiles(source: fs.PathLike) {
 }
 
 export function readFileContent(filepath: fs.PathLike) {
-   return fs.readFileSync(filepath, "utf-8");
+   return fs.readFileSync(filepath, "utf-8") || null;
 }

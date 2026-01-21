@@ -6,10 +6,9 @@ interface ContainerProps extends HTMLAttributes<HTMLElement> {
   className?: string | "";
 }
 
-export const ContainerWidth = ({ children, className, ...rest }: ContainerProps) => {
-  return (
-    <div {...rest} className={classNames("container px-4 mx-auto:1280 mx-auto", {}, [className || ""])}>
-      {children}
-    </div>
-  );
-};
+
+export const ContainerWidth = ({ children, className = "", ...rest }: ContainerProps) => (
+  <div {...rest} className={classNames("px-4 max-w-7xl mx-auto" , {}, [className])}>
+    {children}
+  </div>
+);
