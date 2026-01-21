@@ -56,21 +56,20 @@ class BibleManager {
   }
 
   async getChapterContent(params: Chapter): Promise<string | null> {
-
-    // Find bible 
-    const bible = this.getBible(params.bible)
+    // Find bible
+    const bible = this.getBible(params.bible);
     if (!bible) return null;
-    
+
     // Find book
-    const book = bible.books.find(b => b.id.toString() === params.bookId);
+    const book = bible.books.find((b) => b.id.toString() === params.bookId);
     if (!book) return null;
-    
+
     //Find chapter
-    const chapter = book.chapters.find(c => c.chapterId === params.chapterId);
+    const chapter = book.chapters.find((c) => c.chapterId === params.chapterId);
     if (!chapter) return null;
 
     // Create path
-    const bibleFileName = bible.bibleName; 
+    const bibleFileName = bible.bibleName;
     const bookFileName = book.id.toString().padStart(2, "0");
     const chapterFileName = `${chapter.chapterId.padStart(2, "0")}.html`;
 

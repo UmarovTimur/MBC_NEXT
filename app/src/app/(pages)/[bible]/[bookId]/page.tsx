@@ -1,4 +1,5 @@
-import { bibleManager, Book } from "@/entities/bible";
+import { bibleManager, Book, Chapter } from "@/entities/bible";
+import { notFound } from "next/navigation";
 
 type BookPageProps = {
   bible: string;
@@ -22,10 +23,22 @@ export async function generateStaticParams() {
 
 export default async function BookPage({ params }: { params: Promise<BookPageProps> }) {
   const { bible, bookId } = await params;
+  const chapter: Chapter = {
+    bible: bible,
+    bookId: bookId,
+    chapterId: "0",
+  };
+  let content: string | null = null;
+  if (bibleManager) {
+    content = await bibleManager.getChapterContent(chapter);
+  }
+  if (!content) {
+    notFound();
+  }
+
   return (
     <div>
-      {bible}
-      {bookId}
+      <section dangerouslySetInnerHTML={{__html: content}} />
     </div>
   );
 }
