@@ -1,4 +1,5 @@
 import { bibleManager, Book, Chapter } from "@/entities/bible";
+import { ContainerWidth } from "@/shared/ui/Container";
 import { notFound } from "next/navigation";
 
 type BookPageProps = {
@@ -9,15 +10,14 @@ type BookPageProps = {
 export async function generateStaticParams() {
   const staticParams: BookPageProps[] = [];
 
-  if (bibleManager) {
-    bibleManager.traversBooks((params: Book) => {
-      const { bible, id } = params;
-      staticParams.push({
-        bible: bible,
-        bookId: String(id),
-      });
+  bibleManager.traverseBooks((params: Book) => {
+    const { bible, id } = params;
+    staticParams.push({
+      bible: bible,
+      bookId: String(id),
     });
-  }
+  });
+
   return staticParams;
 }
 
@@ -37,8 +37,13 @@ export default async function BookPage({ params }: { params: Promise<BookPagePro
   }
 
   return (
-    <div>
-      <section dangerouslySetInnerHTML={{__html: content}} />
-    </div>
+    <>
+      <ContainerWidth>
+        <div className="flex justify-center">
+          <section className="shrink-0 w-3xl mr-4"
+           dangerouslySetInnerHTML={{ __html: content }} />
+        </div>
+      </ContainerWidth>
+    </>
   );
 }

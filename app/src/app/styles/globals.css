@@ -85,7 +85,7 @@
 
 .dark {
   --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --foreground: oklch(85.142% 0.0001 271.152);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -119,6 +119,7 @@
 
 body {
   background-color: var(--background);
+  color: var(--foreground)
 }
 
 @layer base {

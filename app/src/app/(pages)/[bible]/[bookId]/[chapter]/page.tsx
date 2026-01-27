@@ -11,22 +11,19 @@ type ChapterProps = {
 export async function generateStaticParams() {
   const staticParams: ChapterProps[] = [];
 
-  if (bibleManager) {
-    bibleManager.traverseChapter(({ bible, bookId, chapterId }: Chapter) => {
-
-      staticParams.push({
-        bible: bible,
-        bookId: bookId,
-        chapter: chapterId,
-      });
+  bibleManager.traverseChapter(({ bible, bookId, chapterId }: Chapter) => {
+    staticParams.push({
+      bible: bible,
+      bookId: bookId,
+      chapter: chapterId,
     });
-  }
+  });
 
   return staticParams;
 }
 
 export default async function ChapterPage({ params }: { params: Promise<ChapterProps> }) {
-  const { bible, bookId, chapter} = await params;
+  const { bible, bookId, chapter } = await params;
   const managerParams: Chapter = {
     bible: bible,
     bookId: bookId,

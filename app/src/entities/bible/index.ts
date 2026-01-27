@@ -1,6 +1,7 @@
 import { bibleManager } from "./lib/bible-manager";
-import { Book, Chapter } from "./model/types";
+import { Book, Chapter, BibleViewMode } from "./model/types";
 
 export { bibleManager };
 
-export type { Book, Chapter };
+export type { Book, Chapter, BibleViewMode };
+
