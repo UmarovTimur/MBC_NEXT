@@ -1,11 +1,11 @@
 import { bibleManager, Chapter } from "@/entities/bible";
 import { ContainerWidth } from "@/shared/ui/Container";
-import { notFound } from "next/navigation";
+import { BibleViewer } from "@/widgets/BibleViewer";
 
 type ChapterProps = {
   bible: string;
   bookId: string;
-  chapter: string;
+  chapterId: string;
 };
 
 export async function generateStaticParams() {
@@ -15,7 +15,7 @@ export async function generateStaticParams() {
     staticParams.push({
       bible: bible,
       bookId: bookId,
-      chapter: chapterId,
+      chapterId: chapterId,
     });
   });
 
@@ -23,24 +23,17 @@ export async function generateStaticParams() {
 }
 
 export default async function ChapterPage({ params }: { params: Promise<ChapterProps> }) {
-  const { bible, bookId, chapter } = await params;
-  const managerParams: Chapter = {
+  const { bible, bookId, chapterId } = await params;
+  const chapter: Chapter = {
     bible: bible,
     bookId: bookId,
-    chapterId: chapter,
+    chapterId: chapterId,
   };
-  let content: string | null = null;
-  if (bibleManager) {
-    content = await bibleManager.getChapterContent(managerParams);
-  }
-  if (!content) {
-    notFound();
-  }
 
   return (
     <div>
       <ContainerWidth>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <BibleViewer chapter={chapter} />
       </ContainerWidth>
     </div>
   );

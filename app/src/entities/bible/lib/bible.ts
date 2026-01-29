@@ -8,12 +8,14 @@ export class Bible {
   public readonly books: Book[];
   public readonly basePath: string;
   public readonly defaultViewMode: BibleViewMode;
+  public readonly attachmentBibleName: string;
 
   constructor(basePath: string, books: Book[]) {
     this.basePath = basePath;
     this.bibleName = path.basename(basePath);
     this.books = books;
     this.defaultViewMode = BIBLE_RELATIONS_CONFIG[this.bibleName]?.defaultView || "single-column";
+    this.attachmentBibleName = BIBLE_RELATIONS_CONFIG[this.bibleName]?.attachment || "";
   }
 
   // Get absolute path

@@ -17,7 +17,7 @@ export class BibleManager {
     const biblePromises = entries.filter((e) => e.isDirectory()).map((e) => Bible.init(path.join(rootDir, e.name)));
 
     // Await all bibles and remove nulls
-    const bibles = (await Promise.all(biblePromises));
+    const bibles = await Promise.all(biblePromises);
 
     return new BibleManager(bibles);
   }
@@ -34,8 +34,8 @@ export class BibleManager {
   traverseChapter(fn: (params: Chapter) => void) {
     for (const bible of this.bibles) {
       for (const book of bible.books) {
-        for (const chapter of book.chapters) {
-          fn(chapter);
+        for (let i = 1; i < book.chapters.length; i++) {
+          fn(book.chapters[i]);
         }
       }
     }
@@ -67,6 +67,7 @@ export class BibleManager {
 
     return book;
   }
+  
 }
 
 export const bibleManager = await BibleManager.init(HTML_SRC_DIR);

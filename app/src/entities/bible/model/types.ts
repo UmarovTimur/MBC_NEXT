@@ -6,7 +6,6 @@ export type Book = {
 
 export type BibleViewMode = "single-column" | "split-screen";
 
-
 export type Chapter = {
   bible: string;
   bookId: string;
