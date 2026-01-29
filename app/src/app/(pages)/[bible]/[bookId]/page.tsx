@@ -7,6 +7,8 @@ type BookPageProps = {
   bookId: string;
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const staticParams: BookPageProps[] = [];
 

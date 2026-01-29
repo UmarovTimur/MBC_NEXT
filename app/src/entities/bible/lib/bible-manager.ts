@@ -22,12 +22,16 @@ export class BibleManager {
     return new BibleManager(bibles);
   }
 
-  getAll() {
+  getAll(): Bible[] {
     return this.bibles;
   }
 
-  getBible(bible: string) {
-    return this.bibles.find((b) => b.bibleName === bible);
+  getBible(bible: string): Bible {
+    const res = this.bibles.find((b) => b.bibleName === bible);
+    if (!res) {
+      throw new Error(`Bible "${bible}" not found in BibleManager`);
+    }
+    return res;
   }
 
   // Go through all chapters

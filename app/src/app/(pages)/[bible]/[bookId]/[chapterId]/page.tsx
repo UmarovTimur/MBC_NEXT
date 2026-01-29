@@ -8,6 +8,8 @@ type ChapterProps = {
   chapterId: string;
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const staticParams: ChapterProps[] = [];
 

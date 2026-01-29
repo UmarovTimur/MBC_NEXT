@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <ThemeProvider>
         <body className="flex flex-col justify-between min-h-screen">
           <Navbar />
-          <main className="flex-1 shrink py-18">
+          <main className="flex-1 shrink py-15">
             <Suspense>{children}</Suspense>
           </main>
           <Footer />

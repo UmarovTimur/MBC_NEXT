@@ -1,21 +1,21 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "path";
 import { BibleViewMode, Book, Chapter } from "../model/types";
-import { BIBLE_RELATIONS_CONFIG } from "../config/relations";
+import { BIBLES_CONFIG } from "../config/config";
 
 export class Bible {
-  public readonly bibleName: string;
-  public readonly books: Book[];
-  public readonly basePath: string;
-  public readonly defaultViewMode: BibleViewMode;
-  public readonly attachmentBibleName: string;
+  public readonly bibleName: string; // Name of the bible (folder name)
+  public readonly books: Book[]; // List of books in this bible
+  public readonly basePath: string; // Absolute path to bible folder
+  public readonly defaultViewMode: BibleViewMode; // Default view mode from relations
+  public readonly attachmentBibleName: string; // Attachment bible name from relations
 
   constructor(basePath: string, books: Book[]) {
     this.basePath = basePath;
     this.bibleName = path.basename(basePath);
     this.books = books;
-    this.defaultViewMode = BIBLE_RELATIONS_CONFIG[this.bibleName]?.defaultView || "single-column";
-    this.attachmentBibleName = BIBLE_RELATIONS_CONFIG[this.bibleName]?.attachment || "";
+    this.defaultViewMode = BIBLES_CONFIG[this.bibleName]?.defaultView || "single-column";
+    this.attachmentBibleName = BIBLES_CONFIG[this.bibleName]?.attachment || "";
   }
 
   // Get absolute path
@@ -69,23 +69,34 @@ export class Bible {
     }
   }
 
-  async getChapterContent(bookId: string, chapterId: string): Promise<string | null> {
+  private getBook(bookId: string): Book {
     const book = this.books.find((b) => b.id === Number(bookId));
-    if (!book) return null;
+    if (!book) {
+      throw new Error(`Book "${bookId}" not found in Bible "${this.bibleName}"`);
+    }
+    return book;
+  }
+
+  async getChapterContent(bookId: string, chapterId: string): Promise<string | null> {
+    const book = this.getBook(bookId);
     const chapter = book.chapters.find((c) => c.chapterId === chapterId);
-    if (!chapter) return null;
+    if (!chapter) {
+      return null;
+    }
 
     const bookFileName = book.id.toString().padStart(2, "0");
-    const chapterFileName = `${chapter.chapterId.padStart(2, "0")}.html`;
+    const chapterFileName = `${chapterId.padStart(2, "0")}.html`;
 
     const filePath = path.join(this.basePath, bookFileName, chapterFileName);
-
     try {
       const content = await readFile(filePath, "utf-8");
       return content;
-    } catch {
-      // console.error(`Error reading file ${filePath}:`, e);
-      return null;
+    } catch (e) {
+      throw new Error(`Chapter file not found: ${filePath}, Erorr: ${(e as Error).message}`);
     }
   }
+
+  // getChapterTitle(params: Chapter): string | null {
+
+  // }
 }

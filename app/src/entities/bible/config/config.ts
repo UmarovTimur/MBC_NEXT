@@ -1,16 +1,19 @@
+import { UZ_BOOKS_NAMES } from "../model/mapping";
 import { BibleViewMode } from "../model/types";
 
-export interface BibleRelationsConfig {
+export interface BibleConfig {
   primary: string;
   attachment: string | null;
   defaultView: BibleViewMode;
+  mappingBible?: string[];
 }
 
-export const BIBLE_RELATIONS_CONFIG: Record<string, BibleRelationsConfig> = {
+export const BIBLES_CONFIG: Record<string, BibleConfig> = {
   mbc: {
     primary: "mbc",
     attachment: "muqaddas-kitob",
     defaultView: "split-screen",
+    mappingBible: UZ_BOOKS_NAMES,
   },
   "muqaddas-kitob": {
     primary: "muqaddas-kitob",
