@@ -7,6 +7,7 @@ export interface BibleConfig {
   attachment: string | null;
   defaultView: BibleViewMode;
   mappingBible?: string[];
+  chapterSlug?: string;
 }
 
 export const BIBLES_CONFIG: Record<string, BibleConfig> = {
@@ -19,6 +20,7 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
     attachment: "muqaddas-kitob",
     defaultView: "split-screen",
     mappingBible: UZ_BOOKS_NAMES,
+    chapterSlug: "Bob",
   },
   "muqaddas-kitob": {
     primary: "Muqaddas Kitob ONLINE",

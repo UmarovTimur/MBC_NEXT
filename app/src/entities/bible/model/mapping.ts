@@ -66,6 +66,3 @@ export const UZ_BOOKS_NAMES = [
   "Ibroniylarga maktub",
   "Yuhannoga ko‘rsatilgan vahiy",
 ];
-export const getBookIdBySlug = (slug: string) => {
-  return UZ_BOOKS_NAMES.find((book) => book === slug);
-};

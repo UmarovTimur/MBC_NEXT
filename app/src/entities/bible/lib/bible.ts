@@ -11,6 +11,7 @@ export class Bible {
   public readonly attachmentBibleName: string; // Attachment bible name from relations
   public readonly mappingBook?: string[]; // Mapping books names from relations
   public readonly primaryTitle: string; // Primary title from relations
+  private readonly chapterSlug?: string; // Chapter slug from relations
 
   constructor(basePath: string, books: Book[]) {
     this.basePath = basePath;
@@ -20,6 +21,7 @@ export class Bible {
     this.attachmentBibleName = BIBLES_CONFIG[this.bibleName]?.attachment || "";
     this.primaryTitle = BIBLES_CONFIG[this.bibleName]?.primary;
     this.mappingBook = BIBLES_CONFIG[this.bibleName]?.mappingBible;
+    this.chapterSlug = BIBLES_CONFIG[this.bibleName]?.chapterSlug ?? "";
   }
 
   // Get absolute path
@@ -105,6 +107,6 @@ export class Bible {
       return this.primaryTitle;
     } 
     const bookName = this.mappingBook[Number(params.bookId)];
-    return `${bookName}: ${params.chapterId}`; 
+    return `${bookName}: ${params.chapterId} ${this.chapterSlug}`; 
   }
 }
