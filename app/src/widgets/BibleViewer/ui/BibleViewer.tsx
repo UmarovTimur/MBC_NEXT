@@ -1,5 +1,6 @@
 import { bibleManager, Chapter } from "@/entities/bible";
 import { Bible } from "@/entities/bible/lib/bible";
+import { ChapterLink } from "@/features/bible-navigation";
 import { cn } from "@/shared/lib/cn";
 import { notFound } from "next/navigation";
 
@@ -13,7 +14,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
   // ======================= Bible ==============================================
   const content = await bible.getChapterContent(chapter.bookId, chapter.chapterId);
   const title = bible.getChapterTitle(chapter);
-  const subTitle = bible.primaryTitle;
+  const subTitle = bible.primaryTitle === title ? "" : bible.primaryTitle;
 
   // ======================= attached Bible =====================================
   let attachedContent: string | null = null;
@@ -27,25 +28,28 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     });
   } 
 
-  const attachedTitle = attachedBible?.getChapterTitle(chapter);
-  // ======================= NotFound ============================================
+  const attachedTitle = attachedBible?.primaryTitle;
+  // ======================= NotFound ==L==========================================
   if (!content) {
     notFound();
   }
   return (
     <div className={cn("", [className])}>
-      <div className={cn("lg:flex justify-center gap-5 font-light [&_strong]:font-bold")}>
-        <div className={cn("basis-2/3 pt-6", attachedContent ? "lg:pr-5 lg:border-r" : "")}>
-          <h1 className="text-4xl font-extrabold">{title}</h1>
-          <h2 className="text-2xl leading-12" >{subTitle}</h2>
-          <div className="[&>p]:mb-4" dangerouslySetInnerHTML={{ __html: content }} />
+      <ChapterLink direction="prev" currentChapter={chapter} />
+      <ChapterLink direction="next" currentChapter={chapter} />
+      
+      <div className={cn("[&_a]:text-blue-600 [&_a]:font-bold lg:flex justify-center gap-5 [&_strong]:font-bold")}>
+        <div className={cn("basis-2/3 pt-6")}>
+          <h1 className="text-3xl md:text-4xl font-black">{title}</h1>
+          <h2 className="text-2xl mb-4 leading-12" >{subTitle}</h2>
+          <div className="[&>p]:mb-4 **:[[id^='V']]:font-bold" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
         {attachedContent && (
           <div className="shrink-0 pt-6 basis-1/3 text-base">
             <h3 className="text-3xl mb-6">{attachedTitle}</h3>
             <div
-              className="[&_a]:text-blue-600 [&_a]:font-bold"
+              className="[&_a]:font-bold "
               dangerouslySetInnerHTML={{ __html: attachedContent }}
             />
           </div>

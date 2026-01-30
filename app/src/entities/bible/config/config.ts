@@ -8,6 +8,8 @@ export interface BibleConfig {
   defaultView: BibleViewMode;
   mappingBible?: string[];
   chapterSlug?: string;
+  formatingStyle?: string;
+  introductionName?: string;
 }
 
 export const BIBLES_CONFIG: Record<string, BibleConfig> = {
@@ -20,6 +22,7 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
     attachment: "muqaddas-kitob",
     defaultView: "split-screen",
     mappingBible: UZ_BOOKS_NAMES,
+    introductionName: "Kirish",
     chapterSlug: "Bob",
   },
   "muqaddas-kitob": {
@@ -37,6 +40,6 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
   azb: {
     primary: "azb",
     defaultView: "single-column",
-    attachment: null
-  }
+    attachment: null,
+  },
 };

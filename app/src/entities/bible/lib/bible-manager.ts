@@ -38,7 +38,7 @@ export class BibleManager {
   traverseChapter(fn: (params: Chapter) => void) {
     for (const bible of this.bibles) {
       for (const book of bible.books) {
-        for (let i = 1; i < book.chapters.length; i++) {
+        for (let i = 0; i < book.chapters.length; i++) {
           fn(book.chapters[i]);
         }
       }
@@ -65,34 +65,77 @@ export class BibleManager {
   getBook(bible: string, bookId: string): Book | null {
     const bibleObj = this.getBible(bible);
     if (!bibleObj) return null;
-
-    const bookIdNum = Number(bookId);
-    const book = bibleObj.books.find((b) => b.id === bookIdNum) || null;
+    
+    const book = bibleObj.books.find((b) => b.id === bookId) || null;
 
     return book;
   }
 
-  getNextChapter(params: Chapter): Chapter | null {
-    const book = this.getBook(params.bible, params.bookId);
-    if (!book) return null;
+  private getBibleContext(params: Chapter) {
+    const bible = this.getBible(params.bible);
+    if (!bible) return null;
 
-    if (+params.chapterId + 1 < book.chapters.length) {
+    const bookIndex = bible.books.findIndex((b) => b.id.toString() === params.bookId);
+    if (bookIndex === -1) return null;
+
+    const book = bible.books[bookIndex];
+    const chapterIndex = book.chapters.findIndex((c) => c.chapterId === params.chapterId);
+    if (chapterIndex === -1) return null;
+
+    return { bible, bookIndex, book, chapterIndex };
+  }
+
+  getNextChapter(params: Chapter): Chapter | null {
+    const ctx = this.getBibleContext(params);
+    if (!ctx) return null;
+
+    const { bible, bookIndex, book, chapterIndex } = ctx;
+
+    if (chapterIndex < book.chapters.length - 1) {
+      const nextChapter = book.chapters[chapterIndex + 1];
       return {
         bible: params.bible,
         bookId: params.bookId,
-        chapterId: book.chapters[+params.chapterId + 1].chapterId,
+        chapterId: nextChapter.chapterId,
       };
-    } else {
-      // Go to next book
-      const nextBook = this.getBook(params.bible, (Number(params.bookId) + 1).toString());
-      if (!nextBook || !nextBook.chapters.length) return null;
+    }
 
+    const nextBook = bible.books[bookIndex + 1];
+    if (nextBook && nextBook.chapters.length > 0) {
       return {
         bible: params.bible,
-        bookId: nextBook.id.toString(),
+        bookId: nextBook.id,
         chapterId: nextBook.chapters[0].chapterId,
       };
     }
+
+    return null;
+  }
+  getPrevChapter(params: Chapter): Chapter | null {
+    const ctx = this.getBibleContext(params);
+    if (!ctx) return null;
+
+    const { bible, bookIndex, book, chapterIndex } = ctx;
+
+    if (chapterIndex > 0) {
+      const nextChapter = book.chapters[chapterIndex - 1];
+      return {
+        bible: params.bible,
+        bookId: params.bookId,
+        chapterId: nextChapter.chapterId,
+      };
+    }
+
+    const nextBook = bible.books[bookIndex - 1];
+    if (nextBook && nextBook.chapters.length > 0) {
+      return {
+        bible: params.bible,
+        bookId: nextBook.id,
+        chapterId: nextBook.chapters[0].chapterId,
+      };
+    }
+
+    return null;
   }
 }
 

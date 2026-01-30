@@ -12,6 +12,7 @@ export class Bible {
   public readonly mappingBook?: string[]; // Mapping books names from relations
   public readonly primaryTitle: string; // Primary title from relations
   private readonly chapterSlug?: string; // Chapter slug from relations
+  private readonly introducingName?: string; // Intro chapter name
 
   constructor(basePath: string, books: Book[]) {
     this.basePath = basePath;
@@ -22,6 +23,7 @@ export class Bible {
     this.primaryTitle = BIBLES_CONFIG[this.bibleName]?.primary;
     this.mappingBook = BIBLES_CONFIG[this.bibleName]?.mappingBible;
     this.chapterSlug = BIBLES_CONFIG[this.bibleName]?.chapterSlug ?? "";
+    this.introducingName = BIBLES_CONFIG[this.bibleName]?.introductionName ?? "";
   }
 
   // Get absolute path
@@ -36,7 +38,7 @@ export class Bible {
         entries
           .filter((entry) => entry.isDirectory() && !isNaN(+entry.name))
           .map(async (dir) => {
-            const bookId: number = +dir.name;
+            const bookId = dir.name;
 
             // Get all chapter files 01.html, 02.html, 03.html,...
             const files = await readdir(path.join(basePath, dir.name));
@@ -48,7 +50,7 @@ export class Bible {
                 const chapterName = +file.replace(".html", "");
                 return {
                   bible: bibleName,
-                  bookId: bookId.toString(),
+                  bookId: bookId,
                   chapterId: chapterName.toString(),
                 };
               })
@@ -66,7 +68,7 @@ export class Bible {
       const books = await booksPromises;
 
       // For accuracy, sort
-      books.sort((a, b) => a.id - b.id);
+      books.sort((a, b) => +a.id - +b.id);
 
       // Create a Bible with gotten properties
       return new Bible(basePath, books);
@@ -76,7 +78,7 @@ export class Bible {
   }
 
   private getBook(bookId: string): Book {
-    const book = this.books.find((b) => b.id === Number(bookId));
+    const book = this.books.find((b) => b.id === bookId);
     if (!book) {
       throw new Error(`Book "${bookId}" not found in Bible "${this.bibleName}"`);
     }
@@ -107,6 +109,7 @@ export class Bible {
       return this.primaryTitle;
     } 
     const bookName = this.mappingBook[Number(params.bookId)];
-    return `${bookName}: ${params.chapterId} ${this.chapterSlug}`; 
+    const chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId} ${this.chapterSlug}`
+    return `${bookName}: ${chapterName}`; 
   }
 }

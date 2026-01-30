@@ -1,6 +1,6 @@
 export type Book = {
   bible: string;
-  id: number;
+  id: string;
   chapters: Chapter[];
 };
 
