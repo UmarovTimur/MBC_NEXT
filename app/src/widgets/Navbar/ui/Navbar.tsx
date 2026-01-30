@@ -3,12 +3,10 @@
 import Link from "next/link";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
-import { usePathname } from "next/navigation";
-
+import { BooksList } from "@/features/bible-navigation/ui/BooksList";
 
 export const Navbar = () => {
-  const pathname = usePathname();
-  const isBookPage = pathname.startsWith("/books")
+  const isBiblePage = true;
   return (
     <header className="py-4 border-b border-border outline-ring/50 fixed w-full bg-white dark:bg-zinc-950 z-50">
       <ContainerWidth className="relative flex h-7 items-center justify-between">
@@ -17,12 +15,8 @@ export const Navbar = () => {
             <h1 className="text-xl font-bold text-black dark:text-white/80">MBC NEXT</h1>
           </Link>
         </div>
-        {isBookPage && (
-          <div className="flex items-center">
-            Book
-          </div>
-        )}
         <div className="flex gap-6 items-center">
+          {isBiblePage && <BooksList />}
           <ThemeSwitcher />
         </div>
       </ContainerWidth>
