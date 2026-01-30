@@ -9,6 +9,8 @@ export class Bible {
   public readonly basePath: string; // Absolute path to bible folder
   public readonly defaultViewMode: BibleViewMode; // Default view mode from relations
   public readonly attachmentBibleName: string; // Attachment bible name from relations
+  public readonly mappingBook?: string[]; // Mapping books names from relations
+  public readonly primaryTitle: string; // Primary title from relations
 
   constructor(basePath: string, books: Book[]) {
     this.basePath = basePath;
@@ -16,6 +18,8 @@ export class Bible {
     this.books = books;
     this.defaultViewMode = BIBLES_CONFIG[this.bibleName]?.defaultView || "single-column";
     this.attachmentBibleName = BIBLES_CONFIG[this.bibleName]?.attachment || "";
+    this.primaryTitle = BIBLES_CONFIG[this.bibleName]?.primary;
+    this.mappingBook = BIBLES_CONFIG[this.bibleName]?.mappingBible;
   }
 
   // Get absolute path
@@ -96,7 +100,11 @@ export class Bible {
     }
   }
 
-  // getChapterTitle(params: Chapter): string | null {
-
-  // }
+  getChapterTitle(params: Chapter): string {
+    if (!this.mappingBook) {
+      return this.primaryTitle;
+    } 
+    const bookName = this.mappingBook[Number(params.bookId)];
+    return `${bookName}: ${params.chapterId}`; 
+  }
 }
