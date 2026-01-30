@@ -25,6 +25,8 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
   "muqaddas-kitob": {
     primary: "Muqaddas Kitob ONLINE",
     attachment: null,
+    mappingBible: UZ_BOOKS_NAMES,
+    chapterSlug: "Bob",
     defaultView: "single-column",
   },
   barclay: {
@@ -32,4 +34,9 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
     attachment: "azb",
     defaultView: "split-screen",
   },
+  azb: {
+    primary: "azb",
+    defaultView: "single-column",
+    attachment: null
+  }
 };

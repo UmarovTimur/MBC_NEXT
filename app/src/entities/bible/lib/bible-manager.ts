@@ -71,7 +71,29 @@ export class BibleManager {
 
     return book;
   }
-  
+
+  getNextChapter(params: Chapter): Chapter | null {
+    const book = this.getBook(params.bible, params.bookId);
+    if (!book) return null;
+
+    if (+params.chapterId + 1 < book.chapters.length) {
+      return {
+        bible: params.bible,
+        bookId: params.bookId,
+        chapterId: book.chapters[+params.chapterId + 1].chapterId,
+      };
+    } else {
+      // Go to next book
+      const nextBook = this.getBook(params.bible, (Number(params.bookId) + 1).toString());
+      if (!nextBook || !nextBook.chapters.length) return null;
+
+      return {
+        bible: params.bible,
+        bookId: nextBook.id.toString(),
+        chapterId: nextBook.chapters[0].chapterId,
+      };
+    }
+  }
 }
 
 export const bibleManager = await BibleManager.init(HTML_SRC_DIR);

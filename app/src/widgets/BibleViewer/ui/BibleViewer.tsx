@@ -1,4 +1,5 @@
 import { bibleManager, Chapter } from "@/entities/bible";
+import { Bible } from "@/entities/bible/lib/bible";
 import { cn } from "@/shared/lib/cn";
 import { notFound } from "next/navigation";
 
@@ -15,14 +16,18 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
   const subTitle = bible.primaryTitle;
 
   // ======================= attached Bible =====================================
-  const attachedBible = bibleManager.getBible(bible.attachmentBibleName);
-  const attachedContent = await bibleManager.getChapterContent({
-    bible: attachedBible.bibleName,
-    bookId: chapter.bookId,
-    chapterId: chapter.chapterId,
-  });
+  let attachedContent: string | null = null;
+  let attachedBible: Bible | undefined = undefined;
+  if (bible.attachmentBibleName) {
+    attachedBible = bibleManager.getBible(bible.attachmentBibleName);
+    attachedContent = await bibleManager.getChapterContent({
+      bible: attachedBible.bibleName,
+      bookId: chapter.bookId,
+      chapterId: chapter.chapterId,
+    });
+  } 
 
-  const attachedTitle = attachedBible.getChapterTitle(chapter);
+  const attachedTitle = attachedBible?.getChapterTitle(chapter);
   // ======================= NotFound ============================================
   if (!content) {
     notFound();
