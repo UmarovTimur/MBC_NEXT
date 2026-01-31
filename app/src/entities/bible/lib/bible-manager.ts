@@ -22,6 +22,8 @@ export class BibleManager {
     return new BibleManager(bibles);
   }
 
+  getManifest() {}
+
   getAll(): Bible[] {
     return this.bibles;
   }

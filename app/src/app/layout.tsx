@@ -16,8 +16,9 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+
   return (
-    <html lang="uz">
+    <html lang={process.env.APP_LANG}>
       <ThemeProvider>
         <body className="flex w-full flex-col justify-between min-h-screen">
           <Navbar />

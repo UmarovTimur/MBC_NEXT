@@ -1,5 +1,6 @@
 "use client";
 
+import { getDictionary } from "@/shared/lib/get-dictionary";
 import { Button } from "@/shared/ui/button";
 import {
   DropdownMenu,
@@ -12,10 +13,12 @@ import {
 import { PencilIcon, ShareIcon, TrashIcon } from "lucide-react";
 
 export function BooksList() {
+  const t = getDictionary();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Actions</Button>
+        <Button>{t.chapters}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>

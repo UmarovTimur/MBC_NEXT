@@ -15,7 +15,7 @@ export const Navbar = () => {
             <h1 className="text-xl font-bold text-black dark:text-white/80">MBC NEXT</h1>
           </Link>
         </div>
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-3 items-center">
           {isBiblePage && <BooksList />}
           <ThemeSwitcher />
         </div>
