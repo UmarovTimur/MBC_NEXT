@@ -2,7 +2,7 @@ import { Chapter } from "@/entities/bible";
 import { Bible } from "@/entities/bible/lib/bible";
 import { bibleManager } from "@/entities/bible/server";
 import { ChapterLink } from "@/features/bible-navigation";
-import { cn } from "@/shared/lib/cn";
+import { cn } from "@/shared/lib/utils";
 import { notFound } from "next/navigation";
 
 interface BibleViewerProps {

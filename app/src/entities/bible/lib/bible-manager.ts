@@ -29,10 +29,10 @@ export class BibleManager {
         books: bible.books.map((book: Book) => ({
           id: book.id,
           name: bible.getBookName(+book.id),
-          chapters: book.chapters.map((c: Chapter) => c.chapterId)
-        }))
-      }))
-    }
+          chapters: book.chapters.map((c: Chapter) => c.chapterId),
+        })),
+      })),
+    };
   }
 
   getAll(): Bible[] {
@@ -136,21 +136,24 @@ export class BibleManager {
     const { bible, bookIndex, book, chapterIndex } = ctx;
 
     if (chapterIndex > 0) {
-      const nextChapter = book.chapters[chapterIndex - 1];
+      const prevIndex = book.chapters[chapterIndex - 1];
       return {
         bible: params.bible,
         bookId: params.bookId,
-        chapterId: nextChapter.chapterId,
+        chapterId: prevIndex.chapterId,
       };
     }
 
-    const nextBook = bible.books[bookIndex - 1];
-    if (nextBook && nextBook.chapters.length > 0) {
-      return {
-        bible: params.bible,
-        bookId: nextBook.id,
-        chapterId: nextBook.chapters[0].chapterId,
-      };
+    const prevBook = bible.books[bookIndex - 1];
+    if (prevBook && prevBook.chapters.length > 0) {
+      const lastChapter = prevBook.chapters.at(-1);
+      if (lastChapter) {
+        return {
+          bible: params.bible,
+          bookId: prevBook.id,
+          chapterId: lastChapter.chapterId,
+        };
+      }
     }
 
     return null;

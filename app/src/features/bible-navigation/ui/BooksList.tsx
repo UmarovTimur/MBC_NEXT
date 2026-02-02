@@ -1,7 +1,7 @@
 "use client";
 
 import { useBible } from "@/entities/bible";
-import { cn } from "@/shared/lib/cn";
+import { cn } from "@/shared/lib/utils";
 import { Button } from "@/shared/ui/button";
 import {
   DropdownMenu,

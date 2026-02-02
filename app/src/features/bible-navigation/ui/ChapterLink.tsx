@@ -1,6 +1,6 @@
 import { Chapter } from "@/entities/bible";
 import { bibleManager } from "@/entities/bible/server";
-import { cn } from "@/shared/lib/cn";
+import { cn } from "@/shared/lib/utils";
 import { Button } from "@/shared/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
