@@ -43,25 +43,29 @@ export function ChaptersTable({ label, discription, intro }: ChaptersTableProps)
         </DialogHeader>
         <div className="no-scrollbar -mx-6 max-h-[80vh] overflow-y-auto px-4">
           <div className="grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))]">
-            {currentBook.chapters.map((c) =>
-              c != currentChapter ? (
-                <DialogClose asChild key={c}>
-                  <Link
-                    href={`/${bible}/${bookId}/${c}`}
-                    className={cn("border flex py-3 justify-center items-center hover:bg-accent")}
-                  >
-                    {c === "0" ? intro : c}
-                  </Link>
-                </DialogClose>
-              ) : (
+            {currentBook.chapters.map((c) => {
+              const href = `/${bible}/${bookId}/${c}`;
+              const content = c === "0" ? intro : c;
+              const isCurrent = c == currentChapter;
+
+              if (!isCurrent) {
+                return (
+                  <DialogClose asChild key={c}>
+                    <Link href={href} className={cn("border flex py-3 justify-center items-center hover:bg-accent")}>
+                      {content}
+                    </Link>
+                  </DialogClose>
+                );
+              }
+              return (
                 <div
                   key={c}
                   className="flex py-3 justify-center items-center bg-primary text-primary-foreground border-0"
                 >
-                  {c === "0" ? intro : c}
+                  {content}
                 </div>
-              ),
-            )}
+              );
+            })}
           </div>
         </div>
       </DialogContent>
