@@ -2,5 +2,7 @@
   "book": "Kitob",
   "books": "Kitoblar",
   "chapter": "Bob",
-  "chapters": "Boblar"
+  "chapters": "Boblar",
+  "Select a chapter": "Bobni tanlang",
+  "Intro": "Kirish"
 }

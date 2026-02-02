@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang={process.env.APP_LANG}>
       <ThemeProvider>
-        <body className="flex w-full flex-col justify-between min-h-screen">
+        <body className="flex w-full flex-col justify-between min-h-screen min-w-90">
           <ManifestProvider manifest={manifest}>
             <Navbar />
             <main className="flex-1 shrink py-15">

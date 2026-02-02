@@ -3,6 +3,7 @@ import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 import { BooksList } from "@/features/bible-navigation/ui/BooksList";
 import { getDictionary } from "@/shared/lib/get-dictionary";
+import { ChaptersTable } from "@/features/bible-navigation/ui/ChaptersTable";
 
 export const Navbar = () => {
   const isBiblePage = true;
@@ -18,7 +19,12 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="flex gap-3 items-center">
-          {isBiblePage && <BooksList label={t.books} />}
+          {isBiblePage && (
+            <>
+              <BooksList label={t("books")} />
+              <ChaptersTable label={t("chapters")} intro={t("Intro")} discription={t("Select a chapter")} />
+            </>
+          )}
           <ThemeSwitcher />
         </div>
       </ContainerWidth>

@@ -2,5 +2,8 @@
   "book": "Book",
   "books": "Books",
   "chapter": "Chapter",
-  "chapters": "Chapters"
+  "chapters": "Chapters",
+  "Select a chapter": "Select a chapter",
+  "Intro": "Intro"
+
 }
