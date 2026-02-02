@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body className="flex w-full flex-col justify-between min-h-screen min-w-90">
           <ManifestProvider manifest={manifest}>
             <Navbar />
-            <main className="flex-1 shrink py-15">
+            <main className="flex-1 shrink pt-15 pb-8 md:pb-12">
               <Suspense>{children}</Suspense>
             </main>
             <Footer />

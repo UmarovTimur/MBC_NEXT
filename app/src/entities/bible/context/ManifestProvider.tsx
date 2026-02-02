@@ -12,7 +12,7 @@ export const ManifestProvider = ({
   children: ReactNode;
   manifest: BibleManifest;
 }) => {
-  return <BibleContext.Provider value={manifest} >{children}</BibleContext.Provider>
+  return <BibleContext.Provider value={manifest}>{children}</BibleContext.Provider>
 }
 
 

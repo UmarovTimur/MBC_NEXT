@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
-import { BooksList } from "@/features/bible-navigation/ui/BooksList";
-import { getDictionary } from "@/shared/lib/get-dictionary";
-import { ChaptersTable } from "@/features/bible-navigation/ui/ChaptersTable";
+import { BooksList } from "@/features/bible-navigation/";
+import { getDictionary } from "@/shared/lib/getDictionary";
+import { ChaptersTable } from "@/features/bible-navigation/";
 
 export const Navbar = () => {
   const isBiblePage = true;

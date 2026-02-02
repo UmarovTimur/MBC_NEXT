@@ -4,5 +4,7 @@
   "chapter": "Bob",
   "chapters": "Boblar",
   "Select a chapter": "Bobni tanlang",
-  "Intro": "Kirish"
+  "Intro": "Kirish",
+  "Next": "Keyingisi",
+  "Previous": "Oldingi"
 }

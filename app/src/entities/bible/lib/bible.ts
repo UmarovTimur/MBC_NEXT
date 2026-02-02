@@ -86,7 +86,7 @@ export class Bible {
   }
 
   getBookName(bookId: number): string {
-    return this.mappingBook?.[bookId] ?? bookId.toString(); 
+    return this.mappingBook?.[bookId - 1] ?? bookId.toString(); 
   }
 
   async getChapterContent(bookId: string, chapterId: string): Promise<string | null> {

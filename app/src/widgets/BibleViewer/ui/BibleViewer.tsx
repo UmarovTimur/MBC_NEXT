@@ -35,7 +35,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     notFound();
   }
   return (
-    <div className={cn("", [className])}>
+    <div className={cn("mb-8 md:mb-12", [className])}>
       <ChapterLink direction="prev" currentChapter={chapter} />
       <ChapterLink direction="next" currentChapter={chapter} />
 

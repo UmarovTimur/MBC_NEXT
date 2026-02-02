@@ -4,33 +4,28 @@ import {
   PaginationEllipsis,
   PaginationItem,
   PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
 } from "@/shared/ui/pagination";
+import { ChaptersTable } from "./ChaptersTable";
+interface ChaptersPaginationProps {
+  next: string;
+  prev: string;
+}
 
-export function PaginationDemo() {
+export function ChaptersPagination({ next, prev }: ChaptersPaginationProps) {
   return (
     <Pagination>
       <PaginationContent>
         <PaginationItem>
-          <PaginationPrevious href="#" />
+          {prev}
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink href="#">1</PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#" isActive>
-            2
-          </PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">3</PaginationLink>
+          {/* <ChaptersTable/> */}
         </PaginationItem>
         <PaginationItem>
           <PaginationEllipsis />
         </PaginationItem>
         <PaginationItem>
-          <PaginationNext href="#" />
+          {next}
         </PaginationItem>
       </PaginationContent>
     </Pagination>
