@@ -9,7 +9,6 @@ export enum Theme {
   SYSTEM = 'system'
 }
 
-
 export interface ThemeContextProps {
   theme?: Theme;
   setTheme?: (theme: Theme) => void;

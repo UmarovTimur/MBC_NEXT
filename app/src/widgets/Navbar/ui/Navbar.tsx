@@ -1,12 +1,14 @@
-"use client";
-
 import Link from "next/link";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 import { BooksList } from "@/features/bible-navigation/ui/BooksList";
+import { getDictionary } from "@/shared/lib/get-dictionary";
 
 export const Navbar = () => {
   const isBiblePage = true;
+
+  const t = getDictionary();
+
   return (
     <header className="py-4 border-b border-border outline-ring/50 fixed w-full bg-white dark:bg-zinc-950 z-50">
       <ContainerWidth className="relative flex h-7 items-center justify-between">
@@ -16,7 +18,7 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="flex gap-3 items-center">
-          {isBiblePage && <BooksList />}
+          {isBiblePage && <BooksList label={t.books} />}
           <ThemeSwitcher />
         </div>
       </ContainerWidth>

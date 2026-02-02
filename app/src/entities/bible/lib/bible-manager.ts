@@ -1,6 +1,6 @@
 import path from "node:path";
 import { readdir } from "node:fs/promises";
-import { Book, Chapter } from "../model/types";
+import { BibleManifest, Book, Chapter } from "../model/types";
 import { HTML_SRC_DIR } from "@/shared/config/paths";
 import { Bible } from "./bible";
 
@@ -22,7 +22,18 @@ export class BibleManager {
     return new BibleManager(bibles);
   }
 
-  getManifest() {}
+  getManifest(): BibleManifest {
+    return {
+      bibles: this.bibles.map((bible: Bible) => ({
+        bibleName: bible.bibleName,
+        books: bible.books.map((book: Book) => ({
+          id: book.id,
+          name: bible.getBookName(+book.id),
+          chapters: book.chapters.map((c: Chapter) => c.chapterId)
+        }))
+      }))
+    }
+  }
 
   getAll(): Bible[] {
     return this.bibles;
@@ -47,13 +58,18 @@ export class BibleManager {
     }
   }
 
-  // Go through all chapters number 0
+  // Go through all books
   traverseBooks(fn: (params: Book) => void) {
     for (const bible of this.bibles) {
       for (const book of bible.books) {
         fn(book);
       }
     }
+  }
+
+  getBooksNames(bibleName: string): string[] {
+    const bible = this.getBible(bibleName);
+    return bible.books.map((b) => bible.mappingBook?.[+b.id] ?? b.id);
   }
 
   async getChapterContent(params: Chapter): Promise<string | null> {
@@ -67,7 +83,7 @@ export class BibleManager {
   getBook(bible: string, bookId: string): Book | null {
     const bibleObj = this.getBible(bible);
     if (!bibleObj) return null;
-    
+
     const book = bibleObj.books.find((b) => b.id === bookId) || null;
 
     return book;

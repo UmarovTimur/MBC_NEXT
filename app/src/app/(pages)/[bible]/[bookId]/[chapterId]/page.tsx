@@ -1,4 +1,5 @@
-import { bibleManager, Chapter } from "@/entities/bible";
+import { Chapter } from "@/entities/bible";
+import { bibleManager } from "@/entities/bible/server";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { BibleViewer } from "@/widgets/BibleViewer";
 
@@ -33,10 +34,10 @@ export default async function ChapterPage({ params }: { params: Promise<ChapterP
   };
 
   return (
-    <div>
+    <section>
       <ContainerWidth>
         <BibleViewer chapter={chapter} />
       </ContainerWidth>
-    </div>
+    </section>
   );
 }

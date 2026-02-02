@@ -1,42 +1,59 @@
 "use client";
 
-import { getDictionary } from "@/shared/lib/get-dictionary";
+import { useBible } from "@/entities/bible";
+import { cn } from "@/shared/lib/cn";
 import { Button } from "@/shared/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/shared/ui/dropdown-menu";
-import { PencilIcon, ShareIcon, TrashIcon } from "lucide-react";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
-export function BooksList() {
-  const t = getDictionary();
+interface BooksListProps {
+  label: string;
+}
+
+export function BooksList({ label }: BooksListProps) {
+  const manifest = useBible();
+  const params = useParams();
+
+  const currentBibleId = params.bible as string;
+  const currentBible = manifest.bibles.find((b) => b.bibleName === currentBibleId);
+
+  const currentBookId = params.bookId as string;
+  const currentBook = currentBible?.books.find(
+    (b: { id: string; name: string; chapters: string[] }) => b.id === currentBookId,
+  );
+
+  if (!currentBible || !currentBook) return null;
+
+  const books = currentBible.books;
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button>{t.chapters}</Button>
+        <Button>{label}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <PencilIcon />
-            Edit
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <ShareIcon />
-            Share
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem className="text-red-600">
-            <TrashIcon />
-            Delete
-          </DropdownMenuItem>
+          {books.map((b: { id: string; name: string; chapters: string[] }) => (
+            <DropdownMenuItem
+              className={cn(
+                b.id === currentBook.id &&
+                  // eslint-disable-next-line max-len
+                  "bg-foreground text-primary-foreground focus:bg-foreground focus:text-primary-foreground focus:opacity-80",
+                "cursor-pointer",
+              )}
+              asChild
+              key={b.id}
+            >
+              <Link href={`/${currentBibleId}/${b.id}`}>{b.name}</Link>
+            </DropdownMenuItem>
+          ))}
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>

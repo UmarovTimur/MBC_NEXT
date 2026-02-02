@@ -1,7 +1,5 @@
-import { bibleManager } from "./lib/bible-manager";
 import { Book, Chapter, BibleViewMode } from "./model/types";
-
-export { bibleManager };
+import { ManifestProvider, useBible } from "./context/ManifestProvider";
 
 export type { Book, Chapter, BibleViewMode };
-
+export { ManifestProvider, useBible };

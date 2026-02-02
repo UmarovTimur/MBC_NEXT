@@ -11,3 +11,14 @@ export type Chapter = {
   bookId: string;
   chapterId: string;
 };
+
+export interface BibleManifest {
+  bibles: {
+    bibleName: string;
+    books: {
+      id: string;
+      name: string;
+      chapters: string[];
+    }[];
+  }[];
+}

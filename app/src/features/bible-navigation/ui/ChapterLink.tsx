@@ -1,4 +1,5 @@
-import { bibleManager, Chapter } from "@/entities/bible";
+import { Chapter } from "@/entities/bible";
+import { bibleManager } from "@/entities/bible/server";
 import { cn } from "@/shared/lib/cn";
 import { Button } from "@/shared/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -29,7 +30,7 @@ export const ChapterLink = (params: ChapterLinkProps) => {
 
   return (
     <Button
-      asChild={true}
+      asChild
       variant="outline"
       size="xlIcon"
       className={cn(

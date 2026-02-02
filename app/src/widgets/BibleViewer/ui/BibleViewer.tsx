@@ -1,5 +1,6 @@
-import { bibleManager, Chapter } from "@/entities/bible";
+import { Chapter } from "@/entities/bible";
 import { Bible } from "@/entities/bible/lib/bible";
+import { bibleManager } from "@/entities/bible/server";
 import { ChapterLink } from "@/features/bible-navigation";
 import { cn } from "@/shared/lib/cn";
 import { notFound } from "next/navigation";
@@ -26,7 +27,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
       bookId: chapter.bookId,
       chapterId: chapter.chapterId,
     });
-  } 
+  }
 
   const attachedTitle = attachedBible?.primaryTitle;
   // ======================= NotFound ==L==========================================
@@ -37,21 +38,23 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     <div className={cn("", [className])}>
       <ChapterLink direction="prev" currentChapter={chapter} />
       <ChapterLink direction="next" currentChapter={chapter} />
-      
-      <div className={cn("[&_a]:text-blue-600 [&_a]:font-bold lg:flex justify-center gap-5 [&_strong]:font-bold")}>
+
+      <div
+        className={cn(
+          "**:[[id^='V']]:font-bold [&_a]:text-blue-600 [&_a]:font-bold",
+          " lg:flex justify-center gap-5 [&_strong]:font-bold",
+        )}
+      >
         <div className={cn("basis-2/3 pt-6")}>
           <h1 className="text-3xl md:text-4xl font-black">{title}</h1>
-          <h2 className="text-2xl mb-4 leading-12" >{subTitle}</h2>
-          <div className="[&>p]:mb-4 **:[[id^='V']]:font-bold" dangerouslySetInnerHTML={{ __html: content }} />
+          <h2 className="text-2xl mb-4 leading-12">{subTitle}</h2>
+          <div className="[&>p]:mb-4 " dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
         {attachedContent && (
           <div className="shrink-0 pt-6 basis-1/3 text-base">
             <h3 className="text-3xl mb-6">{attachedTitle}</h3>
-            <div
-              className="[&_a]:font-bold "
-              dangerouslySetInnerHTML={{ __html: attachedContent }}
-            />
+            <div className="[&_a]:font-bold " dangerouslySetInnerHTML={{ __html: attachedContent }} />
           </div>
         )}
       </div>
