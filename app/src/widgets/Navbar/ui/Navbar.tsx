@@ -2,13 +2,13 @@ import Link from "next/link";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 import { BooksList } from "@/features/bible-navigation/";
-import { getDictionary } from "@/shared/lib/getDictionary";
 import { ChaptersTable } from "@/features/bible-navigation/";
+import { getI18n } from "@/app/providers/I18n/server";
 
 export const Navbar = () => {
   const isBiblePage = true;
 
-  const t = getDictionary();
+  const { t } = getI18n();
 
   return (
     <header className="py-4 border-b border-border outline-ring/50 fixed w-full bg-white dark:bg-zinc-950 z-50">
