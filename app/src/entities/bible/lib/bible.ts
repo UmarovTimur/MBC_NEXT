@@ -96,8 +96,10 @@ export class Bible {
       return null;
     }
 
+    const padStart = book.chapters.length > 100 ? 3 : 2;
+
     const bookFileName = book.id.toString().padStart(2, "0");
-    const chapterFileName = `${chapterId.padStart(2, "0")}.html`;
+    const chapterFileName = `${chapterId.padStart(padStart, "0")}.html`;
 
     const filePath = path.join(this.basePath, bookFileName, chapterFileName);
     try {
