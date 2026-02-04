@@ -36,12 +36,12 @@ export function ChaptersTable({ label, discription, intro }: ChaptersTableProps)
       <DialogTrigger asChild>
         <Button>{label}</Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="lg:max-w-200" >
         <DialogHeader>
           <DialogTitle>{label}</DialogTitle>
           <DialogDescription>{discription}</DialogDescription>
         </DialogHeader>
-        <div className="no-scrollbar -mx-6 max-h-[80vh] overflow-y-auto px-4">
+        <div className="no-scrollbar -mx-4 max-h-[80vh] overflow-y-auto px-4 py-1">
           <div className="grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))]">
             {currentBook.chapters.map((c) => {
               const href = `/${bible}/${bookId}/${c}`;
