@@ -115,7 +115,7 @@ export class Bible {
       return this.primaryTitle;
     } 
     const bookName = this.getBookName(Number(params.bookId));
-    const chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId} ${this.chapterSlug}`
+    const chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId}\u00A0${this.chapterSlug}`
     return `${bookName}: ${chapterName}`; 
   }
 }
