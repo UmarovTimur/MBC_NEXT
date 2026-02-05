@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/app/providers/I18n";
 import { useBible } from "@/entities/bible";
 import { cn } from "@/shared/lib/utils";
 import { Button } from "@/shared/ui/button";
@@ -14,12 +15,14 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 interface BooksListProps {
-  label: string;
+  className?: string;
 }
 
-export function BooksList({ label }: BooksListProps) {
+export function BooksList({className}: BooksListProps) {
   const manifest = useBible();
   const params = useParams();
+  const { t } = useI18n();
+  const label = t("books");
 
   const currentBibleId = params.bible as string;
   const currentBible = manifest.bibles.find((b) => b.bibleName === currentBibleId);
@@ -36,7 +39,7 @@ export function BooksList({ label }: BooksListProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button>{label}</Button>
+        <Button className={cn("", className)} >{label}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>

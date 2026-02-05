@@ -1,31 +1,43 @@
 import Link from "next/link";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
-import { BooksList } from "@/features/bible-navigation/";
-import { ChaptersTable } from "@/features/bible-navigation/";
-import { getI18n } from "@/app/providers/I18n/server";
+import { AppLink } from "@/shared/ui/AppLink";
+import { MobileNavbar } from "./MobileNavbar";
+import { cn } from "@/shared/lib/utils";
+import { ReactNode } from "react";
 
-export const Navbar = () => {
-  const isBiblePage = true;
-
-  const { t } = getI18n();
-
+export const Navbar = ({ actions }: { actions?: ReactNode }) => {
   return (
-    <header className="py-4 border-b border-border outline-ring/50 fixed w-full bg-white dark:bg-zinc-950 z-50">
-      <ContainerWidth className="relative flex h-7 items-center justify-between">
-        <div className="flex items-center">
-          <Link href="/" className="">
-            <h1 className="text-xl font-bold text-black dark:text-white/80">MBC NEXT</h1>
+    <header
+      className={cn(
+        "top-0 py-4 border-b",
+        " border-border outline-ring/50 fixed w-full bg-white dark:bg-zinc-950 z-50",
+      )}
+    >
+      <ContainerWidth className="relative flex items-center justify-between">
+        <div className="flex gap-x-6 items-center">
+          <Link href="/">
+            <span className="text-xl font-bold text-black dark:text-white/80">
+              <span className="text-green-700 uppercase">Kitobook</span>
+              <span className="text-amber-800">.com</span>
+            </span>
           </Link>
+          <div className="hidden lg:flex gap-x-5 pt-1.5 text-sm ">
+            <AppLink href="https://kitobook.com/kitoblar/audio/">Audiokitoblar</AppLink>
+            <AppLink href="https://kitobook.com/symphony/">Simfoniya</AppLink>
+            <AppLink href="https://www.kitobook.com/web/guvohliklar-va-vazlari/masihiy-vazlari.html">
+              Guvohliklar
+            </AppLink>
+            <AppLink href="https://www.kitobook.com/web/video">VIDEO</AppLink>
+            <AppLink href="https://kitobook.com/uzmusic">UzMusic</AppLink>
+          </div>
         </div>
-        <div className="flex gap-3 items-center">
-          {isBiblePage && (
-            <>
-              <BooksList label={t("books")} />
-              <ChaptersTable label={t("chapters")} intro={t("Intro")} discription={t("Select a chapter")} />
-            </>
-          )}
-          <ThemeSwitcher />
+        <div className="gap-x-3 flex items-center">
+          <MobileNavbar />
+          <div className="hidden lg:flex gap-x-3">
+            {actions}
+            <ThemeSwitcher />
+          </div>
         </div>
       </ContainerWidth>
     </header>

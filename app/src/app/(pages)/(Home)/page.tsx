@@ -1,4 +1,5 @@
 import { ContainerWidth } from "@/shared/ui/Container";
+import { Navbar } from "@/widgets/Navbar";
 import { redirect } from "next/navigation";
 
 export const dynamic = "force-static";
@@ -8,6 +9,7 @@ export default function HomePage() {
 
   return (
     <>
+      <Navbar />
       <ContainerWidth>
         <div className="py-4 sm:py-6 lg:py-8 rounded-lg overflow-hidden">
           <div className="rounded-lg relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover">

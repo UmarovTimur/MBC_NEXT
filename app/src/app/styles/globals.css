@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-/* @import "tailwindcss-animate"; */
-/* @import "tw-animate-css"; */
+@plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -120,9 +119,14 @@ html {
   scrollbar-gutter: stable;
 }
 
-body {
-  font-family: var(--font-noto-sans) system-ui, sans-serif;
+body, header {
+  transition: background-color 0.5s cubic-bezier(.4, 0, .2, 1) 0s,
+    border-color 0.5s cubic-bezier(.4, 0, .2, 1) 0s;
   background-color: var(--background);
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
   color: var(--primary)
 }
 

@@ -37,11 +37,9 @@ export default async function ChapterPage({ params }: { params: Promise<ChapterP
   };
 
   return (
-    <section>
-      <ContainerWidth>
-        <BibleViewer chapter={chapter} />
-        {/* <ChaptersPagination next={t("Next")} prev={t("Previous")} /> */}
-      </ContainerWidth>
-    </section>
+    <ContainerWidth>
+      <BibleViewer chapter={chapter} />
+      {/* <ChaptersPagination next={t("Next")} prev={t("Previous")} /> */}
+    </ContainerWidth>
   );
 }

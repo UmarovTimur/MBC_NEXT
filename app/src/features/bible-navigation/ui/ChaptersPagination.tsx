@@ -15,18 +15,12 @@ export function ChaptersPagination({ next, prev }: ChaptersPaginationProps) {
   return (
     <Pagination>
       <PaginationContent>
-        <PaginationItem>
-          {prev}
-        </PaginationItem>
-        <PaginationItem>
-          {/* <ChaptersTable/> */}
-        </PaginationItem>
+        <PaginationItem>{prev}</PaginationItem>
+        <PaginationItem>{/* <ChaptersTable/> */}</PaginationItem>
         <PaginationItem>
           <PaginationEllipsis />
         </PaginationItem>
-        <PaginationItem>
-          {next}
-        </PaginationItem>
+        <PaginationItem>{next}</PaginationItem>
       </PaginationContent>
     </Pagination>
   );

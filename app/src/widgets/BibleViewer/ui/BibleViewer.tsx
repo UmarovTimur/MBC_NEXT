@@ -1,7 +1,7 @@
 import { Chapter } from "@/entities/bible";
 import { Bible } from "@/entities/bible/lib/bible";
 import { bibleManager } from "@/entities/bible/server";
-import { ChapterLink } from "@/features/bible-navigation";
+import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-navigation";
 import { cn } from "@/shared/lib/utils";
 import { notFound } from "next/navigation";
 
@@ -35,9 +35,13 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     notFound();
   }
   return (
-    <div className={cn("mb-8 md:mb-12", [className])}>
-      <ChapterLink direction="prev" currentChapter={chapter} />
-      <ChapterLink direction="next" currentChapter={chapter} />
+    <div className={cn("mb-8 mt-8 lg:mt-0 md:mb-12", [className])}>
+      <div className="flex gap-x-4 items-center">
+        <ChapterLink direction="prev" currentChapter={chapter} />
+        <BooksList className="lg:hidden inline-block grow" />
+        <ChaptersTableTrigger className="lg:hidden inline-block grow" />
+        <ChapterLink direction="next" currentChapter={chapter} />
+      </div>
 
       <div
         className={cn(
@@ -57,6 +61,12 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
             <div className="[&_a]:font-bold " dangerouslySetInnerHTML={{ __html: attachedContent }} />
           </div>
         )}
+      </div>
+      <div className="flex gap-x-4 pt-8 items-center">
+        <ChapterLink className="basis-3/12" direction="prev" currentChapter={chapter} />
+        {/* <BooksList className="lg:hidden inline-block grow" /> */}
+        <ChaptersTableTrigger variant="outline" className="lg:hidden inline-block grow" />
+        <ChapterLink className="basis-3/12" direction="next" currentChapter={chapter} />
       </div>
     </div>
   );

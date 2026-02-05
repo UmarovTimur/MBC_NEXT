@@ -12,7 +12,7 @@ export const AppLink = ({ href, children, className, ...props }: AppLinkProps) =
   const isSpecial = href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("#");
 
   className = cn(
-    "text-sm text-gray-600 dark:text-gray-500 ",
+    "text-gray-600 dark:text-gray-500 ",
     "transition-color hover:text-blue-500 dark:hover:text-blue-300 ",
     className,
   );

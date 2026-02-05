@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
-import { Suspense } from "react";
 import { Footer } from "@/widgets/Footer";
 import { ThemeProvider } from "./providers/Theme";
-import { Navbar } from "@/widgets/Navbar";
 import { ManifestProvider } from "@/entities/bible/context/ManifestProvider";
 import { bibleManager } from "@/entities/bible/server";
 import { I18nProvider } from "@/app/providers/I18n";
@@ -30,10 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider>
           <body className="flex w-full flex-col justify-between min-h-screen min-w-90">
             <ManifestProvider manifest={manifest}>
-              <Navbar />
-              <main className="flex-1 shrink pt-15 pb-8 md:pb-12">
-                <Suspense>{children}</Suspense>
-              </main>
+              {children} 
               <Footer />
             </ManifestProvider>
           </body>
