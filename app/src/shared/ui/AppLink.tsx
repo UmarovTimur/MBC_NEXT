@@ -5,9 +5,10 @@ import Link from "next/link";
 interface AppLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   children: ReactNode;
+  prefetch?: boolean;
 }
 
-export const AppLink = ({ href, children, className, ...props }: AppLinkProps) => {
+export const AppLink = ({ href, children, className, prefetch = false, ...props }: AppLinkProps) => {
   const isExsternal = /^https?:\/\//.test(href) || href.startsWith("//");
   const isSpecial = href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("#");
 
@@ -34,7 +35,7 @@ export const AppLink = ({ href, children, className, ...props }: AppLinkProps) =
   }
 
   return (
-    <Link href={href} className={cn("", className)} {...props}>
+    <Link href={href} prefetch={prefetch} className={cn("", className)} {...props}>
       {children}
     </Link>
   );

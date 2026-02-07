@@ -24,7 +24,7 @@ export default function HomePage() {
                   Комментарии к Библии МакДональда на Узбекском языке.
                 </p>
                 <Button size="lg" variant="outline" asChild className="text-foreground">
-                  <AppLink href="/mbc/40/0">O'qing</AppLink>
+                  <AppLink href="/barclay/40/0">O'qing</AppLink>
                 </Button>
                 <div className="flex flex-wrap"></div>
               </div>

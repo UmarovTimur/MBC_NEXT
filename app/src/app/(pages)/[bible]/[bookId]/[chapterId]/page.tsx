@@ -15,7 +15,7 @@ export async function generateStaticParams() {
   const staticParams: ChapterProps[] = [];
 
   bibleManager.traverseChapter(({ bible, bookId, chapterId }: Chapter) => {
-    if (bible === "muqaddas-kitob") return;
+    if (bible === "azb") return;
     staticParams.push({
       bible: bible,
       bookId: bookId,

@@ -13,10 +13,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/shared/ui/dialog";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import type { ReactNode } from "react";
 import { useBibleUI } from "../model/BibleUIContext";
+import { AppLink } from "@/shared/ui/AppLink";
 
 interface ChaptersTableProps {
   className?: string;
@@ -67,13 +67,13 @@ export function ChaptersTable({ className, open, onOpenChange, trigger, hideTrig
               if (!isCurrent) {
                 return (
                   <DialogClose asChild key={c}>
-                    <Link
+                    <AppLink
                       href={href}
                       prefetch={false}
                       className={cn("border flex py-3 justify-center items-center hover:bg-accent")}
                     >
                       {content}
-                    </Link>
+                    </AppLink>
                   </DialogClose>
                 );
               }
