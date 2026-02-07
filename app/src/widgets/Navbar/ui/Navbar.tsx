@@ -1,6 +1,5 @@
 import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
-import { AppLink } from "@/shared/ui/AppLink";
 import { MobileNavbar } from "./MobileNavbar";
 import { cn } from "@/shared/lib/utils";
 import { ReactNode } from "react";
@@ -19,19 +18,9 @@ export const Navbar = ({ actions }: { actions?: ReactNode }) => {
         <div className="flex gap-x-6 items-center">
           <a href="/">
             <span className="text-xl font-bold text-black dark:text-white/80">
-              <span className="text-green-700 uppercase">Kitobook</span>
-              <span className="text-amber-800">.com</span>
+              <span className="text-green-700 uppercase">Barclay</span>
             </span>
           </a>
-          <div className="hidden lg:flex gap-x-5 pt-1.5 text-sm ">
-            <AppLink href="https://kitobook.com/kitoblar/audio/">Audiokitoblar</AppLink>
-            <AppLink href="https://kitobook.com/symphony/">Simfoniya</AppLink>
-            <AppLink href="https://www.kitobook.com/web/guvohliklar-va-vazlari/masihiy-vazlari.html">
-              Guvohliklar
-            </AppLink>
-            <AppLink href="https://www.kitobook.com/web/video">VIDEO</AppLink>
-            <AppLink href="https://kitobook.com/uzmusic">UzMusic</AppLink>
-          </div>
         </div>
         <div className="gap-x-3 flex items-center">
           <MobileNavbar />
