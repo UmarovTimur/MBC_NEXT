@@ -1,7 +1,5 @@
-// import { getI18n } from "@/app/providers/I18n/server";
 import { Chapter } from "@/entities/bible";
 import { bibleManager } from "@/entities/bible/server";
-// import { ChaptersPagination } from "@/features/bible-navigation/ui/ChaptersPagination";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { BibleViewer } from "@/widgets/BibleViewer";
 
@@ -17,6 +15,7 @@ export async function generateStaticParams() {
   const staticParams: ChapterProps[] = [];
 
   bibleManager.traverseChapter(({ bible, bookId, chapterId }: Chapter) => {
+    if (bible === "muqaddas-kitob") return;
     staticParams.push({
       bible: bible,
       bookId: bookId,
@@ -29,7 +28,6 @@ export async function generateStaticParams() {
 
 export default async function ChapterPage({ params }: { params: Promise<ChapterProps> }) {
   const { bible, bookId, chapterId } = await params;
-  // const { t } = getI18n();
   const chapter: Chapter = {
     bible: bible,
     bookId: bookId,
@@ -39,7 +37,6 @@ export default async function ChapterPage({ params }: { params: Promise<ChapterP
   return (
     <ContainerWidth>
       <BibleViewer chapter={chapter} />
-      {/* <ChaptersPagination next={t("Next")} prev={t("Previous")} /> */}
     </ContainerWidth>
   );
 }

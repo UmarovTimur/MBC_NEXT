@@ -120,8 +120,8 @@ html {
 }
 
 body, header {
-  transition: background-color 0.5s cubic-bezier(.4, 0, .2, 1) 0s,
-    border-color 0.5s cubic-bezier(.4, 0, .2, 1) 0s;
+  transition: background-color 0.3s cubic-bezier(.4, 0, .2, 1) 0s,
+    border-color 0.3s cubic-bezier(.4, 0, .2, 1) 0s;
   background-color: var(--background);
 }
 

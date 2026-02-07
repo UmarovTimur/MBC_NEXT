@@ -25,7 +25,7 @@ export const MobileNavbar = () => {
             <Menu />
           </Button>
         </SheetTrigger>
-        <SheetContent side="top" className="px-0 pb-6 ">
+        <SheetContent aria-describedby="Mobile menu" side="top" className="px-0 pb-6 ">
           <SheetHeader className="px-4">
             <SheetTitle>
               <Link href="/">

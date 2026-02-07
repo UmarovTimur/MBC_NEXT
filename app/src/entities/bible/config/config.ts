@@ -10,6 +10,7 @@ export interface BibleConfig {
   chapterSlug?: string;
   formatingStyle?: string;
   introductionName?: string;
+  isIndependent?: boolean;
 }
 
 export const BIBLES_CONFIG: Record<string, BibleConfig> = {
@@ -24,6 +25,7 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
     mappingBible: UZ_BOOKS_NAMES,
     introductionName: "Kirish",
     chapterSlug: "Bob",
+    isIndependent: true
   },
   "muqaddas-kitob": {
     primary: "Muqaddas Kitob ONLINE",
@@ -32,14 +34,14 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
     chapterSlug: "Bob",
     defaultView: "single-column",
   },
-  barclay: {
-    primary: "barclay",
-    attachment: "azb",
-    defaultView: "split-screen",
-  },
-  azb: {
-    primary: "azb",
-    defaultView: "single-column",
-    attachment: null,
-  },
 };
+//  barclay: {
+//     primary: "barclay",
+//     attachment: "azb",
+//     defaultView: "split-screen",
+//   },
+//   azb: {
+//     primary: "azb",
+//     defaultView: "single-column",
+//     attachment: null,
+//   },

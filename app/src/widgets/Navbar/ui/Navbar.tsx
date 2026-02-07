@@ -1,12 +1,13 @@
-import Link from "next/link";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 import { AppLink } from "@/shared/ui/AppLink";
 import { MobileNavbar } from "./MobileNavbar";
 import { cn } from "@/shared/lib/utils";
 import { ReactNode } from "react";
+import { BooksList, ChaptersTableTrigger } from "@/features/bible-navigation";
 
 export const Navbar = ({ actions }: { actions?: ReactNode }) => {
+
   return (
     <header
       className={cn(
@@ -16,12 +17,12 @@ export const Navbar = ({ actions }: { actions?: ReactNode }) => {
     >
       <ContainerWidth className="relative flex items-center justify-between">
         <div className="flex gap-x-6 items-center">
-          <Link href="/">
+          <a href="/">
             <span className="text-xl font-bold text-black dark:text-white/80">
               <span className="text-green-700 uppercase">Kitobook</span>
               <span className="text-amber-800">.com</span>
             </span>
-          </Link>
+          </a>
           <div className="hidden lg:flex gap-x-5 pt-1.5 text-sm ">
             <AppLink href="https://kitobook.com/kitoblar/audio/">Audiokitoblar</AppLink>
             <AppLink href="https://kitobook.com/symphony/">Simfoniya</AppLink>
@@ -36,6 +37,8 @@ export const Navbar = ({ actions }: { actions?: ReactNode }) => {
           <MobileNavbar />
           <div className="hidden lg:flex gap-x-3">
             {actions}
+            <BooksList />
+            {<ChaptersTableTrigger />}
             <ThemeSwitcher />
           </div>
         </div>

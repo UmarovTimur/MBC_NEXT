@@ -1,15 +1,19 @@
-import { ContainerWidth } from "@/shared/ui/Container";
-import { Navbar } from "@/widgets/Navbar";
-import { redirect } from "next/navigation";
+"use client";
 
+import { AppLink } from "@/shared/ui/AppLink";
+import { Button } from "@/shared/ui/button";
+import { ContainerWidth } from "@/shared/ui/Container";
 export const dynamic = "force-static";
 
 export default function HomePage() {
-  redirect("/mbc/40");
+  // const router = useRouter();
+
+  // useEffect(() => {
+  //   router.replace("/mbc/40/0/");
+  // }, [router]);
 
   return (
-    <>
-      <Navbar />
+    <main className="mt-8 lg:mt-16">
       <ContainerWidth>
         <div className="py-4 sm:py-6 lg:py-8 rounded-lg overflow-hidden">
           <div className="rounded-lg relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover">
@@ -19,6 +23,9 @@ export default function HomePage() {
                 <p className="text-white/80 dark:text-white/60 mt-4 text-base font-normal">
                   Комментарии к Библии МакДональда на Узбекском языке.
                 </p>
+                <Button size="lg" variant="outline" asChild className="text-foreground">
+                  <AppLink href="/mbc/40/0/">O'qing</AppLink>
+                </Button>
                 <div className="flex flex-wrap"></div>
               </div>
             </div>
@@ -61,7 +68,7 @@ export default function HomePage() {
               Kitob maktabi xodimlari jamoasiga a’zo bo‘lgan. 1996-yildan so‘ng Uilyam Makdonald vafotiga qadar, ya’ni
               2007-yil 25-dekabrgacha Muqaddas Kitob xizmatida bo‘ldi.
             </p>
-            max-w-3xl <h3 className="text-xl/16 font-bold">Muallif so‘zboshisi</h3>
+            <h3 className="text-xl/16 font-bold">Muallif so‘zboshisi</h3>
             <p>
               &rdquo;Masihiylar uchun Muqaddas Kitob sharhlari&quot; kitobining maqsadi - oddiy masihiyga Xudoning
               Kalomini jiddiy o‘rganishni boshlashda yordam berishdir. Ammo shuni yodda tutish kerakki, hech qanday
@@ -99,6 +106,6 @@ export default function HomePage() {
           </div>
         </ContainerWidth>
       </section>
-    </>
+    </main>
   );
 }

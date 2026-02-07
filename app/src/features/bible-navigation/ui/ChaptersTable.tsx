@@ -52,7 +52,7 @@ export function ChaptersTable({ className, open, onOpenChange, trigger, hideTrig
           {trigger ?? <Button className={cn("grow", className)}>{t("chapters")}</Button>}
         </DialogTrigger>
       )}
-      <DialogContent className="lg:max-w-200">
+      <DialogContent aria-describedby="Select a chapter" className="lg:max-w-200">
         <DialogHeader>
           <DialogTitle>{t("chapters")}</DialogTitle>
           <DialogDescription>{t("Select a chapter")}</DialogDescription>
@@ -67,7 +67,11 @@ export function ChaptersTable({ className, open, onOpenChange, trigger, hideTrig
               if (!isCurrent) {
                 return (
                   <DialogClose asChild key={c}>
-                    <Link href={href} className={cn("border flex py-3 justify-center items-center hover:bg-accent")}>
+                    <Link
+                      href={href}
+                      prefetch={false}
+                      className={cn("border flex py-3 justify-center items-center hover:bg-accent")}
+                    >
                       {content}
                     </Link>
                   </DialogClose>
@@ -93,9 +97,13 @@ interface ChaptersTableTriggerProps {
   variant?: "default" | "outline" | "secondary" | "ghost" | "link";
 }
 export function ChaptersTableTrigger(props: ChaptersTableTriggerProps) {
-  const { className, variant } = props;
+  const isBookPage = (useParams().bookId as string) ?? "";
   const { t } = useI18n();
   const { openChapters } = useBibleUI();
+  const { className, variant } = props;
+
+  if (!isBookPage) return null;
+
   return (
     <Button variant={variant ?? "default"} onClick={openChapters} className={cn("", className)}>
       {t("chapters")}

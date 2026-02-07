@@ -12,7 +12,7 @@ export class BibleManager {
   static async init(rootDir: string): Promise<BibleManager> {
     // Get all bibles files
     const entries = await readdir(rootDir, { withFileTypes: true });
-
+    
     // Sort only directories and init Bible class
     const biblePromises = entries.filter((e) => e.isDirectory()).map((e) => Bible.init(path.join(rootDir, e.name)));
 
