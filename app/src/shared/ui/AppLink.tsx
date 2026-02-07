@@ -34,7 +34,7 @@ export const AppLink = ({ href, children, className, ...props }: AppLinkProps) =
   }
 
   return (
-    <Link href={href + "/"} className={cn("", className)} {...props}>
+    <Link href={href} className={cn("", className)} {...props}>
       {children}
     </Link>
   );
