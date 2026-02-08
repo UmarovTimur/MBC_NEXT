@@ -24,7 +24,7 @@ export const BIBLES_CONFIG: Record<string, BibleConfig> = {
     defaultView: "split-screen",
     mappingBible: UZ_BOOKS_NAMES,
     introductionName: "Kirish",
-    chapterSlug: "Bob",
+    chapterSlug: "\u00A0Bob",
     isIndependent: true
   },
   "muqaddas-kitob": {
