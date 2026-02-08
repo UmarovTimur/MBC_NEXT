@@ -68,7 +68,6 @@ export const UZ_BOOKS_NAMES = [
 ];
 
 export const AZ_BOOKS_NAMES = [
-  "Azərbaycan dilində Müqəddəs Kitab",
   "Yaradiliş",
   "Çixiş",
   "Levililər",

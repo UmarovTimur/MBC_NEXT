@@ -1,10 +1,10 @@
 {
-  "book": "Book",
-  "books": "Books",
-  "chapter": "Chapter",
-  "chapters": "Chapters",
-  "Select a chapter": "Select a chapter",
-  "Intro": "Intro",
-  "Next": "Next",
-  "Previous": "Previous"
+  "book": "Kitab",
+  "books": "Kitablar",
+  "chapter": "Fəsil",
+  "chapters": "Fəsillər",
+  "Select a chapter": "Fəsil seçin",
+  "Intro": "Giriş",
+  "Next": "Növbəti",
+  "Previous": "Əvvəlki"
 }
