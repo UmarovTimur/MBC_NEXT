@@ -50,14 +50,14 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
         )}
       >
         <div className={cn("basis-2/3 pt-6")}>
-          <h1 className="text-3xl md:text-4xl font-black">{title}</h1>
+          <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
           <h2 className="text-2xl mb-4 leading-12">{subTitle}</h2>
           <div className="[&>p]:mb-4 " dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
         {attachedContent && (
           <div className="shrink-0 pt-6 basis-1/3 text-base">
-            <h3 className="text-3xl mb-6">{attachedTitle}</h3>
+            <h3 className="text-3xl whitespace-pre-line mb-6">{attachedTitle}</h3>
             <div className="[&_a]:font-bold " dangerouslySetInnerHTML={{ __html: attachedContent }} />
           </div>
         )}
