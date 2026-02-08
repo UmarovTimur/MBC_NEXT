@@ -27,7 +27,7 @@ export const ChapterLink = (params: ChapterLinkProps) => {
 
   const { bible, bookId, chapterId } = attendChapter;
 
-  const href = `/${bible}/${bookId}${+chapterId > 0 ? `/${chapterId}` : ""}`;
+  const href = `/${bible}/${bookId}/${chapterId}`;
 
   return (
     <Button
