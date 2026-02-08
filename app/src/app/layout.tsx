@@ -12,7 +12,7 @@ import { BibleUiProvider } from "@/features/bible-navigation";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "MBC",
+  title: "Barclay",
   description: "",
   icons: "/favicon.ico",
 };

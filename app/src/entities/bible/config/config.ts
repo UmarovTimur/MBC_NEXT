@@ -1,4 +1,4 @@
-import { UZ_BOOKS_NAMES } from "../model/mapping";
+import { AZ_BOOKS_NAMES } from "../model/mapping";
 import { BibleViewMode } from "../model/types";
 
 export interface BibleConfig {
@@ -14,34 +14,17 @@ export interface BibleConfig {
 }
 
 export const BIBLES_CONFIG: Record<string, BibleConfig> = {
-  mbc: {
-    primary: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
-    secondary: [
-      "Комментарии к Библии МакДональда на Узбекском языке.",
-      "Uilyam MakDonald - taniqli ilohiyot o‘qituvchisi.",
-    ],
-    attachment: "muqaddas-kitob",
+  barclay: {
+    primary: "Barclay şərhləri",
+    attachment: "azb",
     defaultView: "split-screen",
-    mappingBible: UZ_BOOKS_NAMES,
-    introductionName: "Kirish",
-    chapterSlug: "Bob",
-    isIndependent: true
+    mappingBible: AZ_BOOKS_NAMES,
+    chapterSlug: "-ci fəsil",
+    introductionName: "Giriş",
   },
-  "muqaddas-kitob": {
-    primary: "Muqaddas Kitob ONLINE",
-    attachment: null,
-    mappingBible: UZ_BOOKS_NAMES,
-    chapterSlug: "Bob",
+  azb: {
+    primary: `Azərbaycan dilində\nMüqəddəs Kitab`,
     defaultView: "single-column",
+    attachment: null,
   },
 };
-//  barclay: {
-//     primary: "barclay",
-//     attachment: "azb",
-//     defaultView: "split-screen",
-//   },
-//   azb: {
-//     primary: "azb",
-//     defaultView: "single-column",
-//     attachment: null,
-//   },

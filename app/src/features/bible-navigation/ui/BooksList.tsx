@@ -23,7 +23,7 @@ export function BooksList({className}: BooksListProps) {
   const params = useParams();
   const { t } = useI18n();
 
-  const currentBibleId = params.bible as string ?? manifest.bibles[0].bibleName;
+  const currentBibleId = params.bible as string ?? manifest.bibles[1].bibleName;
   const currentBible = manifest.bibles.find((b) => b.bibleName === currentBibleId);
 
   const currentBookId = params.bookId as string;
