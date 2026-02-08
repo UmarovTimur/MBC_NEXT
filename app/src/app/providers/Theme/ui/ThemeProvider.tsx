@@ -1,15 +1,21 @@
 "use client";
 
 import { FC, useState, useMemo, ReactNode, useEffect } from "react";
-import { Theme, ThemeContext } from "../lib/ThemeContext";
+import { Theme, ThemeContext, LOCAL_STORAGE_THEME_KEY } from "../lib/ThemeContext";
 
 const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
 
-    // const saved = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
-  // useEffect(() => {
-    // if (saved) setTheme(saved);
-  // }, []);
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme | null;
+      if (saved && Object.values(Theme).includes(saved as Theme)) {
+        setTheme(saved as Theme);
+      }
+    } catch {
+      // ignore localStorage errors
+    }
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -26,6 +32,11 @@ const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     }
 
     root.classList.add(appliedTheme);
+    try {
+      localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
+    } catch {
+      // ignore localStorage write errors
+    }
   }, [theme]);
 
   const defaultProps = useMemo(
@@ -33,7 +44,7 @@ const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
       theme: theme,
       setTheme: setTheme,
     }),
-    [theme]
+    [theme],
   );
 
   return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;
