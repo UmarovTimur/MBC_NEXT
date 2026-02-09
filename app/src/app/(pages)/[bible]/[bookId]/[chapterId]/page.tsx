@@ -35,8 +35,10 @@ export default async function ChapterPage({ params }: { params: Promise<ChapterP
   };
 
   return (
-    <ContainerWidth>
-      <BibleViewer chapter={chapter} />
-    </ContainerWidth>
+    <section>
+      <ContainerWidth>
+        <BibleViewer chapter={chapter} />
+      </ContainerWidth>
+    </section>
   );
 }

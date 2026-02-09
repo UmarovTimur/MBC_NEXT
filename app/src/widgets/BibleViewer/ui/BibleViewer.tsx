@@ -35,7 +35,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     notFound();
   }
   return (
-    <div className={cn("mb-8  md:mb-12", [className])}>
+    <div className={cn("mb-8 md:mb-12", [className])}>
       <div className="flex gap-x-4 items-center">
         <ChapterLink direction="prev" currentChapter={chapter} />
         <BooksList className="lg:hidden inline-block grow" />
@@ -49,7 +49,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
           " lg:flex justify-center gap-5 [&_strong]:font-bold",
         )}
       >
-        <div className={cn("basis-2/3 pt-6")}>
+        <div className={cn("basis-2/3 pt-4")}>
           <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
           <h2 className="text-2xl mb-4 leading-12">{subTitle}</h2>
           <div className="[&>p]:mb-4 " dangerouslySetInnerHTML={{ __html: content }} />
