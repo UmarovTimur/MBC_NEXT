@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   const { dict } = getI18n();
 
   return (
-    <html className={notoSansFont.variable} lang={process.env.APP_LANG}>
+    <html className={notoSansFont.variable} lang={process.env.APP_LANG} suppressHydrationWarning >
       <I18nProvider dict={dict}>
         <ThemeProvider>
           <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
