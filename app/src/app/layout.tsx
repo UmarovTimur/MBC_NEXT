@@ -13,8 +13,11 @@ import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "MBC",
-  description: "",
+  description: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
   icons: "/favicon.ico",
+  openGraph: {
+    images: ["https://kitobook.com/images/mcdonald.jpg"],
+  },
 };
 
 interface RootLayoutProps {

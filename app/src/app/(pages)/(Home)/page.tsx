@@ -34,14 +34,23 @@ export default function HomePage() {
       </ContainerWidth>
       <section>
         <ContainerWidth className="xl:max-w-4xl">
+          <div className="flex-col sm:flex-row flex gap-6 items-center ">
+            <img
+              className="rounded-md"
+              alt="MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari"
+              src="https://kitobook.com/images/mcdonald.jpg"
+            />
+            <div className="text-left">
+              <p>
+                <strong>Uilyam Makdonald </strong>- mashhur ilohiyot o‘qituvchisi, oltmishdan ortiq kitob muallifi,
+                ularning ba’zilari allaqachon o’zbek tiliga tarjima qilingan. U 1947-1965-yillarda &quot;Emmaus&quot;
+                Muqaddas Kitob maktabida dars bergan, 1959-yildan esa shu maktabning rahbari bo‘lgan.
+              </p>
+              <p>Makdonaldning Muqaddas Kitobga yozgan sharhlari</p>
+              <p>Uilyam Makdonaldning fikrlari haqida</p>
+            </div>
+          </div>
           <div className="py-5 font-light">
-            <p>
-              <strong>Uilyam Makdonald </strong>- mashhur ilohiyot o‘qituvchisi, oltmishdan ortiq kitob muallifi,
-              ularning ba’zilari allaqachon o’zbek tiliga tarjima qilingan. U 1947-1965-yillarda &quot;Emmaus&quot;
-              Muqaddas Kitob maktabida dars bergan, 1959-yildan esa shu maktabning rahbari bo‘lgan.
-            </p>
-            <p>Makdonaldning Muqaddas Kitobga yozgan sharhlari</p>
-            <p>Uilyam Makdonaldning fikrlari haqida</p>
             <h3 className="text-xl/16 font-bold">Muallif haqida</h3>
             <p>Uilyam (Bill) Makdonald 1917-yil 7-yanvarda Massachusets shtatining Leominster shahrida tug‘ilgan.</p>
             <p>
