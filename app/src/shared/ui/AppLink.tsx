@@ -8,7 +8,7 @@ const linkVariants = cva("transition-color duration-200 ", {
     variant: {
       default: "text-gray-600 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-300",
       contrast: "text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400",
-      button: ""
+      button: "",
     },
   },
   defaultVariants: {

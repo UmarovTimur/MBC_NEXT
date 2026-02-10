@@ -18,18 +18,17 @@ interface BooksListProps {
   className?: string;
 }
 
-export function BooksList({className}: BooksListProps) {
+export function BooksList({ className }: BooksListProps) {
   const manifest = useBible();
   const params = useParams();
   const { t } = useI18n();
 
-  const currentBibleId = params.bible as string ?? manifest.bibles[0].bibleName;
+  const currentBibleId = (params.bible as string) ?? manifest.bibles[0].bibleName;
   const currentBible = manifest.bibles.find((b) => b.bibleName === currentBibleId);
 
   const currentBookId = params.bookId as string;
-  const currentBook = currentBible?.books.find(
-    (b: { id: string; name: string; chapters: string[] }) => b.id === currentBookId,
-  )?.id ?? "";
+  const currentBook =
+    currentBible?.books.find((b: { id: string; name: string; chapters: string[] }) => b.id === currentBookId)?.id ?? "";
 
   if (!currentBible) return null;
 
@@ -38,7 +37,7 @@ export function BooksList({className}: BooksListProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className={cn("", className)} >{t("books")}</Button>
+        <Button className={cn("", className)}>{t("books")}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuGroup>
@@ -53,7 +52,9 @@ export function BooksList({className}: BooksListProps) {
               asChild
               key={b.id}
             >
-              <AppLink href={`/${currentBibleId}/${b.id}/0`}>{b.name}</AppLink>
+              <AppLink variant="button" href={`/${currentBibleId}/${b.id}/0`}>
+                {b.name}
+              </AppLink>
             </DropdownMenuItem>
           ))}
         </DropdownMenuGroup>
