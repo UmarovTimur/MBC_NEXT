@@ -12,9 +12,12 @@ import { BibleUiProvider } from "@/features/bible-navigation";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Barclay",
-  description: "",
+  title: "MBC",
+  description: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
   icons: "/favicon.ico",
+  openGraph: {
+    images: ["https://kitobook.com/images/mcdonald.jpg"],
+  },
 };
 
 interface RootLayoutProps {
@@ -26,20 +29,22 @@ export default function RootLayout({ children }: RootLayoutProps) {
   const { dict } = getI18n();
 
   return (
-    <html className={notoSansFont.variable} lang={process.env.APP_LANG}>
-      <I18nProvider dict={dict}>
-        <ThemeProvider>
-          <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
+    <html className={notoSansFont.variable} lang={process.env.APP_LANG} suppressHydrationWarning>
+      <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
+        <I18nProvider dict={dict}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <ManifestProvider manifest={manifest}>
               <BibleUiProvider>
                 <Navbar />
-                <Suspense>{children}</Suspense>
+                <main className="grow mt-10 lg:mt-16">
+                  <Suspense>{children}</Suspense>
+                </main>
                 <Footer />
               </BibleUiProvider>
             </ManifestProvider>
-          </body>
-        </ThemeProvider>
-      </I18nProvider>
+          </ThemeProvider>
+        </I18nProvider>
+      </body>
     </html>
   );
 }

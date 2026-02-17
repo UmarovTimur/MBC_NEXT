@@ -3,6 +3,7 @@ import { Bible } from "@/entities/bible/lib/bible";
 import { bibleManager } from "@/entities/bible/server";
 import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-navigation";
 import { cn } from "@/shared/lib/utils";
+import { AppLink } from "@/shared/ui/AppLink";
 import { notFound } from "next/navigation";
 
 interface BibleViewerProps {
@@ -35,7 +36,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     notFound();
   }
   return (
-    <div className={cn("mb-8  md:mb-12", [className])}>
+    <div className={cn("mb-8 md:mb-12", [className])}>
       <div className="flex gap-x-4 items-center">
         <ChapterLink direction="prev" currentChapter={chapter} />
         <BooksList className="lg:hidden inline-block grow" />
@@ -49,10 +50,17 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
           " lg:flex justify-center gap-5 [&_strong]:font-bold",
         )}
       >
-        <div className={cn("basis-2/3 pt-6")}>
+        <div className={cn("basis-2/3 pt-4")}>
+          <AppLink href="/">
+            <img
+              className="ml-4 rounded-sm hidden md:inline float-right"
+              src="https://kitobook.com/images/mcdonald.jpg"
+              alt="MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari"
+            />
+          </AppLink>
           <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
-          <h2 className="text-2xl mb-4 leading-12">{subTitle}</h2>
-          <div className="[&>p]:mb-4 " dangerouslySetInnerHTML={{ __html: content }} />
+          <h2 className="text-2xl my-4">{subTitle}</h2>
+          <div className="[&>p]:mb-4" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
         {attachedContent && (

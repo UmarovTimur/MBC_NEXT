@@ -13,7 +13,7 @@ export default function HomePage() {
   // }, [router]);
 
   return (
-    <main className="mt-8 lg:mt-16">
+    <>
       <ContainerWidth>
         <div className="py-4 sm:py-6 lg:py-8 rounded-lg overflow-hidden">
           <div className="rounded-lg relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover">
@@ -32,6 +32,6 @@ export default function HomePage() {
           </div>
         </div>
       </ContainerWidth>
-    </main>
+    </>
   );
 }

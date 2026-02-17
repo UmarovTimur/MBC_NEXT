@@ -1,7 +1,7 @@
 "use client";
 
-import { useContext } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
+import { useTheme as nextUseTheme } from "next-themes";
+import { Theme } from "./ThemeContext";
 
 interface useThemeResult {
   toggleTheme: () => void;
@@ -9,16 +9,15 @@ interface useThemeResult {
 }
 
 export function useTheme(): useThemeResult {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme } = nextUseTheme();
 
   const toggleTheme = () => {
-    const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
-    setTheme?.(newTheme);
-    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-  }
+    if (!theme) return;
+    setTheme?.(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
+  };
 
   return {
-    theme, 
-    toggleTheme
-  }
+    theme: theme as Theme | undefined,
+    toggleTheme,
+  };
 }
