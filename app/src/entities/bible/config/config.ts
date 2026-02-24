@@ -1,4 +1,4 @@
-import { AZ_BOOKS_NAMES } from "../model/mapping";
+import { UZ_BOOKS_NAMES } from "../model/mapping";
 import { BibleViewMode } from "../model/types";
 
 export interface BibleConfig {
@@ -14,17 +14,20 @@ export interface BibleConfig {
 }
 
 export const BIBLES_CONFIG: Record<string, BibleConfig> = {
-  barclay: {
-    primary: "Barclay şərhləri",
-    attachment: "azb",
-    defaultView: "split-screen",
-    mappingBible: AZ_BOOKS_NAMES,
-    chapterSlug: "-ci fəsil",
-    introductionName: "Giriş",
-  },
-  azb: {
-    primary: `Azərbaycan dilində\nMüqəddəs Kitab`,
+  "muqaddas-kitob": {
     defaultView: "single-column",
+    primary: "Muqaddas Kitob ONLINE",
+    mappingBible: UZ_BOOKS_NAMES,
+    chapterSlug: "Bob",
+    introductionName: "Kirish",
     attachment: null,
+  },
+  mbc: {
+    primary: `Azərbaycan dilində\nMüqəddəs Kitab`,
+    mappingBible: UZ_BOOKS_NAMES,
+    chapterSlug: "Bob",
+    defaultView: "split-screen",
+    introductionName: "Kirish",
+    attachment: "muqaddas-kitob",
   },
 };
