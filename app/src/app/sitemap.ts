@@ -30,8 +30,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const manager = bibleManager;
   if (!manager) return [];
 
-  const domain = "https://kitobook.com";
-  const baseName = "/mcdonald";
+  const domain = process.env.DOMAIN || "https://kitobook.com";
+  const baseName = process.env.BASE_PATH || "";
   const baseURL = `${domain}${baseName}`;
 
   const biblePages: MetadataRoute.Sitemap = [];

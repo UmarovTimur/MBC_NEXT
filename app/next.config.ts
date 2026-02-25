@@ -3,9 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   allowedDevOrigins: ["local-origin.dev", "*.local-origin.dev"],
-  // basePath: "/mcdonald",
+  basePath: process.env.BASE_PATH || "",
   images: {
-    unoptimized: true, 
+    unoptimized: true,
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
