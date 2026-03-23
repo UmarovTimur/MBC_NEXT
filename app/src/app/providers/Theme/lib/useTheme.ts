@@ -9,15 +9,14 @@ interface useThemeResult {
 }
 
 export function useTheme(): useThemeResult {
-  const { theme, setTheme } = nextUseTheme();
+  const { resolvedTheme, setTheme } = nextUseTheme();
 
   const toggleTheme = () => {
-    if (!theme) return;
-    setTheme?.(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
+    setTheme?.(resolvedTheme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
   };
 
   return {
-    theme: theme as Theme | undefined,
+    theme: resolvedTheme as Theme | undefined,
     toggleTheme,
   };
 }
