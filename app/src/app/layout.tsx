@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     template: "%s | MBC sharhlari",
   },
   description:
+    // eslint-disable-next-line max-len
     "William MakDonaldning Muqaddas Kitobga yozgan sharhlari o'zbek tilida. Barcha kitoblar va boblar bo'yicha bepul onlayn o'qish.",
   icons: "/favicon.ico",
   openGraph: {
