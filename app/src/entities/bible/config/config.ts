@@ -14,6 +14,7 @@ export interface BibleConfig {
   isIndependent?: boolean;
 }
 
-const configs: Record<string, Record<string, BibleConfig>> = { uz, az } as Record<string, Record<string, BibleConfig>>;
-
-export const BIBLES_CONFIG: Record<string, BibleConfig> = configs[process.env.APP_LANG || "uz"];
+export const BIBLES_CONFIG: Record<string, BibleConfig> = {
+  ...uz,
+  ...az,
+} as Record<string, BibleConfig>;
