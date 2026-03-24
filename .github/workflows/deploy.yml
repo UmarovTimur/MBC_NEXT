@@ -2,8 +2,9 @@ name: Build and Deploy to FTP
 
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - main
+      - az
   workflow_dispatch:
 
 jobs:
@@ -21,12 +22,12 @@ jobs:
           cache-dependency-path: "app/yarn.lock"
 
       - name: Create .env file (main → uz)
-        if: github.ref_name == 'main' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/main'
+        if: github.ref_name == 'main'
         working-directory: ./app
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Create .env file (az)
-        if: github.ref_name == 'az' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/az'
+        if: github.ref_name == 'az'
         working-directory: ./app
         run: echo "${{ secrets.ENV_FILE_AZ }}" > .env
 
@@ -41,7 +42,7 @@ jobs:
           NODE_ENV: production
 
       - name: Upload to FTP (uz)
-        if: github.ref_name == 'main' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/main'
+        if: github.ref_name == 'main'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -51,7 +52,7 @@ jobs:
           server-dir: /
 
       - name: Upload to FTP (az)
-        if: github.ref_name == 'az' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/az'
+        if: github.ref_name == 'az'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER_AZ }}
