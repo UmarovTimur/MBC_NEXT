@@ -11,12 +11,19 @@ import { Navbar } from "@/widgets/Navbar";
 import { BibleUiProvider } from "@/features/bible-navigation";
 import { Suspense } from "react";
 
+const domain = process.env.DOMAIN || "https://kitobook.com/";
+
 export const metadata: Metadata = {
-  title: "MBC",
-  description: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
+  title: {
+    default: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
+    template: "%s | MBC sharhlari",
+  },
+  description:
+    "William MakDonaldning Muqaddas Kitobga yozgan sharhlari o'zbek tilida. Barcha kitoblar va boblar bo'yicha bepul onlayn o'qish.",
   icons: "/favicon.ico",
   openGraph: {
-    images: ["https://kitobook.com/images/mcdonald.jpg"],
+    siteName: "MBC — Muqaddas Kitob Sharhlari",
+    images: [`${domain}images/mcdonald.jpg`],
   },
 };
 

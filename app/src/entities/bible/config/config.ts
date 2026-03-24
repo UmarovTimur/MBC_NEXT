@@ -1,4 +1,5 @@
-import { UZ_BOOKS_NAMES } from "../model/mapping";
+import uz from "@/shared/config/bibles/uz.json";
+import az from "@/shared/config/bibles/az.json";
 import { BibleViewMode } from "../model/types";
 
 export interface BibleConfig {
@@ -13,21 +14,6 @@ export interface BibleConfig {
   isIndependent?: boolean;
 }
 
-export const BIBLES_CONFIG: Record<string, BibleConfig> = {
-  "muqaddas-kitob": {
-    defaultView: "single-column",
-    primary: "Muqaddas Kitob ONLINE",
-    mappingBible: UZ_BOOKS_NAMES,
-    chapterSlug: "Bob",
-    introductionName: "Kirish",
-    attachment: null,
-  },
-  mbc: {
-    primary: `Azərbaycan dilində\nMüqəddəs Kitab`,
-    mappingBible: UZ_BOOKS_NAMES,
-    chapterSlug: "Bob",
-    defaultView: "split-screen",
-    introductionName: "Kirish",
-    attachment: "muqaddas-kitob",
-  },
-};
+const configs: Record<string, Record<string, BibleConfig>> = { uz, az } as Record<string, Record<string, BibleConfig>>;
+
+export const BIBLES_CONFIG: Record<string, BibleConfig> = configs[process.env.APP_LANG || "uz"];

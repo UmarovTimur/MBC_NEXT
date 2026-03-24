@@ -2,16 +2,13 @@ name: Build and Deploy to FTP
 
 on:
   push:
-    branches:
-      - main
     tags:
       - "*"
   workflow_dispatch:
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,9 +20,15 @@ jobs:
           cache: "yarn"
           cache-dependency-path: "app/yarn.lock"
 
-      - name: Create .env file
+      - name: Create .env file (main → uz)
+        if: github.ref_name == 'main' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/main'
         working-directory: ./app
         run: echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Create .env file (az)
+        if: github.ref_name == 'az' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/az'
+        working-directory: ./app
+        run: echo "${{ secrets.ENV_FILE_AZ }}" > .env
 
       - name: Install dependencies
         working-directory: ./app
@@ -37,28 +40,22 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: out
-          path: app/out/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: out
-          path: app/out/
-
-      - name: Upload to FTP
+      - name: Upload to FTP (uz)
+        if: github.ref_name == 'main' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./app/out/
+          server-dir: /
+
+      - name: Upload to FTP (az)
+        if: github.ref_name == 'az' || startsWith(github.ref, 'refs/tags/') && github.event.base_ref == 'refs/heads/az'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER_AZ }}
+          username: ${{ secrets.FTP_USERNAME_AZ }}
+          password: ${{ secrets.FTP_PASSWORD_AZ }}
           local-dir: ./app/out/
           server-dir: /
