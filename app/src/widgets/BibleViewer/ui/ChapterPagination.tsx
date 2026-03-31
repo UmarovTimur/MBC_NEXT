@@ -1,12 +1,14 @@
 import { Chapter } from "@/entities/bible";
 import { bibleManager } from "@/entities/bible/server";
+import { cn } from "@/shared/lib/utils";
+import { buttonVariants } from "@/shared/ui/button";
 import {
   Pagination,
   PaginationContent,
   PaginationEllipsis,
   PaginationItem,
-  PaginationLink,
 } from "@/shared/ui/pagination";
+import Link from "next/link";
 
 interface ChapterPaginationProps {
   chapter: Chapter;
@@ -58,9 +60,13 @@ export const ChapterPagination = ({ chapter }: ChapterPaginationProps) => {
       <PaginationContent className="flex-wrap">
         {hasIntro && (
           <PaginationItem>
-            <PaginationLink href={chapterHref(introChapter!.chapterId)} isActive={isIntroActive} size="default">
+            <Link
+              href={chapterHref(introChapter!.chapterId)}
+              aria-current={isIntroActive ? "page" : undefined}
+              className={cn(buttonVariants({ variant: isIntroActive ? "outline" : "ghost", size: "default" }))}
+            >
               {introducingName}
-            </PaginationLink>
+            </Link>
           </PaginationItem>
         )}
 
@@ -71,12 +77,16 @@ export const ChapterPagination = ({ chapter }: ChapterPaginationProps) => {
             </PaginationItem>
           ) : (
             <PaginationItem key={page}>
-              <PaginationLink
+              <Link
                 href={chapterHref(numberedChapters[page - 1].chapterId)}
-                isActive={!isIntroActive && page === currentPage}
+                aria-current={!isIntroActive && page === currentPage ? "page" : undefined}
+                className={cn(buttonVariants({
+                  variant: !isIntroActive && page === currentPage ? "outline" : "ghost",
+                  size: "icon",
+                }))}
               >
                 {page}
-              </PaginationLink>
+              </Link>
             </PaginationItem>
           ),
         )}
