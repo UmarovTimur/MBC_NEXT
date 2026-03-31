@@ -86,7 +86,11 @@ export class Bible {
   }
 
   getBookName(bookId: number): string {
-    return this.mappingBook?.[bookId - 1] ?? bookId.toString(); 
+    return this.mappingBook?.[bookId - 1] ?? bookId.toString();
+  }
+
+  getIntroducingName(): string | undefined {
+    return this.introducingName || undefined;
   }
 
   async getChapterContent(bookId: string, chapterId: string): Promise<string | null> {
@@ -113,9 +117,9 @@ export class Bible {
   getChapterTitle(params: Chapter): string {
     if (!this.mappingBook) {
       return this.primaryTitle;
-    } 
+    }
     const bookName = this.getBookName(Number(params.bookId));
-    const chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId}${this.chapterSlug}`
-    return `${bookName}: ${chapterName}`; 
+    const chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId} ${this.chapterSlug}`
+    return `${bookName}: ${chapterName}`;
   }
 }

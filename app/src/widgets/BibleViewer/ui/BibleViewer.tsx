@@ -5,6 +5,7 @@ import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-n
 import { cn } from "@/shared/lib/utils";
 import { AppLink } from "@/shared/ui/AppLink";
 import { notFound } from "next/navigation";
+import { ChapterPagination } from "./ChapterPagination";
 
 interface BibleViewerProps {
   className?: string;
@@ -17,7 +18,6 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
   const content = await bible.getChapterContent(chapter.bookId, chapter.chapterId);
   const title = bible.getChapterTitle(chapter);
   const subTitle = bible.primaryTitle === title ? "" : bible.primaryTitle;
-
   // ======================= attached Bible =====================================
   let attachedContent: string | null = null;
   let attachedBible: Bible | undefined = undefined;
@@ -31,7 +31,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
   }
 
   const attachedTitle = attachedBible?.primaryTitle;
-  // ======================= NotFound ==L==========================================
+  // ======================= NotFound ==========================================
   if (!content) {
     notFound();
   }
@@ -70,7 +70,11 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
           </div>
         )}
       </div>
-      <div className="flex gap-x-4 pt-8 items-center">
+
+
+      <ChapterPagination chapter={chapter} />
+
+      <div className="flex gap-x-4 pt-4 items-center">
         <ChapterLink className="basis-3/12" direction="prev" currentChapter={chapter} />
         {/* <BooksList className="lg:hidden inline-block grow" /> */}
         <ChaptersTableTrigger variant="outline" className="lg:hidden inline-block grow" />
