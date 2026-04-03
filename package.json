@@ -1,0 +1,8 @@
+{
+  "name": "mbc-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
