@@ -12,6 +12,7 @@ export class Bible {
   public readonly mappingBook?: string[];
   public readonly primaryTitle: string;
   private readonly chapterSlug?: string;
+  private readonly mappingChapterSlug?: string[];
   private readonly introducingName?: string;
 
   constructor(basePath: string, books: Book[], configMap: Record<string, BibleConfig>) {
@@ -23,7 +24,8 @@ export class Bible {
     this.primaryTitle = configMap[this.bibleName]?.primary;
     this.mappingBook = configMap[this.bibleName]?.mappingBible;
     this.chapterSlug = configMap[this.bibleName]?.chapterSlug ?? "";
-    this.introducingName = configMap[this.bibleName]?.introductionName ?? "0";
+    this.mappingChapterSlug = configMap[this.bibleName]?.mappingChapterSlug;
+    this.introducingName = configMap[this.bibleName]?.introductionName ?? this.mappingChapterSlug?.[0] ?? "0";
   }
 
   static async init(basePath: string, configMap: Record<string, BibleConfig>): Promise<Bible> {
@@ -111,7 +113,12 @@ export class Bible {
       return this.primaryTitle;
     }
     const bookName = this.getBookName(Number(params.bookId));
-    const chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId} ${this.chapterSlug}`
+    let chapterName: string | undefined;
+    if (this.mappingChapterSlug) {
+      chapterName = this.mappingChapterSlug[Number(params.chapterId)];
+    } else {
+      chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId} ${this.chapterSlug}`;
+    }
     return `${bookName}: ${chapterName}`;
   }
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./styles/globals.css";
 import { Footer } from "@/widgets/Footer";
 import { ThemeProvider } from "./providers/Theme";
-import { ManifestProvider } from "@/entities/bible/context/ManifestProvider";
+import { ManifestProvider } from "@/entities/bible";
 import { bibleManager } from "@/entities/bible/server";
 import { I18nProvider } from "@/app/providers/I18n";
 import { getI18n } from "@/app/providers/I18n/server";
@@ -11,15 +11,20 @@ import { Navbar } from "@/widgets/Navbar";
 import { BibleUiProvider } from "@/features/bible-navigation";
 import { Suspense } from "react";
 
+const domain = process.env.DOMAIN || "https://kitobook.com/";
+
 export const metadata: Metadata = {
   title: {
-    default: "Vilyam Barklinin şərhləri",
-    template: "%s | Barclay şərhləri",
+    default: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
+    template: "%s | MBC sharhlari",
   },
-  description: "Professor Əhdi-Cədidi və qədim yunan dilini tədris etmişdir",
-  icons: "",
+  description:
+    // eslint-disable-next-line max-len
+    "William MakDonaldning Muqaddas Kitobga yozgan sharhlari o'zbek tilida. Barcha kitoblar va boblar bo'yicha bepul onlayn o'qish.",
+  icons: "/favicon.ico",
   openGraph: {
-    siteName: "Barclay şərhləri",
+    siteName: "MBC — Muqaddas Kitob Sharhlari",
+    images: [`${domain}images/mcdonald.jpg`],
   },
 };
 

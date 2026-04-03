@@ -1,1 +1,1 @@
-export { ContainerWidth } from "@mbc/ui";
+export { ContainerWidth } from "./ui/Container";
