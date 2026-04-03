@@ -20,9 +20,14 @@ export default function HomePage() {
                   Tədqiqatları Departamentinin professoru tərəfindən yazılmışdır.
                   Professor Əhdi-Cədidi və qədim yunan dilini tədris etmişdir.
                 </p>
-                <Button size="lg" variant="outline" asChild className="text-foreground">
-                  <AppLink href="/barclay/40/0">Oxu</AppLink>
-                </Button>
+                <div className="flex gap-3 justify-center flex-wrap">
+                  <Button size="lg" variant="outline" asChild className="text-foreground">
+                    <AppLink href="/barclay/40/0">Oxu</AppLink>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="text-foreground">
+                    <AppLink href="/books">Kitablar</AppLink>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

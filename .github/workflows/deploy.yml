@@ -45,7 +45,7 @@ jobs:
           server-dir: /
 
   deploy-az:
-    name: Build & Deploy az (server)
+    name: Build & Deploy az (static)
     if: github.ref_name == 'az'
     runs-on: ubuntu-latest
     steps:
@@ -71,11 +71,11 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Upload .next to FTP
+      - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER_AZ }}
           username: ${{ secrets.FTP_USERNAME_AZ }}
           password: ${{ secrets.FTP_PASSWORD_AZ }}
-          local-dir: ./apps/az/.next/
-          server-dir: /.next/
+          local-dir: ./apps/az/out/
+          server-dir: /

@@ -1,0 +1,20 @@
+import type { Book } from "@/entities/book";
+import { BookCard } from "@/entities/book";
+import { ContainerWidth } from "@/shared/ui/Container";
+
+interface BooksPageProps {
+  books: Book[];
+}
+
+export function BooksPage({ books }: BooksPageProps) {
+  return (
+    <ContainerWidth>
+      <h1 className="text-3xl font-black mb-8">Kitablar</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        {books.map((book) => (
+          <BookCard key={book.id} book={book} />
+        ))}
+      </div>
+    </ContainerWidth>
+  );
+}
