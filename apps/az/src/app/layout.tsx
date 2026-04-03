@@ -15,15 +15,14 @@ const domain = process.env.DOMAIN || "https://kitobook.com/";
 
 export const metadata: Metadata = {
   title: {
-    default: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
-    template: "%s | MBC sharhlari",
+    default: "Vilyam Barklinin Müqəddəs Kitab şərhləri — Azərbaycan dilində",
+    template: "%s | Barclay şərhləri",
   },
   description:
-    // eslint-disable-next-line max-len
-    "William MakDonaldning Muqaddas Kitobga yozgan sharhlari o'zbek tilida. Barcha kitoblar va boblar bo'yicha bepul onlayn o'qish.",
+    "Vilyam Barklinin Müqəddəs Kitaba yazdığı şərhlər Azərbaycan dilində. Bütün kitablar və fəsillər üzrə pulsuz onlayn oxu.",
   icons: "/favicon.ico",
   openGraph: {
-    siteName: "MBC — Muqaddas Kitob Sharhlari",
+    siteName: "Barclay — Müqəddəs Kitab Şərhləri",
     images: [`${domain}images/mcdonald.jpg`],
   },
 };
