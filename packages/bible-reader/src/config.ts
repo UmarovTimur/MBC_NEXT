@@ -1,6 +1,7 @@
 import { BibleViewMode } from "./model/types";
 
 export interface BibleConfig {
+  displayName?: string;
   primary: string;
   secondary?: string[];
   attachment: string | null;
@@ -11,4 +12,5 @@ export interface BibleConfig {
   formatingStyle?: string;
   introductionName?: string;
   isIndependent?: boolean;
+  isCommentary?: boolean;
 }

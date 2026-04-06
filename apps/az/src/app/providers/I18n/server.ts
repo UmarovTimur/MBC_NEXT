@@ -4,11 +4,11 @@ import az from "@/shared/config/dictionary/az.json";
 const dictionaries: Record<string, Record<string, string>> = { az };
 
 export const getI18n = () => {
-  const lang = process.env.APP_LANG || "az";
-  const dict = dictionaries[lang];
+  const language = process.env.APP_LANG || "az";
+  const dictionary = dictionaries[language];
 
   const t = (key: string) => {
-    let value: any = dict;
+    let value: any = dictionary;
 
     value = value?.[key];
 
@@ -19,5 +19,5 @@ export const getI18n = () => {
     return value || key;
   };
 
-  return { t, dict, lang };
+  return { t, dictionary, language };
 };

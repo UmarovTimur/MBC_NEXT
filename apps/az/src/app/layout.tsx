@@ -33,12 +33,12 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   const manifest = bibleManager.getManifest();
-  const { dict } = getI18n();
+  const { dictionary } = getI18n();
 
   return (
     <html className={notoSansFont.variable} lang={process.env.APP_LANG} suppressHydrationWarning>
       <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
-        <I18nProvider dict={dict}>
+        <I18nProvider dict={dictionary}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <ManifestProvider manifest={manifest}>
               <BibleUiProvider>

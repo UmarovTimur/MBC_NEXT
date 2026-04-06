@@ -13,7 +13,7 @@ export function BookCard({ book }: BookCardProps) {
         <img
           src={book.imageUrl}
           alt={book.title}
-          className="w-full aspect-[3/4] object-cover rounded-md"
+          className="w-full aspect-3/4 object-cover rounded-md"
         />
       )}
       <h2

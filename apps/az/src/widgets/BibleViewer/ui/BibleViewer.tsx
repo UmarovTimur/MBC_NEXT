@@ -46,7 +46,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
 
       <div
         className={cn(
-          "[&_a]:text-blue-600 [&_a]:font-bold",
+          "[&_a]:text-blue-600 [&_a]:font-bold text-foreground dark:text-muted-foreground",
           " lg:flex justify-center gap-5 [&_strong]:font-bold",
         )}
       >
