@@ -1,8 +1,15 @@
 {
-  "name": "mbc-monorepo",
+  "name": "MBC_NEXT",
+  "packageManager": "yarn@4.13.0",
   "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev:az": "yarn workspace @mbc/az dev",
+    "dev:uz": "yarn workspace @mbc/uz dev",
+    "build:az": "yarn workspace @mbc/az build",
+    "build:uz": "yarn workspace @mbc/uz build"
+  }
 }
