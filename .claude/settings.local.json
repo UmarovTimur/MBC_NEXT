@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yarn workspace:*)",
+      "Bash(yarn workspaces:*)",
+      "Bash(yarn dev:admin)"
+    ]
+  }
+}

@@ -21,7 +21,7 @@ export const Navbar = () => {
       <div className="px-4 relative flex items-center justify-between">
         <div className="flex gap-x-6 items-center">
           <AppLink href="/" className="text-xl font-bold text-black dark:text-white/80">
-            <span className="text-green-700 uppercase">Barclay</span>
+            <span className="text-green-700">Incilaz</span>
           </AppLink>
 
           <NavBibleLinks bibles={independentBibles} />
