@@ -11,6 +11,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default buildConfig({
+  serverURL: process.env.PAYLOAD_SERVER_URL || 'http://localhost:8001',
   admin: {
     user: 'users',
   },

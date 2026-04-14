@@ -1,21 +1,21 @@
-import type { WpBook } from "@/shared/lib/wp";
+import type { PayloadBook } from "@/shared/lib/payload";
 
 export type Book = {
-  id: number;
+  id: string;
   slug: string;
   title: string;
-  description: string;
-  content: string;
+  excerpt: string;
+  content: unknown;
   imageUrl: string;
 };
 
-export function mapWpBook(post: WpBook): Book {
+export function mapPayloadBook(doc: PayloadBook): Book {
   return {
-    id: post.id,
-    slug: post.slug,
-    title: post.title.rendered,
-    description: post.excerpt.rendered,
-    content: post.content.rendered,
-    imageUrl: post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? "",
+    id: doc.id,
+    slug: doc.slug,
+    title: doc.title,
+    excerpt: doc.excerpt ?? '',
+    content: doc.content,
+    imageUrl: doc.coverImage?.url ?? '',
   };
 }

@@ -33,6 +33,7 @@ export function BooksList({ className }: BooksListProps) {
   if (!currentBible) return null;
 
   const books = currentBible.books;
+  const firstChapter = books.find((b) => b.id === currentBookId)?.chapters[0] ?? "0";
 
   return (
     <DropdownMenu>
@@ -52,7 +53,7 @@ export function BooksList({ className }: BooksListProps) {
               asChild
               key={b.id}
             >
-              <AppLink variant="button" href={`/${currentBibleId}/${b.id}/0`}>
+              <AppLink variant="button" href={`/${currentBibleId}/${b.id}/${firstChapter}`}>
                 {b.name}
               </AppLink>
             </DropdownMenuItem>

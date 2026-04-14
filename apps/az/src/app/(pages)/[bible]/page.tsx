@@ -45,9 +45,9 @@ export default async function BibleOverviewPage({ params }: Props) {
 
   const sectionBgClass: Record<string, string> = {
     "paper.webp":
-      "bg-[url('/images/paper.webp')] dark:bg-[url('/images/paper-dark.webp')]",
+      "light:bg-[url('/images/paper.webp')] dark:bg-transparent ",
     "paper-blue.webp":
-      "bg-[url('/images/paper-blue.webp')] dark:bg-[url('/images/paper-dark.webp')]",
+      "light:bg-[url('/images/paper-blue.webp')] dark:bg-transparent",
   };
 
   const renderSection = (
@@ -65,23 +65,23 @@ export default async function BibleOverviewPage({ params }: Props) {
 
     return (
       <div
-        className={`mb-12 rounded-xl px-8 py-6 bg-cover bg-center ${sectionBgClass[lightBg] ?? ""}`}
+        className={`mb-12 rounded-xl border px-8 py-6 bg-cover bg-center ${sectionBgClass[lightBg] ?? ""}`}
       >
         <div className="flex gap-8">
           <h2
-            className="font-serif text-2xl text-muted-foreground shrink-0 w-36 pt-1"
+            className="flex justify-center items-center font-serif text-3xl font-bold flex-1/2 w-36 pt-1"
             style={{ fontVariant: "small-caps" }}
           >
             {title}
           </h2>
-          <div className="grid grid-cols-3 gap-x-12 gap-y-3 grow">
+          <div className="flex-1/2 grid grid-cols-3 gap-x-12 gap-y-3 grow">
             {cols.map((col, ci) => (
               <div key={ci} className="flex flex-col gap-1">
                 {col.map((book) => (
                   <AppLink
                     key={book.id}
                     href={`/${bibleName}/${book.id}/${firstChapter(book.id)}`}
-                    className="text-sm tracking-widest uppercase hover:text-primary transition-colors"
+                    className="text-base text-foreground hover:text-primary transition-colors"
                   >
                     {bible.getShortBookName(+book.id)}
                   </AppLink>
@@ -96,7 +96,21 @@ export default async function BibleOverviewPage({ params }: Props) {
 
   return (
     <ContainerWidth className="py-10">
-      <h1 className="text-4xl text-center font-bold mb-10">{cfg.primary}</h1>
+      {(bibleName == 'barclay') && (<div className="py-12">
+        <div className="relative overflow-hidden bg-cover">
+          <div className="flex flex-col justify-center gap-y-8 ">
+            <div className="font-bold text-3xl max-w-xl sm:text-5xl lg:text-6xl">
+              Vilyam Barklinin şərhləri
+              <p className="mb-4 dark:text-white/60 mt-4 text-base font-normal">
+                Müqəddəs Kitabın şərhi Qlazqo Universitetinin Əhdi-Cədid
+                Tədqiqatları Departamentinin professoru tərəfindən yazılmışdır.
+                Professor Əhdi-Cədidi və qədim yunan dilini tədris etmişdir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div >) || (<h1 className="text-4xl font-bold mb-10">{cfg.primary}</h1>)}
+
       {renderSection("Əhdi-Ətiq", otBooks, "paper.webp")}
       {renderSection("Əhdi-Cədid", ntBooks, "paper-blue.webp")}
     </ContainerWidth>
