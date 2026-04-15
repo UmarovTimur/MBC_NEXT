@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const raw = await fetchBookBySlug(slug);
+  const raw = await fetchBookBySlug(decodeURIComponent(slug));
   if (!raw) return {};
   const book = mapPayloadBook(raw);
   return {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BookDetailPage({ params }: Props) {
   const { slug } = await params;
-  const raw = await fetchBookBySlug(slug);
+  const raw = await fetchBookBySlug(decodeURIComponent(slug));
   if (!raw) notFound();
 
   const book = mapPayloadBook(raw);

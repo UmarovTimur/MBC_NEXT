@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/shared/ui/sheet";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
+import { NavBibleLinks } from "./NavBibleLinks";
 
 export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,19 +31,16 @@ export const MobileNavbar = () => {
             <SheetTitle>
               <Link href="/">
                 <span className="text-xl font-bold text-black dark:text-white/80">
-                  <span className="text-green-700 uppercase">Barclay</span>
+                  <span className="text-green-700">Incilaz</span>
                 </span>
               </Link>
             </SheetTitle>
           </SheetHeader>
-          <div className="mt-4 text-xl grid gap-4 px-4">
-            <AppLink href="https://kitobook.com/">KİTABLAR</AppLink>
-            <AppLink href="https://www.kitobook.com/kitoblar/">Audio kitablar</AppLink>
-            <AppLink href="https://www.kitobook.com/category/book/hikoyalar-kitobi/">Hekayələr</AppLink>
-            <AppLink href="https://kitobook.com/uzmusic">İlahilər</AppLink>
-            <AppLink href="https://www.kitobook.com/video/kino/">Filmlər və cizgi filmləri</AppLink>
-            <AppLink href="https://www.kitobook.com/yes">Xilas haqqında müjdə</AppLink>
-            <AppLink href="https://www.kitobook.com/gospel/">Xoş xəbər hekayələri</AppLink>
+          <div className="mt-4 flex flex-col gap-y-3">
+            <NavBibleLinks className="flex-col gap-y-3 items-start" linkClassName="text-2xl px-4 py-2" />
+            <Button asChild variant="ghost" className="justify-start">
+              <AppLink className="text-2xl px-4 py-2" href="/books">Kitablar</AppLink>
+            </Button>
           </div>
           <div className="mt-6 flex items-center justify-between px-4">
             <ThemeSwitcher />

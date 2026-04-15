@@ -7,9 +7,7 @@ import { NavBibleLinks } from "./NavBibleLinks";
 import { AppLink } from "@/shared/ui/AppLink";
 import { Button } from "@/shared/ui/button";
 
-const independentBibles = Object.entries(BIBLES_CONFIG).filter(
-  ([, cfg]) => cfg.isIndependent
-);
+
 
 export const Navbar = () => {
   return (
@@ -20,14 +18,14 @@ export const Navbar = () => {
       )}
     >
       <div className="px-4 relative flex items-center justify-between">
-        <div className="flex gap-x-3 items-center">
+        <div className="flex gap-x-1 items-center">
 
-          <AppLink href="/" className="text-xl mb-1 hover:text-green-700  text-green-700 font-bold dark:text-white/80">
+          <AppLink href="/" className="text-xl lg:mb-1 mr-2 hover:text-green-700  text-green-700 font-bold dark:text-white/80">
             Incilaz
           </AppLink>
 
 
-          <NavBibleLinks bibles={independentBibles} />
+          <NavBibleLinks className="hidden lg:flex" />
           <Button className="hidden lg:flex" asChild variant="ghost">
             <AppLink className="text-base" href="/books">Kitablar</AppLink>
           </Button>

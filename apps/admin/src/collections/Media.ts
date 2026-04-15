@@ -12,7 +12,17 @@ export const Media: CollectionConfig = {
   },
   upload: {
     staticDir: mediaDir,
-    staticURL: '/media',
+    formatOptions: {
+      format: 'webp',
+      options: { quality: 85 },
+    },
+    imageSizes: [
+      {
+        name: 'thumbnail',
+        width: 400,
+        formatOptions: { format: 'webp', options: { quality: 80 } },
+      },
+    ],
   },
   admin: {
     useAsTitle: 'alt',

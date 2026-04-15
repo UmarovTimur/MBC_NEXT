@@ -12,14 +12,14 @@ export function BookCard({ book }: BookCardProps) {
           <img
             src={book.imageUrl}
             alt={book.title}
-            className="w-full aspect-3/4 mb-2 object-cover rounded-sm"
+            className="mb-2 aspect-ratio-4/3 rounded object-cover"
           />
         )}
         {book.excerpt && (
-          <p className="text-sm text-muted-foreground">{book.excerpt}</p>
+          <p className="text-sm text-muted-foreground truncate">{book.excerpt}</p>
         )}
-        <p className="text-l mb-1  text-foreground font-bold">{book.title}</p>
-      </div >
+        <p className="text-l mb-1 text-foreground font-bold truncate">{book.title}</p>
+      </div>
     </AppLink>
   );
 }

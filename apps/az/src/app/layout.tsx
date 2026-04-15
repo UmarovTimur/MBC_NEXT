@@ -6,7 +6,7 @@ import { ManifestProvider } from "@/entities/bible";
 import { bibleManager } from "@/entities/bible/server";
 import { I18nProvider } from "@/app/providers/I18n";
 import { getI18n } from "@/app/providers/I18n/server";
-import { notoSansFont } from "@/shared/config/fonts";
+import { notoSansFont, robotoCondensedFont } from "@/shared/config/fonts";
 import { Navbar } from "@/widgets/Navbar";
 import { BibleUiProvider } from "@/features/bible-navigation";
 import { NavigationLoader } from "@mbc/ui";
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   const { dictionary } = getI18n();
 
   return (
-    <html className={notoSansFont.variable} lang={process.env.APP_LANG} suppressHydrationWarning>
+    <html className={`${notoSansFont.variable} ${robotoCondensedFont.variable}`} lang={process.env.APP_LANG} suppressHydrationWarning>
       <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
         <I18nProvider dict={dictionary}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <BibleUiProvider>
                 <Suspense><NavigationLoader /></Suspense>
                 <Navbar />
-                <main className="grow mt-10 lg:mt-16">
+                <main className="grow mt-10 py-10 lg:mt-16">
                   <Suspense>{children}</Suspense>
                 </main>
                 <Footer />

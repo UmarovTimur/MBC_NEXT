@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import az from "@/shared/config/dictionary/az.json";
 
-const dictionaries: Record<string, Record<string, string>> = { az };
+const dictionaries: Record<string, Record<string, any>> = { az };
 
 export const getI18n = () => {
   const language = process.env.APP_LANG || "az";
