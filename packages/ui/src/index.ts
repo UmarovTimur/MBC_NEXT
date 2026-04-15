@@ -40,6 +40,7 @@ export {
 } from "./ui/dropdown-menu";
 export { imageLoader } from "./ui/ImageLoader";
 export { NavigationLoader } from "./ui/NavigationLoader";
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "./ui/tooltip";
 export {
   Pagination,
   PaginationContent,

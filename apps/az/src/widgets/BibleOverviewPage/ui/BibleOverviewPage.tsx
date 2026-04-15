@@ -1,7 +1,7 @@
-import { AppLink } from "@/shared/ui/AppLink";
 import { ContainerWidth } from "@/shared/ui/Container";
 import type { BibleConfig } from "@/entities/bible/config/config";
-import { Button } from "@mbc/ui";
+import { TooltipProvider } from "@mbc/ui";
+import { BookButton } from "./BookButton";
 
 const OT_MAX = 39;
 
@@ -12,6 +12,7 @@ type Book = {
 
 type Bible = {
   books: Book[];
+  getBookName: (id: number) => string;
   getShortBookName: (id: number) => string;
 };
 
@@ -62,15 +63,12 @@ function BibleSection({
           {cols.map((col, ci) => (
             <div key={ci} className="flex flex-col gap-1">
               {col.map((book) => (
-                <Button variant="ghost">
-                  <AppLink
-                    key={book.id}
-                    href={`/${bibleName}/${book.id}/${firstChapter(book.id)}`}
-                    className="text-base uppercase font-bold text-foreground hover:text-primary transition-colors"
-                  >
-                    {bible.getShortBookName(+book.id)}
-                  </AppLink>
-                </Button>
+                <BookButton
+                  key={book.id}
+                  shortName={bible.getShortBookName(+book.id)}
+                  fullName={bible.getBookName(+book.id)}
+                  href={`/${bibleName}/${book.id}/${firstChapter(book.id)}`}
+                />
               ))}
             </div>
           ))}
@@ -91,42 +89,44 @@ export function BibleOverviewPage({ bibleName, cfg, bible }: BibleOverviewPagePr
   };
 
   return (
-    <ContainerWidth>
-      {bibleName === "barclay" ? (
-        <div className="relative overflow-hidden bg-cover mb-10">
-          <div className="flex flex-col max-w-xl justify-center gap-y-4">
-            <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl font-(family-name:--font-roboto-condensed)">
-              Vilyam Barklinin şərhləri
-            </h1>
-            <p className="mb-4 dark:text-white/60 text-base font-normal">
-              Müqəddəs Kitabın şərhi Qlazqo Universitetinin Əhdi-Cədid
-              Tədqiqatları Departamentinin professoru tərəfindən yazılmışdır.
-              Professor Əhdi-Cədidi və qədim yunan dilini tədris etmişdir.
-            </p>
+    <TooltipProvider>
+      <ContainerWidth>
+        {bibleName === "barclay" ? (
+          <div className="relative overflow-hidden bg-cover mb-10">
+            <div className="flex flex-col max-w-xl justify-center gap-y-4">
+              <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl font-(family-name:--font-roboto-condensed)">
+                Vilyam Barklinin şərhləri
+              </h1>
+              <p className="mb-4 dark:text-white/60 text-base font-normal">
+                Müqəddəs Kitabın şərhi Qlazqo Universitetinin Əhdi-Cədid
+                Tədqiqatları Departamentinin professoru tərəfindən yazılmışdır.
+                Professor Əhdi-Cədidi və qədim yunan dilini tədris etmişdir.
+              </p>
+            </div>
           </div>
-        </div>
-      ) : (
-        <h1 className="text-5xl font-bold mb-10 font-(family-name:--font-roboto-condensed)">
-          {cfg.primary}
-        </h1>
-      )}
+        ) : (
+          <h1 className="text-5xl font-bold mb-10 font-(family-name:--font-roboto-condensed)">
+            {cfg.primary}
+          </h1>
+        )}
 
-      <BibleSection
-        title="Əhdi-Ətiq"
-        books={otBooks}
-        lightBg="paper.webp"
-        bibleName={bibleName}
-        bible={bible}
-        firstChapter={firstChapter}
-      />
-      <BibleSection
-        title="Əhdi-Cədid"
-        books={ntBooks}
-        lightBg="paper-blue.webp"
-        bibleName={bibleName}
-        bible={bible}
-        firstChapter={firstChapter}
-      />
-    </ContainerWidth>
+        <BibleSection
+          title="Əhdi-Ətiq"
+          books={otBooks}
+          lightBg="paper.webp"
+          bibleName={bibleName}
+          bible={bible}
+          firstChapter={firstChapter}
+        />
+        <BibleSection
+          title="Əhdi-Cədid"
+          books={ntBooks}
+          lightBg="paper-blue.webp"
+          bibleName={bibleName}
+          bible={bible}
+          firstChapter={firstChapter}
+        />
+      </ContainerWidth>
+    </TooltipProvider>
   );
 }

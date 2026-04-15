@@ -6,6 +6,19 @@ on:
       - main
       - az
   workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: 'Deploy to test server'
+        required: true
+        default: 'az'
+        type: choice
+        options:
+          - az
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'develop'
+        type: string
 
 jobs:
   deploy-uz:
@@ -44,6 +57,31 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./apps/uz/out/
           server-dir: /
+
+  deploy-az-test:
+    name: Deploy az + admin → test server
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.TEST_SSH_HOST }}
+          username: ${{ secrets.TEST_SSH_USER }}
+          key: ${{ secrets.TEST_SSH_KEY }}
+          port: ${{ secrets.TEST_SSH_PORT }}
+          script: |
+            cd ${{ secrets.TEST_APP_PATH }}
+            git fetch origin
+            git checkout ${{ github.event.inputs.branch }}
+            git pull origin ${{ github.event.inputs.branch }}
+            corepack enable
+            yarn install --frozen-lockfile
+            echo "${{ secrets.ENV_FILE_AZ_TEST }}" > apps/az/.env
+            echo "${{ secrets.ENV_FILE_ADMIN_TEST }}" > apps/admin/.env
+            yarn workspace @mbc/admin build
+            pm2 restart admin --update-env
+            pm2 restart az --update-env
 
   deploy-az:
     name: Build & Deploy az (static)
