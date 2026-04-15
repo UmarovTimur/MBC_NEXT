@@ -1,0 +1,25 @@
+{
+  "name": "MBC_NEXT",
+  "packageManager": "yarn@4.13.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "resolutions": {
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "@payloadcms/ui": "3.82.1",
+    "@payloadcms/next": "3.82.1",
+    "@payloadcms/richtext-lexical": "3.82.1",
+    "@payloadcms/db-postgres": "3.82.1"
+  },
+  "scripts": {
+    "dev:az": "yarn workspace @mbc/az dev",
+    "dev:uz": "yarn workspace @mbc/uz dev",
+    "dev:admin": "yarn workspace @mbc/admin dev",
+    "build:az": "yarn workspace @mbc/az build",
+    "build:uz": "yarn workspace @mbc/uz build",
+    "build:admin": "yarn workspace @mbc/admin build"
+  }
+}

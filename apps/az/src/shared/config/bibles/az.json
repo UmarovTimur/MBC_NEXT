@@ -1,0 +1,18 @@
+{
+  "barclay": {
+    "primary": "V. Barklinin şərhləri",
+    "attachment": "azb",
+    "defaultView": "split-screen",
+    "isIndependent": true,
+    "isCommentary": true,
+    "chapterSlug": "-ci fəsil"
+  },
+  "azb": {
+    "displayName": "Müqəddəs Kitab",
+    "primary": "Müqəddəs Kitab",
+    "isIndependent": true,
+    "attachment": null,
+    "defaultView": "single-column",
+    "chapterSlug": "-ci fəsil"
+  }
+}

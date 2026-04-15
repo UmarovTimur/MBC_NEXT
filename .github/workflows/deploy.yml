@@ -8,7 +8,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-deploy:
+  deploy-uz:
+    name: Build & Deploy uz (static)
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -19,44 +21,61 @@ jobs:
         with:
           node-version: "24.5.0"
           cache: "yarn"
-          cache-dependency-path: "app/yarn.lock"
+          cache-dependency-path: "yarn.lock"
 
-      - name: Create .env file (main → uz)
-        if: github.ref_name == 'main'
-        working-directory: ./app
+      - name: Create .env file
+        working-directory: ./apps/uz
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
-      - name: Create .env file (az)
-        if: github.ref_name == 'az'
-        working-directory: ./app
-        run: echo "${{ secrets.ENV_FILE_AZ }}" > .env
-
       - name: Install dependencies
-        working-directory: ./app
         run: yarn install --frozen-lockfile
 
-      - name: Build project
-        working-directory: ./app
-        run: yarn build
+      - name: Build
+        run: yarn workspace @mbc/uz build
         env:
           NODE_ENV: production
 
-      - name: Upload to FTP (uz)
-        if: github.ref_name == 'main'
+      - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./app/out/
+          local-dir: ./apps/uz/out/
           server-dir: /
 
-      - name: Upload to FTP (az)
-        if: github.ref_name == 'az'
+  deploy-az:
+    name: Build & Deploy az (static)
+    if: github.ref_name == 'az'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.5.0"
+          cache: "yarn"
+          cache-dependency-path: "yarn.lock"
+
+      - name: Create .env file
+        working-directory: ./apps/az
+        run: echo "${{ secrets.ENV_FILE_AZ }}" > .env
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn workspace @mbc/az build
+        env:
+          NODE_ENV: production
+
+      - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER_AZ }}
           username: ${{ secrets.FTP_USERNAME_AZ }}
           password: ${{ secrets.FTP_PASSWORD_AZ }}
-          local-dir: ./app/out/
+          local-dir: ./apps/az/out/
           server-dir: /
