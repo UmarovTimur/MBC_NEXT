@@ -13,7 +13,4 @@
   # то добавляем слэш (для совместимости с trailingSlash: true)
   RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
   RewriteRule ^(.*)$ $1/ [R=301,L]
-
-  # 3. Стандартный роутинг для Next.js
-  # Если папка существует, ищем в ней index.html
 </IfModule>
