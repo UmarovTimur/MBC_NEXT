@@ -41,7 +41,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html className={notoSansFont.variable} lang={process.env.APP_LANG} suppressHydrationWarning>
-      <head>
+      <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
+        <noscript>
+          <div>
+            <img src="https://mc.yandex.ru/watch/51854858"
+              style={{ position: "absolute", left: "-9999px" }} alt="" />
+          </div>
+        </noscript>
         <Script id="yandex-metrika" strategy="afterInteractive">{`
           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
           m[i].l=1*new Date();
@@ -50,14 +56,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
           ym(51854858,"init",{id:51854858,clickmap:true,trackLinks:true,accurateTrackBounce:true});
         `}</Script>
-        <noscript>
-          <div>
-            <img src="https://mc.yandex.ru/watch/51854858"
-              style={{ position: "absolute", left: "-9999px" }} alt="" />
-          </div>
-        </noscript>
-      </head>
-      <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
         <I18nProvider dict={dict}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <ManifestProvider manifest={manifest}>

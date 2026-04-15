@@ -1,8 +1,5 @@
-# /mcdonald/.htaccess
-
 <IfModule mod_rewrite.c>
-  ; RewriteEngine On
-  ; RewriteBase /mcdonald/
+  RewriteEngine On
 
   ErrorDocument 404 /404/index.html
 
