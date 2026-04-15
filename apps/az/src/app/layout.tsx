@@ -9,6 +9,7 @@ import { getI18n } from "@/app/providers/I18n/server";
 import { notoSansFont } from "@/shared/config/fonts";
 import { Navbar } from "@/widgets/Navbar";
 import { BibleUiProvider } from "@/features/bible-navigation";
+import { NavigationLoader } from "@mbc/ui";
 import { Suspense } from "react";
 
 const domain = process.env.DOMAIN || "https://kitobook.com/";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <ManifestProvider manifest={manifest}>
               <BibleUiProvider>
+                <Suspense><NavigationLoader /></Suspense>
                 <Navbar />
                 <main className="grow mt-10 lg:mt-16">
                   <Suspense>{children}</Suspense>

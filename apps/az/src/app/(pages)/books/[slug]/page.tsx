@@ -1,5 +1,6 @@
-import { fetchBooks, fetchBookBySlug } from "@/shared/lib/wp";
-import { mapWpBook } from "@/entities/book";
+import { fetchBooks, fetchBookBySlug } from "@/shared/lib/payload";
+import { mapPayloadBook } from "@/entities/book";
+import { lexicalToHtml } from "@/shared/lib/lexical";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -11,19 +12,18 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const categoryId = Number(process.env.WP_BOOKS_CATEGORY_ID);
-  const raw = await fetchBooks(categoryId);
-  return raw.map((post) => ({ slug: post.slug }));
+  const raw = await fetchBooks();
+  return raw.map((doc) => ({ slug: doc.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const raw = await fetchBookBySlug(slug);
   if (!raw) return {};
-  const book = mapWpBook(raw);
+  const book = mapPayloadBook(raw);
   return {
     title: book.title,
-    description: book.description.replace(/<[^>]+>/g, "").trim().slice(0, 160),
+    description: book.excerpt.slice(0, 160),
     openGraph: book.imageUrl ? { images: [book.imageUrl] } : undefined,
   };
 }
@@ -33,26 +33,31 @@ export default async function BookDetailPage({ params }: Props) {
   const raw = await fetchBookBySlug(slug);
   if (!raw) notFound();
 
-  const book = mapWpBook(raw);
+  const book = mapPayloadBook(raw);
+  const html = lexicalToHtml(book.content);
+  console.log(book.imageUrl)
 
   return (
     <ContainerWidth>
-      <div className="max-w-2xl mx-auto py-8">
+      <div className="flex gap-5 mx-auto py-8">
         {book.imageUrl && (
           <img
             src={book.imageUrl}
             alt={book.title}
-            className="w-full max-h-96 object-cover rounded-lg mb-6"
+            className="w-48 shrink-0 rounded object-contain self-start"
           />
         )}
-        <h1
-          className="text-3xl font-black mb-4"
-          dangerouslySetInnerHTML={{ __html: book.title }}
-        />
-        <div
-          className="prose prose-zinc dark:prose-invert [&>p]:mb-4"
-          dangerouslySetInnerHTML={{ __html: book.content }}
-        />
+        <div className="lg:pt-4">
+          <h1 className="text-3xl font-black mb-4">{book.title}</h1>
+          {html ? (
+            <div
+              className="prose prose-zinc dark:prose-invert [&>p]:mb-4 [&_a]:text-blue-500 [&_a]:underline hover:[&_a]:text-blue-400"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          ) : book.excerpt ? (
+            <p className="text-muted-foreground">{book.excerpt}</p>
+          ) : null}
+        </div>
       </div>
     </ContainerWidth>
   );

@@ -7,6 +7,7 @@ export interface BibleConfig {
   attachment: string | null;
   defaultView: BibleViewMode;
   mappingBible?: string[];
+  mappingShortBooks?: string[];
   mappingChapterSlug?: string[];
   chapterSlug?: string;
   formatingStyle?: string;

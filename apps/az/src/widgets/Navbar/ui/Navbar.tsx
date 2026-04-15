@@ -5,6 +5,7 @@ import { BIBLES_CONFIG } from "@/entities/bible/config/config";
 import { NavBibleControls } from "./NavBibleControls";
 import { NavBibleLinks } from "./NavBibleLinks";
 import { AppLink } from "@/shared/ui/AppLink";
+import { Button } from "@/shared/ui/button";
 
 const independentBibles = Object.entries(BIBLES_CONFIG).filter(
   ([, cfg]) => cfg.isIndependent
@@ -19,12 +20,17 @@ export const Navbar = () => {
       )}
     >
       <div className="px-4 relative flex items-center justify-between">
-        <div className="flex gap-x-6 items-center">
-          <AppLink href="/" className="text-xl font-bold text-black dark:text-white/80">
-            <span className="text-green-700 uppercase">Barclay</span>
+        <div className="flex gap-x-3 items-center">
+
+          <AppLink href="/" className="text-xl mb-1 hover:text-green-700  text-green-700 font-bold dark:text-white/80">
+            Incilaz
           </AppLink>
 
+
           <NavBibleLinks bibles={independentBibles} />
+          <Button className="hidden lg:flex" asChild variant="ghost">
+            <AppLink className="text-base" href="/books">Kitablar</AppLink>
+          </Button>
         </div>
 
         <div className="gap-x-3 flex items-center">

@@ -10,6 +10,7 @@ export class Bible {
   public readonly defaultViewMode: BibleViewMode;
   public readonly attachmentBibleName: string;
   public readonly mappingBook?: string[];
+  public readonly mappingShortBook?: string[];
   public readonly primaryTitle: string;
   private readonly chapterSlug?: string;
   private readonly mappingChapterSlug?: string[];
@@ -23,6 +24,7 @@ export class Bible {
     this.attachmentBibleName = configMap[this.bibleName]?.attachment || "";
     this.primaryTitle = configMap[this.bibleName]?.primary;
     this.mappingBook = configMap[this.bibleName]?.mappingBible;
+    this.mappingShortBook = configMap[this.bibleName]?.mappingShortBooks;
     this.chapterSlug = configMap[this.bibleName]?.chapterSlug ?? "";
     this.mappingChapterSlug = configMap[this.bibleName]?.mappingChapterSlug;
     this.introducingName = configMap[this.bibleName]?.introductionName ?? this.mappingChapterSlug?.[0] ?? "0";
@@ -81,6 +83,10 @@ export class Bible {
 
   getBookName(bookId: number): string {
     return this.mappingBook?.[bookId - 1] ?? bookId.toString();
+  }
+
+  getShortBookName(bookId: number): string {
+    return this.mappingShortBook?.[bookId - 1] ?? this.getBookName(bookId);
   }
 
   getIntroducingName(): string | undefined {

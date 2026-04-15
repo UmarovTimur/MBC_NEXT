@@ -1,5 +1,5 @@
-import { fetchBooks } from "@/shared/lib/wp";
-import { mapWpBook } from "@/entities/book";
+import { fetchBooks } from "@/shared/lib/payload";
+import { mapPayloadBook } from "@/entities/book";
 import { BooksPage } from "@/widgets/BooksPage";
 import type { Metadata } from "next";
 
@@ -11,9 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default async function BooksListPage() {
-  const categoryId = Number(process.env.WP_BOOKS_CATEGORY_ID);
-  const raw = await fetchBooks(categoryId);
-  const books = raw.map(mapWpBook);
+  const raw = await fetchBooks();
+  const books = raw.map(mapPayloadBook);
 
   return <BooksPage books={books} />;
 }
