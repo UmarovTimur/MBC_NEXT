@@ -39,6 +39,7 @@ export {
   DropdownMenuRadioGroup,
 } from "./ui/dropdown-menu";
 export { imageLoader } from "./ui/ImageLoader";
+export { NavigationLoader } from "./ui/NavigationLoader";
 export {
   Pagination,
   PaginationContent,
