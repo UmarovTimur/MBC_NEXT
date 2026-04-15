@@ -1,9 +1,8 @@
-DirectoryIndex index.html
+# /mcdonald/.htaccess
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
-  ErrorDocument 404 /404/index.html
+  RewriteBase /mcdonald/
 
   # 1. Если запрос идет к РЕАЛЬНОМУ файлу (с расширением .js, .css, .txt, .html),
   # останавливаем все перенаправления и отдаем файл как есть.
@@ -17,7 +16,4 @@ DirectoryIndex index.html
 
   # 3. Стандартный роутинг для Next.js
   # Если папка существует, ищем в ней index.html
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.*)$ $1/index.html [L]
 </IfModule>
