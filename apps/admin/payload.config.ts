@@ -12,6 +12,7 @@ const __dirname = path.dirname(__filename)
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_SERVER_URL || 'http://localhost:8001',
+  csrf: (process.env.CORS_URLS || 'http://localhost:3000').split(','),
   admin: {
     user: 'users',
   },
