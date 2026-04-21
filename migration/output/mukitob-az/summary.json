@@ -1,0 +1,17 @@
+{
+  "source": "mukitob",
+  "locale": "az",
+  "scrapedAt": "2026-04-21T07:49:38.271Z",
+  "booksCount": 40,
+  "filesCount": 245,
+  "formats": [
+    "docx",
+    "epub",
+    "fb2",
+    "mp3",
+    "mp4",
+    "pdf",
+    "rtf",
+    "txt"
+  ]
+}

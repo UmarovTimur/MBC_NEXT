@@ -1,7 +1,8 @@
 import { fetchBooks, fetchBookBySlug } from "@/shared/lib/payload";
 import { mapPayloadBook } from "@/entities/book";
-import { lexicalToHtml } from "@/shared/lib/lexical";
+import { BookDownloadsMenu } from "@/entities/book/ui/BookDownloadsMenu";
 import { ContainerWidth } from "@/shared/ui/Container";
+import { Button } from "@/shared/ui/button";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -20,10 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const raw = await fetchBookBySlug(decodeURIComponent(slug));
   if (!raw) return {};
+
   const book = mapPayloadBook(raw);
+  const description = book.description || book.subtitle || book.author;
+
   return {
     title: book.title,
-    description: book.excerpt.slice(0, 160),
+    description: description.slice(0, 160),
     openGraph: book.imageUrl ? { images: [book.imageUrl] } : undefined,
   };
 }
@@ -34,30 +38,68 @@ export default async function BookDetailPage({ params }: Props) {
   if (!raw) notFound();
 
   const book = mapPayloadBook(raw);
-  const html = lexicalToHtml(book.content);
-  console.log(book.imageUrl)
 
   return (
     <ContainerWidth>
-      <div className="flex gap-5 mx-auto py-8">
-        {book.imageUrl && (
-          <img
-            src={book.imageUrl}
-            alt={book.title}
-            className="w-48 shrink-0 rounded object-contain self-start"
-          />
-        )}
-        <div className="lg:pt-4">
-          <h1 className="text-3xl font-black mb-4">{book.title}</h1>
-          {html ? (
-            <div
-              className="prose prose-zinc dark:prose-invert [&>p]:mb-4 [&_a]:text-blue-500 [&_a]:underline hover:[&_a]:text-blue-400"
-              dangerouslySetInnerHTML={{ __html: html }}
+      <div className="mx-auto py-8">
+        <div className="flex flex-col gap-6 md:flex-row">
+          {book.imageUrl && (
+            <img
+              src={book.imageUrl}
+              alt={book.title}
+              className="w-full max-w-64 shrink-0 rounded object-contain self-start"
             />
-          ) : book.excerpt ? (
-            <p className="text-muted-foreground">{book.excerpt}</p>
-          ) : null}
+          )}
+
+          <div className="flex-1 lg:pt-4">
+            {book.author && (
+              <p className="mb-2 text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                {book.author}
+              </p>
+            )}
+            <h1 className="mb-3 text-4xl font-black">{book.title}</h1>
+            {book.subtitle && <p className="mb-4 text-lg italic text-muted-foreground">{book.subtitle}</p>}
+            {/* {book.previewPages ? (
+              <p className="mb-4 text-sm text-muted-foreground">Preview: {book.previewPages} pages</p>
+            ) : null} */}
+
+            <div className="flex flex-wrap gap-3">
+              {book.readUrl && book.downloads.length > 0 ? (
+                <div className="inline-flex">
+                  <Button asChild variant="secondary" className="rounded-r-none border-r-0">
+                    <a href={book.readUrl} target="_blank" rel="noreferrer">
+                      Oxu onlayn
+                    </a>
+                  </Button>
+                  <BookDownloadsMenu downloads={book.downloads} className="rounded-l-none" />
+                </div>
+              ) : (
+                <>
+                  {book.readUrl ? (
+                    <Button asChild variant="secondary">
+                      <a href={book.readUrl} target="_blank" rel="noreferrer">
+                        Oxu onlayn
+                      </a>
+                    </Button>
+                  ) : null}
+
+                  <BookDownloadsMenu downloads={book.downloads} />
+                </>
+              )}
+              {book.description ? (
+                <div className="mt-8 max-w-3xl">
+                  <p className="whitespace-pre-line text-muted-foreground">{book.description}</p>
+                </div>
+              ) : null}
+            </div>
+          </div>
         </div>
+
+        {/* {book.description ? (
+          <div className="mt-8 max-w-3xl">
+            <p className="whitespace-pre-line text-muted-foreground">{book.description}</p>
+          </div>
+        ) : null} */}
       </div>
     </ContainerWidth>
   );

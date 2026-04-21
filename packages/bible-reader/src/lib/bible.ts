@@ -9,6 +9,7 @@ export class Bible {
   public readonly basePath: string;
   public readonly defaultViewMode: BibleViewMode;
   public readonly attachmentBibleName: string;
+  public readonly formattingStyle: string;
   public readonly mappingBook?: string[];
   public readonly mappingShortBook?: string[];
   public readonly primaryTitle: string;
@@ -22,6 +23,7 @@ export class Bible {
     this.books = books;
     this.defaultViewMode = configMap[this.bibleName]?.defaultView || "single-column";
     this.attachmentBibleName = configMap[this.bibleName]?.attachment || "";
+    this.formattingStyle = configMap[this.bibleName]?.formatingStyle || "";
     this.primaryTitle = configMap[this.bibleName]?.primary;
     this.mappingBook = configMap[this.bibleName]?.mappingBible;
     this.mappingShortBook = configMap[this.bibleName]?.mappingShortBooks;

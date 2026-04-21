@@ -1,0 +1,2781 @@
+{
+  "summary": {
+    "source": "mukitob",
+    "locale": "az",
+    "scrapedAt": "2026-04-21T07:49:38.271Z",
+    "booksCount": 40,
+    "filesCount": 245,
+    "formats": [
+      "docx",
+      "epub",
+      "fb2",
+      "mp3",
+      "mp4",
+      "pdf",
+      "rtf",
+      "txt"
+    ]
+  },
+  "books": [
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 1,
+      "sourceBookKey": "mukitob:az:1",
+      "title": "Lütfün nəsil şəcərəsi",
+      "subtitle": "",
+      "author": "Fransin Rivers",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=1",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=1",
+      "imageUrl": "https://mukitob.com/books/covers/az/1.jpg",
+      "previewPages": 39,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"736Kb\",\"label\":\"docx (736Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=1&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=1&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"2Mb\",\"label\":\"fb2 (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=1&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=1&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"21Mb\",\"label\":\"rtf (21Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=1&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"2Mb\",\"label\":\"txt (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=1&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "736Kb",
+          "label": "docx (736Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=1&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=1&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "2Mb",
+          "label": "fb2 (2Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=1&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=1&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "21Mb",
+          "label": "rtf (21Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=1&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "2Mb",
+          "label": "txt (2Mb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=1&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 2,
+      "sourceBookKey": "mukitob:az:2",
+      "title": "Səadət naminə iztirab",
+      "subtitle": "Allah nə üçün çətin zamanlara izn verir",
+      "author": "Çarlz Stenli",
+      "description": "Pastor Çarlz Stenli müəllifi olduğu kitabında göstərir ki, iztirab — Allahın bizə xeyir-dua vermək üçün istifadə etdiyi bir vasitədir. İztiraba belə baxış — ağlasığmaz gücdür. O, istənilən sınağa və çətinliklərə sinə gəlməkdə bizə kömək etmək qüdrətinə malikdir və bilirik ki, səadət naminə bizə xidmət göstərəcəkdir.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=2",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=2",
+      "imageUrl": "https://mukitob.com/books/covers/az/2.jpg",
+      "previewPages": 45,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"165Kb\",\"label\":\"docx (165Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=2&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=2&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"458Kb\",\"label\":\"fb2 (458Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=2&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=2&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"802Kb\",\"label\":\"rtf (802Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=2&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"443Kb\",\"label\":\"txt (443Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=2&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "165Kb",
+          "label": "docx (165Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=2&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=2&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "458Kb",
+          "label": "fb2 (458Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=2&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=2&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "802Kb",
+          "label": "rtf (802Kb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=2&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "443Kb",
+          "label": "txt (443Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=2&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 3,
+      "sourceBookKey": "mukitob:az:3",
+      "title": "Ər duasının gücü",
+      "subtitle": "",
+      "author": "Stormi Omartian",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=3",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=3",
+      "imageUrl": "https://mukitob.com/books/covers/az/3.jpg",
+      "previewPages": 66,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"314Kb\",\"label\":\"docx (314Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=3&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"1Mb\",\"label\":\"epub (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=3&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"483Kb\",\"label\":\"fb2 (483Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=3&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=3&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"4Mb\",\"label\":\"rtf (4Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=3&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"550Kb\",\"label\":\"txt (550Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=3&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "314Kb",
+          "label": "docx (314Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=3&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "1Mb",
+          "label": "epub (1Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=3&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "483Kb",
+          "label": "fb2 (483Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=3&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=3&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "4Mb",
+          "label": "rtf (4Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=3&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "550Kb",
+          "label": "txt (550Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=3&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 4,
+      "sourceBookKey": "mukitob:az:4",
+      "title": "Düzgün seçim",
+      "subtitle": "İbrətamiz Müqəddəs Kitab hekayələri",
+      "author": "Coş və Dotti Makdauel",
+      "description": "Bu ibrətamiz Müqəddəs Kitab hekayələri toplusu 5–10 yaşlı uşaqlar üçün yazılıb. Müqəddəs Yazı personajlarının nümunəsi uşaqlarınıza həqiqəti yalandan ayırmağı öyrənməyə və hər bir həyat şəraitində düzgün seçim etməyə kömək edəcək.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=4",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=4",
+      "imageUrl": "https://mukitob.com/books/covers/az/4.jpg",
+      "previewPages": 53,
+      "hasAudio": true,
+      "downloadCount": 7,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt, mp3",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"175Kb\",\"label\":\"docx (175Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=4&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"10Mb\",\"label\":\"epub (10Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=4&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"17Mb\",\"label\":\"fb2 (17Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=4&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"20Mb\",\"label\":\"pdf (20Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=4&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=4&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"432Kb\",\"label\":\"txt (432Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=4&f=txt\"},{\"format\":\"mp3\",\"sizeLabel\":\"\",\"label\":\"mp3\",\"downloadUrl\":\"https://mukitob.com/books/az/audio.php?id_book=4\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "175Kb",
+          "label": "docx (175Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=4&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "10Mb",
+          "label": "epub (10Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=4&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "17Mb",
+          "label": "fb2 (17Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=4&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "20Mb",
+          "label": "pdf (20Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=4&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=4&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "432Kb",
+          "label": "txt (432Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=4&f=txt"
+        },
+        {
+          "fileOrder": 7,
+          "format": "mp3",
+          "sizeLabel": "",
+          "label": "mp3",
+          "title": "MP3 - audio-faylların qulaq asılması üçün ən geniş yayılmış formatdır.",
+          "downloadUrl": "https://mukitob.com/books/az/audio.php?id_book=4"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 5,
+      "sourceBookKey": "mukitob:az:5",
+      "title": "Sarsilmaz",
+      "subtitle": "Dəhşətli xatirələrdən son dərəcə fövqəladə lütf yoluna keçən insanın həqiqi həyat hekayəsi",
+      "author": "Coş Makdauell | Kristobal Kruzenin müəllifliyi ilə",
+      "description": "Bu kitabda Coş Makdauell özü haqqında açıq və səmimi danışır. Coş hələ gənc yaşlarından, İsa Məsihin İlahiliyi barədə təlimin uydurma olduğunu sübut etməyə çalışmışdı. Bu məqsədlə də o, qədim dövrlərdə bu hadisələr barədə yazılmış bir çox tarixi sənədləri araşdırmağa başlamış və bu mövzudan başı çıxan adamlarla uzun-uzadı söhbətlər etmişdi. Nəticədə isə, İsa Məsihin sadiq ardıcılına çevrilmişdi.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=5",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=5",
+      "imageUrl": "https://mukitob.com/books/covers/az/5.jpg",
+      "previewPages": 54,
+      "hasAudio": true,
+      "downloadCount": 8,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt, mp3, mp4",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"323Kb\",\"label\":\"docx (323Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=5&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=5&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"568Kb\",\"label\":\"fb2 (568Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=5&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=5&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"7Mb\",\"label\":\"rtf (7Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=5&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"725Kb\",\"label\":\"txt (725Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=5&f=txt\"},{\"format\":\"mp3\",\"sizeLabel\":\"\",\"label\":\"mp3\",\"downloadUrl\":\"https://mukitob.com/books/az/audio.php?id_book=5\"},{\"format\":\"mp4\",\"sizeLabel\":\"\",\"label\":\"mp4\",\"downloadUrl\":\"https://mukitob.com/books/az/video.php?id_book=5\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "323Kb",
+          "label": "docx (323Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=5&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=5&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "568Kb",
+          "label": "fb2 (568Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=5&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=5&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "7Mb",
+          "label": "rtf (7Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=5&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "725Kb",
+          "label": "txt (725Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=5&f=txt"
+        },
+        {
+          "fileOrder": 7,
+          "format": "mp3",
+          "sizeLabel": "",
+          "label": "mp3",
+          "title": "MP3 - audio-faylların qulaq asılması üçün ən geniş yayılmış formatdır.",
+          "downloadUrl": "https://mukitob.com/books/az/audio.php?id_book=5"
+        },
+        {
+          "fileOrder": 8,
+          "format": "mp4",
+          "sizeLabel": "",
+          "label": "mp4",
+          "title": "MP4 video-fayllara baxmaq üçün geniş yayılmış formatdır.",
+          "downloadUrl": "https://mukitob.com/books/az/video.php?id_book=5"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 6,
+      "sourceBookKey": "mukitob:az:6",
+      "title": "O, yalnız dülgər deyildi",
+      "subtitle": "Dika və Şarlotta Deyə Onların həyatı həmişə göstərirdi ki, İsa Məsih adi dülgər deyil",
+      "author": "Coş Makdauell",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=6",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=6",
+      "imageUrl": "https://mukitob.com/books/covers/az/6.jpg",
+      "previewPages": 43,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"402Kb\",\"label\":\"docx (402Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=6&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"408Kb\",\"label\":\"epub (408Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=6&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"692Kb\",\"label\":\"fb2 (692Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=6&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"819Kb\",\"label\":\"pdf (819Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=6&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"12Mb\",\"label\":\"rtf (12Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=6&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"259Kb\",\"label\":\"txt (259Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=6&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "402Kb",
+          "label": "docx (402Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=6&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "408Kb",
+          "label": "epub (408Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=6&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "692Kb",
+          "label": "fb2 (692Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=6&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "819Kb",
+          "label": "pdf (819Kb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=6&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "12Mb",
+          "label": "rtf (12Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=6&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "259Kb",
+          "label": "txt (259Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=6&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 7,
+      "sourceBookKey": "mukitob:az:7",
+      "title": "Dua edən arvadin gücü",
+      "subtitle": "",
+      "author": "Stormie Omartian",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=7",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=7",
+      "imageUrl": "https://mukitob.com/books/covers/az/7.jpg",
+      "previewPages": 41,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"347Kb\",\"label\":\"docx (347Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=7&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"514Kb\",\"label\":\"epub (514Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=7&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"604Kb\",\"label\":\"fb2 (604Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=7&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=7&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=7&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"293Kb\",\"label\":\"txt (293Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=7&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "347Kb",
+          "label": "docx (347Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=7&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "514Kb",
+          "label": "epub (514Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=7&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "604Kb",
+          "label": "fb2 (604Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=7&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=7&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=7&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "293Kb",
+          "label": "txt (293Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=7&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 8,
+      "sourceBookKey": "mukitob:az:8",
+      "title": "Firtinaya dözmək",
+      "subtitle": "Dərs vəsaiti",
+      "author": "Pol Estebruks",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=8",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=8",
+      "imageUrl": "https://mukitob.com/books/covers/az/8.jpg",
+      "previewPages": 42,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"512Kb\",\"label\":\"docx (512Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=8&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"479Kb\",\"label\":\"epub (479Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=8&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"1Mb\",\"label\":\"fb2 (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=8&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"5Mb\",\"label\":\"pdf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=8&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"21Mb\",\"label\":\"rtf (21Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=8&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"783Kb\",\"label\":\"txt (783Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=8&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "512Kb",
+          "label": "docx (512Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=8&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "479Kb",
+          "label": "epub (479Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=8&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "1Mb",
+          "label": "fb2 (1Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=8&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "5Mb",
+          "label": "pdf (5Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=8&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "21Mb",
+          "label": "rtf (21Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=8&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "783Kb",
+          "label": "txt (783Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=8&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 9,
+      "sourceBookKey": "mukitob:az:9",
+      "title": "Dua edən qadının gücü",
+      "subtitle": "",
+      "author": "Stormi Omartian",
+      "description": "Bəzən elə olur ki, qadınlar öz həyatlarını dəyişmək istəyirlər. Lakin Allahın köməyi olmadan zamanın sınağından keçmiş dəyişiklik mümkün deyil. Stormi Omartian həyatdan nümunələr gətirməklə qadınların duasından və bu duanın nə dərəcədə effektli olmasından bəhs edir. Müəllif özü üçün vəsatət edən bir neçə dua nümunəsi təklif edir. Bu duaların sayəsində həyatın dolğunluğunu tamamilə hiss edə və Allahın sizin qarşınıza qoyduğu məqsədə nail ola bilərsiniz.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=9",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=9",
+      "imageUrl": "https://mukitob.com/books/covers/az/9.jpg",
+      "previewPages": 48,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"334Kb\",\"label\":\"docx (334Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=9&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=9&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"549Kb\",\"label\":\"fb2 (549Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=9&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=9&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"4Mb\",\"label\":\"rtf (4Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=9&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"666Kb\",\"label\":\"txt (666Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=9&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "334Kb",
+          "label": "docx (334Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=9&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=9&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "549Kb",
+          "label": "fb2 (549Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=9&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=9&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "4Mb",
+          "label": "rtf (4Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=9&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "666Kb",
+          "label": "txt (666Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=9&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 10,
+      "sourceBookKey": "mukitob:az:10",
+      "title": "Yaralanmiş ürək",
+      "subtitle": "",
+      "author": "Den Allender",
+      "description": "Dünya şöhrətli psixoterapevt və ilahiyyatçı Den Allender bu kitabda cinsi təcavüzü həm psixoloji, həm də Müqəddəs Kitab nöqteyi-nəzərindən açıqlayır. Eyni zamanda təcavüzün qurbanı olmuş insanlara Allahın şəfa yolunu göstərir. Bu şəfaya yol yeni əzablardan ötrü dəyər ödəmək bahasına başa gəlir. Lakin bu, həyata aparan yoldur, öz yolçularını sevgi ilə fərqləndirir. Bu kitab uşaqlıqda cinsi təcavüzə məruz qalan böyüklər üçün ümiddir.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=10",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=10",
+      "imageUrl": "https://mukitob.com/books/covers/az/10.jpg",
+      "previewPages": 39,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"646Kb\",\"label\":\"docx (646Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=10&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"814Kb\",\"label\":\"epub (814Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=10&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"1Mb\",\"label\":\"fb2 (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=10&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"5Mb\",\"label\":\"pdf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=10&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"7Mb\",\"label\":\"rtf (7Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=10&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"677Kb\",\"label\":\"txt (677Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=10&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "646Kb",
+          "label": "docx (646Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=10&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "814Kb",
+          "label": "epub (814Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=10&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "1Mb",
+          "label": "fb2 (1Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=10&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "5Mb",
+          "label": "pdf (5Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=10&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "7Mb",
+          "label": "rtf (7Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=10&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "677Kb",
+          "label": "txt (677Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=10&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 11,
+      "sourceBookKey": "mukitob:az:11",
+      "title": "Uydurmalar və həqiqət",
+      "subtitle": "",
+      "author": "Coş Makdauell | Bob Xostetler",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=11",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=11",
+      "imageUrl": "https://mukitob.com/books/covers/az/11.jpg",
+      "previewPages": 38,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"198Kb\",\"label\":\"docx (198Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=11&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"3Mb\",\"label\":\"epub (3Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=11&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"4Mb\",\"label\":\"fb2 (4Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=11&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"11Mb\",\"label\":\"pdf (11Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=11&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"4Mb\",\"label\":\"rtf (4Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=11&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"390Kb\",\"label\":\"txt (390Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=11&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "198Kb",
+          "label": "docx (198Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=11&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "3Mb",
+          "label": "epub (3Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=11&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "4Mb",
+          "label": "fb2 (4Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=11&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "11Mb",
+          "label": "pdf (11Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=11&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "4Mb",
+          "label": "rtf (4Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=11&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "390Kb",
+          "label": "txt (390Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=11&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 12,
+      "sourceBookKey": "mukitob:az:12",
+      "title": "Qadınların inandığı yalan",
+      "subtitle": "və azad edən həqiqət",
+      "author": "Nensi Demos",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=12",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=12",
+      "imageUrl": "https://mukitob.com/books/covers/az/12.jpg",
+      "previewPages": 34,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"590Kb\",\"label\":\"docx (590Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=12&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"535Kb\",\"label\":\"epub (535Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=12&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"983Kb\",\"label\":\"fb2 (983Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=12&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=12&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"10Mb\",\"label\":\"rtf (10Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=12&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"472Kb\",\"label\":\"txt (472Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=12&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "590Kb",
+          "label": "docx (590Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=12&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "535Kb",
+          "label": "epub (535Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=12&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "983Kb",
+          "label": "fb2 (983Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=12&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=12&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "10Mb",
+          "label": "rtf (10Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=12&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "472Kb",
+          "label": "txt (472Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=12&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 13,
+      "sourceBookKey": "mukitob:az:13",
+      "title": "Şahid",
+      "subtitle": "",
+      "author": "Coş Mak-Dauel",
+      "description": "O, qətlin, adam oğurluğunun və zorakılığın şahidi olur. Bütün bunları isə peşəsi cinayətkar axtarmaq olan biri törədir. Ondan qurtulmaq üçün işi elə qururlar ki, bu dəhşətli cinayətlərin əsasında məhz o dayanmalı olur. Onlar onu əsas şübhəli şəxs qismində təqdim edirlər. Ona isə yalnız qaçmaq qalır. Lakin düşmənlər onu Avropanın altı ölkəsi, Cənubi Afrika və Yaxın Şərq sərhədləri boyunca daim təqib edirlər. O, gizlənmək, kölgəyə sığınmaq istəyir, lakin əvvəllər onun üçün sirr olan həqiqətə aydınlıq gəlməklə qaranlıqda işıq saçır.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=13",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=13",
+      "imageUrl": "https://mukitob.com/books/covers/az/13.jpg",
+      "previewPages": 42,
+      "hasAudio": true,
+      "downloadCount": 7,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt, mp3",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"309Kb\",\"label\":\"docx (309Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=13&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=13&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"510Kb\",\"label\":\"fb2 (510Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=13&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"736Kb\",\"label\":\"pdf (736Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=13&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"6Mb\",\"label\":\"rtf (6Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=13&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"619Kb\",\"label\":\"txt (619Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=13&f=txt\"},{\"format\":\"mp3\",\"sizeLabel\":\"\",\"label\":\"mp3\",\"downloadUrl\":\"https://mukitob.com/books/az/audio.php?id_book=13\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "309Kb",
+          "label": "docx (309Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=13&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=13&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "510Kb",
+          "label": "fb2 (510Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=13&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "736Kb",
+          "label": "pdf (736Kb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=13&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "6Mb",
+          "label": "rtf (6Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=13&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "619Kb",
+          "label": "txt (619Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=13&f=txt"
+        },
+        {
+          "fileOrder": 7,
+          "format": "mp3",
+          "sizeLabel": "",
+          "label": "mp3",
+          "title": "MP3 - audio-faylların qulaq asılması üçün ən geniş yayılmış formatdır.",
+          "downloadUrl": "https://mukitob.com/books/az/audio.php?id_book=13"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 14,
+      "sourceBookKey": "mukitob:az:14",
+      "title": "Valideyn duasının gücü",
+      "subtitle": "",
+      "author": "Stormi Omartian",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=14",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=14",
+      "imageUrl": "https://mukitob.com/books/covers/az/14.jpg",
+      "previewPages": 42,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"283Kb\",\"label\":\"docx (283Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=14&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"1Mb\",\"label\":\"epub (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=14&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"407Kb\",\"label\":\"fb2 (407Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=14&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=14&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"6Mb\",\"label\":\"rtf (6Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=14&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"450Kb\",\"label\":\"txt (450Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=14&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "283Kb",
+          "label": "docx (283Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=14&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "1Mb",
+          "label": "epub (1Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=14&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "407Kb",
+          "label": "fb2 (407Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=14&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=14&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "6Mb",
+          "label": "rtf (6Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=14&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "450Kb",
+          "label": "txt (450Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=14&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 15,
+      "sourceBookKey": "mukitob:az:15",
+      "title": "Tanri qaçaqmalçisinin duasi",
+      "subtitle": "",
+      "author": "Andrey qardaş",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=15",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=15",
+      "imageUrl": "https://mukitob.com/books/covers/az/15.jpg",
+      "previewPages": 39,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"378Kb\",\"label\":\"docx (378Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=15&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=15&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"2Mb\",\"label\":\"fb2 (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=15&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=15&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"9Mb\",\"label\":\"rtf (9Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=15&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"901Kb\",\"label\":\"txt (901Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=15&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "378Kb",
+          "label": "docx (378Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=15&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=15&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "2Mb",
+          "label": "fb2 (2Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=15&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=15&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "9Mb",
+          "label": "rtf (9Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=15&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "901Kb",
+          "label": "txt (901Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=15&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 16,
+      "sourceBookKey": "mukitob:az:16",
+      "title": "Məsih üçün dünyanı dəyişərək",
+      "subtitle": "",
+      "author": "Andrey qardaş",
+      "description": "Müjdə heç vaxt asan iş olmayıb. İsa Məsihin Böyük tapşırığını yerinə yetirən və insalara xilas haqqında danışan şəxslər daim təqiblərə məruz qalıb. Onların çətinliyə baxmayaraq, Allahın iradəsi ilə dünyanı dəyişərək öz həyatlarını risqə atan iman qəhrəmanları adlandıra bilərik. Yer üzərində öz vəzifəmizi yerinə yetirmək üçün bu xüsusiyyətləri necə əldə edə, necə iman qəhrəmanına çevrilə və öz çağırışımızı necə müəyyən edə bilərik?",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=16",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=16",
+      "imageUrl": "https://mukitob.com/books/covers/az/16.jpg",
+      "previewPages": 40,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"196Kb\",\"label\":\"docx (196Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=16&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=16&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"1Mb\",\"label\":\"fb2 (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=16&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=16&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=16&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"477Kb\",\"label\":\"txt (477Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=16&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "196Kb",
+          "label": "docx (196Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=16&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=16&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "1Mb",
+          "label": "fb2 (1Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=16&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=16&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=16&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "477Kb",
+          "label": "txt (477Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=16&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 17,
+      "sourceBookKey": "mukitob:az:17",
+      "title": "Sevgi̇ və hörmət",
+      "subtitle": "Qadının hər şeydən daha çox susadığı sevgi. Kişinin həddindən artiq ehtiyac duyduğu hörmət",
+      "author": "Emerson Eqqerix",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=17",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=17",
+      "imageUrl": "https://mukitob.com/books/covers/az/17.jpg",
+      "previewPages": 39,
+      "hasAudio": true,
+      "downloadCount": 7,
+      "downloadFormats": "docx, fb2, pdf, rtf, txt, epub, mp3",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"851Kb\",\"label\":\"docx (851Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=17&f=docx\"},{\"format\":\"fb2\",\"sizeLabel\":\"2Mb\",\"label\":\"fb2 (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=17&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=17&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"10Mb\",\"label\":\"rtf (10Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=17&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"671Kb\",\"label\":\"txt (671Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=17&f=txt\"},{\"format\":\"epub\",\"sizeLabel\":\"1Mb\",\"label\":\"epub (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=17&f=epub\"},{\"format\":\"mp3\",\"sizeLabel\":\"\",\"label\":\"mp3\",\"downloadUrl\":\"https://mukitob.com/books/az/audio.php?id_book=17\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "851Kb",
+          "label": "docx (851Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=17&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "fb2",
+          "sizeLabel": "2Mb",
+          "label": "fb2 (2Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=17&f=fb2"
+        },
+        {
+          "fileOrder": 3,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=17&f=pdf"
+        },
+        {
+          "fileOrder": 4,
+          "format": "rtf",
+          "sizeLabel": "10Mb",
+          "label": "rtf (10Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=17&f=rtf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "txt",
+          "sizeLabel": "671Kb",
+          "label": "txt (671Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=17&f=txt"
+        },
+        {
+          "fileOrder": 6,
+          "format": "epub",
+          "sizeLabel": "1Mb",
+          "label": "epub (1Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=17&f=epub"
+        },
+        {
+          "fileOrder": 7,
+          "format": "mp3",
+          "sizeLabel": "",
+          "label": "mp3",
+          "title": "MP3 - audio-faylların qulaq asılması üçün ən geniş yayılmış formatdır.",
+          "downloadUrl": "https://mukitob.com/books/az/audio.php?id_book=17"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 18,
+      "sourceBookKey": "mukitob:az:18",
+      "title": "Tarixin gedişatini dəyişmiş sübut",
+      "subtitle": "",
+      "author": "Coş Makdauell | Şon Makdauell",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=18",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=18",
+      "imageUrl": "https://mukitob.com/books/covers/az/18.jpg",
+      "previewPages": 48,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"114Kb\",\"label\":\"docx (114Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=18&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=18&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"291Kb\",\"label\":\"fb2 (291Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=18&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"977Kb\",\"label\":\"pdf (977Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=18&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"942Kb\",\"label\":\"rtf (942Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=18&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"155Kb\",\"label\":\"txt (155Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=18&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "114Kb",
+          "label": "docx (114Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=18&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=18&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "291Kb",
+          "label": "fb2 (291Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=18&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "977Kb",
+          "label": "pdf (977Kb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=18&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "942Kb",
+          "label": "rtf (942Kb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=18&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "155Kb",
+          "label": "txt (155Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=18&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 19,
+      "sourceBookKey": "mukitob:az:19",
+      "title": "Uşaqlara dua etməyi necə öyrətməli",
+      "subtitle": "",
+      "author": "Rik Osborn",
+      "description": "Rik Osborn — Valideynlərə uşaqları Allahı dərk etməyi və Bibliyanı öyrənməyə kömək edən bir çox kitabın müəllifidir. Bu kitabda o, uşaqlara dua etməyi necə öyrənməyin yollarını və Duanı öz həyatlarının əsası olduğunu göstərir. Asan və əlçatan formada, uşaqların ruhi inkişafının əsas pillələri haqqında danışır. Buna misal olaraq özünün şəxsi həyatından nümunələr gətirir, dua nümunələri, sizin və uşaqlarınızın dua etmələri üçün mövzuları təqdim edir.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=19",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=19",
+      "imageUrl": "https://mukitob.com/books/covers/az/19.jpg",
+      "previewPages": 51,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"292Kb\",\"label\":\"docx (292Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=19&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"1Mb\",\"label\":\"epub (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=19&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"661Kb\",\"label\":\"fb2 (661Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=19&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=19&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"6Mb\",\"label\":\"rtf (6Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=19&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"687Kb\",\"label\":\"txt (687Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=19&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "292Kb",
+          "label": "docx (292Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=19&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "1Mb",
+          "label": "epub (1Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=19&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "661Kb",
+          "label": "fb2 (661Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=19&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=19&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "6Mb",
+          "label": "rtf (6Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=19&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "687Kb",
+          "label": "txt (687Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=19&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 20,
+      "sourceBookKey": "mukitob:az:20",
+      "title": "Sən bacararsan",
+      "subtitle": "Çətinlikdə olanlar üçün ümid və dayaq",
+      "author": "Maks Lukado",
+      "description": "Əsl iman bizi əzablardan xilas etmir, lakin onlardan keçməyimizə kömək edir. Maks Lukado kitabları oxucuların etibarını qazanmış məsihçi müəlliflərdən biridir. Çünki o, kitablarında nağıl və əfsanə ilə yaşayanlara deyil, imanla yaşayanlara müraciət edir. Onun «Sən bacararsan» kitabı dərin biliyə və Müqəddəs Kitaba əsaslanır, çətinliklərdən keçməyinizə hökmən kömək edəcək.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=20",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=20",
+      "imageUrl": "https://mukitob.com/books/covers/az/20.jpg",
+      "previewPages": 64,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"404Kb\",\"label\":\"docx (404Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=20&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"574Kb\",\"label\":\"epub (574Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=20&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"878Kb\",\"label\":\"fb2 (878Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=20&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"3Mb\",\"label\":\"pdf (3Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=20&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"12Mb\",\"label\":\"rtf (12Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=20&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"370Kb\",\"label\":\"txt (370Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=20&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "404Kb",
+          "label": "docx (404Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=20&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "574Kb",
+          "label": "epub (574Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=20&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "878Kb",
+          "label": "fb2 (878Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=20&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "3Mb",
+          "label": "pdf (3Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=20&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "12Mb",
+          "label": "rtf (12Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=20&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "370Kb",
+          "label": "txt (370Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=20&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 21,
+      "sourceBookKey": "mukitob:az:21",
+      "title": "Mələyin danışdığı hekayə",
+      "subtitle": "Birinci Milad, səmadan görünüş",
+      "author": "Maks Lukado",
+      "description": "Təməl olaraq hamıya bəlli olan Milad süjetini götürməklə Maks Lukado, Amerikanın ən populyar mÿsihçi yazıçılarından biri, ruhani dünyada Məsihin Yerə gəlişinin müşayiət olunduğu qarşıdurmanı təqdim etməyə çalışır, belə bir qarşıdurma heç şübhəsiz son dərəcə sərt olmuşdur. Əgər İblisə Məsihin beşikdə görünməsinə yol verməmək nəsib olardısa, Məsih çarmıxda sadəcə olmayacaqdı. Zaman etibarilə geriyə, İlahi taxta, hər şeyin başlanğıcı olan yerə səyahətə yollanın və ilk Miladın müşayiət olunduğu şöhrətin, möcüzələrin və mübarizənin şahidinə çevrilin.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=21",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=21",
+      "imageUrl": "https://mukitob.com/books/covers/az/21.jpg",
+      "previewPages": 45,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"168Kb\",\"label\":\"docx (168Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=21&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"953Kb\",\"label\":\"epub (953Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=21&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"297Kb\",\"label\":\"fb2 (297Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=21&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"3Mb\",\"label\":\"pdf (3Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=21&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"2Mb\",\"label\":\"rtf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=21&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"117Kb\",\"label\":\"txt (117Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=21&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "168Kb",
+          "label": "docx (168Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=21&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "953Kb",
+          "label": "epub (953Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=21&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "297Kb",
+          "label": "fb2 (297Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=21&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "3Mb",
+          "label": "pdf (3Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=21&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "2Mb",
+          "label": "rtf (2Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=21&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "117Kb",
+          "label": "txt (117Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=21&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 22,
+      "sourceBookKey": "mukitob:az:22",
+      "title": "Məsihçiliyin əsasi",
+      "subtitle": "",
+      "author": "Con Stott",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=22",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=22",
+      "imageUrl": "https://mukitob.com/books/covers/az/22.jpg",
+      "previewPages": 46,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"179Kb\",\"label\":\"docx (179Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=22&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"958Kb\",\"label\":\"epub (958Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=22&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"369Kb\",\"label\":\"fb2 (369Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=22&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"4Mb\",\"label\":\"pdf (4Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=22&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=22&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"496Kb\",\"label\":\"txt (496Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=22&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "179Kb",
+          "label": "docx (179Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=22&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "958Kb",
+          "label": "epub (958Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=22&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "369Kb",
+          "label": "fb2 (369Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=22&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "4Mb",
+          "label": "pdf (4Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=22&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=22&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "496Kb",
+          "label": "txt (496Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=22&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 23,
+      "sourceBookKey": "mukitob:az:23",
+      "title": "Allahın müqəddəsliji",
+      "subtitle": "",
+      "author": "Robert Spraul",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=23",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=23",
+      "imageUrl": "https://mukitob.com/books/covers/az/23.jpg",
+      "previewPages": 42,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"210Kb\",\"label\":\"docx (210Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=23&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"1Mb\",\"label\":\"epub (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=23&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"553Kb\",\"label\":\"fb2 (553Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=23&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=23&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"7Mb\",\"label\":\"rtf (7Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=23&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"646Kb\",\"label\":\"txt (646Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=23&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "210Kb",
+          "label": "docx (210Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=23&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "1Mb",
+          "label": "epub (1Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=23&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "553Kb",
+          "label": "fb2 (553Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=23&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=23&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "7Mb",
+          "label": "rtf (7Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=23&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "646Kb",
+          "label": "txt (646Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=23&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 24,
+      "sourceBookKey": "mukitob:az:24",
+      "title": "Sənin Zirvələrinə yol",
+      "subtitle": "",
+      "author": "Hanna Harvard",
+      "description": "Bu kitab bizim hər birimizin «Zirvələrimizdə» yaşaya biləcəyimizdən əvvəl qarşımızda duran səyahəti dramatik təsvir edən gözəl alleqoriyadır. Biz baş qəhrəmanla birlikdə onun iki yol yoldaşının ardınca gedəcək və əzablı qorxunu necə dəf etməyi, məhəbbət, sevinc və zəfər zirvələrinə necə çatmağı öyrənəcəyik.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=24",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=24",
+      "imageUrl": "https://mukitob.com/books/covers/az/24.jpg",
+      "previewPages": 54,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"6Mb\",\"label\":\"docx (6Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=24&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=24&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"3Mb\",\"label\":\"fb2 (3Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=24&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"7Mb\",\"label\":\"pdf (7Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=24&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"59Mb\",\"label\":\"rtf (59Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=24&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"673Kb\",\"label\":\"txt (673Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=24&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "6Mb",
+          "label": "docx (6Mb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=24&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=24&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "3Mb",
+          "label": "fb2 (3Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=24&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "7Mb",
+          "label": "pdf (7Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=24&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "59Mb",
+          "label": "rtf (59Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=24&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "673Kb",
+          "label": "txt (673Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=24&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 25,
+      "sourceBookKey": "mukitob:az:25",
+      "title": "Müqəddəs kitabda nikahın surəti",
+      "subtitle": "",
+      "author": "Bryus Uilkenson",
+      "description": "",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=25",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=25",
+      "imageUrl": "https://mukitob.com/books/covers/az/25.jpg",
+      "previewPages": 38,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"193Kb\",\"label\":\"docx (193Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=25&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"946Kb\",\"label\":\"epub (946Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=25&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"372Kb\",\"label\":\"fb2 (372Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=25&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"735Kb\",\"label\":\"pdf (735Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=25&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"4Mb\",\"label\":\"rtf (4Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=25&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"367Kb\",\"label\":\"txt (367Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=25&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "193Kb",
+          "label": "docx (193Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=25&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "946Kb",
+          "label": "epub (946Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=25&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "372Kb",
+          "label": "fb2 (372Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=25&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "735Kb",
+          "label": "pdf (735Kb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=25&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "4Mb",
+          "label": "rtf (4Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=25&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "367Kb",
+          "label": "txt (367Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=25&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 26,
+      "sourceBookKey": "mukitob:az:26",
+      "title": "Bu insanlar kimdir?",
+      "subtitle": "Qüdrətli Tanrının əlindəki adi insanlar",
+      "author": "Maks Lukado",
+      "description": "Bu kitabda Allahın adi insanları dünyanı dəyişdirməyə cəlb et­mə­sin­dən bəhs olunur. Bəli, nə müqəddəs, nə dahi, ancaq sadə insanları. Bəs bu insanlar kimlərdir? Hiyləgərlər, fırıldaqçılar, yalançılar... Təsəvvür edin ki, söhbət bizim «iman qəhrəmanları» hesab etdiyimiz İbrahim, Musa, Paul, Peter, Matta və bir çoxları haqqında gedir. Tanrı onların qüsurlarını Öz məhəbbəti ilə tamamlayanda, onlar qəhrəman oldular. Ən əsası, müəllifin də vurğuladığı kimi, bu insanlar bizik. Xəyanət edən bizik. Mərhəmət göstərməyən bizik. Yalan danışan bizik. Zina edən bizik. Hər şeyi öz bildiyi kimi edən bizik. Lakin Tanrı insandakı bütün pis şeylərə üstün gəlir və yaxşı şeyləri götürür ki, onda Öz izzətini izhar etsin.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=26",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=26",
+      "imageUrl": "https://mukitob.com/books/covers/az/26.jpg",
+      "previewPages": 36,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"268Kb\",\"label\":\"docx (268Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=26&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"1Mb\",\"label\":\"epub (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=26&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"538Kb\",\"label\":\"fb2 (538Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=26&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=26&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"7Mb\",\"label\":\"rtf (7Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=26&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"691Kb\",\"label\":\"txt (691Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=26&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "268Kb",
+          "label": "docx (268Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=26&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "1Mb",
+          "label": "epub (1Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=26&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "538Kb",
+          "label": "fb2 (538Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=26&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=26&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "7Mb",
+          "label": "rtf (7Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=26&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "691Kb",
+          "label": "txt (691Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=26&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 27,
+      "sourceBookKey": "mukitob:az:27",
+      "title": "Bu insanlar kimdir? 2",
+      "subtitle": "Yaşayan Tanrı ilə gözlənilməz qarşılaşma",
+      "author": "Maks Lukado",
+      "description": "Maks Lukado «Bu insanlar kimdir?» kitabında toxunduğu möv­zu­nu bu kitabda davam etdirir. O, bu kitab vasitəsilə oxucularının diq­qətini Müqəddəs Kitabdakı iyirmidən çox personajın ilhamlandırıcı he­kayələrinə yönəldir. Bu hekayələrdə yaşayan Tanrı ilə görüşənlərdən, itənlərdən və tapılanlardan — bizim kimi sadə insanlardan bəhs edilir. Bu insanların həyatından gətirilən nümunələr bizə ümid verir. Belə ki, onları günahlarından satın alan və həyatlarını dəyişdirən Rəbb bizim üçün də bunları edə bilər.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=27",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=27",
+      "imageUrl": "https://mukitob.com/books/covers/az/27.jpg",
+      "previewPages": 47,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"267Kb\",\"label\":\"docx (267Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=27&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"1Mb\",\"label\":\"epub (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=27&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"611Kb\",\"label\":\"fb2 (611Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=27&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"8Mb\",\"label\":\"pdf (8Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=27&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"7Mb\",\"label\":\"rtf (7Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=27&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"710Kb\",\"label\":\"txt (710Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=27&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "267Kb",
+          "label": "docx (267Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=27&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "1Mb",
+          "label": "epub (1Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=27&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "611Kb",
+          "label": "fb2 (611Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=27&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "8Mb",
+          "label": "pdf (8Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=27&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "7Mb",
+          "label": "rtf (7Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=27&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "710Kb",
+          "label": "txt (710Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=27&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 28,
+      "sourceBookKey": "mukitob:az:28",
+      "title": "Nikahda xoşbəxtliyin 10 qaydası",
+      "subtitle": "Nikahda sevgini qorumaq üçün ər-arvada kömək edəcək qərarlar",
+      "author": "Coș Makdauell",
+      "description": "Bu kitabda məşhur amerikalı vəzçi Coş Makdauell nikahdakı təravəti və hisslərin coşqunluğunu qorumaqdan ötrü vacib olan on həll yolundan bəhs edir. Müəllifin Müqəddəs Kitabın hikmətinə və öz şəxsi təcrübəsinə əsaslanaraq verdiyi praktik tövsiyələr həm yeni evlilər, həm də nikahda uzun illər yaşayan, eləcə də evliliklərini xoşbəxt və möhkəm etmək istəyən ər-arvad üçün faydalı olacaqdır. Kitabın sonunda oxucuları bonus gözləyir: onlar emosional ehtiyaclarını müəyyən etmək üçün bir testlə qarşılaşacaqlar.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=28",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=28",
+      "imageUrl": "https://mukitob.com/books/covers/az/28.jpg",
+      "previewPages": 44,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"600Kb\",\"label\":\"docx (600Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=28&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"919Kb\",\"label\":\"epub (919Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=28&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"928Kb\",\"label\":\"fb2 (928Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=28&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=28&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"8Mb\",\"label\":\"rtf (8Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=28&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"339Kb\",\"label\":\"txt (339Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=28&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "600Kb",
+          "label": "docx (600Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=28&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "919Kb",
+          "label": "epub (919Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=28&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "928Kb",
+          "label": "fb2 (928Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=28&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=28&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "8Mb",
+          "label": "rtf (8Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=28&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "339Kb",
+          "label": "txt (339Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=28&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 29,
+      "sourceBookKey": "mukitob:az:29",
+      "title": "Atanın 10 vəzifəsi",
+      "subtitle": "Uşaqlara təsirinizi necə faydalı etmək olar",
+      "author": "Coș Makdauell",
+      "description": "Məşhur amerikalı təbliğçi Coş Makdauell bu kitabında uşaqlarını Allaha və va­li­deyn­lərinə itaətli böyütmək üçün Allah, ailə və özü qarşısında götürdüyü öhdəliklərdən bəhs edir. Müəllifin Müqəddəs Kitab hikmətinə və öz şəxsi təcrübəsinə əsaslanaraq verdiyi praktik tövsiyələr uşaqlara təsirini faydalı etmək istəyən həm gənc, həm də təcrübəli atalara faydalı olacaqdır. Kitabın sonunda oxucuları bonus gözləyir: onlar emosional eh­tiyac­larını müəyyən etməkdən ötrü bir testlə qarşılaşacaqlar.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=29",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=29",
+      "imageUrl": "https://mukitob.com/books/covers/az/29.jpg",
+      "previewPages": 42,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"630Kb\",\"label\":\"docx (630Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=29&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"926Kb\",\"label\":\"epub (926Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=29&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"957Kb\",\"label\":\"fb2 (957Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=29&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=29&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"9Mb\",\"label\":\"rtf (9Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=29&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"345Kb\",\"label\":\"txt (345Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=29&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "630Kb",
+          "label": "docx (630Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=29&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "926Kb",
+          "label": "epub (926Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=29&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "957Kb",
+          "label": "fb2 (957Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=29&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=29&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "9Mb",
+          "label": "rtf (9Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=29&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "345Kb",
+          "label": "txt (345Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=29&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 30,
+      "sourceBookKey": "mukitob:az:30",
+      "title": "Qızıl ürək",
+      "subtitle": "Uşaqlar və böyüklər üçün nağıllar",
+      "author": "Yelena Sokolova",
+      "description": "Yelena Sokolovanın ölçücə kiçik, məzmunca yığcam olan nağılları və məsəlləri — bütün ailə üçün maraqlıdır. Bu nağıl və məsəllərdə xalq müdrikliyi və həqiqətlərin hikməti birləşdirilərək, həyatımızı bərpa edən Allahın həqiqətini lakonik və izahlı surətdə çatdırılır.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=30",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=30",
+      "imageUrl": "https://mukitob.com/books/covers/az/30.jpg",
+      "previewPages": 39,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"7Mb\",\"label\":\"docx (7Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=30&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"2Mb\",\"label\":\"epub (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=30&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"2Mb\",\"label\":\"fb2 (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=30&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"3Mb\",\"label\":\"pdf (3Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=30&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"144Mb\",\"label\":\"rtf (144Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=30&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"167Kb\",\"label\":\"txt (167Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=30&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "7Mb",
+          "label": "docx (7Mb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=30&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "2Mb",
+          "label": "epub (2Mb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=30&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "2Mb",
+          "label": "fb2 (2Mb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=30&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "3Mb",
+          "label": "pdf (3Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=30&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "144Mb",
+          "label": "rtf (144Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=30&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "167Kb",
+          "label": "txt (167Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=30&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 31,
+      "sourceBookKey": "mukitob:az:31",
+      "title": "AÇIQ-AYDIN FAKTLAR",
+      "subtitle": "SEKS HAQQINDA VALİDEYNLƏRİNİZİN ONLARDAN SORUŞMAYACAĞINIZI GÜMAN ETDİYİ 39 SUAL",
+      "author": "Coş Makdauell | Erin Devislə",
+      "description": "Reyçel imanlı cəmiyyət mühitində böyümüşdü. On yaşında o, artıq məsihçi idi. Valideynləri və pastor ona elə təlqin etmişdilər ki, seks pis şeydir. Budur, o, kollecə qəbul olunub, yataqxanadakı qonşuları bütün günü elə bu barədə danışırlar. Hətta məsihçi dostlarından bəziləri seks haqqında adi bir şey kimi danışırlar. Reyçel özlüyündə düşünməyə başlayır: «Bu mövzu nəyə görə hamını bu qədər maraqlandırır?»",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=31",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=31",
+      "imageUrl": "https://mukitob.com/books/covers/az/31.jpg",
+      "previewPages": 90,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, fb2, pdf, rtf, txt, epub",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"499Kb\",\"label\":\"docx (499Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=31&f=docx\"},{\"format\":\"fb2\",\"sizeLabel\":\"806Kb\",\"label\":\"fb2 (806Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=31&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=31&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"6Mb\",\"label\":\"rtf (6Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=31&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"241Kb\",\"label\":\"txt (241Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=31&f=txt\"},{\"format\":\"epub\",\"sizeLabel\":\"640Kb\",\"label\":\"epub (640Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=31&f=epub\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "499Kb",
+          "label": "docx (499Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=31&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "fb2",
+          "sizeLabel": "806Kb",
+          "label": "fb2 (806Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=31&f=fb2"
+        },
+        {
+          "fileOrder": 3,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=31&f=pdf"
+        },
+        {
+          "fileOrder": 4,
+          "format": "rtf",
+          "sizeLabel": "6Mb",
+          "label": "rtf (6Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=31&f=rtf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "txt",
+          "sizeLabel": "241Kb",
+          "label": "txt (241Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=31&f=txt"
+        },
+        {
+          "fileOrder": 6,
+          "format": "epub",
+          "sizeLabel": "640Kb",
+          "label": "epub (640Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=31&f=epub"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 32,
+      "sourceBookKey": "mukitob:az:32",
+      "title": "YENİYETMƏ İLƏ AÇIQ SÖHBƏT",
+      "subtitle": "",
+      "author": "Coş Makdauell | Dotti Makdauell",
+      "description": "Uşaqlarına tərbiyə verərkən Allahın sekslə bağlı planını cəsarət, əminlik, sevgi ilə açıq-aydın izah edən valideynlərə.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=32",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=32",
+      "imageUrl": "https://mukitob.com/books/covers/az/32.jpg",
+      "previewPages": 45,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"587Kb\",\"label\":\"docx (587Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=32&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"675Kb\",\"label\":\"epub (675Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=32&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"943Kb\",\"label\":\"fb2 (943Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=32&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=32&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"6Mb\",\"label\":\"rtf (6Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=32&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"289Kb\",\"label\":\"txt (289Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=32&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "587Kb",
+          "label": "docx (587Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=32&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "675Kb",
+          "label": "epub (675Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=32&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "943Kb",
+          "label": "fb2 (943Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=32&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=32&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "6Mb",
+          "label": "rtf (6Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=32&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "289Kb",
+          "label": "txt (289Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=32&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 33,
+      "sourceBookKey": "mukitob:az:33",
+      "title": "MÜNAQİŞƏLƏR",
+      "subtitle": "",
+      "author": "Coș Makdauell | Ed Styuart",
+      "description": "Atasının ayaq səslərini eşidən on beş yaşlı Ken Meyers onun gəldiyini başa düşdü. Atasının onunla nə barədə danışacağını artıq bilirdi. Çünki bu cür söhbətlər həftədə bir dəfə, bəzən isə iki dəfə təkrarlanırdı.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=33",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=33",
+      "imageUrl": "https://mukitob.com/books/covers/az/33.jpg",
+      "previewPages": 46,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"293Kb\",\"label\":\"docx (293Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=33&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"514Kb\",\"label\":\"epub (514Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=33&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"410Kb\",\"label\":\"fb2 (410Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=33&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=33&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=33&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"62Kb\",\"label\":\"txt (62Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=33&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "293Kb",
+          "label": "docx (293Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=33&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "514Kb",
+          "label": "epub (514Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=33&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "410Kb",
+          "label": "fb2 (410Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=33&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=33&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=33&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "62Kb",
+          "label": "txt (62Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=33&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 34,
+      "sourceBookKey": "mukitob:az:34",
+      "title": "YAXIN ADAMIN ÖLÜMÜ",
+      "subtitle": "",
+      "author": "Coş MAKDAUELL | Ed STYUART",
+      "description": "«Bilirəm ki, bütün bunlar Mettiyə görə oldu — Çad Rocers sakitcə öz-özünə dedi. O, alaqaranlıqda magistralın tozlu tərəfi ilə gedirdi. Ayağının altına təsadüfən düşən çınqıl daşı tapdalayaraq, kiçik qardaşına hirsləndi: «Hələ yeddi yaşı yoxdur, amma anam onunla elə rəftar edir ki, sanki alçaq dağları bu yaradıb! Yəqin anam onu mağazaya aparıb ki, yeni video oyun alsın. Anamın mənim dalımca məktəbə gecikməsi təəccüblü deyil!»",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=34",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=34",
+      "imageUrl": "https://mukitob.com/books/covers/az/34.jpg",
+      "previewPages": 49,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"295Kb\",\"label\":\"docx (295Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=34&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"554Kb\",\"label\":\"epub (554Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=34&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"406Kb\",\"label\":\"fb2 (406Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=34&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=34&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=34&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"51Kb\",\"label\":\"txt (51Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=34&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "295Kb",
+          "label": "docx (295Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=34&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "554Kb",
+          "label": "epub (554Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=34&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "406Kb",
+          "label": "fb2 (406Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=34&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=34&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=34&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "51Kb",
+          "label": "txt (51Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=34&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 35,
+      "sourceBookKey": "mukitob:az:35",
+      "title": "VALİDEYNLƏRİN BOŞANMASI",
+      "subtitle": "",
+      "author": "Coş MAKDAUELL | Ed STYUART",
+      "description": "Anası konkret bir şey deməsə də, on beş yaşlı Cessika İnqram ailəsində söhbətin nədən gedəcəyini bilirdi. Cessikanın bacısı Karen və qardaşı Mark da bu barədə bilirdilər. Nə baş verdiyini başa düşməmək üçün gərək ya kor, ya kar, ya da ağılsız olasan. Valideynlər övladlarına bir müddət ayrı yaşamaqlarının fayda verməyəcəyini və boşanacaqlarını elan edəcəkdilər.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=35",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=35",
+      "imageUrl": "https://mukitob.com/books/covers/az/35.jpg",
+      "previewPages": 39,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"289Kb\",\"label\":\"docx (289Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=35&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"559Kb\",\"label\":\"epub (559Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=35&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"403Kb\",\"label\":\"fb2 (403Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=35&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=35&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=35&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"61Kb\",\"label\":\"txt (61Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=35&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "289Kb",
+          "label": "docx (289Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=35&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "559Kb",
+          "label": "epub (559Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=35&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "403Kb",
+          "label": "fb2 (403Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=35&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=35&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=35&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "61Kb",
+          "label": "txt (61Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=35&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 36,
+      "sourceBookKey": "mukitob:az:36",
+      "title": "ƏSL SEVGİ AXTARIŞINDA",
+      "subtitle": "",
+      "author": "Coş MAKDAUELL | Ed STYUART",
+      "description": "Lyuk qısa zamanda təpənin zirvəsinə çatmağa tələsirdi. Lakin yanında əyləşən rəfiqəsi Treysi şəhərin gecə görünüşündən zövq almaq istəyirdi. Ona görə Lyuk sürəti azaltmalı olurdu. O, Treysinin gəzintidən zövq almasını istəyirdi. Çünki Treysiyə xoş olsaydı, onda görüşləri onun da ürəyincə olacaqdı.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=36",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=36",
+      "imageUrl": "https://mukitob.com/books/covers/az/36.jpg",
+      "previewPages": 72,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"313Kb\",\"label\":\"docx (313Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=36&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"537Kb\",\"label\":\"epub (537Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=36&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"435Kb\",\"label\":\"fb2 (435Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=36&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=36&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=36&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"59Kb\",\"label\":\"txt (59Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=36&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "313Kb",
+          "label": "docx (313Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=36&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "537Kb",
+          "label": "epub (537Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=36&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "435Kb",
+          "label": "fb2 (435Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=36&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=36&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=36&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "59Kb",
+          "label": "txt (59Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=36&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 37,
+      "sourceBookKey": "mukitob:az:37",
+      "title": "ALLAHIN İRADƏSİNİ AXTARMAQ",
+      "subtitle": "",
+      "author": "Coş MAKDAUELL | Ed STYUART",
+      "description": "Bobbi Franklin əlində toxmaqla bazaya yaxınlaşanda, azarkeşlərin alqışlarını çətinliklə eşidirdi. Tribunada onun valideynləri və sevgilisi Eşli oturmuşdu. Məbəddən çoxlu dostları da gəlmişdi. Bobbi onların hamısını çox sevirdi və matçda iştirak etmələrini arzulayırdı. Amma indi onun diqqəti oyuna yönəlmişdi. Görəsən, onun komandası məğlub olacaq, yoxsa qalib gələcək? Bu onun orta məktəbdəki son oyunu idi. Buna görə də bütün diqqətini oyuna cəmləməli idi. Əla oynamaq bacarığı onu məktəb komandaları arasında ilin ən yaxşı oyunçusuna çevirmişdi.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=37",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=37",
+      "imageUrl": "https://mukitob.com/books/covers/az/37.jpg",
+      "previewPages": 48,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"309Kb\",\"label\":\"docx (309Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=37&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"523Kb\",\"label\":\"epub (523Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=37&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"429Kb\",\"label\":\"fb2 (429Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=37&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=37&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=37&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"57Kb\",\"label\":\"txt (57Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=37&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "309Kb",
+          "label": "docx (309Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=37&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "523Kb",
+          "label": "epub (523Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=37&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "429Kb",
+          "label": "fb2 (429Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=37&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=37&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=37&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "57Kb",
+          "label": "txt (57Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=37&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 38,
+      "sourceBookKey": "mukitob:az:38",
+      "title": "PLANLAŞDIRILMAMIŞ HAMİLƏLİK",
+      "subtitle": "",
+      "author": "Coş MAKDAUELL | Ed STYUART",
+      "description": "Stefani pərdənin arasından anasının evdən çıxan avtomobilini gözdən itənə qədər izlədi. Sonra maşının geri dönməyəcəyinə əmin olmaq üçün uzun müddət evin qabağındakı boş küçəyə baxdı. — Stefani, bir özünə kənardan bax! — Keyt gülə-gülə dedi. — Casusa oxşayırsan. Stefani Kuper və Keyt Holmsun on yeddi yaşları var idi. Onlar dördüncü sinifdən dost idilər. Qızların bir-biri ilə tanış olması böyük qardaşlarının sayəsində olub. Çünki onların böyük qardaşları dost idilər.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=38",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=38",
+      "imageUrl": "https://mukitob.com/books/covers/az/38.jpg",
+      "previewPages": 49,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"350Kb\",\"label\":\"docx (350Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=38&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"569Kb\",\"label\":\"epub (569Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=38&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"482Kb\",\"label\":\"fb2 (482Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=38&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=38&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"5Mb\",\"label\":\"rtf (5Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=38&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"56Kb\",\"label\":\"txt (56Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=38&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "350Kb",
+          "label": "docx (350Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=38&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "569Kb",
+          "label": "epub (569Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=38&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "482Kb",
+          "label": "fb2 (482Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=38&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=38&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "5Mb",
+          "label": "rtf (5Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=38&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "56Kb",
+          "label": "txt (56Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=38&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 39,
+      "sourceBookKey": "mukitob:az:39",
+      "title": "CİNSİ TƏCAVÜZ",
+      "subtitle": "",
+      "author": "Coş Makdauell | Ed Styuart",
+      "description": "Dəhlizdə ayaq səslərini eşidən balaca qız qorxudan donub qaldı. O, babası ilə nənəsinin evində qonaqlar üçün nəzərdə tutulan yataq otağında tək idi. Qız fikirləşdi ki, çarpayının altında gizlənmək yaxşı olar. Lakin qapının qulpunun burulduğunu görəndə, artıq gec olduğunu anladı. Qız yorğanı başına çəkib, onu tapmayacağına ümid edərək gizləndi. Qız onun otağa necə girdiyini eşitdi.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=39",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=39",
+      "imageUrl": "https://mukitob.com/books/covers/az/39.jpg",
+      "previewPages": 47,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"50Kb\",\"label\":\"docx (50Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=39&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"877Kb\",\"label\":\"epub (877Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=39&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"138Kb\",\"label\":\"fb2 (138Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=39&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"1Mb\",\"label\":\"pdf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=39&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"259Kb\",\"label\":\"rtf (259Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=39&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"97Kb\",\"label\":\"txt (97Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=39&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "50Kb",
+          "label": "docx (50Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=39&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "877Kb",
+          "label": "epub (877Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=39&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "138Kb",
+          "label": "fb2 (138Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=39&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "1Mb",
+          "label": "pdf (1Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=39&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "259Kb",
+          "label": "rtf (259Kb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=39&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "97Kb",
+          "label": "txt (97Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=39&f=txt"
+        }
+      ]
+    },
+    {
+      "source": "mukitob",
+      "locale": "az",
+      "externalId": 40,
+      "sourceBookKey": "mukitob:az:40",
+      "title": "İNTİHAR HAQQINDA DÜŞÜNCƏLƏR",
+      "subtitle": "",
+      "author": "Coş Makdauell | Ed Styuart",
+      "description": "Gənclər qrupu məbədin yay düşərgəsi üçün maşın yuyaraq dörd yüz otuz dollar qazanmışdı. Ancaq yaddaqalan bu deyil, su döyüşü idi. İşdə fasilə zamanı Şon Uilyamsın başçılıq etdiyi bir qrup orta məktəb şagirdi iki şlanqı ələ keçirərək, kiçik yoldaşlarına atəş açdılar (daha doğrusu, su ilə atəş). Onlar da özlərini itirmədən sabunlu su ilə dolu vedrələri və süngərləri əllərinə alıb qorxmadan döyüşə qoşuldular.",
+      "detailUrl": "https://mukitob.com/books/az/book.php?id_book=40",
+      "readUrl": "https://mukitob.com/books/az/read.php?id_book=40",
+      "imageUrl": "https://mukitob.com/books/covers/az/40.jpg",
+      "previewPages": 50,
+      "hasAudio": false,
+      "downloadCount": 6,
+      "downloadFormats": "docx, epub, fb2, pdf, rtf, txt",
+      "downloadLinksJson": "[{\"format\":\"docx\",\"sizeLabel\":\"47Kb\",\"label\":\"docx (47Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=40&f=docx\"},{\"format\":\"epub\",\"sizeLabel\":\"903Kb\",\"label\":\"epub (903Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=40&f=epub\"},{\"format\":\"fb2\",\"sizeLabel\":\"171Kb\",\"label\":\"fb2 (171Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=40&f=fb2\"},{\"format\":\"pdf\",\"sizeLabel\":\"2Mb\",\"label\":\"pdf (2Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=40&f=pdf\"},{\"format\":\"rtf\",\"sizeLabel\":\"1Mb\",\"label\":\"rtf (1Mb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=40&f=rtf\"},{\"format\":\"txt\",\"sizeLabel\":\"95Kb\",\"label\":\"txt (95Kb)\",\"downloadUrl\":\"https://mukitob.com/books/az/download.php?id_book=40&f=txt\"}]",
+      "downloads": [
+        {
+          "fileOrder": 1,
+          "format": "docx",
+          "sizeLabel": "47Kb",
+          "label": "docx (47Kb)",
+          "title": "DOCX - Microsoft Word proqramında yaradılmış müasir mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=40&f=docx"
+        },
+        {
+          "fileOrder": 2,
+          "format": "epub",
+          "sizeLabel": "903Kb",
+          "label": "epub (903Kb)",
+          "title": "EPUB - Apple (iPad, iPod, iPhone) firması və Android əsaslı qurğular üçün optimal formatdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=40&f=epub"
+        },
+        {
+          "fileOrder": 3,
+          "format": "fb2",
+          "sizeLabel": "171Kb",
+          "label": "fb2 (171Kb)",
+          "title": "FB2 - elektron kitabların oxunması üçün qurğuların və proqramların məşhur formatıdır. Bura interaktiv mündəricat, təsvirlər, istinadlar daxildir.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=40&f=fb2"
+        },
+        {
+          "fileOrder": 4,
+          "format": "pdf",
+          "sizeLabel": "2Mb",
+          "label": "pdf (2Mb)",
+          "title": "PDF - Adobe Systems-in geniş yayılmış formatıdır. Kitab təsvirlərlə birlikdə çap versiyasına bənzəyir. Özündə interaktiv mündəricat saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=40&f=pdf"
+        },
+        {
+          "fileOrder": 5,
+          "format": "rtf",
+          "sizeLabel": "1Mb",
+          "label": "rtf (1Mb)",
+          "title": "RTF - qurğuların əksəriyyətində dəstəklənən universal mətn formatıdır. Özündə formalaşdırmanı, təsvirləri, hyperlink, istinadlar saxlayır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=40&f=rtf"
+        },
+        {
+          "fileOrder": 6,
+          "format": "txt",
+          "sizeLabel": "95Kb",
+          "label": "txt (95Kb)",
+          "title": "TXT - ən sadə formatdır. Məlumat mətn şəklində formalaşdırılmadan, təsvirsiz və hiperlinksiz təqdim olunur. İstənilən qurğuda açılır.",
+          "downloadUrl": "https://mukitob.com/books/az/download.php?id_book=40&f=txt"
+        }
+      ]
+    }
+  ]
+}

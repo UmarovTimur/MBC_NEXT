@@ -1,10 +1,13 @@
 import type { Book } from "../lib/mapWpBook";
 import { AppLink } from "@/shared/ui/AppLink";
+
 interface BookCardProps {
   book: Book;
 }
 
 export function BookCard({ book }: BookCardProps) {
+  const metaLine = book.author || book.subtitle;
+
   return (
     <AppLink href={`/books/${book.slug}`}>
       <div className="flex flex-col">
@@ -15,8 +18,8 @@ export function BookCard({ book }: BookCardProps) {
             className="mb-2 aspect-ratio-4/3 rounded object-cover"
           />
         )}
-        {book.excerpt && (
-          <p className="text-sm text-muted-foreground truncate">{book.excerpt}</p>
+        {metaLine && (
+          <p className="text-sm text-muted-foreground truncate">{metaLine}</p>
         )}
         <p className="text-l mb-1 text-foreground font-bold truncate">{book.title}</p>
       </div>

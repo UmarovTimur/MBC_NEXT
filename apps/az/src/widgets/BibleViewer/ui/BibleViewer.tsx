@@ -6,6 +6,7 @@ import { cn } from "@/shared/lib/utils";
 import { notFound } from "next/navigation";
 import { ChapterPagination } from "./ChapterPagination";
 import { AppLink } from "@/shared/ui/AppLink";
+import { BibleContent } from "@/shared/ui/BibleContent";
 
 interface BibleViewerProps {
   className?: string;
@@ -60,20 +61,13 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
           </AppLink> */}
           <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
           <h2 className="text-2xl my-4">{subTitle}</h2>
-          <div className="[&>p]:mb-4" dangerouslySetInnerHTML={{ __html: content }} />
+          <BibleContent html={content} formattingStyle={bible.formattingStyle} />
         </div>
 
         {attachedContent && (
           <div className="shrink-0 pt-6 basis-1/3 text-base ">
             <h3 className="text-3xl whitespace-pre-line mb-6">{attachedTitle}</h3>
-            <div
-              className={cn("[&_a]:font-bold **:[[id^='V']]:font-bold p [&_span[id^='V']]:before:content-['\a']",
-                "[&_span[id^='V']]:before:whitespace-pre [&_span[id^='V']]:before:block [&_span[id^='V']]:before:h-0",
-                "[&_span[id^='V']]:mt-4 first:[&_span[id^='V']]:before:content-none",
-                "[&_div[class*='s']]:font-bold [&_div[class*='s']]:leading-8"
-              )}
-              dangerouslySetInnerHTML={{ __html: attachedContent }}
-            />
+            <BibleContent html={attachedContent} formattingStyle={attachedBible?.formattingStyle} />
           </div>
         )}
       </div>

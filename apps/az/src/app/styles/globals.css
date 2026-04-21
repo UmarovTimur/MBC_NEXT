@@ -144,3 +144,50 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .bible-content a {
+    @apply font-bold;
+  }
+
+  .bible-content strong {
+    @apply font-bold;
+  }
+
+  .bible-content p,
+  .bible-content .p {
+    @apply mb-4;
+  }
+
+  .bible-content--azb .s {
+    @apply mt-6 font-bold leading-8;
+  }
+
+  .bible-content--azb .r {
+    @apply mb-3 italic;
+  }
+
+  .bible-content--azb .q,
+  .bible-content--azb .pi {
+    @apply pl-4;
+  }
+
+  .bible-content--azb .q {
+    @apply leading-7;
+  }
+
+  .bible-content--azb .verse {
+    @apply font-bold;
+  }
+
+  .bible-content--azb .verse::before {
+    content: "\A";
+    display: block;
+    height: 0;
+    white-space: pre;
+  }
+
+  .bible-content--azb > :first-child .verse:first-child::before {
+    content: none;
+  }
+}

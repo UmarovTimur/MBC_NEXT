@@ -12,6 +12,7 @@
     "primary": "Müqəddəs Kitab",
     "isIndependent": true,
     "attachment": null,
+    "formatingStyle": "azb",
     "defaultView": "single-column",
     "chapterSlug": "-ci fəsil"
   }

@@ -154,27 +154,41 @@ export interface Book {
   id: number;
   title: string;
   /**
-   * URL-friendly identifier (e.g. matthew, john)
+   * URL-friendly identifier used in book pages.
    */
   slug: string;
   locale: 'az' | 'uz' | 'ru';
-  excerpt?: string | null;
-  content?: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
+  author?: string | null;
+  subtitle?: string | null;
+  description?: string | null;
   coverImage?: (number | null) | Media;
+  /**
+   * Used when the cover remains on the source website.
+   */
+  coverImageUrl?: string | null;
+  source?: ('mukitob' | 'manual') | null;
+  sourceBookKey?: string | null;
+  /**
+   * Numeric identifier from the source catalog.
+   */
+  sourceId?: number | null;
+  detailUrl?: string | null;
+  readUrl?: string | null;
+  previewPages?: number | null;
+  /**
+   * Audio formats are intentionally excluded for now.
+   */
+  downloads?:
+    | {
+        format: string;
+        label: string;
+        fileSize?: string | null;
+        description?: string | null;
+        url: string;
+        sortOrder?: number | null;
+        id?: string | null;
+      }[]
+    | null;
   status: 'draft' | 'published';
   updatedAt: string;
   createdAt: string;
@@ -318,9 +332,28 @@ export interface BooksSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   locale?: T;
-  excerpt?: T;
-  content?: T;
+  author?: T;
+  subtitle?: T;
+  description?: T;
   coverImage?: T;
+  coverImageUrl?: T;
+  source?: T;
+  sourceBookKey?: T;
+  sourceId?: T;
+  detailUrl?: T;
+  readUrl?: T;
+  previewPages?: T;
+  downloads?:
+    | T
+    | {
+        format?: T;
+        label?: T;
+        fileSize?: T;
+        description?: T;
+        url?: T;
+        sortOrder?: T;
+        id?: T;
+      };
   status?: T;
   updatedAt?: T;
   createdAt?: T;

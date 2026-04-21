@@ -1,14 +1,31 @@
 export type PayloadBook = {
-  id: string;
+  id: number;
   slug: string;
   title: string;
   locale: 'az' | 'uz' | 'ru';
-  excerpt?: string;
-  content?: unknown;
+  author?: string;
+  subtitle?: string;
+  description?: string;
+  source?: 'mukitob' | 'manual';
+  sourceBookKey?: string;
+  sourceId?: number;
+  detailUrl?: string;
+  readUrl?: string;
+  previewPages?: number;
+  coverImageUrl?: string;
   coverImage?: {
     url: string;
     alt?: string;
   };
+  downloads?: {
+    id?: string;
+    format: string;
+    label: string;
+    fileSize?: string;
+    description?: string;
+    url: string;
+    sortOrder?: number;
+  }[];
   status: 'draft' | 'published';
 };
 
@@ -22,7 +39,7 @@ function apiUrl(path: string) {
 }
 
 export async function fetchBooks(): Promise<PayloadBook[]> {
-  const url = apiUrl('/api/books?where[locale][equals]=az&where[status][equals]=published&depth=1&limit=100');
+  const url = apiUrl('/api/books?where[locale][equals]=az&where[status][equals]=published&depth=1&limit=200&sort=sourceId');
   const res = await fetch(url, {
     cache: process.env.NODE_ENV === 'production' ? 'force-cache' : 'no-store',
   });
