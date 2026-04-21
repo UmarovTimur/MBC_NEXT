@@ -66,7 +66,7 @@ export default async function BookDetailPage({ params }: Props) {
             <div className="flex flex-wrap gap-3">
               {book.readUrl && book.downloads.length > 0 ? (
                 <div className="inline-flex">
-                  <Button asChild variant="secondary" className="rounded-r-none border-r-0">
+                  <Button asChild className="rounded-r-none border-r-0">
                     <a href={book.readUrl} target="_blank" rel="noreferrer">
                       Oxu onlayn
                     </a>
@@ -76,7 +76,7 @@ export default async function BookDetailPage({ params }: Props) {
               ) : (
                 <>
                   {book.readUrl ? (
-                    <Button asChild variant="secondary">
+                    <Button asChild >
                       <a href={book.readUrl} target="_blank" rel="noreferrer">
                         Oxu onlayn
                       </a>
