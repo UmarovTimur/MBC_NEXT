@@ -15,6 +15,7 @@
     "@payloadcms/db-postgres": "3.82.1"
   },
   "scripts": {
+    "postinstall": "node scripts/apply-payload-cookie-fix.cjs",
     "dev:az": "yarn workspace @mbc/az dev",
     "dev:uz": "yarn workspace @mbc/uz dev",
     "dev:admin": "yarn workspace @mbc/admin dev",
