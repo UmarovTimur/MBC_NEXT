@@ -27,6 +27,7 @@ export default buildConfig({
   serverURL: payloadServerURL,
   csrf: csrfUrls,
   admin: {
+    suppressHydrationWarning: true,
     user: 'users',
     components: {
       views: {
