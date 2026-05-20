@@ -3,6 +3,7 @@ import fs from 'node:fs/promises'
 import { createRequire } from 'node:module'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { resolveMukitobDownloadUrl } from '../../../migration/lib/mukitob-downloads.js'
 
 type ScrapedBookFile = {
   format: string
@@ -35,7 +36,6 @@ const adminRoot = path.resolve(__dirname, '..')
 const repoRoot = path.resolve(adminRoot, '..', '..')
 const mediaDir = path.resolve(adminRoot, 'media')
 const importFile = path.resolve(repoRoot, 'migration', 'output', 'mukitob-az', 'books.json')
-const MUKITOB_BOOKS_BASE = 'https://mukitob.com/books/az/'
 const AUDIO_FORMATS = new Set(['mp3', 'mp4'])
 
 function slugify(input: string) {
@@ -52,10 +52,6 @@ function slugify(input: string) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
-}
-
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 async function loadEnvFile(filePath: string) {
@@ -118,48 +114,6 @@ async function ensureSchema(client: InstanceType<typeof Client>) {
 
   await client.query('create index if not exists books_downloads_order_idx on books_downloads (_order);')
   await client.query('create index if not exists books_downloads_parent_id_idx on books_downloads (_parent_id);')
-}
-
-async function fetchText(url: string) {
-  let lastError: unknown
-
-  for (let attempt = 1; attempt <= 4; attempt += 1) {
-    try {
-      const response = await fetch(url, {
-        headers: {
-          'user-agent': 'Mozilla/5.0',
-          referer: MUKITOB_BOOKS_BASE,
-          connection: 'close',
-        },
-      })
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`)
-      }
-
-      return await response.text()
-    } catch (error) {
-      lastError = error
-      if (attempt < 4) await sleep(1000 * attempt)
-    }
-  }
-
-  throw lastError
-}
-
-async function resolveActualDownloadUrl(downloadUrl: string, format: string) {
-  const html = await fetchText(downloadUrl)
-  const hrefs = [...html.matchAll(/href=(["'])(.*?)\1/gi)].map((match) => match[2])
-  const candidates = hrefs.filter((href) => href.includes('/books/download/'))
-  const exact = candidates.find((href) => href.toLowerCase().endsWith(`.${format.toLowerCase()}`))
-  const fallback = candidates.find((href) => /\.(pdf|docx|epub|fb2|rtf|txt)$/i.test(href))
-  const resolved = exact || fallback
-
-  if (!resolved) {
-    throw new Error(`Could not resolve final file URL from ${downloadUrl}`)
-  }
-
-  return new URL(resolved, MUKITOB_BOOKS_BASE).href
 }
 
 async function cleanupLocalizedArtifacts(client: InstanceType<typeof Client>) {
@@ -237,7 +191,7 @@ async function main() {
       const downloads = book.downloads.filter((entry) => !AUDIO_FORMATS.has(entry.format))
 
       for (const [index, file] of downloads.entries()) {
-        const directUrl = await resolveActualDownloadUrl(file.downloadUrl, file.format)
+        const directUrl = await resolveMukitobDownloadUrl(file.downloadUrl, file.format)
 
         await client.query(
           `

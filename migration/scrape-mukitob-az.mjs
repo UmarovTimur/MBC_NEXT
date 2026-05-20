@@ -3,8 +3,13 @@ import { fileURLToPath } from "node:url";
 import { mkdir, writeFile } from "node:fs/promises";
 import { Buffer } from "node:buffer";
 import * as cheerio from "cheerio";
+import {
+  MUKITOB_BASE_URL,
+  MUKITOB_DOWNLOAD_FILE_FORMATS,
+  resolveMukitobDownloadUrl,
+} from "./lib/mukitob-downloads.js";
 
-const BASE_URL = "https://mukitob.com";
+const BASE_URL = MUKITOB_BASE_URL;
 const LIST_PATH = "/books/az/all_books.php";
 const OUTPUT_DIR = path.join(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -131,7 +136,7 @@ function parseDownloads($, pageUrl) {
     .get();
 }
 
-function parseBookPage(listEntry, html) {
+async function parseBookPage(listEntry, html) {
   const $ = cheerio.load(html);
   const detailTitle = normalizeText($(".book-info__title").first().text());
   const author = normalizeAuthorHtml($(".book-info__author").first().html() || "");
@@ -145,7 +150,16 @@ function parseBookPage(listEntry, html) {
   const readUrl = toAbsoluteUrl($('a[href^="read.php"]').first().attr("href") || "", listEntry.detailUrl);
   const previewText = normalizeText($(".book-info__preview").first().text());
   const previewMatch = previewText.match(/(\d+)/);
-  const downloads = parseDownloads($, listEntry.detailUrl);
+  const downloads = await Promise.all(
+    parseDownloads($, listEntry.detailUrl).map(async (download) => {
+      if (!MUKITOB_DOWNLOAD_FILE_FORMATS.has(download.format)) return download;
+
+      return {
+        ...download,
+        downloadUrl: await resolveMukitobDownloadUrl(download.downloadUrl, download.format),
+      };
+    }),
+  );
 
   return {
     source: "mukitob",
@@ -208,7 +222,7 @@ async function main() {
   for (const [index, entry] of listEntries.entries()) {
     console.log(`Fetching book ${index + 1}/${listEntries.length}: ${entry.detailUrl}`);
     const html = await fetchHtml(entry.detailUrl);
-    books.push(parseBookPage(entry, html));
+    books.push(await parseBookPage(entry, html));
   }
 
   const fileRows = books.flatMap((book) =>

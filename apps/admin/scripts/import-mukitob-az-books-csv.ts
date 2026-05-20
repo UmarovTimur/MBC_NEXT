@@ -3,6 +3,7 @@ import fs from 'node:fs/promises'
 import { createRequire } from 'node:module'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { resolveMukitobDownloadUrl } from '../../../migration/lib/mukitob-downloads.js'
 
 type CsvRow = Record<string, string>
 
@@ -285,6 +286,8 @@ async function main() {
       )
 
       for (const [index, file] of downloads.entries()) {
+        const directUrl = await resolveMukitobDownloadUrl(file.downloadUrl, file.format)
+
         await client.query(
           `
             insert into books_downloads (
@@ -309,7 +312,7 @@ async function main() {
             file.label,
             file.sizeLabel,
             file.description,
-            file.downloadUrl,
+            directUrl,
             toInt(file.fileOrder) ?? index + 1,
           ],
         )
