@@ -8,10 +8,12 @@ interface BibleContentProps {
 
 const STYLE_CLASS_NAMES: Record<string, string> = {
   azb: "bible-content--azb",
+  barclay: "bible-content--barclay",
 };
 
 function normalizeBibleHtml(html: string, formattingStyle?: string): string {
   switch (formattingStyle) {
+    case "barclay":
     case "azb":
     default:
       return html;

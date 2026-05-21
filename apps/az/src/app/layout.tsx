@@ -38,14 +38,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html className={`${notoSansFont.variable} ${robotoCondensedFont.variable}`} lang={process.env.APP_LANG} suppressHydrationWarning>
-      <body className="flex w-full flex-col mt-8 lg:mt-0 justify-between min-h-screen min-w-90">
+      <body className="flex min-h-screen w-full min-w-90 flex-col justify-between bg-[#ebe9e4]">
         <I18nProvider dict={dictionary}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <ManifestProvider manifest={manifest}>
               <BibleUiProvider>
                 <Suspense><NavigationLoader /></Suspense>
                 <Navbar />
-                <main className="grow mt-10 py-10 lg:mt-16">
+                <main className="grow pt-24 pb-10">
                   <Suspense>{children}</Suspense>
                 </main>
                 <Footer />

@@ -19,7 +19,7 @@ export const ThemeSwitcher = () => {
 
   return (
     <Button variant="outline" size="icon" onClick={toggleTheme}>
-      {theme == Theme.DARK ? <Sun /> : <Moon />}
+      {theme == Theme.DARK ? <Sun suppressHydrationWarning /> : <Moon suppressHydrationWarning />}
     </Button>
   );
 };

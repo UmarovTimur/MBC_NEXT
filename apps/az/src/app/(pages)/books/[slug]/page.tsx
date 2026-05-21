@@ -41,7 +41,7 @@ export default async function BookDetailPage({ params }: Props) {
 
   return (
     <ContainerWidth>
-      <div className="mx-auto py-8">
+      <div className="mx-auto lg:py-8">
         <div className="flex flex-col gap-6 md:flex-row">
           {book.imageUrl && (
             <img

@@ -25,7 +25,7 @@ export function BookDownloadsMenu({ downloads, className }: BookDownloadsMenuPro
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className={className}>
           Yukle
-          <ChevronDown className="size-4 opacity-70" />
+          <ChevronDown className="size-4 opacity-70" suppressHydrationWarning />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="min-w-56">
