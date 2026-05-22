@@ -27,7 +27,7 @@ export function NavBibleLinks({ className, linkClassName }: NavBibleLinksProps) 
             href={`/${bibleName}`}
             className={cn("transition-colors text-base", linkClassName)}
           >
-            {cfg.isCommentary ? t("homeQuickCommentary") : cfg.displayName ?? cfg.primary}
+            {cfg.primary}
           </AppLink>
         </Button>
       ))}

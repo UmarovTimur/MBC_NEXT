@@ -72,10 +72,10 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
   ];
 
   const categories = [
-    { title: t("homeCategoryOld"), meta: t("homeCategoryOldMeta"), image: "/images/mick-haupt-eQ2Z9ay9Wws-unsplash.jpg" },
-    { title: t("homeCategoryNew"), meta: t("homeCategoryNewMeta"), image: "/images/jerry-zhang-ePpaQC2c1xA-unsplash.jpg" },
-    { title: t("homeCategoryStudies"), meta: t("homeCategoryStudiesMeta"), image: "/images/paper-white.webp" },
-    { title: t("homeCategoryLiving"), meta: t("homeCategoryLivingMeta"), image: "/images/paper-dark.webp" },
+    { title: t("homeCategoryOld"), meta: t("homeCategoryOldMeta"), image: "/images/mick-haupt-eQ2Z9ay9Wws-unsplash.jpg", href: '/azb' },
+    { title: t("homeCategoryNew"), meta: t("homeCategoryNewMeta"), image: "/images/jerry-zhang-ePpaQC2c1xA-unsplash.jpg", href: '/azb' },
+    { title: "V. Barklinin şərhləri", meta: "6 kitab", image: "/images/paper-white.webp", href: '/barclay' },
+    // { title: t("homeCategoryLiving"), meta: t("homeCategoryLivingMeta"), image: "/images/paper-dark.webp" },
   ];
 
   return (
@@ -128,7 +128,7 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
               <div className="grid gap-y-4 xl:grid-cols-[1fr]">
                 <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-zinc-950/80">
                   <div className="mb-4 flex items-center justify-between">
-                    <h2 className="text-sm font-semibold">{t("homeRecommendedTitle")}</h2>
+                    <h2 className="text-sm font-semibold">{t("books")}</h2>
                     <AppLink href="/books" className="text-xs text-zinc-500 hover:text-[#18375d]">
                       {t("homeViewAll")}
                     </AppLink>
@@ -144,7 +144,7 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
 
                 <div className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm xl:col-span-3 dark:border-white/10 dark:bg-zinc-950/80">
                   <div className="mb-3 flex items-center justify-between">
-                    <h2 className="text-sm font-semibold">{t("homeCategoriesTitle")}</h2>
+                    <h3 className="text-sm font-semibold">{t("homeCategoriesTitle")}</h3>
                     <AppLink href={bibleHref} className="text-xs text-zinc-500 hover:text-[#18375d]">
                       {t("homeViewAll")}
                     </AppLink>
@@ -153,7 +153,7 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
                     {categories.map((category) => (
                       <AppLink
                         key={category.title}
-                        href={bibleHref}
+                        href={category.href}
                         className="overflow-hidden rounded-md border border-stone-200 bg-white transition-colors hover:bg-stone-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                       >
                         <div
