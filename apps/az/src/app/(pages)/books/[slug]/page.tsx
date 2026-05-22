@@ -7,12 +7,17 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 export const revalidate = false;
+export const dynamicParams = false;
+
+type BookPageParams = {
+  slug: string;
+};
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<BookPageParams>;
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<BookPageParams[]> {
   const raw = await fetchBooks();
   return raw.map((doc) => ({ slug: doc.slug }));
 }

@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-3 z-50 px-3",
+        "fixed inset-x-0 z-50 bg-background transition-colors border-b border-stone-200 dark:border-white/10",
       )}
     >
       <div className="mx-auto flex h-[58px] items-center justify-between dark:border-white/10  sm:px-6">

@@ -41,7 +41,7 @@ function apiUrl(path: string) {
 export async function fetchBooks(): Promise<PayloadBook[]> {
   const url = apiUrl('/api/books?where[locale][equals]=az&where[status][equals]=published&depth=1&limit=200&sort=sourceId');
   const res = await fetch(url, {
-    cache: process.env.NODE_ENV === 'production' ? 'force-cache' : 'no-store',
+    next: { revalidate: 60 },
   });
   if (!res.ok) throw new Error(`Payload API error: ${res.status}`);
   const data: PayloadResponse<PayloadBook> = await res.json();

@@ -72,8 +72,8 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
   ];
 
   const categories = [
-    { title: t("homeCategoryOld"), meta: t("homeCategoryOldMeta"), image: "images/mick-haupt-eQ2Z9ay9Wws-unsplash.webp" },
-    { title: t("homeCategoryNew"), meta: t("homeCategoryNewMeta"), image: "images/jerry-zhang-ePpaQC2c1xA-unsplash.webp" },
+    { title: t("homeCategoryOld"), meta: t("homeCategoryOldMeta"), image: "/images/mick-haupt-eQ2Z9ay9Wws-unsplash.jpg" },
+    { title: t("homeCategoryNew"), meta: t("homeCategoryNewMeta"), image: "/images/jerry-zhang-ePpaQC2c1xA-unsplash.jpg" },
     { title: t("homeCategoryStudies"), meta: t("homeCategoryStudiesMeta"), image: "/images/paper-white.webp" },
     { title: t("homeCategoryLiving"), meta: t("homeCategoryLivingMeta"), image: "/images/paper-dark.webp" },
   ];
