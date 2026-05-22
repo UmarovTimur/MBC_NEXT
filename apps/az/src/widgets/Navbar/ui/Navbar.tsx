@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 import { MobileNavbar } from "./MobileNavbar";
 import { cn } from "@/shared/lib/utils";
@@ -7,23 +8,72 @@ import { NavBibleControls } from "./NavBibleControls";
 import { NavBibleLinks } from "./NavBibleLinks";
 import { AppLink } from "@/shared/ui/AppLink";
 import { Button } from "@/shared/ui/button";
-import { Search } from "lucide-react";
 import { useI18n } from "@/app/providers/I18n/ui/useI18n";
 
 export const Navbar = () => {
   const { t } = useI18n();
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollYRef = useRef(0);
+  const tickingRef = useRef(false);
+
+  useEffect(() => {
+    const minScrollBeforeHide = 80;
+    const scrollDelta = 8;
+
+    const updateHeaderVisibility = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDiff = currentScrollY - lastScrollYRef.current;
+
+      if (currentScrollY <= minScrollBeforeHide) {
+        setIsHidden(false);
+      } else if (scrollDiff > scrollDelta) {
+        setIsHidden(true);
+      } else if (scrollDiff < -scrollDelta) {
+        setIsHidden(false);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+      tickingRef.current = false;
+    };
+
+    const handleScroll = () => {
+      if (tickingRef.current) return;
+      tickingRef.current = true;
+      window.requestAnimationFrame(updateHeaderVisibility);
+    };
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!window.matchMedia("(pointer: coarse)").matches) return;
+      if (event.pointerType !== "touch" && event.pointerType !== "pen") return;
+      setIsHidden(false);
+    };
+
+    const showHeader = () => setIsHidden(false);
+
+    lastScrollYRef.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("pointerdown", handlePointerDown, { passive: true });
+    window.addEventListener("focusin", showHeader);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("pointerdown", handlePointerDown);
+      window.removeEventListener("focusin", showHeader);
+    };
+  }, []);
 
   return (
     <header
       className={cn(
-        "fixed inset-x-0 z-50 bg-background transition-colors border-b border-stone-200 dark:border-white/10",
+        "fixed inset-x-0 top-0 z-50 transform-gpu border-b border-stone-200 bg-background px-3 transition-transform duration-300 ease-in-out will-change-transform dark:border-white/10",
+        isHidden ? "-translate-y-full" : "translate-y-0",
       )}
     >
-      <div className="mx-auto flex h-[58px] items-center justify-between dark:border-white/10  sm:px-6">
+      <div className="mx-auto flex h-14.5 items-center justify-between dark:border-white/10  sm:px-6">
         <div className="flex min-w-0 items-center gap-x-5">
           <AppLink
             href="/"
-            className="mb-[4px] shrink-0 text-2xl font-bold leading-none text-[#101820] transition-colors dark:text-white"
+            className="mb-1 shrink-0 text-2xl font-bold leading-none text-[#101820] transition-colors dark:text-white"
           >
             {t("siteName")}
           </AppLink>

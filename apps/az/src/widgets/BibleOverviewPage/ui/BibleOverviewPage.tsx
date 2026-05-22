@@ -61,24 +61,23 @@ function BibleSection({
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-px bg-white/70 dark:bg-white/10" />
         <div
-          className={`absolute -right-20 top-0 h-44 w-44 rounded-full blur-3xl ${
-            lightBg === "paper-blue.webp"
-              ? "bg-sky-300/25 dark:bg-sky-400/10"
-              : "bg-amber-200/30 dark:bg-amber-100/10"
-          }`}
+          className={`absolute -right-20 top-0 h-44 w-44 rounded-full blur-3xl ${lightBg === "paper-blue.webp"
+            ? "bg-sky-300/25 dark:bg-sky-400/10"
+            : "bg-amber-200/30 dark:bg-amber-100/10"
+            }`}
         />
       </div>
 
       <div className="relative flex flex-col gap-5 lg:flex-row lg:gap-8">
         <h2
-          className="flex items-center justify-center pt-1 text-center font-serif text-2xl font-bold lg:w-36 lg:flex-1/2 lg:text-3xl"
+          className="flex items-center justify-center pt-1 text-center font-serif text-2xl font-bold lg:w-36 lg:flex-1/3 lg:text-3xl"
           style={{ fontVariant: "small-caps" }}
         >
           {title}
         </h2>
 
         <div
-          className="grid grow auto-cols-fr grid-flow-col grid-rows-[var(--mobile-rows)] gap-x-4 gap-y-1 sm:gap-x-6 lg:flex-1/2 lg:grid-rows-[var(--desktop-rows)] lg:gap-x-12"
+          className="grid grow auto-cols-fr grid-flow-col grid-rows-(--mobile-rows) gap-x-4 gap-y-1 sm:gap-x-6 lg:flex-2/3 lg:grid-rows-(--desktop-rows) lg:gap-x-12"
           style={booksGridStyle}
         >
           {books.map((book) => (

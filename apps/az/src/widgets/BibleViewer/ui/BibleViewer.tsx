@@ -5,8 +5,8 @@ import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-n
 import { cn } from "@/shared/lib/utils";
 import { notFound } from "next/navigation";
 import { ChapterPagination } from "./ChapterPagination";
-import { AppLink } from "@/shared/ui/AppLink";
 import { BibleContent } from "@/shared/ui/BibleContent";
+import { FloatingChapterNav } from "./FloatingChapterNav";
 
 interface BibleViewerProps {
   className?: string;
@@ -37,13 +37,24 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     notFound();
   }
   return (
-    <div className={cn("mb-8 md:mb-12", [className])}>
-      <div className="flex gap-x-4 items-center">
-        <ChapterLink direction="prev" currentChapter={chapter} />
-        <BooksList className="lg:hidden inline-block grow" />
-        <ChaptersTableTrigger className="lg:hidden inline-block grow" />
-        <ChapterLink direction="next" currentChapter={chapter} />
-      </div>
+    <div className={cn("mb-8 pb-24 md:mb-12", [className])}>
+      <FloatingChapterNav>
+        <ChapterLink
+          className="basis-12 lg:static lg:top-auto lg:left-auto lg:right-auto"
+          direction="prev"
+          currentChapter={chapter}
+        />
+        <BooksList className=" inline-flex grow" />
+        <ChaptersTableTrigger className=" inline-flex grow" />
+        <ChapterLink
+          className="basis-12 lg:static lg:top-auto lg:left-auto lg:right-auto"
+          direction="next"
+          currentChapter={chapter}
+        />
+      </FloatingChapterNav>
+
+      <ChapterLink className="hidden lg:flex" direction="prev" currentChapter={chapter} />
+      <ChapterLink className="hidden lg:flex basis-3/12" direction="next" currentChapter={chapter} />
 
       <div
         className={cn(
@@ -52,13 +63,6 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
         )}
       >
         <div className={cn("basis-2/3 pt-4")}>
-          {/* <AppLink href="/">
-            <img
-              className="ml-4 rounded-sm hidden md:inline float-right"
-              src="https://kitobook.com/images/mcdonald.jpg"
-              alt="MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari"
-            />
-          </AppLink> */}
           <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
           <h2 className="text-2xl my-4">{subTitle}</h2>
           <BibleContent html={content} formattingStyle={bible.formattingStyle} />
@@ -74,13 +78,6 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
 
 
       <ChapterPagination chapter={chapter} />
-
-      <div className="flex gap-x-4 pt-4 items-center">
-        <ChapterLink className="basis-3/12" direction="prev" currentChapter={chapter} />
-        {/* <BooksList className="lg:hidden inline-block grow" /> */}
-        <ChaptersTableTrigger variant="outline" className="lg:hidden inline-block grow" />
-        <ChapterLink className="basis-3/12" direction="next" currentChapter={chapter} />
-      </div>
     </div>
   );
 };

@@ -28,7 +28,7 @@ export function BookButton({ shortName, fullName, href }: BookButtonProps) {
         > */}
         <AppLink
           href={href}
-          className="min-w-0 w-full text-sm font-bold leading-9 uppercase text-foreground transition-colors hover:text-primary sm:text-base"
+          className="min-w-0 w-full text-sm font-bold leading-9 uppercase text-foreground transition-colors hover:underline hover:text-primary sm:text-base"
         >
           <span ref={textRef} className="truncate block">
             {shortName}
