@@ -129,7 +129,11 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
                 <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-zinc-950/80">
                   <div className="mb-4 flex items-center justify-between">
                     <h2 className="text-sm font-semibold">{t("books")}</h2>
-                    <AppLink href="/books" className="text-xs text-zinc-500 hover:text-[#18375d]">
+                    <AppLink
+                      href="/books"
+                      aria-label="Bütün kitabları göstər"
+                      className="text-xs text-zinc-500 hover:text-[#18375d]"
+                    >
                       {t("homeViewAll")}
                     </AppLink>
                   </div>
@@ -145,7 +149,11 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
                 <div className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm xl:col-span-3 dark:border-white/10 dark:bg-zinc-950/80">
                   <div className="mb-3 flex items-center justify-between">
                     <h3 className="text-sm font-semibold">{t("homeCategoriesTitle")}</h3>
-                    <AppLink href={bibleHref} className="text-xs text-zinc-500 hover:text-[#18375d]">
+                    <AppLink
+                      href={bibleHref}
+                      aria-label="Bütün Müqəddəs Kitab bölmələrini göstər"
+                      className="text-xs text-zinc-500 hover:text-[#18375d]"
+                    >
                       {t("homeViewAll")}
                     </AppLink>
                   </div>

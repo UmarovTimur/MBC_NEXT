@@ -4947,12 +4947,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"MBC_NEXT@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "MBC_NEXT@workspace:."
-  languageName: unknown
-  linkType: soft
-
 "abbrev@npm:^4.0.0":
   version: 4.0.0
   resolution: "abbrev@npm:4.0.0"
@@ -9619,6 +9613,12 @@ __metadata:
   checksum: 10c0/7579ff94e899e2f76ab64491d76cf606274c874d8f2af4a442c016bd85688927fcfca157ba6bf74b08e9439dc010b248ce05b96cc7c126a354c3bae7fcb48b7f
   languageName: node
   linkType: hard
+
+"mbc_next@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "mbc_next@workspace:."
+  languageName: unknown
+  linkType: soft
 
 "md5@npm:2.3.0":
   version: 2.3.0
