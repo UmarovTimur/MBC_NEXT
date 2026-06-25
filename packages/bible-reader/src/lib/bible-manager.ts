@@ -1,20 +1,89 @@
-import path from "node:path";
-import { readdir } from "node:fs/promises";
 import { BibleManifest, Book, Chapter } from "../model/types";
 import { BibleConfig } from "../config";
 import { Bible } from "./bible";
+import {
+  BibleFetchOptions,
+  fetchBibleDocs,
+  fetchBookNames,
+  fetchChapterHtml,
+  fetchChapterRefs,
+} from "./api";
 
 export class BibleManager {
   constructor(private bibles: Bible[]) { }
 
-  static async init(rootDir: string, configMap: Record<string, BibleConfig>): Promise<BibleManager> {
-    const entries = await readdir(rootDir, { withFileTypes: true });
+  /**
+   * Build the manager entirely from the database (Payload REST API): bible
+   * configs, canonical book names, and the chapter manifest. Chapter HTML is
+   * lazy-loaded on demand.
+   */
+  static async initFromApi(
+    apiBaseUrl: string,
+    locale: string,
+    fetchOptions?: BibleFetchOptions,
+  ): Promise<BibleManager> {
+    const [bibleDocs, bookNames, refs] = await Promise.all([
+      fetchBibleDocs(apiBaseUrl, locale, fetchOptions),
+      fetchBookNames(apiBaseUrl, locale, fetchOptions),
+      fetchChapterRefs(apiBaseUrl, locale, fetchOptions),
+    ]);
 
-    const biblePromises = entries
-      .filter((e) => e.isDirectory())
-      .map((e) => Bible.init(path.join(rootDir, e.name), configMap));
+    const idToKey = new Map(bibleDocs.map((doc) => [doc.id, doc.bibleKey]));
 
-    const bibles = await Promise.all(biblePromises);
+    const configMap: Record<string, BibleConfig> = {};
+    for (const doc of bibleDocs) {
+      const attachmentId = typeof doc.attachment === "object" ? doc.attachment?.id : doc.attachment;
+      configMap[doc.bibleKey] = {
+        displayName: doc.displayName ?? undefined,
+        primary: doc.primary,
+        secondary: doc.secondary?.length ? doc.secondary : undefined,
+        attachment: (attachmentId != null ? idToKey.get(attachmentId) : null) ?? null,
+        defaultView: doc.defaultView,
+        chapterSlug: doc.chapterSlug ?? undefined,
+        // hasMany text fields come back as [] (not omitted) when unset.
+        mappingChapterSlug: doc.mappingChapterSlug?.length ? doc.mappingChapterSlug : undefined,
+        formattingStyle: doc.formattingStyle ?? undefined,
+        introductionName: doc.introductionName ?? undefined,
+        isIndependent: Boolean(doc.isIndependent),
+        isCommentary: Boolean(doc.isCommentary),
+      };
+    }
+
+    const contentLoader = (bible: string, bookNumber: string, chapterId: string) =>
+      fetchChapterHtml(apiBaseUrl, bible, bookNumber, chapterId, fetchOptions);
+
+    // Group chapter refs into bibleKey -> bookNumber -> chapters[].
+    const byBible = new Map<string, Map<string, Chapter[]>>();
+    for (const ref of refs) {
+      const bibleKey = idToKey.get(ref.bible);
+      if (!bibleKey) continue;
+
+      let books = byBible.get(bibleKey);
+      if (!books) {
+        books = new Map<string, Chapter[]>();
+        byBible.set(bibleKey, books);
+      }
+      const chapters = books.get(ref.bookNumber) ?? [];
+      chapters.push({ bible: bibleKey, bookId: ref.bookNumber, chapterId: ref.chapterId });
+      books.set(ref.bookNumber, chapters);
+    }
+
+    const bibles = [...byBible.entries()].map(([bibleName, bookMap]) => {
+      const books: Book[] = [...bookMap.entries()]
+        .map(([bookId, chapters]) => ({
+          id: bookId,
+          bible: bibleName,
+          chapters: chapters.sort((a, b) => +a.chapterId - +b.chapterId),
+        }))
+        .sort((a, b) => +a.id - +b.id);
+
+      const config = configMap[bibleName];
+      if (!config) {
+        throw new Error(`No Bibles config found for "${bibleName}" (locale "${locale}")`);
+      }
+
+      return new Bible(bibleName, books, config, bookNames, contentLoader);
+    });
 
     return new BibleManager(bibles);
   }
@@ -23,6 +92,9 @@ export class BibleManager {
     return {
       bibles: this.bibles.map((bible: Bible) => ({
         bibleName: bible.bibleName,
+        primary: bible.primaryTitle,
+        isIndependent: bible.isIndependent,
+        isCommentary: bible.isCommentary,
         books: bible.books.map((book: Book) => ({
           id: book.id,
           name: bible.getBookName(+book.id),
@@ -64,7 +136,7 @@ export class BibleManager {
 
   getBooksNames(bibleName: string): string[] {
     const bible = this.getBible(bibleName);
-    return bible.books.map((b) => bible.mappingBook?.[+b.id] ?? b.id);
+    return bible.books.map((b) => bible.getBookName(+b.id));
   }
 
   async getChapterContent(params: Chapter): Promise<string | null> {

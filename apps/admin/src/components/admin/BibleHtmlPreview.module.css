@@ -1,0 +1,75 @@
+.wrapper {
+  margin-top: 0.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-elevation-500);
+}
+
+.preview {
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  background: var(--theme-elevation-0);
+  max-height: 600px;
+  overflow: auto;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.empty {
+  color: var(--theme-elevation-400);
+  font-style: italic;
+}
+
+/* Approximation of the public site's .bible-content styles for a faithful preview. */
+.preview :global(a),
+.preview :global(strong) {
+  font-weight: 700;
+}
+
+.preview :global(p),
+.preview :global(.p) {
+  margin-bottom: 1rem;
+}
+
+.preview :global(.s) {
+  margin-top: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+.preview :global(.r) {
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.preview :global(.q),
+.preview :global(.pi) {
+  padding-left: 1rem;
+}
+
+.preview :global(.verse) {
+  font-weight: 700;
+}
+
+.preview :global(.verse)::before {
+  content: "\A";
+  display: block;
+  height: 0;
+  white-space: pre;
+}
+
+.preview > :global(:first-child) :global(.verse):first-child::before {
+  content: none;
+}
+
+.preview :global(mark) {
+  background-color: transparent;
+  color: inherit;
+}

@@ -138,3 +138,7 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /app/
+
+# migration/ script artifacts (yt-dlp cache, downloaded audio)
+migration/.yarn/
+migration/output/

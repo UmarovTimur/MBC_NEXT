@@ -6,12 +6,16 @@ export interface BibleConfig {
   secondary?: string[];
   attachment: string | null;
   defaultView: BibleViewMode;
-  mappingBible?: string[];
-  mappingShortBooks?: string[];
   mappingChapterSlug?: string[];
   chapterSlug?: string;
-  formatingStyle?: string;
+  formattingStyle?: string;
   introductionName?: string;
   isIndependent?: boolean;
   isCommentary?: boolean;
+}
+
+/** Canonical book name, shared by every bible of one locale. */
+export interface BookName {
+  name: string;
+  shortName?: string;
 }

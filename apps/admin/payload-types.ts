@@ -70,6 +70,9 @@ export interface Config {
     users: User;
     books: Book;
     media: Media;
+    bibles: Bible;
+    'bible-books': BibleBook;
+    'bible-chapters': BibleChapter;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -80,6 +83,9 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     books: BooksSelect<false> | BooksSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    bibles: BiblesSelect<false> | BiblesSelect<true>;
+    'bible-books': BibleBooksSelect<false> | BibleBooksSelect<true>;
+    'bible-chapters': BibleChaptersSelect<false> | BibleChaptersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -224,6 +230,94 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bibles".
+ */
+export interface Bible {
+  id: number;
+  /**
+   * Stable key used in public URLs, e.g. azb, barclay, mbc, muqaddas-kitob.
+   */
+  bibleKey: string;
+  locale: 'az' | 'uz';
+  primary: string;
+  displayName?: string | null;
+  secondary?: string[] | null;
+  /**
+   * The other bible shown alongside this one in split-screen view.
+   */
+  attachment?: (number | null) | Bible;
+  defaultView: 'single-column' | 'split-screen';
+  /**
+   * CSS profile key used to style chapter HTML, e.g. azb, barclay.
+   */
+  formattingStyle?: string | null;
+  /**
+   * e.g. "-ci fəsil" so chapter 1 reads "1-ci fəsil".
+   */
+  chapterSlug?: string | null;
+  introductionName?: string | null;
+  /**
+   * Optional. Overrides the chapter slug suffix with explicit names per chapter index.
+   */
+  mappingChapterSlug?: string[] | null;
+  isIndependent?: boolean | null;
+  isCommentary?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bible-books".
+ */
+export interface BibleBook {
+  id: number;
+  locale: 'az' | 'uz';
+  /**
+   * Zero-padded canonical id, e.g. "01".."66".
+   */
+  bookId: string;
+  name: string;
+  /**
+   * Falls back to the long name if left blank.
+   */
+  shortName?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bible-chapters".
+ */
+export interface BibleChapter {
+  id: number;
+  bible: number | Bible;
+  book: number | BibleBook;
+  /**
+   * Auto-filled from the linked book.
+   */
+  bookNumber: string;
+  /**
+   * "0" = introduction, then "1", "2", … (no padding).
+   */
+  chapterId: string;
+  /**
+   * Auto-filled from the linked book.
+   */
+  locale?: ('az' | 'uz') | null;
+  /**
+   * Optional human-friendly label shown in the admin list.
+   */
+  title?: string | null;
+  /**
+   * Raw chapter HTML. Verse spans and custom classes are stored verbatim.
+   */
+  html: string;
+  lastEditedBy?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -257,6 +351,18 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'bibles';
+        value: number | Bible;
+      } | null)
+    | ({
+        relationTo: 'bible-books';
+        value: number | BibleBook;
+      } | null)
+    | ({
+        relationTo: 'bible-chapters';
+        value: number | BibleChapter;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -389,6 +495,55 @@ export interface MediaSelect<T extends boolean = true> {
               filename?: T;
             };
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bibles_select".
+ */
+export interface BiblesSelect<T extends boolean = true> {
+  bibleKey?: T;
+  locale?: T;
+  primary?: T;
+  displayName?: T;
+  secondary?: T;
+  attachment?: T;
+  defaultView?: T;
+  formattingStyle?: T;
+  chapterSlug?: T;
+  introductionName?: T;
+  mappingChapterSlug?: T;
+  isIndependent?: T;
+  isCommentary?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bible-books_select".
+ */
+export interface BibleBooksSelect<T extends boolean = true> {
+  locale?: T;
+  bookId?: T;
+  name?: T;
+  shortName?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bible-chapters_select".
+ */
+export interface BibleChaptersSelect<T extends boolean = true> {
+  bible?: T;
+  book?: T;
+  bookNumber?: T;
+  chapterId?: T;
+  locale?: T;
+  title?: T;
+  html?: T;
+  lastEditedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -1,78 +1,49 @@
-import { readdir, readFile } from "node:fs/promises";
-import path from "path";
 import { BibleViewMode, Book, Chapter } from "../model/types";
-import { BibleConfig } from "../config";
+import { BibleConfig, BookName } from "../config";
+
+/** Loads the raw HTML for a chapter from the data source (DB via REST API). */
+export type ChapterContentLoader = (
+  bible: string,
+  bookId: string,
+  chapterId: string,
+) => Promise<string | null>;
 
 export class Bible {
   public readonly bibleName: string;
   public readonly books: Book[];
-  public readonly basePath: string;
   public readonly defaultViewMode: BibleViewMode;
   public readonly attachmentBibleName: string;
   public readonly formattingStyle: string;
-  public readonly mappingBook?: string[];
-  public readonly mappingShortBook?: string[];
   public readonly primaryTitle: string;
+  public readonly isIndependent: boolean;
+  public readonly isCommentary: boolean;
+  /** Canonical book names for this bible's locale, shared across all bibles of that locale. */
+  private readonly bookNames: Map<string, BookName>;
   private readonly chapterSlug?: string;
   private readonly mappingChapterSlug?: string[];
   private readonly introducingName?: string;
+  private readonly contentLoader: ChapterContentLoader;
 
-  constructor(basePath: string, books: Book[], configMap: Record<string, BibleConfig>) {
-    this.basePath = basePath;
-    this.bibleName = path.basename(basePath);
+  constructor(
+    bibleName: string,
+    books: Book[],
+    config: BibleConfig,
+    bookNames: Map<string, BookName>,
+    contentLoader: ChapterContentLoader,
+  ) {
+    this.bibleName = bibleName;
     this.books = books;
-    this.defaultViewMode = configMap[this.bibleName]?.defaultView || "single-column";
-    this.attachmentBibleName = configMap[this.bibleName]?.attachment || "";
-    this.formattingStyle = configMap[this.bibleName]?.formatingStyle || "";
-    this.primaryTitle = configMap[this.bibleName]?.primary;
-    this.mappingBook = configMap[this.bibleName]?.mappingBible;
-    this.mappingShortBook = configMap[this.bibleName]?.mappingShortBooks;
-    this.chapterSlug = configMap[this.bibleName]?.chapterSlug ?? "";
-    this.mappingChapterSlug = configMap[this.bibleName]?.mappingChapterSlug;
-    this.introducingName = configMap[this.bibleName]?.introductionName ?? this.mappingChapterSlug?.[0] ?? "0";
-  }
-
-  static async init(basePath: string, configMap: Record<string, BibleConfig>): Promise<Bible> {
-    try {
-      const entries = await readdir(basePath, { withFileTypes: true });
-      const bibleName = path.basename(basePath);
-
-      const booksPromises: Promise<Book[]> = Promise.all(
-        entries
-          .filter((entry) => entry.isDirectory() && !isNaN(+entry.name))
-          .map(async (dir) => {
-            const bookId = dir.name;
-
-            const files = await readdir(path.join(basePath, dir.name));
-
-            const chapters: Chapter[] = files
-              .filter((file) => file.endsWith(".html"))
-              .map((file) => {
-                const chapterName = +file.replace(".html", "");
-                return {
-                  bible: bibleName,
-                  bookId: bookId,
-                  chapterId: chapterName.toString(),
-                };
-              })
-              .filter((chapter) => !isNaN(+chapter.chapterId))
-              .sort((a, b) => +a.chapterId - +b.chapterId);
-
-            return {
-              id: bookId,
-              bible: bibleName,
-              chapters: chapters,
-            };
-          }),
-      );
-      const books = await booksPromises;
-
-      books.sort((a, b) => +a.id - +b.id);
-
-      return new Bible(basePath, books, configMap);
-    } catch (e) {
-      throw new Error(`Init Bible failed ${basePath}: ${(e as Error).message}`);
-    }
+    this.bookNames = bookNames;
+    this.contentLoader = contentLoader;
+    this.defaultViewMode = config.defaultView || "single-column";
+    this.attachmentBibleName = config.attachment || "";
+    this.formattingStyle = config.formattingStyle || "";
+    this.primaryTitle = config.primary;
+    this.isIndependent = Boolean(config.isIndependent);
+    this.isCommentary = Boolean(config.isCommentary);
+    this.chapterSlug = config.chapterSlug ?? "";
+    this.mappingChapterSlug = config.mappingChapterSlug;
+    this.introducingName = config.introductionName ?? this.mappingChapterSlug?.[0] ?? "0";
   }
 
   private getBook(bookId: string): Book {
@@ -84,11 +55,13 @@ export class Bible {
   }
 
   getBookName(bookId: number): string {
-    return this.mappingBook?.[bookId - 1] ?? bookId.toString();
+    const key = String(bookId).padStart(2, "0");
+    return this.bookNames.get(key)?.name ?? bookId.toString();
   }
 
   getShortBookName(bookId: number): string {
-    return this.mappingShortBook?.[bookId - 1] ?? this.getBookName(bookId);
+    const key = String(bookId).padStart(2, "0");
+    return this.bookNames.get(key)?.shortName || this.getBookName(bookId);
   }
 
   getIntroducingName(): string | undefined {
@@ -102,22 +75,11 @@ export class Bible {
       return null;
     }
 
-    const padStart = book.chapters.length > 100 ? 3 : 2;
-
-    const bookFileName = book.id.toString().padStart(2, "0");
-    const chapterFileName = `${chapterId.padStart(padStart, "0")}.html`;
-
-    const filePath = path.join(this.basePath, bookFileName, chapterFileName);
-    try {
-      const content = await readFile(filePath, "utf-8");
-      return content;
-    } catch (e) {
-      throw new Error(`Chapter file not found: ${filePath}, Erorr: ${(e as Error).message}`);
-    }
+    return this.contentLoader(this.bibleName, bookId, chapterId);
   }
 
   getChapterTitle(params: Chapter): string {
-    if (!this.mappingBook) {
+    if (this.bookNames.size === 0) {
       return this.primaryTitle;
     }
     const bookName = this.getBookName(Number(params.bookId));

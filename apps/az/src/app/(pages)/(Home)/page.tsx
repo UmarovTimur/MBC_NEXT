@@ -1,4 +1,3 @@
-import { BIBLES_CONFIG } from "@/entities/bible/config/config";
 import { bibleManager } from "@/entities/bible/server";
 import { mapPayloadBook } from "@/entities/book";
 import { fetchBooks } from "@/shared/lib/payload";
@@ -12,7 +11,6 @@ export default async function HomePage() {
   const books = rawBooks.map(mapPayloadBook);
 
   const bibleName = "azb";
-  const cfg = BIBLES_CONFIG[bibleName];
 
   const bible = bibleManager.getBible(bibleName);
   const john = bible.books.find((book) => book.id === "43");
@@ -28,7 +26,7 @@ export default async function HomePage() {
         commentaryHref="/barclay"
       />
 
-      <BibleOverviewPage bibleName={bibleName} cfg={cfg} bible={bible} />
+      <BibleOverviewPage bibleName={bibleName} bible={bible} />
 
       <BooksPage books={books} />
     </>

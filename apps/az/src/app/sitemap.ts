@@ -1,30 +1,7 @@
-import type { Book } from "@/entities/bible";
-import type { Bible } from "@/entities/bible/server";
 import { bibleManager } from "@/entities/bible/server";
 import { MetadataRoute } from "next";
-import path from "node:path";
-import { stat } from "node:fs/promises";
 
 export const dynamic = "force-static";
-
-const ZERO_DATE = new Date(0);
-
-const getChapterFilePath = (bible: Bible, book: Book, chapterId: string) => {
-  const padStart = book.chapters.length > 100 ? 3 : 2;
-  const bookFileName = book.id.toString().padStart(2, "0");
-  const chapterFileName = `${chapterId.padStart(padStart, "0")}.html`;
-
-  return path.join(bible.basePath, bookFileName, chapterFileName);
-};
-
-const getLastModified = async (filePath: string) => {
-  try {
-    const fileStat = await stat(filePath);
-    return fileStat.mtime;
-  } catch {
-    return ZERO_DATE;
-  }
-};
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const manager = bibleManager;
@@ -34,20 +11,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseName = process.env.BASE_PATH || "";
   const baseURL = `${domain}${baseName}`;
 
+  // Content now lives in the database; use the build time as the freshness hint.
+  const lastModified = new Date();
+
   const biblePages: MetadataRoute.Sitemap = [];
-  let latestModified = ZERO_DATE;
 
   for (const bible of manager.getAll()) {
     for (const book of bible.books) {
       for (const chapter of book.chapters) {
-        const chapterPath = `${chapter.bible}/${chapter.bookId}/${chapter.chapterId}`
-
-        const filePath = getChapterFilePath(bible, book, chapter.chapterId);
-        const lastModified = await getLastModified(filePath);
-
-        if (lastModified.getTime() > latestModified.getTime()) {
-          latestModified = lastModified;
-        }
+        const chapterPath = `${chapter.bible}/${chapter.bookId}/${chapter.chapterId}`;
 
         biblePages.push({
           url: `${baseURL}/${chapterPath}`,
@@ -62,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${baseURL}/`,
-      lastModified: latestModified.getTime() > 0 ? latestModified : undefined,
+      lastModified,
       changeFrequency: "monthly",
       priority: 1,
     },

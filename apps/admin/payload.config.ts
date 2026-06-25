@@ -7,6 +7,9 @@ import { fileURLToPath } from 'url'
 import { Users } from './src/collections/Users'
 import { Books } from './src/collections/Books'
 import { Media } from './src/collections/Media'
+import { BibleChapters } from './src/collections/BibleChapters'
+import { Bibles } from './src/collections/Bibles'
+import { BibleBooks } from './src/collections/BibleBooks'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -37,7 +40,7 @@ export default buildConfig({
       },
     },
   },
-  collections: [Users, Books, Media],
+  collections: [Users, Books, Media, Bibles, BibleBooks, BibleChapters],
   editor: lexicalEditor(),
   sharp,
   db: postgresAdapter({

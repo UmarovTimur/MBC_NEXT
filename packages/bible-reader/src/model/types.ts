@@ -15,6 +15,9 @@ export type Chapter = {
 export interface BibleManifest {
   bibles: {
     bibleName: string;
+    primary: string;
+    isIndependent: boolean;
+    isCommentary: boolean;
     books: {
       id: string;
       name: string;

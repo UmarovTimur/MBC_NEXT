@@ -1,4 +1,3 @@
-import type { BibleConfig } from "@/entities/bible/config/config";
 import { ContainerWidth } from "@/shared/ui/Container";
 import { TooltipProvider } from "@mbc/ui";
 import type { CSSProperties } from "react";
@@ -13,13 +12,13 @@ type Book = {
 
 type Bible = {
   books: Book[];
+  primaryTitle: string;
   getBookName: (id: number) => string;
   getShortBookName: (id: number) => string;
 };
 
 interface BibleOverviewPageProps {
   bibleName: string;
-  cfg: BibleConfig;
   bible: Bible;
 }
 
@@ -94,7 +93,7 @@ function BibleSection({
   );
 }
 
-export function BibleOverviewPage({ bibleName, cfg, bible }: BibleOverviewPageProps) {
+export function BibleOverviewPage({ bibleName, bible }: BibleOverviewPageProps) {
   const { books } = bible;
   const otBooks = books.filter((b) => +b.id <= OT_MAX);
   const ntBooks = books.filter((b) => +b.id > OT_MAX);
@@ -122,7 +121,7 @@ export function BibleOverviewPage({ bibleName, cfg, bible }: BibleOverviewPagePr
           </div>
         ) : (
           <h1 className="mb-8 text-3xl font-bold font-(family-name:--font-roboto-condensed) sm:text-4xl lg:mb-10 lg:text-5xl">
-            {cfg.primary}
+            {bible.primaryTitle}
           </h1>
         )}
 

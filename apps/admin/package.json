@@ -9,7 +9,8 @@
     "start": "next start --port 8001",
     "generate:types": "payload generate:types",
     "import:mukitob:az": "node --import tsx ./scripts/import-mukitob-az-books.ts",
-    "import:mukitob:az:csv": "node --import tsx ./scripts/import-mukitob-az-books-csv.ts"
+    "import:mukitob:az:csv": "node --import tsx ./scripts/import-mukitob-az-books-csv.ts",
+    "migrate:bible-html": "node --import tsx ./scripts/migrate-bible-html.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.82.1",

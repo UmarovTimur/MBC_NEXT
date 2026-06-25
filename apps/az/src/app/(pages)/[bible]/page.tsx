@@ -1,5 +1,4 @@
 import { bibleManager } from "@/entities/bible/server";
-import { BIBLES_CONFIG } from "@/entities/bible/config/config";
 import { BibleOverviewPage } from "@/widgets/BibleOverviewPage";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -11,24 +10,23 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return Object.entries(BIBLES_CONFIG)
-    .filter(([, cfg]) => cfg.isIndependent)
-    .map(([bibleName]) => ({ bible: bibleName }));
+  return bibleManager
+    .getAll()
+    .filter((bible) => bible.isIndependent)
+    .map((bible) => ({ bible: bible.bibleName }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { bible } = await params;
-  const cfg = BIBLES_CONFIG[bible];
-  if (!cfg?.isIndependent) return {};
-  return { title: cfg.primary };
+  const { bible: bibleName } = await params;
+  const bible = bibleManager.getAll().find((b) => b.bibleName === bibleName);
+  if (!bible?.isIndependent) return {};
+  return { title: bible.primaryTitle };
 }
 
 export default async function BibleOverviewPageRoute({ params }: Props) {
   const { bible: bibleName } = await params;
-  const cfg = BIBLES_CONFIG[bibleName];
-  if (!cfg?.isIndependent) notFound();
+  const bible = bibleManager.getAll().find((b) => b.bibleName === bibleName);
+  if (!bible?.isIndependent) notFound();
 
-  const bible = bibleManager.getBible(bibleName);
-
-  return <BibleOverviewPage bibleName={bibleName} cfg={cfg} bible={bible} />;
+  return <BibleOverviewPage bibleName={bibleName} bible={bible} />;
 }
