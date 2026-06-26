@@ -7,7 +7,9 @@
       "Bash(grep -E \"\\\\.\\(json|yml|yaml|ts\\)$\")",
       "Bash(mkdir -p \"c:/Users/Tim/Documents/work/MBC_NEXT/apps/admin/src/app/\\(payload\\)/admin/[[...segments]]\")",
       "Bash(mkdir -p \"c:/Users/Tim/Documents/work/MBC_NEXT/apps/admin/src/app/\\(payload\\)/api/[...slug]\")",
-      "Bash(python3 -c \"import json,sys; pkg=json.load\\(sys.stdin\\); exports=pkg.get\\('exports',{}\\); [print\\(k,v\\) for k,v in exports.items\\(\\) if 'css' in k.lower\\(\\) or 'scss' in k.lower\\(\\) or 'style' in k.lower\\(\\)]\")"
+      "Bash(python3 -c \"import json,sys; pkg=json.load\\(sys.stdin\\); exports=pkg.get\\('exports',{}\\); [print\\(k,v\\) for k,v in exports.items\\(\\) if 'css' in k.lower\\(\\) or 'scss' in k.lower\\(\\) or 'style' in k.lower\\(\\)]\")",
+      "Bash(node *)",
+      "Bash(python3 *)"
     ]
   }
 }
