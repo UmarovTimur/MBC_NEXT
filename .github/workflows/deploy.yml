@@ -50,8 +50,7 @@ jobs:
             yarn install --immutable
             yarn workspace @mbc/admin build
             yarn workspace @mbc/az build
-            pm2 restart admin --update-env
-            pm2 restart az --update-env
+            pm2 startOrRestart ecosystem.config.cjs --update-env
 
   # ── az test: workflow_dispatch → SSH test server ──────────────────────────
   deploy-az-test:
