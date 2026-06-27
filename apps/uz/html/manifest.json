@@ -1,0 +1,6953 @@
+{
+  "bibles": [
+    {
+      "bibleKey": "mbc",
+      "primary": "MakDonaldning Injil kitobiga o`zbek tilidagi sharhlari",
+      "attachment": "muqaddas-kitob",
+      "defaultView": "split-screen",
+      "chapterSlug": " Bob",
+      "introductionName": "Kirish"
+    },
+    {
+      "bibleKey": "muqaddas-kitob",
+      "primary": "Muqaddas Kitob ONLINE",
+      "attachment": null,
+      "defaultView": "single-column",
+      "chapterSlug": " Bob",
+      "introductionName": "Kirish"
+    }
+  ],
+  "bookNames": [
+    {
+      "bookId": "01",
+      "name": "Ibtido"
+    },
+    {
+      "bookId": "02",
+      "name": "Chiqish"
+    },
+    {
+      "bookId": "03",
+      "name": "Levilar"
+    },
+    {
+      "bookId": "04",
+      "name": "Sahroda"
+    },
+    {
+      "bookId": "05",
+      "name": "Qonunlar"
+    },
+    {
+      "bookId": "06",
+      "name": "Yoshua"
+    },
+    {
+      "bookId": "07",
+      "name": "Hakamlar"
+    },
+    {
+      "bookId": "08",
+      "name": "Rut"
+    },
+    {
+      "bookId": "09",
+      "name": "Shohlar (birinchi kitob)"
+    },
+    {
+      "bookId": "10",
+      "name": "Shohlar (ikkinchi kitob)"
+    },
+    {
+      "bookId": "11",
+      "name": "Shohlar (uchinchi kitob)"
+    },
+    {
+      "bookId": "12",
+      "name": "Shohlar (to'rtinchi kitob)"
+    },
+    {
+      "bookId": "13",
+      "name": "Solnomalar (birinchi kitob)"
+    },
+    {
+      "bookId": "14",
+      "name": "Solnomalar (ikkinchi kitob)"
+    },
+    {
+      "bookId": "15",
+      "name": "Ezra"
+    },
+    {
+      "bookId": "16",
+      "name": "Naximiyo"
+    },
+    {
+      "bookId": "17",
+      "name": "Ester"
+    },
+    {
+      "bookId": "18",
+      "name": "Ayub"
+    },
+    {
+      "bookId": "19",
+      "name": "Zabur"
+    },
+    {
+      "bookId": "20",
+      "name": "Sulaymonning hikmatlari"
+    },
+    {
+      "bookId": "21",
+      "name": "Voiz"
+    },
+    {
+      "bookId": "22",
+      "name": "Sulaymonning go'zal qo'shig'i"
+    },
+    {
+      "bookId": "23",
+      "name": "Ishayo"
+    },
+    {
+      "bookId": "24",
+      "name": "Yeremiyo"
+    },
+    {
+      "bookId": "25",
+      "name": "Yeremiyoning marsiyasi"
+    },
+    {
+      "bookId": "26",
+      "name": "Hizqiyo"
+    },
+    {
+      "bookId": "27",
+      "name": "Doniyor"
+    },
+    {
+      "bookId": "28",
+      "name": "Xo'sheya"
+    },
+    {
+      "bookId": "29",
+      "name": "Yo'el"
+    },
+    {
+      "bookId": "30",
+      "name": "Amos"
+    },
+    {
+      "bookId": "31",
+      "name": "Obodiyo"
+    },
+    {
+      "bookId": "32",
+      "name": "Yunus"
+    },
+    {
+      "bookId": "33",
+      "name": "Mixo"
+    },
+    {
+      "bookId": "34",
+      "name": "Noxum"
+    },
+    {
+      "bookId": "35",
+      "name": "Xabaqquq"
+    },
+    {
+      "bookId": "36",
+      "name": "Zafaniyo"
+    },
+    {
+      "bookId": "37",
+      "name": "Xaggey"
+    },
+    {
+      "bookId": "38",
+      "name": "Zakariyo"
+    },
+    {
+      "bookId": "39",
+      "name": "Malaki"
+    },
+    {
+      "bookId": "40",
+      "name": "Matto Muqaddas xushxabar"
+    },
+    {
+      "bookId": "41",
+      "name": "Mark Muqaddas xushxabar"
+    },
+    {
+      "bookId": "42",
+      "name": "Luqo Muqaddas xushxabar"
+    },
+    {
+      "bookId": "43",
+      "name": "Yuhanno Muqaddas xushxabar"
+    },
+    {
+      "bookId": "44",
+      "name": "Havoriylarning faoliyati"
+    },
+    {
+      "bookId": "45",
+      "name": "Yoqubning maktubi"
+    },
+    {
+      "bookId": "46",
+      "name": "Butrusning birinchi maktubi"
+    },
+    {
+      "bookId": "47",
+      "name": "Butrusning ikkinchi maktubi"
+    },
+    {
+      "bookId": "48",
+      "name": "Yuhannoning birinchi maktubi"
+    },
+    {
+      "bookId": "49",
+      "name": "Yuhannoning ikkinchi maktubi"
+    },
+    {
+      "bookId": "50",
+      "name": "Yuhannoning uchinchi maktubi"
+    },
+    {
+      "bookId": "51",
+      "name": "Yahudoning maktubi"
+    },
+    {
+      "bookId": "52",
+      "name": "Rimliklarga maktub"
+    },
+    {
+      "bookId": "53",
+      "name": "Korinfliklarga birinchi maktub"
+    },
+    {
+      "bookId": "54",
+      "name": "Korinfliklarga ikkinchi maktub"
+    },
+    {
+      "bookId": "55",
+      "name": "Galatiyaliklarga maktub"
+    },
+    {
+      "bookId": "56",
+      "name": "Efesliklarga maktub"
+    },
+    {
+      "bookId": "57",
+      "name": "Filippiliklarga maktub"
+    },
+    {
+      "bookId": "58",
+      "name": "Kolosaliklarga maktub"
+    },
+    {
+      "bookId": "59",
+      "name": "Salonikaliklarga birinchi maktub"
+    },
+    {
+      "bookId": "60",
+      "name": "Salonikaliklarga ikkinchi maktub"
+    },
+    {
+      "bookId": "61",
+      "name": "Timo'tiyga birinchi maktub"
+    },
+    {
+      "bookId": "62",
+      "name": "Timo'tiyga ikkinchi maktub"
+    },
+    {
+      "bookId": "63",
+      "name": "Titusga maktub"
+    },
+    {
+      "bookId": "64",
+      "name": "Filimo'nga maktub"
+    },
+    {
+      "bookId": "65",
+      "name": "Ibroniylarga maktub"
+    },
+    {
+      "bookId": "66",
+      "name": "Yuhannoga ko'rsatilgan vahiy"
+    }
+  ],
+  "chapters": [
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "6"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "7"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "8"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "9"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "10"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "11"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "12"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "13"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "14"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "15"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "16"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "17"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "18"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "19"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "20"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "21"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "22"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "23"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "24"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "25"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "26"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "27"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "40",
+      "chapterId": "28"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "6"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "7"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "8"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "9"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "10"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "11"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "12"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "13"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "14"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "15"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "41",
+      "chapterId": "16"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "6"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "7"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "8"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "9"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "10"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "11"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "12"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "13"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "14"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "15"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "16"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "17"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "18"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "19"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "20"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "21"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "22"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "23"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "42",
+      "chapterId": "24"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "6"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "7"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "8"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "9"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "10"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "11"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "12"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "13"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "14"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "15"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "16"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "17"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "18"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "19"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "20"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "43",
+      "chapterId": "21"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "6"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "7"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "8"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "9"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "10"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "11"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "12"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "13"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "14"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "15"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "16"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "17"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "18"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "19"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "20"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "21"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "22"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "23"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "24"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "25"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "26"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "27"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "44",
+      "chapterId": "28"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "45",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "45",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "45",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "45",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "45",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "45",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "46",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "46",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "46",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "46",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "46",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "46",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "47",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "47",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "47",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "47",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "48",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "48",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "48",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "48",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "48",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "48",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "37"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "38"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "39"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "40"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "41"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "42"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "43"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "44"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "45"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "46"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "47"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "48"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "49"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "01",
+      "chapterId": "50"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "37"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "38"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "39"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "02",
+      "chapterId": "40"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "03",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "04",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "05",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "06",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "07",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "08",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "08",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "08",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "08",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "09",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "10",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "11",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "12",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "13",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "14",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "15",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "16",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "17",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "37"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "38"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "39"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "40"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "41"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "18",
+      "chapterId": "42"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "37"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "38"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "39"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "40"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "41"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "42"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "43"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "44"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "45"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "46"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "47"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "48"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "49"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "50"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "51"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "52"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "53"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "54"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "55"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "56"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "57"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "58"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "59"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "60"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "61"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "62"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "63"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "64"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "65"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "66"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "67"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "68"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "69"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "70"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "71"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "72"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "73"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "74"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "75"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "76"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "77"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "78"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "79"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "80"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "81"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "82"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "83"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "84"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "85"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "86"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "87"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "88"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "89"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "90"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "91"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "92"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "93"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "94"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "95"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "96"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "97"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "98"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "99"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "100"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "101"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "102"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "103"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "104"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "105"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "106"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "107"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "108"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "109"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "110"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "111"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "112"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "113"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "114"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "115"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "116"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "117"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "118"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "119"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "120"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "121"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "122"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "123"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "124"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "125"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "126"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "127"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "128"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "129"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "130"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "131"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "132"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "133"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "134"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "135"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "136"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "137"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "138"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "139"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "140"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "141"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "142"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "143"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "144"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "145"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "146"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "147"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "148"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "149"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "19",
+      "chapterId": "150"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "20",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "21",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "22",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "37"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "38"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "39"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "40"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "41"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "42"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "43"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "44"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "45"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "46"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "47"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "48"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "49"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "50"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "51"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "52"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "53"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "54"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "55"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "56"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "57"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "58"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "59"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "60"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "61"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "62"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "63"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "64"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "65"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "23",
+      "chapterId": "66"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "37"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "38"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "39"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "40"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "41"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "42"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "43"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "44"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "45"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "46"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "47"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "48"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "49"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "50"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "51"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "24",
+      "chapterId": "52"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "25",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "25",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "25",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "25",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "25",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "29"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "30"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "31"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "32"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "33"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "34"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "35"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "36"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "37"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "38"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "39"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "40"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "41"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "42"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "43"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "44"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "45"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "46"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "47"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "26",
+      "chapterId": "48"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "27",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "28",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "29",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "29",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "29",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "30",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "31",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "32",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "32",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "32",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "32",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "33",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "33",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "33",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "33",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "33",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "33",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "33",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "34",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "34",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "34",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "35",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "35",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "35",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "36",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "36",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "36",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "37",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "37",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "38",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "39",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "39",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "39",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "39",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "40",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "41",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "42",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "43",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "22"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "23"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "24"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "25"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "26"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "27"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "44",
+      "chapterId": "28"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "45",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "45",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "45",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "45",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "45",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "46",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "46",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "46",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "46",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "46",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "47",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "47",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "47",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "48",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "48",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "48",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "48",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "48",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "49",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "50",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "51",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "52",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "53",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "54",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "55",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "55",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "55",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "55",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "55",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "55",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "56",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "56",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "56",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "56",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "56",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "56",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "57",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "57",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "57",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "57",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "58",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "58",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "58",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "58",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "59",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "59",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "59",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "59",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "59",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "60",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "60",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "60",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "61",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "61",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "61",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "61",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "61",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "61",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "62",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "62",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "62",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "62",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "63",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "63",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "63",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "64",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "65",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "1"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "2"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "3"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "4"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "5"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "6"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "7"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "8"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "9"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "10"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "11"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "12"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "13"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "14"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "15"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "16"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "17"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "18"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "19"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "20"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "21"
+    },
+    {
+      "bible": "muqaddas-kitob",
+      "bookNumber": "66",
+      "chapterId": "22"
+    }
+  ]
+}

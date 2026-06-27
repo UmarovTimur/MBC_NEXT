@@ -1,10 +1,9 @@
-name: Build and Deploy to FTP
+name: Build and Deploy
 
 on:
   push:
     branches:
       - main
-      - az
   workflow_dispatch:
     inputs:
       deploy_target:
@@ -21,8 +20,9 @@ on:
         type: string
 
 jobs:
+  # ── uz: static build → FTP ────────────────────────────────────────────────
   deploy-uz:
-    name: Build & Deploy uz (static)
+    name: Build & Deploy uz (static → FTP)
     if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
@@ -58,6 +58,33 @@ jobs:
           local-dir: ./apps/uz/out/
           server-dir: /
 
+  # ── az + admin: SSH → git pull → build → pm2 restart ─────────────────────
+  deploy-vps:
+    name: Deploy az + admin to VPS
+    if: github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_SSH_HOST }}
+          username: ${{ secrets.VPS_SSH_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT }}
+          script: |
+            set -e
+            cd ${{ secrets.VPS_APP_PATH }}
+            git fetch origin main
+            git checkout main
+            git pull origin main
+            corepack enable
+            yarn install --immutable
+            yarn workspace @mbc/admin build
+            yarn workspace @mbc/az build
+            pm2 restart admin --update-env
+            pm2 restart az --update-env
+
+  # ── az test: workflow_dispatch → SSH test server ──────────────────────────
   deploy-az-test:
     name: Deploy az + admin → test server
     if: github.event_name == 'workflow_dispatch'
@@ -82,40 +109,3 @@ jobs:
             yarn workspace @mbc/admin build
             pm2 restart admin --update-env
             pm2 restart az --update-env
-
-  deploy-az:
-    name: Build & Deploy az (static)
-    if: github.ref_name == 'az'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24.5.0"
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Create .env file
-        working-directory: ./apps/az
-        run: echo "${{ secrets.ENV_FILE_AZ }}" > .env
-
-      - name: Install dependencies
-        run: yarn install --immutable
-
-      - name: Build
-        run: yarn workspace @mbc/az build
-        env:
-          NODE_ENV: production
-
-      - name: Upload to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER_AZ }}
-          username: ${{ secrets.FTP_USERNAME_AZ }}
-          password: ${{ secrets.FTP_PASSWORD_AZ }}
-          local-dir: ./apps/az/out/
-          server-dir: /

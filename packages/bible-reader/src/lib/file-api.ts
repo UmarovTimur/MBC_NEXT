@@ -30,27 +30,25 @@ export function toBookNameMap(
   );
 }
 
-export async function readManifest(dataDir: string): Promise<FileManifest> {
-  const raw = await readFile(path.join(dataDir, "manifest.json"), "utf-8");
+export async function readManifest(htmlDir: string): Promise<FileManifest> {
+  const raw = await readFile(path.join(htmlDir, "manifest.json"), "utf-8");
   return JSON.parse(raw) as FileManifest;
 }
 
 export async function readChapterHtml(
-  dataDir: string,
+  htmlDir: string,
   bibleKey: string,
   bookNumber: string,
   chapterId: string,
 ): Promise<string | null> {
-  const filePath = path.join(
-    dataDir,
-    "html",
-    bibleKey,
-    bookNumber,
-    `${chapterId}.html`,
-  );
-  try {
-    return await readFile(filePath, "utf-8");
-  } catch {
-    return null;
+  // Files use zero-padded names (01.html, 00.html) for single-digit ids
+  const paddedId = chapterId.padStart(2, "0");
+  for (const name of [paddedId, chapterId]) {
+    try {
+      return await readFile(path.join(htmlDir, bibleKey, bookNumber, `${name}.html`), "utf-8");
+    } catch {
+      continue;
+    }
   }
+  return null;
 }

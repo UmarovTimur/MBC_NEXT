@@ -46,12 +46,8 @@ export class Bible {
     this.introducingName = config.introductionName ?? this.mappingChapterSlug?.[0] ?? "0";
   }
 
-  private getBook(bookId: string): Book {
-    const book = this.books.find((b) => b.id === bookId);
-    if (!book) {
-      throw new Error(`Book "${bookId}" not found in Bible "${this.bibleName}"`);
-    }
-    return book;
+  private getBook(bookId: string): Book | null {
+    return this.books.find((b) => b.id === bookId) ?? null;
   }
 
   getBookName(bookId: number): string {
@@ -70,11 +66,9 @@ export class Bible {
 
   async getChapterContent(bookId: string, chapterId: string): Promise<string | null> {
     const book = this.getBook(bookId);
+    if (!book) return null;
     const chapter = book.chapters.find((c) => c.chapterId === chapterId);
-    if (!chapter) {
-      return null;
-    }
-
+    if (!chapter) return null;
     return this.contentLoader(this.bibleName, bookId, chapterId);
   }
 
