@@ -76,7 +76,7 @@ jobs:
             cd ${{ secrets.VPS_APP_PATH }}
             git fetch origin main
             git checkout main
-            git pull origin main
+            git reset --hard origin/main
             corepack enable
             yarn install --immutable
             yarn workspace @mbc/admin build
