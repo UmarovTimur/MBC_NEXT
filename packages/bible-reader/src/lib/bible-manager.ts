@@ -8,6 +8,7 @@ import {
   fetchChapterHtml,
   fetchChapterRefs,
 } from "./api";
+import { readManifest, readChapterHtml, toBookNameMap } from "./file-api";
 
 export class BibleManager {
   constructor(private bibles: Bible[]) { }
@@ -102,6 +103,56 @@ export class BibleManager {
         })),
       })),
     };
+  }
+
+  /**
+   * Build the manager from local files (manifest.json + html/ directory).
+   * Used as a fallback when the Payload API is not reachable (e.g. CI static builds).
+   */
+  static async initFromFiles(dataDir: string): Promise<BibleManager> {
+    const manifest = await readManifest(dataDir);
+    const bookNames = toBookNameMap(manifest.bookNames);
+
+    const contentLoader = (bible: string, bookNumber: string, chapterId: string) =>
+      readChapterHtml(dataDir, bible, bookNumber, chapterId);
+
+    const byBible = new Map<string, Map<string, Chapter[]>>();
+    for (const ref of manifest.chapters) {
+      let books = byBible.get(ref.bible);
+      if (!books) {
+        books = new Map<string, Chapter[]>();
+        byBible.set(ref.bible, books);
+      }
+      const chapters = books.get(ref.bookNumber) ?? [];
+      chapters.push({ bible: ref.bible, bookId: ref.bookNumber, chapterId: ref.chapterId });
+      books.set(ref.bookNumber, chapters);
+    }
+
+    const bibles = manifest.bibles.map((def) => {
+      const books: Book[] = [...(byBible.get(def.bibleKey)?.entries() ?? [])]
+        .map(([bookId, chapters]) => ({
+          id: bookId,
+          bible: def.bibleKey,
+          chapters: chapters.sort((a, b) => +a.chapterId - +b.chapterId),
+        }))
+        .sort((a, b) => +a.id - +b.id);
+
+      const config: BibleConfig = {
+        primary: def.primary,
+        attachment: def.attachment,
+        defaultView: def.defaultView,
+        chapterSlug: def.chapterSlug,
+        mappingChapterSlug: def.mappingChapterSlug,
+        formattingStyle: def.formattingStyle,
+        introductionName: def.introductionName,
+        isIndependent: def.isIndependent,
+        isCommentary: def.isCommentary,
+      };
+
+      return new Bible(def.bibleKey, books, config, bookNames, contentLoader);
+    });
+
+    return new BibleManager(bibles);
   }
 
   getAll(): Bible[] {
