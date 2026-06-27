@@ -1,9 +1,16 @@
-name: Build and Deploy
+name: Deploy az + admin to VPS
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "apps/az/**"
+      - "apps/admin/**"
+      - "packages/**"
+      - "ecosystem.config.cjs"
+      - "package.json"
+      - "yarn.lock"
   workflow_dispatch:
     inputs:
       deploy_target:
@@ -20,48 +27,10 @@ on:
         type: string
 
 jobs:
-  # ── uz: static build → FTP ────────────────────────────────────────────────
-  deploy-uz:
-    name: Build & Deploy uz (static → FTP)
-    if: github.ref_name == 'main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24.5.0"
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Create .env file
-        working-directory: ./apps/uz
-        run: echo "${{ secrets.ENV_FILE }}" > .env
-
-      - name: Install dependencies
-        run: yarn install --immutable
-
-      - name: Build
-        run: yarn workspace @mbc/uz build
-        env:
-          NODE_ENV: production
-
-      - name: Upload to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./apps/uz/out/
-          server-dir: /
-
   # ── az + admin: SSH → git pull → build → pm2 restart ─────────────────────
   deploy-vps:
     name: Deploy az + admin to VPS
-    if: github.ref_name == 'main'
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Deploy via SSH

@@ -1,0 +1,48 @@
+name: Deploy uz (static → FTP)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/uz/**"
+      - "packages/**"
+      - "package.json"
+      - "yarn.lock"
+
+jobs:
+  deploy-uz:
+    name: Build & Deploy uz (static → FTP)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.5.0"
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Create .env file
+        working-directory: ./apps/uz
+        run: echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build
+        run: yarn workspace @mbc/uz build
+        env:
+          NODE_ENV: production
+
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./apps/uz/out/
+          server-dir: /
