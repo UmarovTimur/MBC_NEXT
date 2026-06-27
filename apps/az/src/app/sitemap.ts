@@ -1,8 +1,6 @@
 import { bibleManager } from "@/entities/bible/server";
 import { MetadataRoute } from "next";
 
-export const dynamic = "force-static";
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const manager = bibleManager;
   if (!manager) return [];
