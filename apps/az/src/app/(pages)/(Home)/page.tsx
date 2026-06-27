@@ -4,6 +4,8 @@ import { fetchBooks } from "@/shared/lib/payload";
 import { BibleOverviewPage } from "@/widgets/BibleOverviewPage";
 import { BooksPage } from "@/widgets/BooksPage";
 import { HomeHero } from "@/widgets/HomeHero";
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const rawBooks = await fetchBooks();
   const books = rawBooks.map(mapPayloadBook);
