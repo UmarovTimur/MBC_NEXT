@@ -42,7 +42,7 @@ jobs:
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build
         run: yarn workspace @mbc/uz build
@@ -104,7 +104,7 @@ jobs:
         run: echo "${{ secrets.ENV_FILE_AZ }}" > .env
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build
         run: yarn workspace @mbc/az build

@@ -142,3 +142,4 @@ vite.config.ts.timestamp-*
 # migration/ script artifacts (yt-dlp cache, downloaded audio)
 migration/.yarn/
 migration/output/backups/
+migration/output/audio/
