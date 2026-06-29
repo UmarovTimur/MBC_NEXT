@@ -130,6 +130,14 @@ export const BibleChapters: CollectionConfig = {
       admin: {
         language: 'html',
         description: 'Raw chapter HTML. Verse spans and custom classes are stored verbatim.',
+        editorProps: {
+          height: '70vh',
+        },
+        editorOptions: {
+          automaticLayout: true,
+          scrollBeyondLastLine: false,
+          wordWrap: 'on',
+        },
       },
     },
     {
