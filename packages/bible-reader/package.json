@@ -8,6 +8,10 @@
     ".": "./src/index.ts",
     "./server": "./src/server.ts"
   },
+  "dependencies": {
+    "@mbc/ui": "*",
+    "lucide-react": "^0.562.0"
+  },
   "peerDependencies": {
     "next": "*",
     "react": "*",

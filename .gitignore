@@ -143,3 +143,8 @@ vite.config.ts.timestamp-*
 migration/.yarn/
 migration/output/backups/
 migration/output/audio/
+
+# Аудио Библии AZB (~5.2 ГБ, 1189 mp3). В git не хранится: заливается на VPS
+# отдельно через scripts/rsync-az-audio.sh и переживает деплои, т.к.
+# `git reset --hard` не трогает gitignored-файлы.
+apps/az/public/audio/

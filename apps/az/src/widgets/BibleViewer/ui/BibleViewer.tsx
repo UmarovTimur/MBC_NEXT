@@ -1,4 +1,4 @@
-import { Chapter } from "@/entities/bible";
+import { Chapter, ChapterAudioPlayer } from "@/entities/bible";
 import { bibleManager } from "@/entities/bible/server";
 import type { Bible } from "@/entities/bible/server";
 import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-navigation";
@@ -19,6 +19,8 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
   const content = await bible.getChapterContent(chapter.bookId, chapter.chapterId);
   const title = bible.getChapterTitle(chapter);
   const subTitle = bible.primaryTitle === title ? "" : bible.primaryTitle;
+  // null for bibles without recordings (e.g. barclay) — then no player renders.
+  const audioSrc = bible.getChapterAudioUrl(chapter.bookId, chapter.chapterId);
   // ======================= attached Bible =====================================
   let attachedContent: string | null = null;
   let attachedBible: Bible | undefined = undefined;
@@ -63,6 +65,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
         )}
       >
         <div className={cn("basis-2/3 pt-4")}>
+          {audioSrc && <ChapterAudioPlayer className="mb-4" src={audioSrc} />}
           <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
           <h2 className="text-2xl my-4">{subTitle}</h2>
           <BibleContent html={content} formattingStyle={bible.formattingStyle} />

@@ -1,5 +1,6 @@
 import { BibleViewMode, Book, Chapter } from "../model/types";
 import { BibleConfig, BookName } from "../config";
+import { buildChapterAudioUrl, hasChapterAudio } from "./audio";
 
 /** Loads the raw HTML for a chapter from the data source (DB via REST API). */
 export type ChapterContentLoader = (
@@ -70,6 +71,18 @@ export class Bible {
     const chapter = book.chapters.find((c) => c.chapterId === chapterId);
     if (!chapter) return null;
     return this.contentLoader(this.bibleName, bookId, chapterId);
+  }
+
+  /** URL of this chapter's recording, or null if this bible has no audio. */
+  getChapterAudioUrl(bookId: string, chapterId: string): string | null {
+    if (!hasChapterAudio(this.bibleName)) return null;
+    const book = this.getBook(bookId);
+    if (!book?.chapters.some((c) => c.chapterId === chapterId)) return null;
+
+    // Padding depends on the highest chapter number, not on chapters.length:
+    // commentaries prepend an intro chapter "0", which would skew the count.
+    const maxChapterId = Math.max(...book.chapters.map((c) => Number(c.chapterId)));
+    return buildChapterAudioUrl(this.bibleName, bookId, chapterId, maxChapterId);
   }
 
   getChapterTitle(params: Chapter): string {

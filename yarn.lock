@@ -2092,6 +2092,9 @@ __metadata:
 "@mbc/bible-reader@npm:*, @mbc/bible-reader@workspace:packages/bible-reader":
   version: 0.0.0-use.local
   resolution: "@mbc/bible-reader@workspace:packages/bible-reader"
+  dependencies:
+    "@mbc/ui": "npm:*"
+    lucide-react: "npm:^0.562.0"
   peerDependencies:
     next: "*"
     react: "*"

@@ -31,7 +31,6 @@ type RawBibleConfig = {
 // there and partly in the az dictionary's "bible" key (see below).
 const SOURCES: { app: string; htmlRoot: string; locale: Locale }[] = [
   { app: 'az', htmlRoot: path.join(repoRoot, 'apps', 'az', 'html'), locale: 'az' },
-  { app: 'uz', htmlRoot: path.join(repoRoot, 'apps', 'uz', 'html'), locale: 'uz' },
 ]
 
 async function loadEnvFile(filePath: string) {
