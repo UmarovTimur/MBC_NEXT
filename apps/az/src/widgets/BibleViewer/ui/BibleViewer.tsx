@@ -4,6 +4,7 @@ import type { Bible } from "@/entities/bible/server";
 import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-navigation";
 import { cn } from "@/shared/lib/utils";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { ChapterPagination } from "./ChapterPagination";
 import { BibleContent } from "@/shared/ui/BibleContent";
 import { FloatingChapterNav } from "./FloatingChapterNav";
@@ -71,9 +72,16 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
           <BibleContent html={content} formattingStyle={bible.formattingStyle} />
         </div>
 
-        {attachedContent && (
+        {attachedContent && attachedBible && (
           <div className="shrink-0 pt-6 basis-1/3 text-base ">
-            <h3 className="text-3xl whitespace-pre-line mb-6">{attachedTitle}</h3>
+            <h3 className="text-3xl whitespace-pre-line mb-6">
+              <Link
+                href={`/${attachedBible.bibleName}/${chapter.bookId}/${chapter.chapterId}`}
+                className="transition-colors hover:text-blue-500 dark:hover:text-blue-300"
+              >
+                {attachedTitle}
+              </Link>
+            </h3>
             <BibleContent html={attachedContent} formattingStyle={attachedBible?.formattingStyle} />
           </div>
         )}
