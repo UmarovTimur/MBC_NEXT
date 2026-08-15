@@ -3,6 +3,7 @@ import { BibleConfig } from "../config";
 import { Bible } from "./bible";
 import {
   BibleFetchOptions,
+  fetchAssembledChapterHtml,
   fetchBibleDocs,
   fetchBookNames,
   fetchChapterHtml,
@@ -47,11 +48,19 @@ export class BibleManager {
         introductionName: doc.introductionName ?? undefined,
         isIndependent: Boolean(doc.isIndependent),
         isCommentary: Boolean(doc.isCommentary),
+        storageMode: doc.storageMode ?? "chapter",
       };
     }
 
-    const contentLoader = (bible: string, bookNumber: string, chapterId: string) =>
+    // Verse-mode corpora have their chapter HTML assembled by the API from
+    // bible-verses; chapter-mode corpora read the stored HTML column directly.
+    // Everything downstream of the loader is identical either way.
+    const chapterLoader = (bible: string, bookNumber: string, chapterId: string) =>
       fetchChapterHtml(apiBaseUrl, bible, bookNumber, chapterId, fetchOptions);
+    const verseLoader = (bible: string, bookNumber: string, chapterId: string) =>
+      fetchAssembledChapterHtml(apiBaseUrl, bible, bookNumber, chapterId, fetchOptions);
+    const loaderFor = (bibleKey: string) =>
+      configMap[bibleKey]?.storageMode === "verse" ? verseLoader : chapterLoader;
 
     // Group chapter refs into bibleKey -> bookNumber -> chapters[].
     const byBible = new Map<string, Map<string, Chapter[]>>();
@@ -83,7 +92,7 @@ export class BibleManager {
         throw new Error(`No Bibles config found for "${bibleName}" (locale "${locale}")`);
       }
 
-      return new Bible(bibleName, books, config, bookNames, contentLoader);
+      return new Bible(bibleName, books, config, bookNames, loaderFor(bibleName));
     });
 
     return new BibleManager(bibles);

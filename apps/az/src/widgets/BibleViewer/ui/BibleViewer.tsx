@@ -4,10 +4,11 @@ import type { Bible } from "@/entities/bible/server";
 import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-navigation";
 import { cn } from "@/shared/lib/utils";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { ChapterPagination } from "./ChapterPagination";
 import { BibleContent } from "@/shared/ui/BibleContent";
 import { FloatingChapterNav } from "./FloatingChapterNav";
+import { AppLink } from "@/shared/ui/AppLink";
+import { VerseHighlight } from "@/features/verse-highlight";
 
 interface BibleViewerProps {
   className?: string;
@@ -61,7 +62,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
 
       <div
         className={cn(
-          "[&_a]:text-blue-600 [&_a]:font-bold text-foreground dark:text-muted-foreground",
+          "text-foreground dark:text-muted-foreground",
           " lg:flex justify-center gap-5 [&_strong]:font-bold",
         )}
       >
@@ -75,18 +76,21 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
         {attachedContent && attachedBible && (
           <div className="shrink-0 pt-6 basis-1/3 text-base ">
             <h3 className="text-3xl whitespace-pre-line mb-6">
-              <Link
+              <AppLink
                 href={`/${attachedBible.bibleName}/${chapter.bookId}/${chapter.chapterId}`}
-                className="transition-colors hover:text-blue-500 dark:hover:text-blue-300"
+                className="text-[#101820] transition-colors dark:text-white"
               >
                 {attachedTitle}
-              </Link>
+              </AppLink>
             </h3>
             <BibleContent html={attachedContent} formattingStyle={attachedBible?.formattingStyle} />
           </div>
         )}
       </div>
 
+
+      {/* Operates on the rendered DOM; verse-mode chapters carry .v wrappers. */}
+      <VerseHighlight />
 
       <ChapterPagination chapter={chapter} />
     </div>

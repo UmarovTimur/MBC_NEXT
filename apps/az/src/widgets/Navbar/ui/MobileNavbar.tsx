@@ -24,7 +24,7 @@ export const MobileNavbar = () => {
     <div className="lg:hidden">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
-          <Button className="h-10 w-10 rounded-full" variant="ghost" size="icon" aria-label={t("navOpenMenu")}>
+          <Button className="h-10 w-10" variant="ghost" size="icon" aria-label={t("navOpenMenu")}>
             <Menu suppressHydrationWarning />
           </Button>
         </SheetTrigger>

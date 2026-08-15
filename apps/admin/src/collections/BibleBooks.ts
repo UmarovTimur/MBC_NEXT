@@ -34,7 +34,6 @@ export const BibleBooks: CollectionConfig = {
           index: true,
           options: [
             { label: 'Azerbaijani', value: 'az' },
-            { label: 'Uzbek', value: 'uz' },
           ],
         },
         {

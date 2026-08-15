@@ -62,7 +62,6 @@ export const Books: CollectionConfig = {
       defaultValue: 'az',
       options: [
         { label: 'Azerbaijani', value: 'az' },
-        { label: 'Uzbek', value: 'uz' },
         { label: 'Russian', value: 'ru' },
       ],
     },

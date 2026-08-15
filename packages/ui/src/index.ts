@@ -39,6 +39,8 @@ export {
   DropdownMenuRadioGroup,
 } from "./ui/dropdown-menu";
 export { imageLoader } from "./ui/ImageLoader";
+export { Input } from "./ui/input";
+export type { InputProps } from "./ui/input";
 export { NavigationLoader } from "./ui/NavigationLoader";
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "./ui/tooltip";
 export {

@@ -10,9 +10,12 @@
     "generate:types": "payload generate:types",
     "import:mukitob:az": "node --import tsx ./scripts/import-mukitob-az-books.ts",
     "import:mukitob:az:csv": "node --import tsx ./scripts/import-mukitob-az-books-csv.ts",
-    "migrate:bible-html": "node --import tsx ./scripts/migrate-bible-html.ts"
+    "migrate:bible-html": "node --import tsx ./scripts/migrate-bible-html.ts",
+    "migrate:bible-verses": "node --import tsx ./scripts/migrate-bible-verses.ts",
+    "verify:verses": "node --import tsx ./scripts/verify-verse-roundtrip.ts"
   },
   "dependencies": {
+    "@mbc/bible-verses": "*",
     "@payloadcms/db-postgres": "^3.82.1",
     "@payloadcms/next": "^3.82.1",
     "@payloadcms/richtext-lexical": "^3.82.1",

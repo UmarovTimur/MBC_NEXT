@@ -1,0 +1,104 @@
+.wrapper {
+  margin-top: 0.5rem;
+}
+
+.label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-elevation-500);
+}
+
+.note {
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  color: var(--theme-elevation-400);
+  font-style: italic;
+}
+
+.table {
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 4px;
+  max-height: 420px;
+  overflow: auto;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--theme-elevation-100);
+  text-decoration: none;
+  color: inherit;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: var(--theme-elevation-50);
+}
+
+.num {
+  flex: 0 0 3.5rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--theme-elevation-600);
+}
+
+.text {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.preview {
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  background: var(--theme-elevation-0);
+  max-height: 600px;
+  overflow: auto;
+  line-height: 1.7;
+}
+
+/* Mirrors the public site's .bible-content--azb rules so the preview is faithful. */
+.preview :global(.s),
+.preview :global(.s2) {
+  font-weight: 700;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.preview :global(.r),
+.preview :global(.mr) {
+  font-style: italic;
+  color: var(--theme-elevation-500);
+}
+
+.preview :global(.p),
+.preview :global(.m),
+.preview :global(.nb) {
+  margin-bottom: 1rem;
+}
+
+.preview :global(.q),
+.preview :global(.qs),
+.preview :global(.pi),
+.preview :global(.mi) {
+  margin-left: 1.5rem;
+}
+
+.preview :global(.verse) {
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+.preview :global(.v:target) {
+  background: var(--theme-warning-100, #fef3c7);
+  border-radius: 2px;
+}

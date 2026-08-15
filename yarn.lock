@@ -2040,6 +2040,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mbc/admin@workspace:apps/admin"
   dependencies:
+    "@mbc/bible-verses": "npm:*"
     "@payloadcms/db-postgres": "npm:^3.82.1"
     "@payloadcms/next": "npm:^3.82.1"
     "@payloadcms/richtext-lexical": "npm:^3.82.1"
@@ -2062,6 +2063,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^9.39.2"
     "@mbc/bible-reader": "npm:*"
+    "@mbc/bible-verses": "npm:*"
     "@mbc/ui": "npm:*"
     "@next/eslint-plugin-next": "npm:^16.1.6"
     "@radix-ui/react-dropdown-menu": "npm:^2.1.16"
@@ -2099,6 +2101,12 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@mbc/bible-verses@npm:*, @mbc/bible-verses@workspace:packages/bible-verses":
+  version: 0.0.0-use.local
+  resolution: "@mbc/bible-verses@workspace:packages/bible-verses"
   languageName: unknown
   linkType: soft
 

@@ -1,6 +1,9 @@
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { sql } from 'drizzle-orm'
+import { index } from 'drizzle-orm/pg-core'
+import { AZ_TSV, VERSE_FTS_INDEX } from './src/lib/search/azFold'
 import path from 'path'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
@@ -10,6 +13,7 @@ import { Media } from './src/collections/Media'
 import { BibleChapters } from './src/collections/BibleChapters'
 import { Bibles } from './src/collections/Bibles'
 import { BibleBooks } from './src/collections/BibleBooks'
+import { BibleVerses } from './src/collections/BibleVerses'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -40,7 +44,7 @@ export default buildConfig({
       },
     },
   },
-  collections: [Users, Books, Media, Bibles, BibleBooks, BibleChapters],
+  collections: [Users, Books, Media, Bibles, BibleBooks, BibleChapters, BibleVerses],
   editor: lexicalEditor(),
   sharp,
   db: postgresAdapter({
@@ -48,6 +52,27 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URL,
     },
     push: process.env.NODE_ENV === 'development',
+    // The verse full-text index is an expression index Payload has no field-level
+    // way to declare. Registering it here means both `push` (development) and
+    // `migrate:create` (production) know about it — otherwise drizzle-kit treats
+    // it as an unknown object and drops it on the next push.
+    afterSchemaInit: [
+      ({ schema, extendTable }) => {
+        const table = schema.tables.bible_verses
+        if (table) {
+          extendTable({
+            table,
+            extraConfig: () => ({
+              [VERSE_FTS_INDEX]: index(VERSE_FTS_INDEX).using(
+                'gin',
+                sql.raw(AZ_TSV('"plain_text"')),
+              ),
+            }),
+          })
+        }
+        return schema
+      },
+    ],
   }),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

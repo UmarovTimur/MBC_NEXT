@@ -29,6 +29,7 @@ type RawBibleDoc = {
   introductionName?: string | null;
   isIndependent?: boolean | null;
   isCommentary?: boolean | null;
+  storageMode?: BibleConfig["storageMode"] | null;
 };
 
 type RawBookNameDoc = {
@@ -141,5 +142,71 @@ export async function fetchChapterHtml(
   const data: PayloadListResponse<{ html?: string }> = await res.json();
   return data.docs[0]?.html ?? null;
 }
+
+/**
+ * Chapter HTML for a verse-mode bible, assembled server-side from its verse rows.
+ *
+ * Assembling on the API side rather than fetching verses and joining them here
+ * keeps `ChapterContentLoader` — and therefore BibleViewer and BibleContent —
+ * completely unchanged, and avoids shipping 176 JSON rows for a chapter like
+ * Psalm 119 when the assembled HTML is a fraction of the size.
+ */
+export async function fetchAssembledChapterHtml(
+  baseUrl: string,
+  bibleKey: string,
+  bookNumber: string,
+  chapterId: string,
+  fetchOptions?: BibleFetchOptions,
+): Promise<string | null> {
+  const url =
+    `${normalizeBaseUrl(baseUrl)}/api/bible-chapters/assembled` +
+    `?bible=${encodeURIComponent(bibleKey)}` +
+    `&book=${encodeURIComponent(bookNumber)}` +
+    `&chapter=${encodeURIComponent(chapterId)}`;
+
+  const res = await fetch(url, fetchOptions);
+  if (res.status === 404) return null;
+  if (!res.ok) {
+    throw new Error(
+      `Assembled chapter fetch failed (${bibleKey}/${bookNumber}/${chapterId}): ${res.status}`,
+    );
+  }
+  const data: { html?: string } = await res.json();
+  return data.html ?? null;
+}
+
+/** Full-text search over verses. Returns raw book/chapter numbers; the caller names them. */
+export async function searchVerses(
+  baseUrl: string,
+  bibleKey: string,
+  query: string,
+  options?: { book?: string; limit?: number; page?: number; fetchOptions?: BibleFetchOptions },
+): Promise<VerseSearchResponse> {
+  const params = new URLSearchParams({ q: query, bible: bibleKey });
+  if (options?.book) params.set("book", options.book);
+  if (options?.limit) params.set("limit", String(options.limit));
+  if (options?.page) params.set("page", String(options.page));
+
+  const url = `${normalizeBaseUrl(baseUrl)}/api/bible-verses/search?${params.toString()}`;
+  const res = await fetch(url, options?.fetchOptions);
+  if (!res.ok) throw new Error(`Verse search failed: ${res.status}`);
+  return res.json();
+}
+
+export type VerseSearchHit = {
+  bookNumber: string;
+  chapterNumber: string;
+  verseNumber: number;
+  /** Last verse of a merged range; equals verseNumber otherwise. */
+  verseEnd: number;
+  plainText: string;
+};
+
+export type VerseSearchResponse = {
+  total: number;
+  page: number;
+  limit: number;
+  results: VerseSearchHit[];
+};
 
 export type { RawBibleDoc };

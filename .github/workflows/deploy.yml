@@ -49,6 +49,19 @@ jobs:
             corepack enable
             yarn install --immutable
             yarn workspace @mbc/admin build
+            # Schema must be in place before the admin serves the new endpoints.
+            yarn workspace @mbc/admin exec payload migrate
+            pm2 startOrRestart ecosystem.config.cjs --only admin --update-env
+            # The az build fetches every chapter from the admin. For verse-mode
+            # bibles that goes through /api/bible-chapters/assembled, which the
+            # PREVIOUS admin process does not serve — so the admin has to be
+            # restarted and answering before az is built, or the build 404s on
+            # every chapter page.
+            for i in $(seq 1 30); do
+              curl -fsS "http://127.0.0.1:8001/api/bible-chapters/assembled?bible=azb&book=01&chapter=1" >/dev/null && break
+              [ "$i" = 30 ] && { echo "admin did not come up"; exit 1; }
+              sleep 2
+            done
             yarn workspace @mbc/az build
             pm2 startOrRestart ecosystem.config.cjs --update-env
 

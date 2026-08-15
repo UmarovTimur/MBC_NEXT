@@ -37,7 +37,6 @@ export const Bibles: CollectionConfig = {
           index: true,
           options: [
             { label: 'Azerbaijani', value: 'az' },
-            { label: 'Uzbek', value: 'uz' },
           ],
         },
       ],
@@ -97,6 +96,21 @@ export const Bibles: CollectionConfig = {
           },
         },
       ],
+    },
+    {
+      name: 'storageMode',
+      type: 'select',
+      label: 'Storage mode',
+      required: true,
+      defaultValue: 'chapter',
+      options: [
+        { label: 'Chapter HTML', value: 'chapter' },
+        { label: 'Verses (chapter assembled on read)', value: 'verse' },
+      ],
+      admin: {
+        description:
+          'chapter = the Chapter HTML field is the source of truth. verse = Bible Verses are the source of truth and chapter HTML is derived, read-only, and kept only as a rollback artifact. Only corpora with verse markup (azb) can use verse mode; prose commentaries cannot.',
+      },
     },
     {
       type: 'row',

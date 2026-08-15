@@ -22,7 +22,7 @@ export function NavBibleLinks({ className, linkClassName }: NavBibleLinksProps) 
   return (
     <div className={cn("flex items-center gap-x-1 gap-y-4", className)}>
       {independentBibles.map((bible) => (
-        <Button key={bible.bibleName} asChild variant="ghost" className="rounded-full px-4 hover:bg-stone-100 dark:hover:bg-white/10">
+        <Button key={bible.bibleName} asChild variant="ghost" className="px-4 hover:bg-stone-100 dark:hover:bg-white/10">
           <AppLink
             href={`/${bible.bibleName}`}
             className={cn("transition-colors text-base", linkClassName)}

@@ -147,7 +147,7 @@ body {
 
 @layer components {
   .bible-content a {
-    @apply font-bold;
+    @apply font-bold text-blue-600;
   }
 
   .bible-content strong {
@@ -180,19 +180,57 @@ body {
     @apply font-bold;
   }
 
-  .bible-content--azb .verse::before {
+  /*
+   * Every verse starts on a new line.
+   *
+   * In verse mode each verse segment is its own `.v` wrapper, so this is just a
+   * block display — no pseudo-element trickery, and it holds however many verses
+   * share a paragraph.
+   */
+  .bible-content--azb .v {
+    display: block;
+  }
+
+  /*
+   * Chapter mode (no `.v` wrappers — e.g. after a storageMode rollback) has no
+   * element per verse, so there the line break still has to come from a
+   * pseudo-element. Scoped to markers that are a direct child of a block, which
+   * is exactly the un-wrapped shape; in verse mode the marker sits inside `.v`
+   * and this does not apply.
+   */
+  .bible-content--azb > * > .verse::before {
     content: "\A";
     display: block;
     height: 0;
     white-space: pre;
   }
 
-  .bible-content--azb > :first-child .verse:first-child::before {
+  .bible-content--azb > :first-child > .verse:first-child::before {
     content: none;
   }
 
   .bible-content--barclay mark {
     background-color: transparent;
     color: inherit;
+  }
+
+  /* Clear the sticky FloatingChapterNav when jumping to a verse anchor. */
+  .bible-content [id^="V"] {
+    scroll-margin-top: 6rem;
+  }
+
+  /*
+   * Verse highlight. :target alone is not enough: 41% of verses span more than
+   * one block and therefore emit more than one wrapper, and only the first
+   * carries the id — so VerseHighlight adds .is-active to all of them.
+   */
+  .bible-content .v:target,
+  .bible-content .v.is-active {
+    @apply rounded-sm bg-yellow-100 dark:bg-yellow-900/40;
+  }
+
+  /* The verse number doubles as the copy-verse affordance. */
+  .bible-content .v > .verse {
+    @apply cursor-pointer;
   }
 }

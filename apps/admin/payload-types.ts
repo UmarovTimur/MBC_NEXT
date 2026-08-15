@@ -73,6 +73,7 @@ export interface Config {
     bibles: Bible;
     'bible-books': BibleBook;
     'bible-chapters': BibleChapter;
+    'bible-verses': BibleVerse;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -86,6 +87,7 @@ export interface Config {
     bibles: BiblesSelect<false> | BiblesSelect<true>;
     'bible-books': BibleBooksSelect<false> | BibleBooksSelect<true>;
     'bible-chapters': BibleChaptersSelect<false> | BibleChaptersSelect<true>;
+    'bible-verses': BibleVersesSelect<false> | BibleVersesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -163,7 +165,7 @@ export interface Book {
    * URL-friendly identifier used in book pages.
    */
   slug: string;
-  locale: 'az' | 'uz' | 'ru';
+  locale: 'az' | 'ru';
   author?: string | null;
   subtitle?: string | null;
   description?: string | null;
@@ -238,7 +240,7 @@ export interface Bible {
    * Stable key used in public URLs, e.g. azb, barclay, mbc, muqaddas-kitob.
    */
   bibleKey: string;
-  locale: 'az' | 'uz';
+  locale: 'az';
   primary: string;
   displayName?: string | null;
   secondary?: string[] | null;
@@ -251,6 +253,10 @@ export interface Bible {
    * CSS profile key used to style chapter HTML, e.g. azb, barclay.
    */
   formattingStyle?: string | null;
+  /**
+   * chapter = the Chapter HTML field is the source of truth. verse = Bible Verses are the source of truth and chapter HTML is derived, read-only, and kept only as a rollback artifact. Only corpora with verse markup (azb) can use verse mode; prose commentaries cannot.
+   */
+  storageMode: 'chapter' | 'verse';
   /**
    * e.g. "-ci fəsil" so chapter 1 reads "1-ci fəsil".
    */
@@ -271,7 +277,7 @@ export interface Bible {
  */
 export interface BibleBook {
   id: number;
-  locale: 'az' | 'uz';
+  locale: 'az';
   /**
    * Zero-padded canonical id, e.g. "01".."66".
    */
@@ -303,15 +309,80 @@ export interface BibleChapter {
   /**
    * Auto-filled from the linked book.
    */
-  locale?: ('az' | 'uz') | null;
+  locale?: 'az' | null;
   /**
    * Optional human-friendly label shown in the admin list.
    */
   title?: string | null;
+  storageMode?: string | null;
   /**
    * Raw chapter HTML. Verse spans and custom classes are stored verbatim.
    */
-  html: string;
+  html?: string | null;
+  lastEditedBy?: (number | null) | User;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bible-verses".
+ */
+export interface BibleVerse {
+  id: number;
+  bible: number | Bible;
+  chapter: number | BibleChapter;
+  /**
+   * Auto-filled from the linked chapter.
+   */
+  bookNumber: string;
+  /**
+   * Auto-filled from the linked chapter.
+   */
+  chapterNumber: string;
+  /**
+   * Auto-filled from the linked chapter.
+   */
+  locale?: 'az' | null;
+  /**
+   * 0 = chapter preamble (blocks before the first verse marker).
+   */
+  verseNumber: number;
+  /**
+   * Last verse covered by this record. Greater than the verse number only for the 30 azb markers that label a merged range (e.g. 16-17 under id V16); equal to it otherwise. The marker text shown in the chapter is derived from these two numbers, not stored.
+   */
+  verseEnd?: number | null;
+  /**
+   * bookNumber:chapterId:verseNumber
+   */
+  ref?: string | null;
+  /**
+   * Tag-free text, recomputed from segments on every save. This is what full-text search indexes. Empty for the 8 verses that carry a marker but no text in critical-text translations.
+   */
+  plainText?: string | null;
+  /**
+   * [{ cls, html }] — headings/references emitted before this verse.
+   */
+  before?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * [{ cls, html, newBlock }] — one entry per block the verse occupies. 41% of verses span more than one block, so this is a list, not a string. newBlock:false on the first entry means the verse starts part-way through the previous block.
+   */
+  segments:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   lastEditedBy?: (number | null) | User;
   updatedAt: string;
   createdAt: string;
@@ -363,6 +434,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'bible-chapters';
         value: number | BibleChapter;
+      } | null)
+    | ({
+        relationTo: 'bible-verses';
+        value: number | BibleVerse;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -509,6 +584,7 @@ export interface BiblesSelect<T extends boolean = true> {
   attachment?: T;
   defaultView?: T;
   formattingStyle?: T;
+  storageMode?: T;
   chapterSlug?: T;
   introductionName?: T;
   mappingChapterSlug?: T;
@@ -540,7 +616,28 @@ export interface BibleChaptersSelect<T extends boolean = true> {
   chapterId?: T;
   locale?: T;
   title?: T;
+  storageMode?: T;
   html?: T;
+  lastEditedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bible-verses_select".
+ */
+export interface BibleVersesSelect<T extends boolean = true> {
+  bible?: T;
+  chapter?: T;
+  bookNumber?: T;
+  chapterNumber?: T;
+  locale?: T;
+  verseNumber?: T;
+  verseEnd?: T;
+  ref?: T;
+  plainText?: T;
+  before?: T;
+  segments?: T;
   lastEditedBy?: T;
   updatedAt?: T;
   createdAt?: T;

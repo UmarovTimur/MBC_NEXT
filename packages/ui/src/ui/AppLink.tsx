@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 import Link from "next/link";
 import { cva, VariantProps } from "class-variance-authority";
 
-const linkVariants = cva("transition-color duration-200 ", {
+const linkVariants = cva("transition-colors duration-200 ", {
   variants: {
     variant: {
       default: "text-gray-600 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-300",

@@ -18,9 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<ChapterProp
   const bibleObj = bibleManager.getBible(bible);
   const title = bibleObj.getChapterTitle(chapter);
 
+  // Derived from the bible itself rather than hardcoded, so it stays correct for
+  // every corpus instead of describing one of them.
+  const primary = bibleObj.primaryTitle;
+
   return {
     title,
-    description: `${title} — William MakDonaldning Muqaddas Kitobga yozgan sharhlari o'zbek tilida.`,
+    description: primary && primary !== title ? `${title} — ${primary}` : title,
   };
 }
 
@@ -28,7 +32,6 @@ export async function generateStaticParams() {
   const staticParams: ChapterProps[] = [];
 
   bibleManager.traverseChapter(({ bible, bookId, chapterId }: Chapter) => {
-    if (bible === "muqaddas-kitob") return;
     staticParams.push({
       bible: bible,
       bookId: bookId,

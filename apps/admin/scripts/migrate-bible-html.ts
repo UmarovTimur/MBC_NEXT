@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename)
 const adminRoot = path.resolve(__dirname, '..')
 const repoRoot = path.resolve(adminRoot, '..', '..')
 
-type Locale = 'az' | 'uz'
+type Locale = 'az'
 
 type RawBibleConfig = {
   primary: string
@@ -70,23 +70,15 @@ async function listHtmlFiles(dir: string): Promise<string[]> {
 
 /** Loads each locale's raw bible configs, merging in the az dictionary's shared
  * "bible" translations the same way the old static BIBLES_CONFIG did. */
-async function loadBibleConfigs(locale: Locale): Promise<Record<string, RawBibleConfig>> {
-  if (locale === 'az') {
-    const cfg = (await loadJson<Record<string, RawBibleConfig>>(
-      path.join(repoRoot, 'apps', 'az', 'src', 'shared', 'config', 'bibles', 'az.json'),
-    )) ?? {}
-    const dict = await loadJson<{ bible?: Partial<RawBibleConfig> }>(
-      path.join(repoRoot, 'apps', 'az', 'src', 'shared', 'config', 'dictionary', 'az.json'),
-    )
-    const shared = dict?.bible ?? {}
-    return Object.fromEntries(Object.entries(cfg).map(([key, value]) => [key, { ...value, ...shared }]))
-  }
-
-  return (
-    (await loadJson<Record<string, RawBibleConfig>>(
-      path.join(repoRoot, 'apps', 'uz', 'src', 'shared', 'config', 'bibles', 'uz.json'),
-    )) ?? {}
+async function loadBibleConfigs(_locale: Locale): Promise<Record<string, RawBibleConfig>> {
+  const cfg = (await loadJson<Record<string, RawBibleConfig>>(
+    path.join(repoRoot, 'apps', 'az', 'src', 'shared', 'config', 'bibles', 'az.json'),
+  )) ?? {}
+  const dict = await loadJson<{ bible?: Partial<RawBibleConfig> }>(
+    path.join(repoRoot, 'apps', 'az', 'src', 'shared', 'config', 'dictionary', 'az.json'),
   )
+  const shared = dict?.bible ?? {}
+  return Object.fromEntries(Object.entries(cfg).map(([key, value]) => [key, { ...value, ...shared }]))
 }
 
 /** Canonical book names per locale (shared across every bible of that locale). */
@@ -163,9 +155,12 @@ async function upsertBibles(
       depth: 0,
     })
 
+    // storageMode is deliberately absent from `data`: it is set per bible in the
+    // admin (or by the verse migration) and re-running this importer must never
+    // silently drag a verse-mode bible back to chapter mode.
     const doc = existing.docs[0]
       ? await payload.update({ collection: 'bibles', id: existing.docs[0].id, data })
-      : await payload.create({ collection: 'bibles', data })
+      : await payload.create({ collection: 'bibles', data: { ...data, storageMode: 'chapter' } })
 
     idByKey.set(bibleKey, doc.id)
   }

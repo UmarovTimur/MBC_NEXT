@@ -30,6 +30,9 @@ type WebpackCompiler = {
 }
 
 const nextConfig: NextConfig = {
+  // @mbc/bible-verses ships TypeScript sources (like the other workspace
+  // packages), so Next has to compile it rather than treat it as a built dep.
+  transpilePackages: ['@mbc/bible-verses'],
   allowedDevOrigins: [
     'localhost',
     '127.0.0.1',
