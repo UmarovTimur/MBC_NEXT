@@ -104,12 +104,14 @@ export function BibleSearch({
             <ul className="space-y-4">
               {results.map((hit) => (
                 <li key={`${hit.bookNumber}:${hit.chapterNumber}:${hit.verseNumber}`}>
-                  <AppLink href={hit.href} className="group block">
+                  {/* Reference and verse share one inline flow, so the text picks
+                      up right after the reference and wraps under it. */}
+                  <AppLink href={hit.href} className="group block leading-7">
                     <span className="text-sm font-bold text-blue-600 group-hover:underline">
                       {hit.bookName} {hit.chapterNumber}:
                       {verseRefLabel(hit.verseNumber, hit.verseEnd)}
-                    </span>
-                    <p className="mt-1 leading-7">{markTerms(hit.plainText, query)}</p>
+                    </span>{" "}
+                    <span>{markTerms(hit.plainText, query)}</span>
                   </AppLink>
                 </li>
               ))}

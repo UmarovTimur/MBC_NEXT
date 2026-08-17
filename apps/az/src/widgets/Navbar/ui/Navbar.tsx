@@ -94,6 +94,20 @@ export const Navbar = () => {
             <Search className="size-4" />
             <span>{t("navSearchPlaceholder")}</span>
           </AppLink>
+          {/* Below xl the search box above does not fit, so search collapses to an
+              icon that sits next to the menu button rather than disappearing. */}
+          <Button
+            asChild
+            variant="ghost"
+            size="icon"
+            className="h-10 w-10 xl:hidden"
+            aria-label={t("searchTitle")}
+            title={t("searchTitle")}
+          >
+            <AppLink href="/search">
+              <Search aria-hidden="true" />
+            </AppLink>
+          </Button>
           <MobileNavbar />
           <div className="hidden items-center gap-x-3 lg:flex">
             <NavBibleControls />

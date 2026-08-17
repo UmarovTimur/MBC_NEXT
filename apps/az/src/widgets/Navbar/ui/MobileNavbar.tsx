@@ -20,6 +20,10 @@ export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useI18n();
 
+  // Client-side navigation keeps the sheet mounted, so it has to be dismissed
+  // explicitly or it stays open on top of the page the user just opened.
+  const close = () => setIsOpen(false);
+
   return (
     <div className="lg:hidden">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -31,7 +35,7 @@ export const MobileNavbar = () => {
         <SheetContent aria-describedby="Mobile menu" side="top" className="border-stone-200 bg-[#fbfaf7] px-0 pb-6 dark:border-white/10 dark:bg-zinc-950">
           <SheetHeader className="px-4">
             <SheetTitle>
-              <Link href="/">
+              <Link href="/" onClick={close}>
                 <span className="font-serif text-2xl font-bold text-[#101820] dark:text-white">
                   {t("siteName")}
                 </span>
@@ -39,9 +43,13 @@ export const MobileNavbar = () => {
             </SheetTitle>
           </SheetHeader>
           <div className="mt-5 flex flex-col gap-y-2 px-2">
-            <NavBibleLinks className="flex-col items-start gap-y-2" linkClassName="px-3 py-2 text-xl" />
+            <NavBibleLinks
+              className="flex-col items-start gap-y-2"
+              linkClassName="px-3 py-2 text-xl"
+              onNavigate={close}
+            />
             <Button asChild variant="ghost" className="h-12 justify-start rounded-xl">
-              <AppLink className="px-3 text-xl" href="/books">{t("books")}</AppLink>
+              <AppLink className="px-3 text-xl" href="/books" onClick={close}>{t("books")}</AppLink>
             </Button>
           </div>
           <div className="mt-6 flex items-center justify-between px-4">

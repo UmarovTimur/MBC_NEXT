@@ -9,9 +9,11 @@ import { useI18n } from "@/app/providers/I18n/ui/useI18n";
 interface NavBibleLinksProps {
   className?: string;
   linkClassName?: string;
+  /** Called after a link is followed, so a containing mobile sheet can close itself. */
+  onNavigate?: () => void;
 }
 
-export function NavBibleLinks({ className, linkClassName }: NavBibleLinksProps) {
+export function NavBibleLinks({ className, linkClassName, onNavigate }: NavBibleLinksProps) {
   const { t } = useI18n();
   const manifest = useBible();
 
@@ -26,6 +28,7 @@ export function NavBibleLinks({ className, linkClassName }: NavBibleLinksProps) 
           <AppLink
             href={`/${bible.bibleName}`}
             className={cn("transition-colors text-base", linkClassName)}
+            onClick={onNavigate}
           >
             {bible.primary}
           </AppLink>
