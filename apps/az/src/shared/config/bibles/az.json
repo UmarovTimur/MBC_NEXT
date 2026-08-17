@@ -6,7 +6,7 @@
     "isIndependent": true,
     "isCommentary": true,
     "formatingStyle": "barclay",
-    "chapterSlug": "-ci fəsil"
+    "chapterSlug": "fəsil"
   },
   "azb": {
     "displayName": "Müqəddəs Kitab",
@@ -15,6 +15,6 @@
     "attachment": null,
     "formatingStyle": "azb",
     "defaultView": "single-column",
-    "chapterSlug": "-ci fəsil"
+    "chapterSlug": "fəsil"
   }
 }

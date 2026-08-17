@@ -258,12 +258,12 @@ export interface Bible {
    */
   storageMode: 'chapter' | 'verse';
   /**
-   * e.g. "-ci fəsil" so chapter 1 reads "1-ci fəsil".
+   * The noun only, e.g. "fəsil" — chapter 1 reads "1-ci fəsil", chapter 3 "3-cü fəsil". The ordinal suffix is derived from the number and the locale, so do not include it here.
    */
   chapterSlug?: string | null;
   introductionName?: string | null;
   /**
-   * Optional. Overrides the chapter slug suffix with explicit names per chapter index.
+   * Optional per-chapter override, indexed by chapter number (index 0 = the introduction). Chapters without an entry fall back to the computed "N-ci fəsil" form, so the list does not have to cover the whole book.
    */
   mappingChapterSlug?: string[] | null;
   isIndependent?: boolean | null;

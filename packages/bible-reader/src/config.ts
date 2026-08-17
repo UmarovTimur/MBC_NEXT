@@ -6,7 +6,13 @@ export interface BibleConfig {
   secondary?: string[];
   attachment: string | null;
   defaultView: BibleViewMode;
+  /** Locale of the corpus; selects the ordinal rules used in chapter titles. */
+  locale?: string;
   mappingChapterSlug?: string[];
+  /**
+   * The chapter noun alone, e.g. "fəsil" — NOT "-ci fəsil". The ordinal suffix
+   * varies per chapter number and is computed, see lib/ordinal.ts.
+   */
   chapterSlug?: string;
   formattingStyle?: string;
   introductionName?: string;

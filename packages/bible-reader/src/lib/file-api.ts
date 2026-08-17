@@ -7,6 +7,7 @@ export type FileManifestBible = {
   primary: string;
   attachment: string | null;
   defaultView: BibleConfig["defaultView"];
+  locale?: string;
   chapterSlug?: string;
   mappingChapterSlug?: string[];
   formattingStyle?: string;

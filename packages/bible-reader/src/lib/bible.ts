@@ -1,6 +1,7 @@
 import { BibleViewMode, Book, Chapter } from "../model/types";
 import { BibleConfig, BookName } from "../config";
 import { buildChapterAudioUrl, hasChapterAudio } from "./audio";
+import { formatOrdinal, stripLeadingOrdinal } from "./ordinal";
 
 /** Loads the raw HTML for a chapter from the data source (DB via REST API). */
 export type ChapterContentLoader = (
@@ -20,7 +21,10 @@ export class Bible {
   public readonly isCommentary: boolean;
   /** Canonical book names for this bible's locale, shared across all bibles of that locale. */
   private readonly bookNames: Map<string, BookName>;
-  private readonly chapterSlug?: string;
+  /** Drives the ordinal suffix in chapter titles; undefined = no ordinals. */
+  private readonly locale?: string;
+  /** The chapter noun alone ("fəsil"); the ordinal suffix is computed per chapter. */
+  private readonly chapterSlug: string;
   private readonly mappingChapterSlug?: string[];
   private readonly introducingName?: string;
   private readonly contentLoader: ChapterContentLoader;
@@ -42,7 +46,8 @@ export class Bible {
     this.primaryTitle = config.primary;
     this.isIndependent = Boolean(config.isIndependent);
     this.isCommentary = Boolean(config.isCommentary);
-    this.chapterSlug = config.chapterSlug ?? "";
+    this.locale = config.locale;
+    this.chapterSlug = stripLeadingOrdinal(config.chapterSlug ?? "");
     this.mappingChapterSlug = config.mappingChapterSlug;
     this.introducingName = config.introductionName ?? this.mappingChapterSlug?.[0] ?? "0";
   }
@@ -90,11 +95,17 @@ export class Bible {
       return this.primaryTitle;
     }
     const bookName = this.getBookName(Number(params.bookId));
-    let chapterName: string | undefined;
-    if (this.mappingChapterSlug) {
-      chapterName = this.mappingChapterSlug[Number(params.chapterId)];
-    } else {
-      chapterName = params.chapterId === "0" ? this.introducingName : `${params.chapterId} ${this.chapterSlug}`;
+    // An explicit name wins, but only per chapter: the arrays in the DB are
+    // shorter than the books they cover (29 entries vs 150 psalms), so a missing
+    // entry has to fall through to the computed form instead of rendering blank.
+    let chapterName = this.mappingChapterSlug?.[Number(params.chapterId)];
+    if (!chapterName) {
+      if (params.chapterId === "0") {
+        chapterName = this.introducingName;
+      } else {
+        const ordinal = formatOrdinal(Number(params.chapterId), this.locale);
+        chapterName = `${ordinal} ${this.chapterSlug}`.trim();
+      }
     }
     return `${bookName}: ${chapterName}`;
   }

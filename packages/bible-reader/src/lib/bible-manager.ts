@@ -41,6 +41,8 @@ export class BibleManager {
         secondary: doc.secondary?.length ? doc.secondary : undefined,
         attachment: (attachmentId != null ? idToKey.get(attachmentId) : null) ?? null,
         defaultView: doc.defaultView,
+        // The fetch is already filtered by locale, so every doc here is this one.
+        locale,
         chapterSlug: doc.chapterSlug ?? undefined,
         // hasMany text fields come back as [] (not omitted) when unset.
         mappingChapterSlug: doc.mappingChapterSlug?.length ? doc.mappingChapterSlug : undefined,
@@ -150,6 +152,7 @@ export class BibleManager {
         primary: def.primary,
         attachment: def.attachment,
         defaultView: def.defaultView,
+        locale: def.locale,
         chapterSlug: def.chapterSlug,
         mappingChapterSlug: def.mappingChapterSlug,
         formattingStyle: def.formattingStyle,
