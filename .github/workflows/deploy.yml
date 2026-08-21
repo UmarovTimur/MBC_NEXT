@@ -40,6 +40,9 @@ jobs:
           username: ${{ secrets.VPS_SSH_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_SSH_PORT }}
+          # admin build + migrate + az build (every bible chapter) exceeds the
+          # action's 10m default.
+          command_timeout: 40m
           script: |
             set -e
             cd ${{ secrets.VPS_APP_PATH }}
@@ -50,7 +53,17 @@ jobs:
             yarn install --immutable
             yarn workspace @mbc/admin build
             # Schema must be in place before the admin serves the new endpoints.
-            yarn workspace @mbc/admin exec payload migrate
+            # `payload migrate` prompts (and so hangs a non-interactive SSH
+            # session until the job is killed) when payload_migrations holds a
+            # batch -1 row, i.e. the database was last touched by a dev-mode
+            # push. Close stdin so it can never block, then fail loudly on the
+            # warning instead of silently skipping the migrations.
+            set -o pipefail
+            yarn workspace @mbc/admin exec payload migrate </dev/null 2>&1 | tee /tmp/payload-migrate.log
+            if grep -q "run Payload in dev mode" /tmp/payload-migrate.log; then
+              echo "payload_migrations contains a dev-push (batch -1) row; reconcile it on the server before deploying"
+              exit 1
+            fi
             pm2 startOrRestart ecosystem.config.cjs --only admin --update-env
             # The az build fetches every chapter from the admin. For verse-mode
             # bibles that goes through /api/bible-chapters/assembled, which the
