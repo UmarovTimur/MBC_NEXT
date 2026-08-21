@@ -74,6 +74,7 @@ export interface Config {
     'bible-books': BibleBook;
     'bible-chapters': BibleChapter;
     'bible-verses': BibleVerse;
+    'content-reports': ContentReport;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -88,6 +89,7 @@ export interface Config {
     'bible-books': BibleBooksSelect<false> | BibleBooksSelect<true>;
     'bible-chapters': BibleChaptersSelect<false> | BibleChaptersSelect<true>;
     'bible-verses': BibleVersesSelect<false> | BibleVersesSelect<true>;
+    'content-reports': ContentReportsSelect<false> | ContentReportsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -389,6 +391,38 @@ export interface BibleVerse {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-reports".
+ */
+export interface ContentReport {
+  id: number;
+  type: 'report' | 'contact';
+  status: 'new' | 'reviewed' | 'resolved';
+  /**
+   * Full URL of the page the selection was made on.
+   */
+  pageUrl: string;
+  /**
+   * Empty for contact-only submissions.
+   */
+  selectedText?: string | null;
+  /**
+   * What the reporter says is wrong with the selected text.
+   */
+  comment?: string | null;
+  /**
+   * Left voluntarily by the reporter so we can reach out.
+   */
+  contact?: string | null;
+  /**
+   * sha256(ip + salt) — used for rate limiting, not the raw IP.
+   */
+  ipHash?: string | null;
+  userAgent?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -438,6 +472,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'bible-verses';
         value: number | BibleVerse;
+      } | null)
+    | ({
+        relationTo: 'content-reports';
+        value: number | ContentReport;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -639,6 +677,22 @@ export interface BibleVersesSelect<T extends boolean = true> {
   before?: T;
   segments?: T;
   lastEditedBy?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-reports_select".
+ */
+export interface ContentReportsSelect<T extends boolean = true> {
+  type?: T;
+  status?: T;
+  pageUrl?: T;
+  selectedText?: T;
+  comment?: T;
+  contact?: T;
+  ipHash?: T;
+  userAgent?: T;
   updatedAt?: T;
   createdAt?: T;
 }

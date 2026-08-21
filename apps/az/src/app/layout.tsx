@@ -9,6 +9,7 @@ import { getI18n } from "@/app/providers/I18n/server";
 import { notoSansFont, robotoCondensedFont } from "@/shared/config/fonts";
 import { Navbar } from "@/widgets/Navbar";
 import { BibleUiProvider } from "@/features/bible-navigation";
+import { ContentReportProvider } from "@/features/content-report";
 import { NavigationLoader } from "@mbc/ui";
 import { Suspense } from "react";
 
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   <Suspense>{children}</Suspense>
                 </main>
                 <Footer />
+                <ContentReportProvider />
               </BibleUiProvider>
             </ManifestProvider>
           </ThemeProvider>

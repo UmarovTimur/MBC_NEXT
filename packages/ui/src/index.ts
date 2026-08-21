@@ -63,3 +63,5 @@ export {
   SheetDescription,
 } from "./ui/sheet";
 export { Slider } from "./ui/slider";
+export { Textarea } from "./ui/textarea";
+export type { TextareaProps } from "./ui/textarea";
