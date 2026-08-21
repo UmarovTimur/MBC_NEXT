@@ -8,6 +8,7 @@ export {
   isCanonicalMarkerLabel,
 } from "./label";
 export { normalizeHtmlForCompare, azFold, AZ_FOLD_FROM, AZ_FOLD_TO } from "./normalize";
+export { AZ_ALPHABET, compareAzWords } from "./az-alphabet";
 export { sanitizeBlockHtml, isSanitizedBlockHtml } from "./sanitize";
 export {
   ALLOWED_BLOCK_CLASSES,

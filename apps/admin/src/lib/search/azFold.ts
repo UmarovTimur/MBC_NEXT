@@ -30,3 +30,10 @@ export const AZ_TSV = (expr: string): string => `to_tsvector('simple', ${AZ_FOLD
 
 /** Name of the GIN index, referenced by both the schema hook and the migration. */
 export const VERSE_FTS_INDEX = 'bible_verses_fts_idx'
+
+/**
+ * Name of the trigram GIN index used for typo-tolerant fallback matching
+ * (see BibleVerses.ts search endpoint). Built over the same `AZ_FOLD`
+ * expression as the FTS index, via `pg_trgm`'s `gin_trgm_ops`.
+ */
+export const VERSE_TRGM_INDEX = 'bible_verses_trgm_idx'

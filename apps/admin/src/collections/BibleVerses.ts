@@ -5,13 +5,29 @@ import {
   isAllowedBlockClass,
   isSanitizedBlockHtml,
   verseToPlainText,
+  AZ_ALPHABET,
+  compareAzWords,
   type Block,
   type Segment,
 } from '@mbc/bible-verses'
-import { AZ_TSV } from '../lib/search/azFold'
+import { AZ_FOLD, AZ_TSV } from '../lib/search/azFold'
 
 const MAX_SEARCH_LIMIT = 50
 const MIN_QUERY_LENGTH = 2
+
+/** Minimum word_similarity for a typo-tolerant fallback match. */
+const TRGM_THRESHOLD = 0.4
+/** Trigram matches are ranked below exact/prefix tsquery matches (see ORDER BY). */
+const TRGM_RANK_WEIGHT = 0.5
+
+/**
+ * Splits a folded query into tokens the same way the client-side highlighter
+ * (`markTerms` in BibleSearch.tsx) does, so what gets matched and what gets
+ * highlighted stay in sync.
+ */
+function tokenize(folded: string): string[] {
+  return folded.split(/[^\p{L}\p{N}]+/u).filter((t) => t.length > 0)
+}
 
 /**
  * Verse-level storage for corpora whose bible has `storageMode: 'verse'` (azb).
@@ -79,24 +95,64 @@ export const BibleVerses: CollectionConfig = {
         // provably use the same character map (see lib/search/azFold.ts).
         const folded = azFold(raw)
         const tsv = sql.raw(AZ_TSV('v.plain_text'))
+        const trgmText = sql.raw(AZ_FOLD('v.plain_text'))
 
-        const rows = await req.payload.db.drizzle.execute(sql`
-          SELECT v.book_number      AS "bookNumber",
-                 v.chapter_number   AS "chapterNumber",
-                 v.verse_number     AS "verseNumber",
-                 v.verse_end        AS "verseEnd",
-                 v.plain_text       AS "plainText",
-                 ts_rank_cd(${tsv}, websearch_to_tsquery('simple', ${folded})) AS rank,
-                 count(*) OVER ()   AS total
-            FROM bible_verses v
-            JOIN bibles b ON b.id = v.bible_id
-           WHERE b.bible_key = ${bibleKey}
-             AND v.verse_number > 0
-             ${book ? sql`AND v.book_number = ${book}` : sql``}
-             AND ${tsv} @@ websearch_to_tsquery('simple', ${folded})
-           ORDER BY rank DESC, v.book_number, (v.chapter_number)::int, v.verse_number
-           LIMIT ${limit} OFFSET ${(page - 1) * limit}
-        `)
+        // websearch_to_tsquery only matches whole words, so a query that is
+        // still mid-word (user typing) or misspelled returns nothing. Instead,
+        // build a prefix tsquery by hand (`token:* & token:*  ...`) — GIN
+        // tsvector indexes support `:*` lookups directly — and OR it with a
+        // pg_trgm fallback so a typo still surfaces the verse, ranked below
+        // exact/prefix hits (see VERSE_TRGM_INDEX migration). `word_similarity`
+        // (not `similarity`) is used because it scores the query against the
+        // BEST-matching word inside the verse rather than the whole sentence —
+        // `similarity` against a full verse dilutes a single mistyped word to
+        // near zero.
+        const tokens = tokenize(folded)
+        if (tokens.length === 0) {
+          return Response.json({ total: 0, page, limit, results: [] })
+        }
+        const prefixQueryText = tokens.map((t) => `${t}:*`).join(' & ')
+        const prefixQuery = sql`to_tsquery('simple', ${prefixQueryText})`
+        const trgmScore = sql`word_similarity(${folded}, ${trgmText})`
+        // `<%` (not the `word_similarity(...) > threshold` function form) is what
+        // lets the planner use bible_verses_trgm_idx: the function form can only
+        // ever be checked row-by-row, forcing a full seq scan of all ~32k verses
+        // on every typo query (~640ms measured). The operator form lets Postgres
+        // combine the FTS and trigram indexes with a BitmapOr (~10ms measured).
+        // Its threshold comes from the `pg_trgm.word_similarity_threshold` GUC,
+        // not an argument, hence the `SET LOCAL` — scoped to this transaction so
+        // it never leaks onto other queries sharing the connection pool.
+        const trgmMatch = sql`${folded} <% ${trgmText}`
+
+        const rows = await req.payload.db.drizzle.transaction(async (tx) => {
+          await tx.execute(sql.raw(`SET LOCAL pg_trgm.word_similarity_threshold = ${TRGM_THRESHOLD}`))
+          return tx.execute(sql`
+            SELECT v.book_number      AS "bookNumber",
+                   v.chapter_number   AS "chapterNumber",
+                   v.verse_number     AS "verseNumber",
+                   v.verse_end        AS "verseEnd",
+                   v.plain_text       AS "plainText",
+                   (${tsv} @@ ${prefixQuery}) AS "isPrefixMatch",
+                   GREATEST(
+                     ts_rank_cd(${tsv}, ${prefixQuery}),
+                     ${trgmScore} * ${TRGM_RANK_WEIGHT}
+                   ) AS rank,
+                   count(*) OVER ()   AS total
+              FROM bible_verses v
+              JOIN bibles b ON b.id = v.bible_id
+             WHERE b.bible_key = ${bibleKey}
+               AND v.verse_number > 0
+               ${book ? sql`AND v.book_number = ${book}` : sql``}
+               AND (
+                 ${tsv} @@ ${prefixQuery}
+                 OR ${trgmMatch}
+               )
+             -- Prefix/whole-word matches always outrank pure typo-fallback
+             -- matches; only within each group does the score break ties.
+             ORDER BY "isPrefixMatch" DESC, rank DESC, v.book_number, (v.chapter_number)::int, v.verse_number
+             LIMIT ${limit} OFFSET ${(page - 1) * limit}
+          `)
+        })
 
         const results = (rows.rows ?? rows) as Record<string, unknown>[]
         return Response.json({
@@ -113,6 +169,63 @@ export const BibleVerses: CollectionConfig = {
             plainText: r.plainText,
           })),
         })
+      },
+    },
+    {
+      // Symphony (concordance) index: how many distinct words start with each
+      // letter. Reads the `bible_words` table populated by
+      // `pnpm --filter admin rebuild:words` — not derived live from
+      // bible_verses, so this never does a corpus-wide scan per request.
+      path: '/words',
+      method: 'get',
+      handler: async (req) => {
+        const url = new URL(req.url ?? '', 'http://localhost')
+        const bibleKey = url.searchParams.get('bible') ?? 'azb'
+
+        const rows = await req.payload.db.drizzle.execute(sql`
+          SELECT w.first_letter AS "firstLetter",
+                 count(*)       AS "wordCount"
+            FROM bible_words w
+            JOIN bibles b ON b.id = w.bible_id
+           WHERE b.bible_key = ${bibleKey}
+           GROUP BY w.first_letter
+        `)
+        const results = (rows.rows ?? rows) as { firstLetter: string; wordCount: string }[]
+        const counts = new Map(results.map((r) => [r.firstLetter, Number(r.wordCount)]))
+
+        return Response.json({
+          letters: AZ_ALPHABET.map((letter) => ({
+            letter,
+            wordCount: counts.get(letter) ?? 0,
+          })),
+        })
+      },
+    },
+    {
+      // Symphony word list for one letter. `letter` is a query param (not a
+      // path param) to keep parsing consistent with the other endpoints here,
+      // which all read from `url.searchParams`.
+      path: '/words-by-letter',
+      method: 'get',
+      handler: async (req) => {
+        const url = new URL(req.url ?? '', 'http://localhost')
+        const bibleKey = url.searchParams.get('bible') ?? 'azb'
+        const letter = (url.searchParams.get('letter') ?? '').trim().toLocaleLowerCase('az')
+
+        if (!AZ_ALPHABET.includes(letter)) {
+          return Response.json({ letter, total: 0, words: [] }, { status: 400 })
+        }
+
+        const rows = await req.payload.db.drizzle.execute(sql`
+          SELECT w.word AS "word", w.occurrence_count AS "count"
+            FROM bible_words w
+            JOIN bibles b ON b.id = w.bible_id
+           WHERE b.bible_key = ${bibleKey} AND w.first_letter = ${letter}
+        `)
+        const results = (rows.rows ?? rows) as { word: string; count: number }[]
+        results.sort((a, b) => compareAzWords(a.word, b.word))
+
+        return Response.json({ letter, total: results.length, words: results })
       },
     },
   ],

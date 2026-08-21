@@ -209,4 +209,41 @@ export type VerseSearchResponse = {
   results: VerseSearchHit[];
 };
 
+/** Symphony (concordance) index: word count per letter. */
+export async function getWordLetters(
+  baseUrl: string,
+  bibleKey: string,
+  fetchOptions?: BibleFetchOptions,
+): Promise<WordLettersResponse> {
+  const url =
+    `${normalizeBaseUrl(baseUrl)}/api/bible-verses/words?bible=${encodeURIComponent(bibleKey)}`;
+  const res = await fetch(url, fetchOptions);
+  if (!res.ok) throw new Error(`Word letters fetch failed: ${res.status}`);
+  return res.json();
+}
+
+/** Symphony word list for one letter. */
+export async function getWordsForLetter(
+  baseUrl: string,
+  bibleKey: string,
+  letter: string,
+  fetchOptions?: BibleFetchOptions,
+): Promise<WordsByLetterResponse> {
+  const params = new URLSearchParams({ bible: bibleKey, letter });
+  const url = `${normalizeBaseUrl(baseUrl)}/api/bible-verses/words-by-letter?${params.toString()}`;
+  const res = await fetch(url, fetchOptions);
+  if (!res.ok) throw new Error(`Words-by-letter fetch failed: ${res.status}`);
+  return res.json();
+}
+
+export type WordLettersResponse = {
+  letters: { letter: string; wordCount: number }[];
+};
+
+export type WordsByLetterResponse = {
+  letter: string;
+  total: number;
+  words: { word: string; count: number }[];
+};
+
 export type { RawBibleDoc };

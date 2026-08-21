@@ -12,7 +12,8 @@
     "import:mukitob:az:csv": "node --import tsx ./scripts/import-mukitob-az-books-csv.ts",
     "migrate:bible-html": "node --import tsx ./scripts/migrate-bible-html.ts",
     "migrate:bible-verses": "node --import tsx ./scripts/migrate-bible-verses.ts",
-    "verify:verses": "node --import tsx ./scripts/verify-verse-roundtrip.ts"
+    "verify:verses": "node --import tsx ./scripts/verify-verse-roundtrip.ts",
+    "rebuild:words": "node --import tsx ./scripts/rebuild-bible-words.ts"
   },
   "dependencies": {
     "@mbc/bible-verses": "*",

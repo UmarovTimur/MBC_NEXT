@@ -2,6 +2,8 @@ import * as migration_20260627_104107 from './20260627_104107';
 import * as migration_20260813_235525_bible_verses from './20260813_235525_bible_verses';
 import * as migration_20260814_032954_remove_uz_locale from './20260814_032954_remove_uz_locale';
 import * as migration_20260814_035621_drop_verse_label from './20260814_035621_drop_verse_label';
+import * as migration_20260820_074326_bible_verses_trgm from './20260820_074326_bible_verses_trgm';
+import * as migration_20260820_090000_bible_words from './20260820_090000_bible_words';
 
 export const migrations = [
   {
@@ -22,6 +24,16 @@ export const migrations = [
   {
     up: migration_20260814_035621_drop_verse_label.up,
     down: migration_20260814_035621_drop_verse_label.down,
-    name: '20260814_035621_drop_verse_label'
+    name: '20260814_035621_drop_verse_label',
+  },
+  {
+    up: migration_20260820_074326_bible_verses_trgm.up,
+    down: migration_20260820_074326_bible_verses_trgm.down,
+    name: '20260820_074326_bible_verses_trgm'
+  },
+  {
+    up: migration_20260820_090000_bible_words.up,
+    down: migration_20260820_090000_bible_words.down,
+    name: '20260820_090000_bible_words',
   },
 ];

@@ -51,6 +51,9 @@ export const MobileNavbar = () => {
             <Button asChild variant="ghost" className="h-12 justify-start rounded-xl">
               <AppLink className="px-3 text-xl" href="/books" onClick={close}>{t("books")}</AppLink>
             </Button>
+            <Button asChild variant="ghost" className="h-12 justify-start rounded-xl">
+              <AppLink className="px-3 text-xl" href="/simfoniya" onClick={close}>{t("symphonyTitle")}</AppLink>
+            </Button>
           </div>
           <div className="mt-6 flex items-center justify-between px-4">
             <ThemeSwitcher />

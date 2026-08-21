@@ -83,6 +83,9 @@ export const Navbar = () => {
           <Button className="hidden px-4 text-sm text-zinc-700 hover:bg-stone-100 lg:inline-flex dark:text-zinc-200 dark:hover:bg-white/10" asChild variant="ghost">
             <AppLink href="/books">{t("books")}</AppLink>
           </Button>
+          <Button className="hidden px-4 text-sm text-zinc-700 hover:bg-stone-100 lg:inline-flex dark:text-zinc-200 dark:hover:bg-white/10" asChild variant="ghost">
+            <AppLink href="/simfoniya">{t("symphonyTitle")}</AppLink>
+          </Button>
         </div>
 
         <div className="flex items-center gap-x-3">
