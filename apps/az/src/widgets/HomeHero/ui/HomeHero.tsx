@@ -16,6 +16,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Button } from "@mbc/ui";
+import Image from "next/image";
 
 type HomeHeroProps = {
   books: Book[];
@@ -44,7 +45,13 @@ function MiniBookCover({ book, index }: { book?: Book; index: number }) {
     >
       <div className="relative aspect-3/4 overflow-hidden rounded-md border border-black/10 bg-stone-100 shadow-sm transition-transform group-hover:-translate-y-0.5 dark:border-white/10">
         {book?.imageUrl ? (
-          <img src={book.imageUrl} alt={title} className="h-full w-full object-cover" />
+          <Image
+            src={book.imageUrl}
+            alt={title}
+            fill
+            sizes="20vw"
+            className="object-cover"
+          />
         ) : (
           <div
             className={`flex h-full w-full items-center justify-center bg-gradient-to-b p-2 text-center font-serif text-[10px] uppercase leading-4 sm:text-xs ${coverThemes[index % coverThemes.length]}`}

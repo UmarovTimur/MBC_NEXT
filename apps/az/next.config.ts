@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["local-origin.dev", "*.local-origin.dev"],
   basePath: process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "",
   images: {
-    unoptimized: true,
+    loaderFile: "./src/shared/image-loader.ts",
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
