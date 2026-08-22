@@ -79,6 +79,13 @@ export const BibleVerses: CollectionConfig = {
         const raw = (url.searchParams.get('q') ?? '').trim().slice(0, 200)
         const bibleKey = url.searchParams.get('bible') ?? 'azb'
         const book = url.searchParams.get('book')
+        // 'ot'/'nt' filter by the standard 66-book numbering (01-39 / 40-66);
+        // anything else (missing, 'all') leaves the corpus unfiltered.
+        const testament = url.searchParams.get('testament')
+        // Whole-word match only, no typo-tolerant trigram fallback — used by the
+        // Symphony concordance, which links to a word it already knows is spelled
+        // correctly. The free-text search box never sends this.
+        const exact = url.searchParams.get('exact') === '1'
         const limit = Math.min(
           Math.max(Number(url.searchParams.get('limit') ?? 20) || 20, 1),
           MAX_SEARCH_LIMIT,
@@ -111,8 +118,10 @@ export const BibleVerses: CollectionConfig = {
         if (tokens.length === 0) {
           return Response.json({ total: 0, page, limit, results: [] })
         }
-        const prefixQueryText = tokens.map((t) => `${t}:*`).join(' & ')
-        const prefixQuery = sql`to_tsquery('simple', ${prefixQueryText})`
+        // Exact mode drops the `:*` prefix wildcard, so `to_tsquery` only matches
+        // the whole lexeme — no typo fallback is unioned in either.
+        const queryText = tokens.map((t) => (exact ? t : `${t}:*`)).join(' & ')
+        const tsQuery = sql`to_tsquery('simple', ${queryText})`
         const trgmScore = sql`word_similarity(${folded}, ${trgmText})`
         // `<%` (not the `word_similarity(...) > threshold` function form) is what
         // lets the planner use bible_verses_trgm_idx: the function form can only
@@ -123,6 +132,13 @@ export const BibleVerses: CollectionConfig = {
         // not an argument, hence the `SET LOCAL` — scoped to this transaction so
         // it never leaks onto other queries sharing the connection pool.
         const trgmMatch = sql`${folded} <% ${trgmText}`
+        const matchCondition = exact ? sql`${tsv} @@ ${tsQuery}` : sql`(${tsv} @@ ${tsQuery} OR ${trgmMatch})`
+        const testamentCondition =
+          testament === 'ot'
+            ? sql`AND v.book_number BETWEEN '01' AND '39'`
+            : testament === 'nt'
+              ? sql`AND v.book_number BETWEEN '40' AND '66'`
+              : sql``
 
         const rows = await req.payload.db.drizzle.transaction(async (tx) => {
           await tx.execute(sql.raw(`SET LOCAL pg_trgm.word_similarity_threshold = ${TRGM_THRESHOLD}`))
@@ -132,10 +148,10 @@ export const BibleVerses: CollectionConfig = {
                    v.verse_number     AS "verseNumber",
                    v.verse_end        AS "verseEnd",
                    v.plain_text       AS "plainText",
-                   (${tsv} @@ ${prefixQuery}) AS "isPrefixMatch",
+                   (${tsv} @@ ${tsQuery}) AS "isPrefixMatch",
                    GREATEST(
-                     ts_rank_cd(${tsv}, ${prefixQuery}),
-                     ${trgmScore} * ${TRGM_RANK_WEIGHT}
+                     ts_rank_cd(${tsv}, ${tsQuery}),
+                     ${exact ? sql`0` : sql`${trgmScore} * ${TRGM_RANK_WEIGHT}`}
                    ) AS rank,
                    count(*) OVER ()   AS total
               FROM bible_verses v
@@ -143,10 +159,8 @@ export const BibleVerses: CollectionConfig = {
              WHERE b.bible_key = ${bibleKey}
                AND v.verse_number > 0
                ${book ? sql`AND v.book_number = ${book}` : sql``}
-               AND (
-                 ${tsv} @@ ${prefixQuery}
-                 OR ${trgmMatch}
-               )
+               ${testamentCondition}
+               AND ${matchCondition}
              -- Prefix/whole-word matches always outrank pure typo-fallback
              -- matches; only within each group does the score break ties.
              ORDER BY "isPrefixMatch" DESC, rank DESC, v.book_number, (v.chapter_number)::int, v.verse_number

@@ -45,8 +45,7 @@ export default async function SymphonyLetterPage({
     <WordList
       letter={letter}
       words={words}
-      total={total}
-      totalLabel={(n) => `${n} ${t("symphonyResultsSuffix")}`}
+      totalLabel={`${total} ${t("symphonyResultsSuffix")}`}
       backLabel={t("symphonyBackToLetters")}
       emptyLabel={t("symphonyEmptyLetter")}
       filterPlaceholder={t("symphonyFilterPlaceholder")}

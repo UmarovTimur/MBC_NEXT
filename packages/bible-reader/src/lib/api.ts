@@ -180,10 +180,20 @@ export async function searchVerses(
   baseUrl: string,
   bibleKey: string,
   query: string,
-  options?: { book?: string; limit?: number; page?: number; fetchOptions?: BibleFetchOptions },
+  options?: {
+    book?: string;
+    testament?: "ot" | "nt";
+    /** Whole-word match only, no typo-tolerant trigram fallback. */
+    exact?: boolean;
+    limit?: number;
+    page?: number;
+    fetchOptions?: BibleFetchOptions;
+  },
 ): Promise<VerseSearchResponse> {
   const params = new URLSearchParams({ q: query, bible: bibleKey });
   if (options?.book) params.set("book", options.book);
+  if (options?.testament) params.set("testament", options.testament);
+  if (options?.exact) params.set("exact", "1");
   if (options?.limit) params.set("limit", String(options.limit));
   if (options?.page) params.set("page", String(options.page));
 

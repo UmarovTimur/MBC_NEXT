@@ -12,6 +12,13 @@ export const SEARCH_PAGE_SIZE = 50;
 export const BIBLE_KEY = "azb";
 export const PAYLOAD_API_URL = process.env.PAYLOAD_API_URL ?? "http://localhost:8001";
 
+export type Testament = "ot" | "nt";
+
+/** Reads a `testament` search param, ignoring anything but the two known values. */
+export function parseTestament(raw: string | null): Testament | undefined {
+  return raw === "ot" || raw === "nt" ? raw : undefined;
+}
+
 function toResultItem(hit: VerseSearchHit): SearchResultItem {
   const bible = bibleManager.getBible(BIBLE_KEY);
   return {
@@ -23,8 +30,14 @@ function toResultItem(hit: VerseSearchHit): SearchResultItem {
   };
 }
 
-export async function fetchSearchPage(query: string, page: number) {
+export async function fetchSearchPage(
+  query: string,
+  page: number,
+  options?: { exact?: boolean; testament?: "ot" | "nt" },
+) {
   const response = await searchVerses(PAYLOAD_API_URL, BIBLE_KEY, query, {
+    exact: options?.exact,
+    testament: options?.testament,
     limit: SEARCH_PAGE_SIZE,
     page,
     fetchOptions: { cache: "no-store" },

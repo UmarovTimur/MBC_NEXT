@@ -1,13 +1,14 @@
+"use client";
+
 import { AppLink } from "@/shared/ui/AppLink";
-import { FilterableWordList, type WordCount } from "./FilterableWordList";
+import { useWordFilter, WordFilterInput, WordListItems, type WordCount } from "./FilterableWordList";
 
 export type { WordCount };
 
 interface WordListProps {
   letter: string;
   words: WordCount[];
-  total: number;
-  totalLabel: (n: number) => string;
+  totalLabel: string;
   backLabel: string;
   emptyLabel: string;
   filterPlaceholder: string;
@@ -17,13 +18,14 @@ interface WordListProps {
 export function WordList({
   letter,
   words,
-  total,
   totalLabel,
   backLabel,
   emptyLabel,
   filterPlaceholder,
   noMatchLabel,
 }: WordListProps) {
+  const { query, setQuery, filtered } = useWordFilter(words);
+
   return (
     <div className="mx-auto w-full max-w-5xl px-4 py-8">
       <AppLink
@@ -33,15 +35,25 @@ export function WordList({
         {backLabel}
       </AppLink>
 
-      <h1 className="mb-2 text-3xl font-bold font-(family-name:--font-roboto-condensed) uppercase sm:text-4xl">
-        {letter}
-      </h1>
-      <p className="mb-8 text-sm text-zinc-500 dark:text-zinc-400">{totalLabel(total)}</p>
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-4">
+        <h1 className="text-3xl font-bold font-(family-name:--font-roboto-condensed) uppercase sm:text-4xl">
+          {letter}
+        </h1>
+        {words.length > 0 && (
+          <WordFilterInput
+            query={query}
+            onQueryChange={setQuery}
+            placeholder={filterPlaceholder}
+            className="h-11 w-full max-w-xs px-4 text-base"
+          />
+        )}
+      </div>
+      <p className="mb-8 text-sm text-zinc-500 dark:text-zinc-400">{totalLabel}</p>
 
       {words.length === 0 ? (
         <p className="text-zinc-500 dark:text-zinc-400">{emptyLabel}</p>
       ) : (
-        <FilterableWordList words={words} filterPlaceholder={filterPlaceholder} noMatchLabel={noMatchLabel} />
+        <WordListItems words={filtered} noMatchLabel={noMatchLabel} />
       )}
     </div>
   );

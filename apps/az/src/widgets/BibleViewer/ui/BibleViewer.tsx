@@ -9,6 +9,7 @@ import { BibleContent } from "@/shared/ui/BibleContent";
 import { FloatingChapterNav } from "./FloatingChapterNav";
 import { AppLink } from "@/shared/ui/AppLink";
 import { VerseHighlight } from "@/features/verse-highlight";
+import { getI18n } from "@/app/providers/I18n/server";
 
 interface BibleViewerProps {
   className?: string;
@@ -16,6 +17,7 @@ interface BibleViewerProps {
 }
 
 export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
+  const { t } = getI18n();
   const bible: Bible = bibleManager.getBible(chapter.bible);
   // ======================= Bible ==============================================
   const content = await bible.getChapterContent(chapter.bookId, chapter.chapterId);
@@ -71,6 +73,17 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
           <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
           <h2 className="text-2xl my-4">{subTitle}</h2>
           <BibleContent html={content} formattingStyle={bible.formattingStyle} />
+
+          <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-400">
+            {t("chapterErrorHintQuestion")} {t("chapterErrorHintAction")}{" "}
+            <kbd className="rounded border border-current/20 bg-black/5 px-1.5 py-0.5 font-sans text-xs font-normal text-zinc-500 dark:bg-white/10 dark:text-zinc-400">
+              Ctrl
+            </kbd>{" "}
+            +{" "}
+            <kbd className="rounded border border-current/20 bg-black/5 px-1.5 py-0.5 font-sans text-xs font-normal text-zinc-500 dark:bg-white/10 dark:text-zinc-400">
+              Enter
+            </kbd>
+          </p>
         </div>
 
         {attachedContent && attachedBible && (
@@ -90,9 +103,9 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
 
 
       {/* Operates on the rendered DOM; verse-mode chapters carry .v wrappers. */}
-      <VerseHighlight />
-
       <ChapterPagination chapter={chapter} />
+
+      <VerseHighlight />
     </div>
   );
 };

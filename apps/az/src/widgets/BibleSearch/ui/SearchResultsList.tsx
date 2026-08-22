@@ -3,10 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { useI18n } from "@/app/providers/I18n";
+import type { Testament } from "../lib/searchVerses";
 import { SearchResultRow, type SearchResultItem } from "./SearchResultRow";
 
 interface SearchResultsListProps {
   query: string;
+  exact: boolean;
+  testament: Testament | undefined;
   total: number;
   limit: number;
   initialResults: SearchResultItem[];
@@ -22,7 +25,14 @@ function resultKey(hit: SearchResultItem): string {
  * batch itself is never re-fetched, so a no-JS load already shows everything
  * up to `limit` results — this only adds what comes after.
  */
-export function SearchResultsList({ query, total, limit, initialResults }: SearchResultsListProps) {
+export function SearchResultsList({
+  query,
+  exact,
+  testament,
+  total,
+  limit,
+  initialResults,
+}: SearchResultsListProps) {
   const { t } = useI18n();
   const [items, setItems] = useState(initialResults);
   const sentinelRef = useRef<HTMLDivElement>(null);
@@ -52,7 +62,10 @@ export function SearchResultsList({ query, total, limit, initialResults }: Searc
         state.loading = true;
 
         const nextPage = state.page + 1;
-        fetch(`/api/search?q=${encodeURIComponent(query)}&page=${nextPage}`, { cache: "no-store" })
+        const params = new URLSearchParams({ q: query, page: String(nextPage) });
+        if (exact) params.set("exact", "1");
+        if (testament) params.set("testament", testament);
+        fetch(`/api/search?${params.toString()}`, { cache: "no-store" })
           .then((res) => (res.ok ? (res.json() as Promise<{ results: SearchResultItem[] }>) : null))
           .then((data) => {
             if (!data) return;
@@ -83,7 +96,7 @@ export function SearchResultsList({ query, total, limit, initialResults }: Searc
     );
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, [query, limit]);
+  }, [query, exact, testament, limit]);
 
   const hasMore = items.length < total;
 
