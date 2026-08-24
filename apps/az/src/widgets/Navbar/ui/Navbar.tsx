@@ -6,6 +6,7 @@ import { MobileNavbar } from "./MobileNavbar";
 import { cn } from "@/shared/lib/utils";
 import { NavBibleControls } from "./NavBibleControls";
 import { NavBibleLinks } from "./NavBibleLinks";
+import { NavLink } from "./NavLink";
 import { AppLink } from "@/shared/ui/AppLink";
 import { Button } from "@/shared/ui/button";
 import { useI18n } from "@/app/providers/I18n/ui/useI18n";
@@ -71,7 +72,7 @@ export const Navbar = () => {
       )}
     >
       <div className="mx-auto flex h-14.5 items-center justify-between dark:border-white/10  sm:px-6">
-        <div className="flex min-w-0 items-center gap-x-5">
+        <div className="flex min-w-0 items-center gap-x-5 self-stretch">
           <AppLink
             href="/"
             className="mb-1 shrink-0 text-2xl font-bold leading-none text-[#101820] transition-colors dark:text-white"
@@ -79,13 +80,13 @@ export const Navbar = () => {
             {t("siteName")}
           </AppLink>
 
-          <NavBibleLinks className="hidden items-center gap-x-2 lg:flex" linkClassName="text-sm text-zinc-700 dark:text-zinc-200" />
-          <Button className="hidden px-4 text-sm text-zinc-700 hover:bg-stone-100 lg:inline-flex dark:text-zinc-200 dark:hover:bg-white/10" asChild variant="ghost">
-            <AppLink href="/books">{t("books")}</AppLink>
-          </Button>
-          <Button className="hidden px-4 text-sm text-zinc-700 hover:bg-stone-100 lg:inline-flex dark:text-zinc-200 dark:hover:bg-white/10" asChild variant="ghost">
-            <AppLink href="/simfoniya">{t("symphonyTitle")}</AppLink>
-          </Button>
+          <NavBibleLinks className="hidden gap-x-4 self-stretch lg:flex" />
+          <NavLink href="/books" className="hidden lg:inline-flex">
+            {t("books")}
+          </NavLink>
+          <NavLink href="/simfoniya" className="hidden lg:inline-flex">
+            {t("symphonyTitle")}
+          </NavLink>
         </div>
 
         <div className="flex items-center gap-x-3">
