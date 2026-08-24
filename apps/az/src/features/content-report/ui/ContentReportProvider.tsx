@@ -115,8 +115,9 @@ export function ContentReportProvider() {
   return (
     <>
       {selection && !open && (
-        <button
+        <Button
           type="button"
+          variant="outline"
           // Without this, mousedown/touchstart on the button collapses the
           // live selection (browser default for a click outside the range)
           // before the click fires — on a slow/held click the debounced
@@ -137,7 +138,7 @@ export function ContentReportProvider() {
                 ? selection.rect.top - 44
                 : selection.rect.bottom + TRIGGER_MARGIN,
           }}
-          className="z-40 inline-flex h-9 items-center gap-1.5 rounded-full border border-stone-200 bg-white px-3.5 text-xs font-medium text-zinc-700 shadow-md transition-colors hover:bg-stone-50 dark:border-white/10 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800"
+          className="z-40 h-9 gap-1.5 bg-white px-3.5 text-xs font-medium text-zinc-700 shadow-md dark:bg-zinc-900 dark:text-zinc-200"
         >
           {t("reportTriggerLabel")}
           {hasKeyboard && (
@@ -145,7 +146,7 @@ export function ContentReportProvider() {
               {shortcutLabel}
             </kbd>
           )}
-        </button>
+        </Button>
       )}
 
       <Dialog

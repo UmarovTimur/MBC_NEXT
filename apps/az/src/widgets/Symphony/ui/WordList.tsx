@@ -1,6 +1,7 @@
 "use client";
 
 import { AppLink } from "@/shared/ui/AppLink";
+import { ContainerWidth } from "@/shared/ui/Container";
 import { useWordFilter, WordFilterInput, WordListItems, type WordCount } from "./FilterableWordList";
 
 export type { WordCount };
@@ -27,7 +28,7 @@ export function WordList({
   const { query, setQuery, filtered } = useWordFilter(words);
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 py-8">
+    <ContainerWidth>
       <AppLink
         href="/simfoniya"
         className="mb-4 inline-block text-sm text-blue-600 hover:underline dark:text-blue-400"
@@ -36,7 +37,7 @@ export function WordList({
       </AppLink>
 
       <div className="mb-2 flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-3xl font-bold font-(family-name:--font-roboto-condensed) uppercase sm:text-4xl">
+        <h1 className="text-5xl font-black font-(family-name:--font-roboto-condensed) uppercase">
           {letter}
         </h1>
         {words.length > 0 && (
@@ -55,6 +56,6 @@ export function WordList({
       ) : (
         <WordListItems words={filtered} noMatchLabel={noMatchLabel} />
       )}
-    </div>
+    </ContainerWidth>
   );
 }

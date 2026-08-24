@@ -35,7 +35,7 @@ export const ChapterLink = (params: ChapterLinkProps) => {
       variant={variant ?? "outline"}
       size="icon"
       className={cn(
-        "lg:rounded-full lg:fixed z-20 top-1/2",
+        "lg:fixed z-20 top-1/2",
         "lg:h-12 lg:w-12 lg:[&_svg]:size-5",
         className,
         direction === "next" ? "right-4 lg:right-1/12" : "left-4 lg:left-1/12",

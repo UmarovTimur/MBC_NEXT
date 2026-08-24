@@ -1,4 +1,5 @@
 import { AppLink } from "@/shared/ui/AppLink";
+import { ContainerWidth } from "@/shared/ui/Container";
 
 export type LetterCount = { letter: string; wordCount: number };
 
@@ -11,13 +12,13 @@ interface LetterGridProps {
 
 export function LetterGrid({ title, description, letters, wordCountSuffix }: LetterGridProps) {
   return (
-    <div className="mx-auto w-full max-w-3xl px-4 py-8">
-      <h1 className="mb-2 text-3xl font-bold font-(family-name:--font-roboto-condensed) sm:text-4xl">
+    <ContainerWidth>
+      <h1 className="mb-2 text-5xl font-black font-(family-name:--font-roboto-condensed)">
         {title}
       </h1>
       <p className="mb-8 text-sm text-zinc-500 dark:text-zinc-400">{description}</p>
 
-      <div className="grid grid-cols-4 gap-3 sm:grid-cols-6 md:grid-cols-8">
+      <div className="grid grid-cols-4 gap-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10">
         {letters.map(({ letter, wordCount }, i) =>
           wordCount === 0 ? (
             <span
@@ -42,6 +43,6 @@ export function LetterGrid({ title, description, letters, wordCountSuffix }: Let
           ),
         )}
       </div>
-    </div>
+    </ContainerWidth>
   );
 }
