@@ -65,3 +65,5 @@ export {
 export { Slider } from "./ui/slider";
 export { Textarea } from "./ui/textarea";
 export type { TextareaProps } from "./ui/textarea";
+export { Toggle, toggleVariants } from "./ui/toggle";
+export { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";

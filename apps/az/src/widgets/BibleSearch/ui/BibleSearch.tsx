@@ -1,10 +1,9 @@
 import { Button } from "@/shared/ui/button";
 import { Input } from "@/shared/ui/input";
-import { AppLink } from "@/shared/ui/AppLink";
-import { cn } from "@mbc/ui";
 import type { Testament } from "../lib/searchVerses";
 import type { SearchResultItem } from "./SearchResultRow";
 import { SearchResultsList } from "./SearchResultsList";
+import { TestamentFilter } from "./TestamentFilter";
 
 export type { SearchResultItem };
 
@@ -40,21 +39,6 @@ export function BibleSearch({
   filterOldLabel,
   filterNewLabel,
 }: BibleSearchProps) {
-  // Switching the testament filter keeps `exact` (still the same underlying
-  // query) but is plain navigation, not a form resubmit.
-  const filterHref = (next: Testament | undefined) => {
-    const params = new URLSearchParams({ q: query });
-    if (exact) params.set("exact", "1");
-    if (next) params.set("testament", next);
-    return `/search?${params.toString()}`;
-  };
-
-  const filters: { value: Testament | undefined; label: string }[] = [
-    { value: undefined, label: filterAllLabel },
-    { value: "ot", label: filterOldLabel },
-    { value: "nt", label: filterNewLabel },
-  ];
-
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-8">
       {/* Plain GET form: search works with JavaScript disabled. Testament
@@ -76,22 +60,14 @@ export function BibleSearch({
         </Button>
       </form>
 
-      <div className="mb-6 flex gap-2">
-        {filters.map(({ value, label }) => (
-          <AppLink
-            key={label}
-            href={filterHref(value)}
-            className={cn(
-              "rounded-full border px-3 py-1 text-sm transition-colors",
-              testament === value
-                ? "border-foreground bg-foreground text-primary-foreground"
-                : "border-zinc-300 text-zinc-600 hover:border-foreground hover:text-foreground dark:border-zinc-700 dark:text-zinc-400 dark:hover:border-foreground dark:hover:text-foreground",
-            )}
-          >
-            {label}
-          </AppLink>
-        ))}
-      </div>
+      <TestamentFilter
+        query={query}
+        exact={exact}
+        value={testament}
+        allLabel={filterAllLabel}
+        oldLabel={filterOldLabel}
+        newLabel={filterNewLabel}
+      />
 
       {query.length > 0 &&
         (results.length === 0 ? (
