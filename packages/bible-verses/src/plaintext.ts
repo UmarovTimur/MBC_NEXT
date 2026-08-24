@@ -39,6 +39,17 @@ export function verseToPlainText(verse: VerseRecord): string {
   return decodeEntities(stripTags(raw)).replace(/\s+/g, " ").trim();
 }
 
+/**
+ * Escapes plain text for storage as a segment's `html`.
+ *
+ * Only the three characters that would otherwise be read as markup — anything
+ * else the editor types is literal. `decodeEntities` reverses all three, so
+ * `verseToPlainText(plainTextToSegmentHtml(s)) === s`.
+ */
+export function plainTextToSegmentHtml(text: string): string {
+  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
 /** Plain text of a whole chapter, verses only, in reading order. */
 export function chapterToPlainText(doc: ChapterDoc): string {
   return doc.verses

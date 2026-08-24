@@ -358,7 +358,7 @@ export interface BibleVerse {
    */
   ref?: string | null;
   /**
-   * Tag-free text, recomputed from segments on every save. This is what full-text search indexes. Empty for the 8 verses that carry a marker but no text in critical-text translations.
+   * The verse as plain running text — no markup, no line breaks. Edit it here: saving rebuilds the verse body from what you type. This is also what full-text search indexes. Empty for the 8 verses that carry a marker but no text in critical-text translations.
    */
   plainText?: string | null;
   /**
@@ -374,7 +374,7 @@ export interface BibleVerse {
     | boolean
     | null;
   /**
-   * [{ cls, html, newBlock }] — one entry per block the verse occupies. 41% of verses span more than one block, so this is a list, not a string. newBlock:false on the first entry means the verse starts part-way through the previous block.
+   * [{ cls, html, newBlock }] — one entry per block the verse occupies. Verses imported before the flat-text switch may still span several. newBlock:false on the first entry means the verse starts part-way through the previous block.
    */
   segments:
     | {

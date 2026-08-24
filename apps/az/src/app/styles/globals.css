@@ -167,9 +167,17 @@ body {
     @apply mb-3 italic;
   }
 
+  /*
+   * azb renders as flat prose: the source markup's poetry/quote classes (q, pi,
+   * mi, li) each carry their own left indent in the original typesetting, but
+   * the reader shows every verse flush to the margin, one verse per line.
+   */
   .bible-content--azb .q,
-  .bible-content--azb .pi {
-    @apply pl-4;
+  .bible-content--azb .qs,
+  .bible-content--azb .pi,
+  .bible-content--azb .mi,
+  .bible-content--azb .li {
+    @apply pl-0;
   }
 
   .bible-content--azb .q {

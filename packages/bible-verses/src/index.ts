@@ -1,6 +1,6 @@
 export { parseChapterHtml, ChapterParseError } from "./parse";
 export { renderChapterHtml, renderVerseHtml } from "./render";
-export { verseToPlainText, chapterToPlainText } from "./plaintext";
+export { verseToPlainText, chapterToPlainText, plainTextToSegmentHtml } from "./plaintext";
 export {
   verseRefLabel,
   verseMarkerLabel,

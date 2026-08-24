@@ -5,6 +5,7 @@ import {
   isAllowedBlockClass,
   isSanitizedBlockHtml,
   verseToPlainText,
+  plainTextToSegmentHtml,
   AZ_ALPHABET,
   compareAzWords,
   type Block,
@@ -245,9 +246,33 @@ export const BibleVerses: CollectionConfig = {
   ],
   hooks: {
     beforeChange: [
-      async ({ req, data, context }) => {
+      async ({ req, data, context, originalDoc }) => {
         if (req?.user) {
           data.lastEditedBy = req.user.id
+        }
+
+        // `plainText` is the editing surface: azb renders flat, one verse per
+        // line, so a verse is just its text and an editor should never have to
+        // touch the segments JSON. When the text field comes back changed, it
+        // wins and the segments are rebuilt as a single block from it; the
+        // original block class and newBlock flag carry over so the verse keeps
+        // its place in the chapter's paragraph flow. Untouched, the field is
+        // recomputed from segments further down as before, which is also what
+        // keeps the importer (which never sends plainText) working unchanged.
+        const editedText = typeof data.plainText === 'string' ? data.plainText.trim() : null
+        if (
+          editedText !== null &&
+          originalDoc &&
+          editedText !== String(originalDoc.plainText ?? '').trim()
+        ) {
+          const previous = (originalDoc.segments ?? []) as Segment[]
+          data.segments = [
+            {
+              cls: previous[0]?.cls ?? 'p',
+              html: plainTextToSegmentHtml(editedText),
+              newBlock: previous[0]?.newBlock ?? true,
+            },
+          ]
         }
 
         // The importer supplies every denormalized field itself and sets this
@@ -407,30 +432,41 @@ export const BibleVerses: CollectionConfig = {
     {
       name: 'plainText',
       type: 'textarea',
-      label: 'Plain text',
+      label: 'Verse text',
       admin: {
-        readOnly: true,
+        rows: 6,
         description:
-          'Tag-free text, recomputed from segments on every save. This is what full-text search indexes. Empty for the 8 verses that carry a marker but no text in critical-text translations.',
+          'The verse as plain running text — no markup, no line breaks. Edit it here: saving rebuilds the verse body from what you type. This is also what full-text search indexes. Empty for the 8 verses that carry a marker but no text in critical-text translations.',
       },
     },
     {
-      name: 'before',
-      type: 'json',
-      label: 'Preceding blocks',
+      type: 'collapsible',
+      label: 'Raw block markup',
       admin: {
-        description: '[{ cls, html }] — headings/references emitted before this verse.',
-      },
-    },
-    {
-      name: 'segments',
-      type: 'json',
-      label: 'Verse body',
-      required: true,
-      admin: {
+        initCollapsed: true,
         description:
-          '[{ cls, html, newBlock }] — one entry per block the verse occupies. 41% of verses span more than one block, so this is a list, not a string. newBlock:false on the first entry means the verse starts part-way through the previous block.',
+          'The stored block structure. Editing "Verse text" above rewrites the body for you — only open this to change a heading or the block class.',
       },
+      fields: [
+        {
+          name: 'before',
+          type: 'json',
+          label: 'Preceding blocks',
+          admin: {
+            description: '[{ cls, html }] — headings/references emitted before this verse.',
+          },
+        },
+        {
+          name: 'segments',
+          type: 'json',
+          label: 'Verse body',
+          required: true,
+          admin: {
+            description:
+              '[{ cls, html, newBlock }] — one entry per block the verse occupies. Verses imported before the flat-text switch may still span several. newBlock:false on the first entry means the verse starts part-way through the previous block.',
+          },
+        },
+      ],
     },
     {
       name: 'preview',
