@@ -4,6 +4,7 @@ import { useI18n } from "@/app/providers/I18n";
 import { useBible } from "@/entities/bible";
 import { cn } from "@/shared/lib/utils";
 import { Button } from "@/shared/ui/button";
+import { ChoiceGrid, ChoiceGridItem } from "@/shared/ui/choice-grid";
 import {
   Dialog,
   DialogClose,
@@ -17,6 +18,7 @@ import { useParams } from "next/navigation";
 import type { ReactNode } from "react";
 import { useBibleUI } from "../model/BibleUIContext";
 import { AppLink } from "@/shared/ui/AppLink";
+import { ScrollArea } from "@/shared/ui/scroll-area";
 
 interface ChaptersTableProps {
   className?: string;
@@ -52,42 +54,36 @@ export function ChaptersTable({ className, open, onOpenChange, trigger, hideTrig
           {trigger ?? <Button className={cn("grow", className)}>{t("chapters")}</Button>}
         </DialogTrigger>
       )}
-      <DialogContent aria-describedby="Select a chapter" className="lg:max-w-200">
+      <DialogContent className="lg:max-w-200">
         <DialogHeader>
           <DialogTitle>{t("chapters")}</DialogTitle>
           <DialogDescription>{t("Select a chapter")}</DialogDescription>
         </DialogHeader>
-        <div className="no-scrollbar -mx-4 max-h-[80vh] overflow-y-auto px-4 py-1">
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))]">
+        {/* -mx-4/px-4: the scrollbar runs in the dialog's padding, clear of the cells. */}
+        <ScrollArea className="-mx-4 max-h-[80vh]">
+          <ChoiceGrid className="px-4 py-1">
             {currentBook.chapters.map((c) => {
-              const href = `/${bible}/${bookId}/${c}`;
               const content = c === "0" ? t("Intro") : c;
-              const isCurrent = c == currentChapter;
 
-              if (!isCurrent) {
+              if (c === currentChapter) {
                 return (
-                  <DialogClose asChild key={c}>
-                    <AppLink
-                      href={href}
-                      prefetch={false}
-                      className={cn("border flex py-3 justify-center items-center hover:bg-accent")}
-                    >
-                      {content}
-                    </AppLink>
-                  </DialogClose>
+                  <ChoiceGridItem key={c} current asChild>
+                    <div>{content}</div>
+                  </ChoiceGridItem>
                 );
               }
               return (
-                <div
-                  key={c}
-                  className="flex py-3 justify-center items-center bg-primary text-primary-foreground border-0"
-                >
-                  {content}
-                </div>
+                <DialogClose asChild key={c}>
+                  <ChoiceGridItem asChild>
+                    <AppLink href={`/${bible}/${bookId}/${c}`} prefetch={false}>
+                      {content}
+                    </AppLink>
+                  </ChoiceGridItem>
+                </DialogClose>
               );
             })}
-          </div>
-        </div>
+          </ChoiceGrid>
+        </ScrollArea>
       </DialogContent>
     </Dialog>
   );
