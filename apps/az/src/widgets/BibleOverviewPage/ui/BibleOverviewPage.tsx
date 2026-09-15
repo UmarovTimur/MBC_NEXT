@@ -1,4 +1,5 @@
 import { ContainerWidth } from "@/shared/ui/Container";
+import { MaskIcon } from "@/shared/ui/mask-icon";
 import { TooltipProvider } from "@mbc/ui";
 import type { CSSProperties } from "react";
 import { BookButton } from "./BookButton";
@@ -31,6 +32,7 @@ const sectionThemeClass: Record<string, string> = {
 
 function BibleSection({
   title,
+  icon,
   books,
   lightBg,
   bibleName,
@@ -38,6 +40,7 @@ function BibleSection({
   firstChapter,
 }: {
   title: string;
+  icon: string;
   books: Book[];
   lightBg: string;
   bibleName: string;
@@ -69,9 +72,10 @@ function BibleSection({
 
       <div className="relative flex flex-col gap-5 lg:flex-row lg:gap-8">
         <h2
-          className="flex items-center justify-center pt-1 text-center font-serif text-2xl font-bold lg:w-36 lg:flex-1/3 lg:text-3xl"
+          className="flex flex-col items-center justify-center gap-2 pt-1 text-center font-serif text-3xl font-bold lg:w-36 lg:flex-1/3 lg:text-4xl"
           style={{ fontVariant: "small-caps" }}
         >
+          <MaskIcon src={icon} className="h-10 w-12 lg:h-12 lg:w-14" />
           {title}
         </h2>
 
@@ -127,6 +131,7 @@ export function BibleOverviewPage({ bibleName, bible }: BibleOverviewPageProps) 
 
         <BibleSection
           title="Əhdi-Ətiq"
+          icon="/images/icons/book.svg"
           books={otBooks}
           lightBg="paper.webp"
           bibleName={bibleName}
@@ -135,6 +140,7 @@ export function BibleOverviewPage({ bibleName, bible }: BibleOverviewPageProps) 
         />
         <BibleSection
           title="Əhdi-Cədid"
+          icon="/images/icons/sun-rays.svg"
           books={ntBooks}
           lightBg="paper-blue.webp"
           bibleName={bibleName}

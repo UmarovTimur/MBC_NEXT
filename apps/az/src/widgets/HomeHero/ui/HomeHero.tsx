@@ -91,7 +91,7 @@ export function HomeHero({ books, startReadingHref, bibleHref, commentaryHref }:
         <div className="rounded-[24px] bg-white/95 py-5 sm:py-7 dark:border-white/10 dark:bg-zinc-950/90">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div className="flex max-w-2xl flex-col">
-              <h1 className="text-[clamp(2.7rem,4.8vw,3rem)] font-bold leading-[1.1] text-[#101820] dark:text-white">
+              <h1 className="text-[clamp(2.7rem,4.8vw,3rem)] font-(family-name:--font-roboto-condensed) font-bold leading-[1.1] text-[#101820] dark:text-white">
                 {t("homeHeroTitle")}
               </h1>
               <p className="mt-5 max-w-xl text-small text-zinc-600 sm:text-lg dark:text-zinc-300">
