@@ -35,3 +35,22 @@ export function buildChapterAudioUrl(
 ): string {
   return `${AUDIO_BASE}/${bibleKey}/${bookId}/${chapterAudioFileName(chapterId, maxChapterId)}`;
 }
+
+/**
+ * URL of one chapter's recording given the ids of every chapter in its book, or
+ * null when the bible has no audio or the book has no such chapter. Works from
+ * plain ids so the server `Bible` and the client manifest share it.
+ */
+export function resolveChapterAudioUrl(
+  bibleKey: string,
+  bookId: string,
+  bookChapterIds: string[],
+  chapterId: string,
+): string | null {
+  if (!hasChapterAudio(bibleKey) || !bookChapterIds.includes(chapterId)) return null;
+
+  // Padding depends on the highest chapter number, not on chapters.length:
+  // commentaries prepend an intro chapter "0", which would skew the count.
+  const maxChapterId = Math.max(...bookChapterIds.map(Number));
+  return buildChapterAudioUrl(bibleKey, bookId, chapterId, maxChapterId);
+}

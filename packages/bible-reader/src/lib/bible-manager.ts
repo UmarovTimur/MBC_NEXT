@@ -107,6 +107,7 @@ export class BibleManager {
         primary: bible.primaryTitle,
         isIndependent: bible.isIndependent,
         isCommentary: bible.isCommentary,
+        chapterNaming: bible.chapterNaming,
         books: bible.books.map((book: Book) => ({
           id: book.id,
           name: bible.getBookName(+book.id),

@@ -1,3 +1,5 @@
+import type { ChapterNaming } from "../lib/chapter-name";
+
 export type Book = {
   bible: string;
   id: string;
@@ -18,6 +20,7 @@ export interface BibleManifest {
     primary: string;
     isIndependent: boolean;
     isCommentary: boolean;
+    chapterNaming: ChapterNaming;
     books: {
       id: string;
       name: string;
