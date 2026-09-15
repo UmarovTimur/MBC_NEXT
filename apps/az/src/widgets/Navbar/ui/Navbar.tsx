@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 import { MobileNavbar } from "./MobileNavbar";
 import { cn } from "@/shared/lib/utils";
+import { useHideOnScroll } from "@/shared/lib/useHideOnScroll";
 import { NavBibleControls } from "./NavBibleControls";
 import { NavBibleLinks } from "./NavBibleLinks";
 import { NavLink } from "./NavLink";
@@ -14,55 +14,7 @@ import { Search } from "lucide-react";
 
 export const Navbar = () => {
   const { t } = useI18n();
-  const [isHidden, setIsHidden] = useState(false);
-  const lastScrollYRef = useRef(0);
-  const tickingRef = useRef(false);
-
-  useEffect(() => {
-    const minScrollBeforeHide = 80;
-    const scrollDelta = 8;
-
-    const updateHeaderVisibility = () => {
-      const currentScrollY = window.scrollY;
-      const scrollDiff = currentScrollY - lastScrollYRef.current;
-
-      if (currentScrollY <= minScrollBeforeHide) {
-        setIsHidden(false);
-      } else if (scrollDiff > scrollDelta) {
-        setIsHidden(true);
-      } else if (scrollDiff < -scrollDelta) {
-        setIsHidden(false);
-      }
-
-      lastScrollYRef.current = currentScrollY;
-      tickingRef.current = false;
-    };
-
-    const handleScroll = () => {
-      if (tickingRef.current) return;
-      tickingRef.current = true;
-      window.requestAnimationFrame(updateHeaderVisibility);
-    };
-
-    const handlePointerDown = (event: PointerEvent) => {
-      if (!window.matchMedia("(pointer: coarse)").matches) return;
-      if (event.pointerType !== "touch" && event.pointerType !== "pen") return;
-      setIsHidden(false);
-    };
-
-    const showHeader = () => setIsHidden(false);
-
-    lastScrollYRef.current = window.scrollY;
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("pointerdown", handlePointerDown, { passive: true });
-    window.addEventListener("focusin", showHeader);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("pointerdown", handlePointerDown);
-      window.removeEventListener("focusin", showHeader);
-    };
-  }, []);
+  const isHidden = useHideOnScroll();
 
   return (
     <header
@@ -92,7 +44,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-x-3">
           <AppLink
             href="/search"
-            className="hidden h-10 min-w-64 items-center gap-3 rounded-md border border-stone-200 bg-stone-50/80 px-4 text-sm text-zinc-500 transition-colors hover:bg-white xl:flex dark:border-white/10 dark:bg-white/5 dark:text-zinc-400 dark:hover:bg-white/10"
+            className="hidden h-9 min-w-64 items-center gap-3 rounded-md border border-stone-200 bg-stone-50/80 px-4 text-sm text-zinc-500 shadow-sm transition-colors hover:bg-white xl:flex dark:border-white/10 dark:bg-white/5 dark:text-zinc-400 dark:hover:bg-white/10"
             aria-label={t("navSearchPlaceholder")}
           >
             <Search className="size-4" />
