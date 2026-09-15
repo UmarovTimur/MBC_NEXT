@@ -8,6 +8,12 @@ export type { BreadcrumbItem } from "./ui/Breadcrumbs";
 export { Breadcrumbs } from "./ui/Breadcrumbs";
 export { Button, buttonVariants } from "./ui/button";
 export type { ButtonProps } from "./ui/button";
+export {
+  ButtonGroup,
+  ButtonGroupSeparator,
+  ButtonGroupText,
+  buttonGroupVariants,
+} from "./ui/button-group";
 export { ContainerWidth } from "./ui/Container";
 export {
   Dialog,
@@ -41,6 +47,7 @@ export {
 export { imageLoader } from "./ui/ImageLoader";
 export { Input } from "./ui/input";
 export type { InputProps } from "./ui/input";
+export { MaskIcon } from "./ui/mask-icon";
 export { NavigationLoader } from "./ui/NavigationLoader";
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "./ui/tooltip";
 export {
@@ -62,6 +69,18 @@ export {
   SheetTitle,
   SheetDescription,
 } from "./ui/sheet";
+export {
+  Popover,
+  PopoverAnchor,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "./ui/popover";
+export { ChoiceGrid, ChoiceGridItem } from "./ui/choice-grid";
+export { ScrollArea, ScrollBar } from "./ui/scroll-area";
+export { Separator } from "./ui/separator";
 export { Slider } from "./ui/slider";
 export { Textarea } from "./ui/textarea";
 export type { TextareaProps } from "./ui/textarea";
