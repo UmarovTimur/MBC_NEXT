@@ -66,9 +66,22 @@ export function VerseHighlight() {
       const container = wrapper?.closest(".bible-content");
       if (!container) return;
 
+      const segments = versesFor(container, Number(verse));
+
+      // A second click on a highlighted verse clears it, along with a #V{n} hash
+      // pointing at it — otherwise a reload would highlight it again.
+      if (wrapper.classList.contains(ACTIVE)) {
+        segments.forEach((el) => el.classList.remove(ACTIVE));
+        const hashVerse = /^#V(\d+)$/.exec(window.location.hash)?.[1];
+        if (hashVerse && versesFor(container, Number(hashVerse)).includes(wrapper)) {
+          window.history.replaceState(window.history.state, "", window.location.pathname + window.location.search);
+        }
+        return;
+      }
+
       // Text comes straight from the DOM: every segment of the verse, minus the
       // number marker itself.
-      const text = versesFor(container, Number(verse))
+      const text = segments
         .map((el) => {
           const clone = el.cloneNode(true) as HTMLElement;
           clone.querySelectorAll(".verse").forEach((m) => m.remove());
@@ -84,7 +97,7 @@ export function VerseHighlight() {
       url.hash = `V${verse}`;
       void navigator.clipboard?.writeText(`${text}\n${url.toString()}`);
 
-      wrapper?.classList.add(ACTIVE);
+      segments.forEach((el) => el.classList.add(ACTIVE));
     };
 
     document.addEventListener("click", onClick);

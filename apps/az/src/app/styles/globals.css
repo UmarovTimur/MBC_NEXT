@@ -230,9 +230,9 @@ body {
   /*
    * Verse highlight. :target alone is not enough: 41% of verses span more than
    * one block and therefore emit more than one wrapper, and only the first
-   * carries the id — so VerseHighlight adds .is-active to all of them.
+   * carries the id — so VerseHighlight adds .is-active to all of them. No :target
+   * rule on top: it could not be cleared by a second click on the verse number.
    */
-  .bible-content .v:target,
   .bible-content .v.is-active {
     @apply rounded-sm bg-yellow-100 dark:bg-yellow-900/40;
   }
