@@ -9,6 +9,7 @@ import { getI18n } from "@/app/providers/I18n/server";
 import { notoSansFont, robotoCondensedFont } from "@/shared/config/fonts";
 import { Navbar } from "@/widgets/Navbar";
 import { BibleUiProvider } from "@/features/bible-navigation";
+import { BibleAudioProvider } from "@/features/bible-audio";
 import { ContentReportProvider } from "@/features/content-report";
 import { NavigationLoader } from "@mbc/ui";
 import { Suspense } from "react";
@@ -37,21 +38,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
   const manifest = bibleManager.getManifest();
   const { dictionary } = getI18n();
 
+  // pb: --audio-bar-h is set while the bottom audio player is open, keeping the footer clear of it.
   return (
     <html className={`${notoSansFont.variable} ${robotoCondensedFont.variable}`} lang={process.env.APP_LANG} suppressHydrationWarning>
-      <body className="flex min-h-screen w-full min-w-90 flex-col justify-between bg-[#ebe9e4]">
+      <body className="flex min-h-screen w-full min-w-90 flex-col justify-between bg-[#ebe9e4] pb-[var(--audio-bar-h,0px)]">
         <I18nProvider dict={dictionary}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <ManifestProvider manifest={manifest}>
-              <BibleUiProvider>
-                <Suspense><NavigationLoader /></Suspense>
-                <Navbar />
-                <main className="grow pt-24 pb-10">
-                  <Suspense>{children}</Suspense>
-                </main>
-                <Footer />
-                <ContentReportProvider />
-              </BibleUiProvider>
+              <BibleAudioProvider>
+                <BibleUiProvider>
+                  <Suspense><NavigationLoader /></Suspense>
+                  <Navbar />
+                  <main className="grow pt-24 pb-10">
+                    <Suspense>{children}</Suspense>
+                  </main>
+                  <Footer />
+                  <ContentReportProvider />
+                </BibleUiProvider>
+              </BibleAudioProvider>
             </ManifestProvider>
           </ThemeProvider>
         </I18nProvider>

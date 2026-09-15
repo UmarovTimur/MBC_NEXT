@@ -1,4 +1,4 @@
-import { Chapter, ChapterAudioPlayer } from "@/entities/bible";
+import { Chapter } from "@/entities/bible";
 import { bibleManager } from "@/entities/bible/server";
 import type { Bible } from "@/entities/bible/server";
 import { BooksList, ChapterLink, ChaptersTableTrigger } from "@/features/bible-navigation";
@@ -10,6 +10,7 @@ import { FloatingChapterNav } from "./FloatingChapterNav";
 import { AppLink } from "@/shared/ui/AppLink";
 import { VerseHighlight } from "@/features/verse-highlight";
 import { getI18n } from "@/app/providers/I18n/server";
+import { ChapterAudioToggle, ChapterListenButton } from "@/features/bible-audio";
 
 interface BibleViewerProps {
   className?: string;
@@ -23,8 +24,8 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
   const content = await bible.getChapterContent(chapter.bookId, chapter.chapterId);
   const title = bible.getChapterTitle(chapter);
   const subTitle = bible.primaryTitle === title ? "" : bible.primaryTitle;
-  // null for bibles without recordings (e.g. barclay) — then no player renders.
-  const audioSrc = bible.getChapterAudioUrl(chapter.bookId, chapter.chapterId);
+  // null for bibles without recordings (e.g. barclay) — then no audio is offered.
+  const hasAudio = bible.getChapterAudioUrl(chapter.bookId, chapter.chapterId) !== null;
   // ======================= attached Bible =====================================
   let attachedContent: string | null = null;
   let attachedBible: Bible | undefined = undefined;
@@ -52,6 +53,12 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
         />
         <BooksList className=" inline-flex grow" />
         <ChaptersTableTrigger className=" inline-flex grow" />
+        {hasAudio && (
+          <ChapterAudioToggle
+            className="basis-12"
+            chapter={{ bible: chapter.bible, bookId: chapter.bookId, chapterId: chapter.chapterId }}
+          />
+        )}
         <ChapterLink
           className="basis-12 lg:static lg:top-auto lg:left-auto lg:right-auto"
           direction="next"
@@ -69,7 +76,12 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
         )}
       >
         <div className={cn("basis-2/3 pt-4")}>
-          {audioSrc && <ChapterAudioPlayer className="mb-4" src={audioSrc} />}
+          {hasAudio && (
+            <ChapterListenButton
+              className="mb-4"
+              chapter={{ bible: chapter.bible, bookId: chapter.bookId, chapterId: chapter.chapterId }}
+            />
+          )}
           <h1 className="text-3xl whitespace-pre-line md:text-4xl font-black">{title}</h1>
           <h2 className="text-2xl my-4">{subTitle}</h2>
           <BibleContent html={content} formattingStyle={bible.formattingStyle} />
