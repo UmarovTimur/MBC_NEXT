@@ -4,7 +4,17 @@ import { fetchBooks } from "@/shared/lib/payload";
 import { BibleOverviewPage } from "@/widgets/BibleOverviewPage";
 import { BooksPage } from "@/widgets/BooksPage";
 import { HomeHero } from "@/widgets/HomeHero";
-export const dynamic = "force-dynamic";
+import { getI18n } from "@/app/providers/I18n/server";
+import type { Metadata } from "next";
+
+// Nothing here is per-request (no cookies/headers/searchParams), so let it be
+// cached and refreshed with the same 60s window as the fetches it makes.
+export const revalidate = 60;
+
+export function generateMetadata(): Metadata {
+  const { t } = getI18n();
+  return { description: t("homeHeroDescription") };
+}
 
 export default async function HomePage() {
   const rawBooks = await fetchBooks();

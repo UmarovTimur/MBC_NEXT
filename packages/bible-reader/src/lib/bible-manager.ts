@@ -12,6 +12,12 @@ import {
 import { readManifest, readChapterHtml, toBookNameMap } from "./file-api";
 
 export class BibleManager {
+  /**
+   * `bibleKey/bookId/chapterId` -> ISO updatedAt. Server-only and kept off
+   * `Chapter` on purpose: `Chapter` ships to the browser inside the manifest.
+   */
+  private chapterUpdatedAt = new Map<string, string>();
+
   constructor(private bibles: Bible[]) { }
 
   /**
@@ -66,9 +72,11 @@ export class BibleManager {
 
     // Group chapter refs into bibleKey -> bookNumber -> chapters[].
     const byBible = new Map<string, Map<string, Chapter[]>>();
+    const updatedAt = new Map<string, string>();
     for (const ref of refs) {
       const bibleKey = idToKey.get(ref.bible);
       if (!bibleKey) continue;
+      if (ref.updatedAt) updatedAt.set(`${bibleKey}/${ref.bookNumber}/${ref.chapterId}`, ref.updatedAt);
 
       let books = byBible.get(bibleKey);
       if (!books) {
@@ -97,7 +105,14 @@ export class BibleManager {
       return new Bible(bibleName, books, config, bookNames, loaderFor(bibleName));
     });
 
-    return new BibleManager(bibles);
+    const manager = new BibleManager(bibles);
+    manager.chapterUpdatedAt = updatedAt;
+    return manager;
+  }
+
+  /** ISO timestamp of the chapter's last edit, or undefined when unknown (e.g. file-backed bibles). */
+  getChapterUpdatedAt(bible: string, bookId: string, chapterId: string): string | undefined {
+    return this.chapterUpdatedAt.get(`${bible}/${bookId}/${chapterId}`);
   }
 
   getManifest(): BibleManifest {

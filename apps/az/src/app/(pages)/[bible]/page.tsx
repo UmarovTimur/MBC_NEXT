@@ -20,7 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { bible: bibleName } = await params;
   const bible = bibleManager.getAll().find((b) => b.bibleName === bibleName);
   if (!bible?.isIndependent) return {};
-  return { title: bible.primaryTitle };
+  const description =
+    bible.bibleName === "barclay"
+      ? `${bible.primaryTitle} — ${bible.books.length} kitab üzrə Azərbaycan dilində şərhlər. Pulsuz onlayn oxu.`
+      : `${bible.primaryTitle} — ${bible.books.length} kitab, Azərbaycan dilində pulsuz onlayn oxu.`;
+  return { title: bible.primaryTitle, description };
 }
 
 export default async function BibleOverviewPageRoute({ params }: Props) {

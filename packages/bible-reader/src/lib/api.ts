@@ -5,6 +5,8 @@ export type ChapterRef = {
   bible: number;
   bookNumber: string;
   chapterId: string;
+  /** ISO timestamp of the last edit; feeds the sitemap's <lastmod>. */
+  updatedAt?: string;
 };
 
 export type BibleFetchOptions = RequestInit & {
@@ -106,7 +108,7 @@ export async function fetchChapterRefs(
     `${normalizeBaseUrl(baseUrl)}/api/bible-chapters` +
     `?where[locale][equals]=${encodeURIComponent(locale)}` +
     `&limit=0&depth=0` +
-    `&select[bible]=true&select[bookNumber]=true&select[chapterId]=true`;
+    `&select[bible]=true&select[bookNumber]=true&select[chapterId]=true&select[updatedAt]=true`;
 
   const res = await fetch(url, fetchOptions);
   if (!res.ok) {

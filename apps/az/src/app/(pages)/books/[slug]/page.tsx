@@ -6,6 +6,8 @@ import { Button } from "@/shared/ui/button";
 import { getI18n } from "@/app/providers/I18n/server";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { Breadcrumbs } from "@/shared/ui/Breadcrumbs";
+import { JsonLd } from "@/shared/lib/jsonLd";
 import type { Metadata } from "next";
 
 const OTHER_BOOKS_COUNT = 10;
@@ -54,8 +56,42 @@ export default async function BookDetailPage({ params }: Props) {
     .slice(0, OTHER_BOOKS_COUNT)
     .map(mapPayloadBook);
 
+  const domain = (process.env.DOMAIN || "https://kitobook.com").replace(/\/+$/, "");
+  const basePath = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
+  const abs = (path: string) => `${domain}${basePath}${path}`;
+  const crumbs = [
+    { label: t("breadcrumbHome"), href: "/" },
+    { label: t("books"), href: "/books" },
+    { label: book.title },
+  ];
+
   return (
     <ContainerWidth>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: crumbs.map((c, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: c.label,
+              item: c.href ? abs(c.href === "/" ? "/" : `${c.href}/`) : abs(`/books/${book.slug}/`),
+            })),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Book",
+            name: book.title,
+            url: abs(`/books/${book.slug}/`),
+            inLanguage: "az",
+            ...(book.author && { author: { "@type": "Person", name: book.author } }),
+            ...(book.description && { description: book.description.slice(0, 300) }),
+            ...(book.imageUrl && { image: book.imageUrl }),
+          },
+        ]}
+      />
+      <Breadcrumbs items={crumbs} />
       <div className="mx-auto lg:py-8">
         <div className="flex flex-col gap-6 md:flex-row">
           {book.imageUrl && (

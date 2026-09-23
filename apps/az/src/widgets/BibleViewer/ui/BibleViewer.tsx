@@ -11,6 +11,8 @@ import { AppLink } from "@/shared/ui/AppLink";
 import { VerseHighlight } from "@/features/verse-highlight";
 import { getI18n } from "@/app/providers/I18n/server";
 import { ChapterAudioToggle, ChapterListenButton } from "@/features/bible-audio";
+import { Breadcrumbs, type BreadcrumbItem } from "@/shared/ui/Breadcrumbs";
+import { JsonLd } from "@/shared/lib/jsonLd";
 
 interface BibleViewerProps {
   className?: string;
@@ -43,8 +45,49 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
   if (!content) {
     notFound();
   }
+
+  // ======================= breadcrumbs + structured data =====================
+  const bookName = bible.getBookName(Number(chapter.bookId));
+  const crumbs: BreadcrumbItem[] = [
+    { label: t("breadcrumbHome"), href: "/" },
+    ...(bible.isIndependent ? [{ label: bible.primaryTitle, href: `/${bible.bibleName}` }] : []),
+    { label: bookName },
+    { label: title },
+  ];
+  const domain = (process.env.DOMAIN || "https://kitobook.com").replace(/\/+$/, "");
+  const basePath = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
+  const abs = (path: string) => `${domain}${basePath}${path}`;
+  const chapterUrl = abs(`/${chapter.bible}/${chapter.bookId}/${chapter.chapterId}/`);
+  const dateModified = bibleManager.getChapterUpdatedAt(chapter.bible, chapter.bookId, chapter.chapterId);
+
   return (
     <div className={cn("mb-8 pb-24 md:mb-12", [className])}>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: crumbs.map((c, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: c.label,
+              // Only the last crumb (this page) and linked crumbs get a URL.
+              ...(c.href ? { item: abs(c.href === "/" ? "/" : `${c.href}/`) } : i === crumbs.length - 1 ? { item: chapterUrl } : {}),
+            })),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Chapter",
+            name: title,
+            url: chapterUrl,
+            inLanguage: "az",
+            position: Number(chapter.chapterId),
+            isPartOf: { "@type": "Book", name: bible.primaryTitle, inLanguage: "az" },
+            ...(dateModified && { dateModified }),
+          },
+        ]}
+      />
+      <Breadcrumbs items={crumbs} className="pt-2" />
       <FloatingChapterNav>
         <ChapterLink
           className="basis-12 lg:static lg:top-auto lg:left-auto lg:right-auto"

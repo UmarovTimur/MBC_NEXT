@@ -13,6 +13,7 @@ import { BibleAudioProvider } from "@/features/bible-audio";
 import { ContentReportProvider } from "@/features/content-report";
 import { NavigationLoader } from "@mbc/ui";
 import { Suspense } from "react";
+import { JsonLd } from "@/shared/lib/jsonLd";
 
 const domain = (process.env.DOMAIN || "https://kitobook.com").replace(/\/+$/, "");
 const basePath = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
@@ -23,14 +24,14 @@ export const metadata: Metadata = {
   // itself in the one URL shape (trailing slash, no query string).
   alternates: { canonical: "./" },
   title: {
-    default: "Vilyam Barklinin Müqəddəs Kitab şərhləri — Azərbaycan dilində",
-    template: "%s | Barclay şərhləri",
+    default: "Incilaz — Müqəddəs Kitab və şərhlər Azərbaycan dilində",
+    template: "%s | Incilaz",
   },
   description:
-    "Vilyam Barklinin Müqəddəs Kitaba yazdığı şərhlər Azərbaycan dilində. Bütün kitablar və fəsillər üzrə pulsuz onlayn oxu.",
+    "Incilaz Müqəddəs Yazıları, etibarlı şərhləri və ruhlandıran kitabları Azərbaycan dilində oxumaq üçün rəqəmsal kitabxanadır.",
   icons: "/favicon.ico",
   openGraph: {
-    siteName: "Barclay — Müqəddəs Kitab Şərhləri",
+    siteName: "Incilaz",
     images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Incilaz" }],
   },
   twitter: {
@@ -51,6 +52,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html className={`${notoSansFont.variable} ${robotoCondensedFont.variable}`} lang={process.env.APP_LANG} suppressHydrationWarning>
       <body className="flex min-h-screen w-full min-w-90 flex-col justify-between bg-[#ebe9e4] pb-[var(--audio-bar-h,0px)]">
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Incilaz",
+            url: `${domain}${basePath}/`,
+            inLanguage: "az",
+          }}
+        />
         <I18nProvider dict={dictionary}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <ManifestProvider manifest={manifest}>

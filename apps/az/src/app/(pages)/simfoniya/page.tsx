@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   const { t } = getI18n();
-  return { title: t("symphonyTitle") };
+  return { title: t("symphonyTitle"), description: t("symphonyDescription") };
 }
 
 export default async function SymphonyPage() {

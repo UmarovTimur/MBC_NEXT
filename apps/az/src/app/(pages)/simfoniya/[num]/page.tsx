@@ -24,7 +24,11 @@ export async function generateMetadata({
   const { t } = getI18n();
   const letter = letterFromNumParam((await params).num);
   if (!letter) return {};
-  return { title: `${letter.toLocaleUpperCase("az")} — ${t("symphonyTitle")}` };
+  const upper = letter.toLocaleUpperCase("az");
+  return {
+    title: `${upper} — ${t("symphonyTitle")}`,
+    description: `${upper} hərfi ilə başlayan sözlər. ${t("symphonyDescription")}`,
+  };
 }
 
 export default async function SymphonyLetterPage({

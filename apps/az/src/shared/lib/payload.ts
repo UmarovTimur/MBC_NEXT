@@ -27,6 +27,7 @@ export type PayloadBook = {
     sortOrder?: number;
   }[];
   status: 'draft' | 'published';
+  updatedAt?: string;
 };
 
 type PayloadResponse<T> = {
