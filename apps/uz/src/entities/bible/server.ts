@@ -3,8 +3,6 @@ import path from 'path';
 import { BibleManager } from '@mbc/bible-reader/server';
 export type { Bible } from '@mbc/bible-reader/server';
 
-const PAYLOAD_API_URL = process.env.PAYLOAD_API_URL;
-
-export const bibleManager = PAYLOAD_API_URL
-  ? await BibleManager.initFromApi(PAYLOAD_API_URL, 'uz', { next: { revalidate: 60 } })
-  : await BibleManager.initFromFiles(path.join(process.cwd(), 'html'));
+// Uzbek text is read from the committed html/ corpus only. The Payload admin has
+// no `uz` locale (dropped in the remove_uz_locale migration), so never ask it.
+export const bibleManager = await BibleManager.initFromFiles(path.join(process.cwd(), 'html'));

@@ -42,9 +42,10 @@ export async function readChapterHtml(
   bookNumber: string,
   chapterId: string,
 ): Promise<string | null> {
-  // Files use zero-padded names (01.html, 00.html) for single-digit ids
-  const paddedId = chapterId.padStart(2, "0");
-  for (const name of [paddedId, chapterId]) {
+  // Files use zero-padded names: two digits (01.html, 00.html), three in books
+  // with 100+ chapters (Psalms: 001.html … 150.html).
+  const names = new Set([chapterId.padStart(2, "0"), chapterId.padStart(3, "0"), chapterId]);
+  for (const name of names) {
     try {
       return await readFile(path.join(htmlDir, bibleKey, bookNumber, `${name}.html`), "utf-8");
     } catch {
