@@ -54,6 +54,12 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
     { label: bookName },
     { label: title },
   ];
+  // The visible trail drops the "Book: " prefix from the last crumb, which would
+  // otherwise repeat the book crumb right before it. Structured data keeps full names.
+  const visibleCrumbs: BreadcrumbItem[] = [
+    ...crumbs.slice(0, -1),
+    { label: title.startsWith(`${bookName}: `) ? title.slice(bookName.length + 2) : title },
+  ];
   const domain = (process.env.DOMAIN || "https://kitobook.com").replace(/\/+$/, "");
   const basePath = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
   const abs = (path: string) => `${domain}${basePath}${path}`;
@@ -87,7 +93,6 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
           },
         ]}
       />
-      <Breadcrumbs items={crumbs} className="pt-2" />
       <FloatingChapterNav>
         <ChapterLink
           className="basis-12 lg:static lg:top-auto lg:left-auto lg:right-auto"
@@ -119,6 +124,7 @@ export const BibleViewer = async ({ className, chapter }: BibleViewerProps) => {
         )}
       >
         <div className={cn("basis-2/3 pt-4")}>
+          <Breadcrumbs items={visibleCrumbs} />
           {hasAudio && (
             <ChapterListenButton
               className="mb-4"
