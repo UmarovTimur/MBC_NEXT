@@ -20,7 +20,7 @@ export type SubmitReportResult = "ok" | "rate_limited" | "error";
 
 export async function submitReport(payload: ReportPayload): Promise<SubmitReportResult> {
   try {
-    const res = await fetch("/api/content-reports", {
+    const res = await fetch("/api/content-reports/", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(payload),

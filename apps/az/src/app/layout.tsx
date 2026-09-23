@@ -14,9 +14,14 @@ import { ContentReportProvider } from "@/features/content-report";
 import { NavigationLoader } from "@mbc/ui";
 import { Suspense } from "react";
 
-const domain = process.env.DOMAIN || "https://kitobook.com/";
+const domain = (process.env.DOMAIN || "https://kitobook.com").replace(/\/+$/, "");
+const basePath = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${domain}${basePath}/`),
+  // "./" resolves against each page's own path, so every page is canonical to
+  // itself in the one URL shape (trailing slash, no query string).
+  alternates: { canonical: "./" },
   title: {
     default: "Vilyam Barklinin Müqəddəs Kitab şərhləri — Azərbaycan dilində",
     template: "%s | Barclay şərhləri",
@@ -26,7 +31,11 @@ export const metadata: Metadata = {
   icons: "/favicon.ico",
   openGraph: {
     siteName: "Barclay — Müqəddəs Kitab Şərhləri",
-    images: [`${domain}images/mcdonald.jpg`],
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Incilaz" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og.jpg"],
   },
 };
 

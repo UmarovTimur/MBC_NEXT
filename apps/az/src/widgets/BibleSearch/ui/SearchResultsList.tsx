@@ -65,7 +65,7 @@ export function SearchResultsList({
         const params = new URLSearchParams({ q: query, page: String(nextPage) });
         if (exact) params.set("exact", "1");
         if (testament) params.set("testament", testament);
-        fetch(`/api/search?${params.toString()}`, { cache: "no-store" })
+        fetch(`/api/search/?${params.toString()}`, { cache: "no-store" })
           .then((res) => (res.ok ? (res.json() as Promise<{ results: SearchResultItem[] }>) : null))
           .then((data) => {
             if (!data) return;

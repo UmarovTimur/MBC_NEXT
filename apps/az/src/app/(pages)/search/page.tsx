@@ -8,7 +8,11 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata(): Metadata {
   const { t } = getI18n();
-  return { title: t("searchTitle") };
+  // Result pages are thin, near-duplicate content keyed by an unbounded query, so
+  // keep every /search URL out of the index. `follow` still lets crawlers reach
+  // the chapters the results link to. Deliberately not a robots.txt Disallow:
+  // a blocked page is never fetched, so its noindex would never be seen.
+  return { title: t("searchTitle"), robots: { index: false, follow: true } };
 }
 
 export default async function SearchPage({

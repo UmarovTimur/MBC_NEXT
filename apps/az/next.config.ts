@@ -8,8 +8,10 @@ const nextConfig: NextConfig = {
   images: {
     loaderFile: "./src/shared/image-loader.ts",
   },
+  // One URL shape site-wide: "/books/", not "/books". Next 308-redirects the
+  // slashless form and <Link> emits the slashed one. Do NOT re-add
+  // skipTrailingSlashRedirect — it also stops <Link> from normalizing hrefs.
   trailingSlash: true,
-  skipTrailingSlashRedirect: true,
 };
 
 export default nextConfig;

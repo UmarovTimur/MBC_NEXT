@@ -7,8 +7,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const manager = bibleManager;
   if (!manager) return [];
 
-  const domain = process.env.DOMAIN || "https://kitobook.com";
-  const baseName = process.env.BASE_PATH || "";
+  const domain = (process.env.DOMAIN || "https://kitobook.com").replace(/\/+$/, "");
+  const baseName = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
   const baseURL = `${domain}${baseName}`;
 
   // Content now lives in the database; use the build time as the freshness hint.
@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         const chapterPath = `${chapter.bible}/${chapter.bookId}/${chapter.chapterId}`;
 
         biblePages.push({
-          url: `${baseURL}/${chapterPath}`,
+          url: `${baseURL}/${chapterPath}/`,
           lastModified,
           changeFrequency: "monthly",
           priority: 0.7,
