@@ -6,9 +6,7 @@
  * whole migration rests on: if a chapter cannot be rebuilt from its verses, that
  * chapter must not be migrated.
  *
- *   --source=disk    read apps/az/html/<bible>/**  (no database needed)
- *   --source=db      read bible_chapters.html
- *   --from=html      rebuild from parsed HTML          (default)
+ *   --from=html      rebuild from bible_chapters.html  (default)
  *   --from=verses    rebuild from the bible_verses rows, diff against chapters.html
  *   --bible=azb      bible key (default azb)
  *   --book=01        restrict to one book
@@ -39,7 +37,6 @@ const adminRoot = path.resolve(__dirname, '..')
 const repoRoot = path.resolve(adminRoot, '..', '..')
 
 type Args = {
-  source: 'disk' | 'db'
   from: 'html' | 'verses'
   bible: string
   book?: string
@@ -52,14 +49,10 @@ function parseArgs(argv: string[]): Args {
     const hit = argv.find((a) => a.startsWith(`--${name}=`))
     return hit ? hit.slice(name.length + 3) : undefined
   }
-  const source = (get('source') ?? 'disk') as Args['source']
   const from = (get('from') ?? 'html') as Args['from']
-  if (source !== 'disk' && source !== 'db') throw new Error(`--source must be disk|db`)
   if (from !== 'html' && from !== 'verses') throw new Error(`--from must be html|verses`)
-  if (from === 'verses' && source !== 'db') throw new Error(`--from=verses requires --source=db`)
   const limit = get('limit')
   return {
-    source,
     from,
     bible: get('bible') ?? 'azb',
     book: get('book'),
@@ -88,34 +81,6 @@ async function loadEnvFile(filePath: string) {
 }
 
 type ChapterRow = { key: string; bookNumber: string; chapterId: string; html: string }
-
-async function readFromDisk(args: Args): Promise<ChapterRow[]> {
-  const root = path.join(repoRoot, 'apps', 'az', 'html', args.bible)
-  const books = (await fs.readdir(root, { withFileTypes: true }))
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
-    .filter((b) => !args.book || b === args.book)
-    .sort()
-
-  const rows: ChapterRow[] = []
-  for (const book of books) {
-    const dir = path.join(root, book)
-    const files = (await fs.readdir(dir, { withFileTypes: true }))
-      .filter((e) => e.isFile() && e.name.endsWith('.html'))
-      .map((e) => e.name)
-      .sort()
-    for (const file of files) {
-      const chapterId = String(Number(path.basename(file, '.html')))
-      rows.push({
-        key: `${book}/${file}`,
-        bookNumber: book,
-        chapterId,
-        html: await fs.readFile(path.join(dir, file), 'utf8'),
-      })
-    }
-  }
-  return rows
-}
 
 // `pg` is pulled in through @payloadcms/db-postgres; import-mukitob-az-books.ts
 // reaches for it the same way rather than booting the whole Payload runtime.
@@ -224,7 +189,7 @@ function firstDivergence(a: string, b: string): string {
 
 async function main() {
   const args = parseArgs(process.argv.slice(2))
-  const label = `${args.bible} · source=${args.source} · from=${args.from}`
+  const label = `${args.bible} · from=${args.from}`
   console.log(`Verifying ${label}\n`)
 
   let pairs: { row: ChapterRow; rebuilt: string }[]
@@ -233,7 +198,7 @@ async function main() {
   if (args.from === 'verses') {
     pairs = await readFromVerses(args)
   } else {
-    const rows = args.source === 'disk' ? await readFromDisk(args) : await readChaptersFromDb(args)
+    const rows = await readChaptersFromDb(args)
     pairs = []
     for (const row of rows) {
       try {

@@ -1,0 +1,12 @@
+#!/bin/sh
+# Basic gate before every commit. In an emergency: git commit --no-verify
+set -e
+
+echo "pre-commit: unit tests"
+yarn test
+
+# The az typecheck is slower, so only when app or package code is staged.
+if git diff --cached --name-only | grep -qE '^(apps/az|packages)/'; then
+  echo "pre-commit: az typecheck"
+  yarn typecheck:az
+fi

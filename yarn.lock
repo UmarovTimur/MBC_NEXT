@@ -9628,6 +9628,8 @@ __metadata:
 "mbc_next@workspace:.":
   version: 0.0.0-use.local
   resolution: "mbc_next@workspace:."
+  dependencies:
+    vitest: "npm:^4.0.17"
   languageName: unknown
   linkType: soft
 

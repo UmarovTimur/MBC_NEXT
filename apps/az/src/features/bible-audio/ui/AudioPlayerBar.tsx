@@ -109,7 +109,8 @@ function VolumeControl({ audio }: { audio: HTMLAudioElement }) {
           <Icon />
         </Button>
       </PopoverTrigger>
-      <PopoverContent side="top" className="flex w-auto flex-col items-center gap-2 p-2">
+      {/* Slider only: the trigger right below already shows the speaker icon. Drag to 0 to mute. */}
+      <PopoverContent side="top" className="w-auto px-2 py-3">
         <Slider
           orientation="vertical"
           value={[silent ? 0 : state.volume]}
@@ -120,19 +121,7 @@ function VolumeControl({ audio }: { audio: HTMLAudioElement }) {
             if (value > 0) audio.muted = false;
           }}
           aria-label={t("audioVolume")}
-          className="mt-2"
         />
-        <Button
-          variant="ghost"
-          size="icon"
-          className="[&_svg]:size-5"
-          onClick={() => {
-            audio.muted = !audio.muted;
-          }}
-          aria-label={silent ? t("audioUnmute") : t("audioMute")}
-        >
-          <Icon />
-        </Button>
       </PopoverContent>
     </Popover>
   );
