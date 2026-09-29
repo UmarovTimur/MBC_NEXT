@@ -1005,6 +1005,26 @@
       "chapterId": "5"
     },
     {
+      "bible": "mbc",
+      "bookNumber": "49",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "49",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "50",
+      "chapterId": "0"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "50",
+      "chapterId": "1"
+    },
+    {
       "bible": "muqaddas-kitob",
       "bookNumber": "01",
       "chapterId": "1"
