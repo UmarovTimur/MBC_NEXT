@@ -29,7 +29,7 @@ export const AppLink = ({ href, children, className, variant, ...props }: AppLin
 
   if (isExsternal) {
     return (
-      <a href={href} target="_blan" rel="noopener noreferrer" className={className} {...props}>
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className} {...props}>
         {children}
       </a>
     );

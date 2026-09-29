@@ -15,6 +15,7 @@ export {
   buttonGroupVariants,
 } from "./ui/button-group";
 export { ContainerWidth } from "./ui/Container";
+export { PromoBanner } from "./ui/PromoBanner";
 export {
   Dialog,
   DialogClose,

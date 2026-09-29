@@ -4,6 +4,7 @@ import { fetchBooks } from "@/shared/lib/payload";
 import { BibleOverviewPage } from "@/widgets/BibleOverviewPage";
 import { BooksPage } from "@/widgets/BooksPage";
 import { HomeHero } from "@/widgets/HomeHero";
+import { StoryBanner } from "@/widgets/StoryBanner";
 import { getI18n } from "@/app/providers/I18n/server";
 import type { Metadata } from "next";
 
@@ -37,6 +38,8 @@ export default async function HomePage() {
       />
 
       <BibleOverviewPage bibleName={bibleName} bible={bible} />
+
+      <StoryBanner />
 
       <BooksPage books={books} />
     </>
