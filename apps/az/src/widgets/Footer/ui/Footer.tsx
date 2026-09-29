@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex justify-center gap-x-5 gap-y-2 flex-wrap text-sm ">
           <AppLink href="https://mukitob.com/books/az/">KİTABLAR</AppLink>
           <AppLink href="https://www.youtube.com/@azkitablar">Audio kitablar</AppLink>
-          <AppLink href="https://101story.org">Hekayələr</AppLink>
+          <AppLink href="https://101story.org/az/">Hekayələr</AppLink>
           <AppLink href="https://kitobook.com/uzmusic">İlahilər</AppLink>
           <AppLink href="https://vidkino.com/az">Filmlər və cizgi filmləri</AppLink>
           <AppLink href="https://www.kitobook.com/yes">Xilas haqqında müjdə</AppLink>
