@@ -18,8 +18,10 @@ export default function HomePage() {
         <div className="py-4 sm:py-6 lg:py-8 rounded-lg overflow-hidden">
           <div className="rounded-lg relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover">
             <div className="h-full w-full flex flex-col justify-center items-center text-center gap-y-8 bg-black/40">
-              <div className="font-bold text-3xl sm:text-5xl lg:text-6xl max-w-xl text-white dark:text-white/80">
-                Uilyam MakDonald taniqli ilohiyot o‘qituvchisi
+              <div className="max-w-xl">
+                <h1 className="font-bold text-3xl sm:text-5xl lg:text-6xl text-white dark:text-white/80">
+                  Uilyam MakDonald taniqli ilohiyot o‘qituvchisi
+                </h1>
                 <p className="text-white/80 dark:text-white/60 mt-4 text-base font-normal">
                   Комментарии к Библии МакДональда на Узбекском языке.
                 </p>
@@ -51,7 +53,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="py-5 font-light">
-            <h3 className="text-xl/16 font-bold">Muallif haqida</h3>
+            <h2 className="text-xl/16 font-bold">Muallif haqida</h2>
             <p>Uilyam (Bill) Makdonald 1917-yil 7-yanvarda Massachusets shtatining Leominster shahrida tug‘ilgan.</p>
             <p>
               30 yoshida Uilyam Makdonald Xudoga Muqaddas Kitobga sharhlar yozib, Yangi Ahdni oyatma-oyat tushuntirib
@@ -77,7 +79,7 @@ export default function HomePage() {
               Kitob maktabi xodimlari jamoasiga a’zo bo‘lgan. 1996-yildan so‘ng Uilyam Makdonald vafotiga qadar, ya’ni
               2007-yil 25-dekabrgacha Muqaddas Kitob xizmatida bo‘ldi.
             </p>
-            <h3 className="text-xl/16 font-bold">Muallif so‘zboshisi</h3>
+            <h2 className="text-xl/16 font-bold">Muallif so‘zboshisi</h2>
             <p>
               &rdquo;Masihiylar uchun Muqaddas Kitob sharhlari&quot; kitobining maqsadi - oddiy masihiyga Xudoning
               Kalomini jiddiy o‘rganishni boshlashda yordam berishdir. Ammo shuni yodda tutish kerakki, hech qanday
