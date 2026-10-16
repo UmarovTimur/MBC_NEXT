@@ -13,9 +13,14 @@ import { BibleUiProvider } from "@/features/bible-navigation";
 import { NavigationLoader } from "@mbc/ui";
 import { Suspense } from "react";
 
-const domain = process.env.DOMAIN || "https://kitobook.com/";
+const domain = (process.env.DOMAIN || "https://kitobook.com").replace(/\/+$/, "");
+const basePath = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${domain}${basePath}/`),
+  // "./" resolves against each page's own path, so every page is canonical to
+  // itself in the one URL shape (trailing slash, no query string).
+  alternates: { canonical: "./" },
   title: {
     default: "MakDonaldning Injil kitobiga o'zbek tilidagi sharhlari",
     template: "%s | MBC sharhlari",
@@ -27,7 +32,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     siteName: "MBC — Muqaddas Kitob Sharhlari",
-    images: [`${domain}images/mcdonald.jpg`],
+    images: [`${domain}/images/mcdonald.jpg`],
   },
 };
 
