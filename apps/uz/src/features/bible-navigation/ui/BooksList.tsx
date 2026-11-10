@@ -52,7 +52,8 @@ export function BooksList({ className }: BooksListProps) {
               asChild
               key={b.id}
             >
-              <AppLink variant="button" href={`/${currentBibleId}/${b.id}/0`}>
+              {/* First chapter, not "/0": a book without an introduction has no chapter 0. */}
+              <AppLink variant="button" href={`/${currentBibleId}/${b.id}/${b.chapters[0] ?? "0"}`}>
                 {b.name}
               </AppLink>
             </DropdownMenuItem>
