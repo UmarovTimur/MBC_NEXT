@@ -286,6 +286,256 @@
   "chapters": [
     {
       "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "1"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "2"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "3"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "4"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "5"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "6"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "7"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "8"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "9"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "10"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "11"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "12"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "13"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "14"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "15"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "16"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "17"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "18"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "19"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "20"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "21"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "22"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "23"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "24"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "25"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "26"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "27"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "28"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "29"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "30"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "31"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "32"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "33"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "34"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "35"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "36"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "37"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "38"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "39"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "40"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "41"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "42"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "43"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "44"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "45"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "46"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "47"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "48"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "49"
+    },
+    {
+      "bible": "mbc",
+      "bookNumber": "01",
+      "chapterId": "50"
+    },
+    {
+      "bible": "mbc",
       "bookNumber": "40",
       "chapterId": "0"
     },
