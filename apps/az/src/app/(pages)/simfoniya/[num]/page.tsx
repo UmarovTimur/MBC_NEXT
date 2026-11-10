@@ -5,6 +5,9 @@ import { AZ_ALPHABET } from "@mbc/bible-verses";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+// Letters are fixed (AZ_ALPHABET): anything else is a 404, not a cached page.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return AZ_ALPHABET.map((_, i) => ({ num: String(i + 1) }));
 }

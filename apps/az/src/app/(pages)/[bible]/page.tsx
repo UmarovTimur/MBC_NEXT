@@ -4,6 +4,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 export const revalidate = false;
+// Only the bibles from generateStaticParams exist. Any other first path segment
+// (scanner noise like "/%2f/", "/wp-login.php/") must be a real 404 instead of a
+// 200 page cached forever; "/%2f/" even ended up in the home page's cache entry.
+export const dynamicParams = false;
 
 interface Props {
   params: Promise<{ bible: string }>;
