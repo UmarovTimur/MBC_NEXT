@@ -1,16 +1,23 @@
-"use client";
-
+import { bibleManager } from "@/entities/bible/server";
 import { AppLink } from "@/shared/ui/AppLink";
 import { Button } from "@/shared/ui/button";
 import { ContainerWidth } from "@/shared/ui/Container";
+import { BibleBooksSection, type BibleBooksSectionBook } from "@mbc/ui";
 export const dynamic = "force-static";
 
-export default function HomePage() {
-  // const router = useRouter();
+const COMMENTARY_BIBLE = "mbc";
+const OT_MAX = 39;
 
-  // useEffect(() => {
-  //   router.replace("/mbc/40/0/");
-  // }, [router]);
+export default function HomePage() {
+  const bible = bibleManager.getBible(COMMENTARY_BIBLE);
+  const toSectionBook = (book: (typeof bible.books)[number]): BibleBooksSectionBook => ({
+    id: book.id,
+    shortName: bible.getShortBookName(+book.id),
+    fullName: bible.getBookName(+book.id),
+    href: `/${COMMENTARY_BIBLE}/${book.id}/${book.chapters[0]?.chapterId ?? "0"}`,
+  });
+  const otBooks = bible.books.filter((b) => +b.id <= OT_MAX).map(toSectionBook);
+  const ntBooks = bible.books.filter((b) => +b.id > OT_MAX).map(toSectionBook);
 
   return (
     <>
@@ -34,6 +41,24 @@ export default function HomePage() {
           </div>
         </div>
       </ContainerWidth>
+      <section>
+        <ContainerWidth>
+          <BibleBooksSection
+            title="Eski Ahd"
+            icon="/images/icons/book.svg"
+            books={otBooks}
+            variant="old-testament"
+            uppercase={false}
+          />
+          <BibleBooksSection
+            title="Yangi Ahd"
+            icon="/images/icons/sun-rays.svg"
+            books={ntBooks}
+            variant="new-testament"
+            uppercase={false}
+          />
+        </ContainerWidth>
+      </section>
       <section>
         <ContainerWidth className="xl:max-w-4xl">
           <div className="flex-col sm:flex-row flex gap-6 items-center ">
