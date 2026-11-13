@@ -5,6 +5,7 @@ import * as migration_20260814_035621_drop_verse_label from './20260814_035621_d
 import * as migration_20260820_074326_bible_verses_trgm from './20260820_074326_bible_verses_trgm';
 import * as migration_20260820_090000_bible_words from './20260820_090000_bible_words';
 import * as migration_20260825_192218_content_reports from './20260825_192218_content_reports';
+import * as migration_20261113_120000_visit_counter from './20261113_120000_visit_counter';
 
 export const migrations = [
   {
@@ -41,5 +42,10 @@ export const migrations = [
     up: migration_20260825_192218_content_reports.up,
     down: migration_20260825_192218_content_reports.down,
     name: '20260825_192218_content_reports'
+  },
+  {
+    up: migration_20261113_120000_visit_counter.up,
+    down: migration_20261113_120000_visit_counter.down,
+    name: '20261113_120000_visit_counter',
   },
 ];

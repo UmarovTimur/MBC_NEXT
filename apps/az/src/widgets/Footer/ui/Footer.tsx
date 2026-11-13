@@ -1,3 +1,4 @@
+import { VisitCounter } from "@/features/visit-counter";
 import { AppLink } from "@/shared/ui/AppLink";
 
 export function Footer() {
@@ -12,6 +13,9 @@ export function Footer() {
           <AppLink href="https://vidkino.com/az">Filmlər və cizgi filmləri</AppLink>
           <AppLink href="https://www.kitobook.com/yes">Xilas haqqında müjdə</AppLink>
           <AppLink href="https://www.kitobook.com/gospel/">Xoş xəbər hekayələri</AppLink>
+        </div>
+        <div className="mt-3 flex justify-center empty:hidden">
+          <VisitCounter locale="az" />
         </div>
       </div>
     </footer>

@@ -2,7 +2,7 @@ import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { sql } from 'drizzle-orm'
-import { index, integer, pgTable, serial, unique, varchar } from 'drizzle-orm/pg-core'
+import { bigint, check, index, integer, pgTable, serial, unique, varchar } from 'drizzle-orm/pg-core'
 import { AZ_FOLD, AZ_TSV, VERSE_FTS_INDEX, VERSE_TRGM_INDEX } from './src/lib/search/azFold'
 import path from 'path'
 import sharp from 'sharp'
@@ -15,6 +15,7 @@ import { Bibles } from './src/collections/Bibles'
 import { BibleBooks } from './src/collections/BibleBooks'
 import { BibleVerses } from './src/collections/BibleVerses'
 import { ContentReports } from './src/collections/ContentReports'
+import { visitsEndpoints } from './src/endpoints/visits'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -46,6 +47,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Books, Media, Bibles, BibleBooks, BibleChapters, BibleVerses, ContentReports],
+  endpoints: visitsEndpoints,
   editor: lexicalEditor(),
   sharp,
   db: postgresAdapter({
@@ -100,6 +102,18 @@ export default buildConfig({
             unique('bible_words_bible_id_word_unique').on(t.bibleId, t.word),
             index('bible_words_letter_idx').on(t.bibleId, t.firstLetter),
           ],
+        )
+
+        // `visit_counter` (az footer visit count, see src/endpoints/visits.ts)
+        // — same reason as above: declared so dev `push` keeps it. Created and
+        // seeded by migration 20261113_120000_visit_counter.
+        schema.tables.visit_counter = pgTable(
+          'visit_counter',
+          {
+            id: integer('id').primaryKey(),
+            n: bigint('n', { mode: 'number' }).notNull(),
+          },
+          (t) => [check('visit_counter_id_check', sql`${t.id} = 1`)],
         )
 
         return schema
