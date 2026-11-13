@@ -10,6 +10,9 @@ const COMMENTARY_BIBLE = "mbc";
 // to links, but plain asset URLs like the MaskIcon src need it by hand.
 const BASE_PATH = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
 const OT_MAX = 39;
+// "combined": one grid with every book in canonical order;
+// "testaments": separate Eski Ahd / Yangi Ahd grids (as on az).
+const BOOKS_LAYOUT: "combined" | "testaments" = "combined";
 
 export default function HomePage() {
   const bible = bibleManager.getBible(COMMENTARY_BIBLE);
@@ -19,6 +22,7 @@ export default function HomePage() {
     fullName: bible.getBookName(+book.id),
     href: `/${COMMENTARY_BIBLE}/${book.id}/${book.chapters[0]?.chapterId ?? "0"}`,
   });
+  const allBooks = bible.books.map(toSectionBook);
   const otBooks = bible.books.filter((b) => +b.id <= OT_MAX).map(toSectionBook);
   const ntBooks = bible.books.filter((b) => +b.id > OT_MAX).map(toSectionBook);
 
@@ -46,20 +50,32 @@ export default function HomePage() {
       </ContainerWidth>
       <section>
         <ContainerWidth>
-          <BibleBooksSection
-            title="Eski Ahd"
-            icon={`${BASE_PATH}/images/icons/book.svg`}
-            books={otBooks}
-            variant="old-testament"
-            uppercase={false}
-          />
-          <BibleBooksSection
-            title="Yangi Ahd"
-            icon={`${BASE_PATH}/images/icons/sun-rays.svg`}
-            books={ntBooks}
-            variant="new-testament"
-            uppercase={false}
-          />
+          {BOOKS_LAYOUT === "combined" ? (
+            <BibleBooksSection
+              title="Muqaddas Kitob"
+              icon={`${BASE_PATH}/images/icons/book.svg`}
+              books={allBooks}
+              variant="old-testament"
+              uppercase={false}
+            />
+          ) : (
+            <>
+              <BibleBooksSection
+                title="Eski Ahd"
+                icon={`${BASE_PATH}/images/icons/book.svg`}
+                books={otBooks}
+                variant="old-testament"
+                uppercase={false}
+              />
+              <BibleBooksSection
+                title="Yangi Ahd"
+                icon={`${BASE_PATH}/images/icons/sun-rays.svg`}
+                books={ntBooks}
+                variant="new-testament"
+                uppercase={false}
+              />
+            </>
+          )}
         </ContainerWidth>
       </section>
       <section>

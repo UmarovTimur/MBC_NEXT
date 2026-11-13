@@ -26,6 +26,9 @@ export function BookButton({ shortName, fullName, href, uppercase = true }: Book
       <TooltipTrigger asChild>
         <AppLink
           href={href}
+          // "button" variant adds no colours of its own, so text-foreground
+          // also applies in dark mode (default variant forces dark:text-gray-500).
+          variant="button"
           className={cn(
             "min-w-0 w-full text-sm font-bold leading-9 text-foreground transition-colors hover:underline hover:text-primary sm:text-base",
             uppercase && "uppercase",
