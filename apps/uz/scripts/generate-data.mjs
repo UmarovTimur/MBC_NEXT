@@ -34,18 +34,25 @@ const bibles = Object.entries(uzConfig).map(([bibleKey, cfg]) => ({
 
 // ── Book names ────────────────────────────────────────────────────────────────
 
-const firstMapping = Object.values(uzConfig)[0].mappingBible ?? [];
-const bookNames = firstMapping.map((name, i) => ({
-  bookId: String(i + 1).padStart(2, "0"),
-  name,
-}));
+const firstConfig = Object.values(uzConfig)[0];
+const firstMapping = firstConfig.mappingBible ?? [];
+const shortMapping = firstConfig.shortMappingBible ?? [];
+const bookNames = firstMapping.map((name, i) => {
+  const shortName = shortMapping[i];
+  return {
+    bookId: String(i + 1).padStart(2, "0"),
+    name,
+    ...(shortName && shortName !== name ? { shortName } : {}),
+  };
+});
 
 // ── Discover chapters from html/{bibleKey}/{bookNumber}/*.html ────────────────
 
 const chapters = [];
 
 const bibleDirs = (await readdir(HTML_DIR, { withFileTypes: true }))
-  .filter((d) => d.isDirectory() && d.name !== "manifest.json")
+  // Only bibles declared in uz.json — skips helper folders like html/zip.
+  .filter((d) => d.isDirectory() && d.name in uzConfig)
   .map((d) => d.name)
   .sort();
 
