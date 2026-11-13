@@ -1,0 +1,78 @@
+import type { CSSProperties } from "react";
+import { BookButton } from "./BookButton";
+import { MaskIcon } from "./mask-icon";
+import { TooltipProvider } from "./tooltip";
+
+export type BibleBooksSectionBook = {
+  id: string;
+  shortName: string;
+  fullName: string;
+  href: string;
+};
+
+export type BibleBooksSectionVariant = "old-testament" | "new-testament";
+
+interface BibleBooksSectionProps {
+  title: string;
+  /** URL of a single-colour SVG shown above the title (rendered via MaskIcon). */
+  icon?: string;
+  books: BibleBooksSectionBook[];
+  variant?: BibleBooksSectionVariant;
+  /** Render book names in uppercase (default: true). */
+  uppercase?: boolean;
+}
+
+const sectionThemeClass: Record<BibleBooksSectionVariant, string> = {
+  "old-testament":
+    "border-stone-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.94))] shadow-[0_18px_50px_-28px_rgba(50,38,21,0.18)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(24,21,18,0.94),rgba(16,14,12,0.9))]",
+  "new-testament":
+    "border-sky-200/80 bg-[linear-gradient(180deg,rgba(249,252,255,0.98),rgba(238,246,255,0.94))] shadow-[0_18px_50px_-28px_rgba(24,78,119,0.16)] dark:border-sky-500/20 dark:bg-[linear-gradient(180deg,rgba(16,24,32,0.94),rgba(11,17,24,0.9))]",
+};
+
+const glowClass: Record<BibleBooksSectionVariant, string> = {
+  "old-testament": "bg-amber-200/30 dark:bg-amber-100/10",
+  "new-testament": "bg-sky-300/25 dark:bg-sky-400/10",
+};
+
+export function BibleBooksSection({ title, icon, books, variant = "old-testament", uppercase = true }: BibleBooksSectionProps) {
+  if (books.length === 0) return null;
+
+  const mobileRows = Math.ceil(books.length / 2);
+  const desktopRows = Math.ceil(books.length / 3);
+  const booksGridStyle = {
+    "--mobile-rows": `repeat(${mobileRows}, minmax(0, auto))`,
+    "--desktop-rows": `repeat(${desktopRows}, minmax(0, auto))`,
+  } as CSSProperties;
+
+  return (
+    <TooltipProvider>
+      <div
+        className={`relative mb-8 overflow-hidden rounded-[28px] border px-4 py-5 backdrop-blur-sm sm:px-6 sm:py-6 lg:mb-12 lg:px-8 ${sectionThemeClass[variant]}`}
+      >
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-x-0 top-0 h-px bg-white/70 dark:bg-white/10" />
+          <div className={`absolute -right-20 top-0 h-44 w-44 rounded-full blur-3xl ${glowClass[variant]}`} />
+        </div>
+
+        <div className="relative flex flex-col gap-5 lg:flex-row lg:gap-8">
+          <h2
+            className="flex flex-col items-center justify-center gap-2 pt-1 text-center font-serif text-3xl font-bold lg:w-36 lg:flex-1/3 lg:text-4xl"
+            style={{ fontVariant: "small-caps" }}
+          >
+            {icon && <MaskIcon src={icon} className="h-10 w-12 lg:h-12 lg:w-14" />}
+            {title}
+          </h2>
+
+          <div
+            className="grid grow auto-cols-fr grid-flow-col grid-rows-(--mobile-rows) gap-x-4 gap-y-1 sm:gap-x-6 lg:flex-2/3 lg:grid-rows-(--desktop-rows) lg:gap-x-12"
+            style={booksGridStyle}
+          >
+            {books.map((book) => (
+              <BookButton key={book.id} shortName={book.shortName} fullName={book.fullName} href={book.href} uppercase={uppercase} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </TooltipProvider>
+  );
+}

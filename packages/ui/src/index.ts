@@ -6,6 +6,9 @@ export { logger } from "./lib/logger";
 export { AppLink } from "./ui/AppLink";
 export type { BreadcrumbItem } from "./ui/Breadcrumbs";
 export { Breadcrumbs } from "./ui/Breadcrumbs";
+export { BibleBooksSection } from "./ui/BibleBooksSection";
+export type { BibleBooksSectionBook, BibleBooksSectionVariant } from "./ui/BibleBooksSection";
+export { BookButton } from "./ui/BookButton";
 export { Button, buttonVariants } from "./ui/button";
 export type { ButtonProps } from "./ui/button";
 export {
