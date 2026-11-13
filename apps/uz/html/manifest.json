@@ -52,27 +52,33 @@
     },
     {
       "bookId": "09",
-      "name": "Shohlar (birinchi kitob)"
+      "name": "Shohlar (birinchi kitob)",
+      "shortName": "1 Shohlar"
     },
     {
       "bookId": "10",
-      "name": "Shohlar (ikkinchi kitob)"
+      "name": "Shohlar (ikkinchi kitob)",
+      "shortName": "2 Shohlar"
     },
     {
       "bookId": "11",
-      "name": "Shohlar (uchinchi kitob)"
+      "name": "Shohlar (uchinchi kitob)",
+      "shortName": "3 Shohlar"
     },
     {
       "bookId": "12",
-      "name": "Shohlar (to'rtinchi kitob)"
+      "name": "Shohlar (to'rtinchi kitob)",
+      "shortName": "4 Shohlar"
     },
     {
       "bookId": "13",
-      "name": "Solnomalar (birinchi kitob)"
+      "name": "Solnomalar (birinchi kitob)",
+      "shortName": "1 Solnomalar"
     },
     {
       "bookId": "14",
-      "name": "Solnomalar (ikkinchi kitob)"
+      "name": "Solnomalar (ikkinchi kitob)",
+      "shortName": "2 Solnomalar"
     },
     {
       "bookId": "15",
@@ -96,7 +102,8 @@
     },
     {
       "bookId": "20",
-      "name": "Sulaymonning hikmatlari"
+      "name": "Sulaymonning hikmatlari",
+      "shortName": "Hikmatlar"
     },
     {
       "bookId": "21",
@@ -104,7 +111,8 @@
     },
     {
       "bookId": "22",
-      "name": "Sulaymonning go'zal qo'shig'i"
+      "name": "Sulaymonning go'zal qo'shig'i",
+      "shortName": "Qo'shiqlar qo'shig'i"
     },
     {
       "bookId": "23",
@@ -116,7 +124,8 @@
     },
     {
       "bookId": "25",
-      "name": "Yeremiyoning marsiyasi"
+      "name": "Yeremiyoning marsiyasi",
+      "shortName": "Marsiya"
     },
     {
       "bookId": "26",
@@ -176,111 +185,138 @@
     },
     {
       "bookId": "40",
-      "name": "Matto Muqaddas xushxabar"
+      "name": "Matto Muqaddas xushxabar",
+      "shortName": "Matto"
     },
     {
       "bookId": "41",
-      "name": "Mark Muqaddas xushxabar"
+      "name": "Mark Muqaddas xushxabar",
+      "shortName": "Mark"
     },
     {
       "bookId": "42",
-      "name": "Luqo Muqaddas xushxabar"
+      "name": "Luqo Muqaddas xushxabar",
+      "shortName": "Luqo"
     },
     {
       "bookId": "43",
-      "name": "Yuhanno Muqaddas xushxabar"
+      "name": "Yuhanno Muqaddas xushxabar",
+      "shortName": "Yuhanno"
     },
     {
       "bookId": "44",
-      "name": "Havoriylarning faoliyati"
+      "name": "Havoriylarning faoliyati",
+      "shortName": "Havoriylar"
     },
     {
       "bookId": "45",
-      "name": "Yoqubning maktubi"
+      "name": "Yoqubning maktubi",
+      "shortName": "Yoqub"
     },
     {
       "bookId": "46",
-      "name": "Butrusning birinchi maktubi"
+      "name": "Butrusning birinchi maktubi",
+      "shortName": "1 Butrus"
     },
     {
       "bookId": "47",
-      "name": "Butrusning ikkinchi maktubi"
+      "name": "Butrusning ikkinchi maktubi",
+      "shortName": "2 Butrus"
     },
     {
       "bookId": "48",
-      "name": "Yuhannoning birinchi maktubi"
+      "name": "Yuhannoning birinchi maktubi",
+      "shortName": "1 Yuhanno"
     },
     {
       "bookId": "49",
-      "name": "Yuhannoning ikkinchi maktubi"
+      "name": "Yuhannoning ikkinchi maktubi",
+      "shortName": "2 Yuhanno"
     },
     {
       "bookId": "50",
-      "name": "Yuhannoning uchinchi maktubi"
+      "name": "Yuhannoning uchinchi maktubi",
+      "shortName": "3 Yuhanno"
     },
     {
       "bookId": "51",
-      "name": "Yahudoning maktubi"
+      "name": "Yahudoning maktubi",
+      "shortName": "Yahudo"
     },
     {
       "bookId": "52",
-      "name": "Rimliklarga maktub"
+      "name": "Rimliklarga maktub",
+      "shortName": "Rimliklarga"
     },
     {
       "bookId": "53",
-      "name": "Korinfliklarga birinchi maktub"
+      "name": "Korinfliklarga birinchi maktub",
+      "shortName": "1 Korinfliklarga"
     },
     {
       "bookId": "54",
-      "name": "Korinfliklarga ikkinchi maktub"
+      "name": "Korinfliklarga ikkinchi maktub",
+      "shortName": "2 Korinfliklarga"
     },
     {
       "bookId": "55",
-      "name": "Galatiyaliklarga maktub"
+      "name": "Galatiyaliklarga maktub",
+      "shortName": "Galatiyaliklarga"
     },
     {
       "bookId": "56",
-      "name": "Efesliklarga maktub"
+      "name": "Efesliklarga maktub",
+      "shortName": "Efesliklarga"
     },
     {
       "bookId": "57",
-      "name": "Filippiliklarga maktub"
+      "name": "Filippiliklarga maktub",
+      "shortName": "Filippiliklarga"
     },
     {
       "bookId": "58",
-      "name": "Kolosaliklarga maktub"
+      "name": "Kolosaliklarga maktub",
+      "shortName": "Kolosaliklarga"
     },
     {
       "bookId": "59",
-      "name": "Salonikaliklarga birinchi maktub"
+      "name": "Salonikaliklarga birinchi maktub",
+      "shortName": "1 Salonikaliklarga"
     },
     {
       "bookId": "60",
-      "name": "Salonikaliklarga ikkinchi maktub"
+      "name": "Salonikaliklarga ikkinchi maktub",
+      "shortName": "2 Salonikaliklarga"
     },
     {
       "bookId": "61",
-      "name": "Timo'tiyga birinchi maktub"
+      "name": "Timo'tiyga birinchi maktub",
+      "shortName": "1 Timo'tiyga"
     },
     {
       "bookId": "62",
-      "name": "Timo'tiyga ikkinchi maktub"
+      "name": "Timo'tiyga ikkinchi maktub",
+      "shortName": "2 Timo'tiyga"
     },
     {
       "bookId": "63",
-      "name": "Titusga maktub"
+      "name": "Titusga maktub",
+      "shortName": "Titusga"
     },
     {
       "bookId": "64",
-      "name": "Filimo'nga maktub"
+      "name": "Filimo'nga maktub",
+      "shortName": "Filimo'nga"
     },
     {
       "bookId": "65",
-      "name": "Ibroniylarga maktub"
+      "name": "Ibroniylarga maktub",
+      "shortName": "Ibroniylarga"
     },
     {
       "bookId": "66",
-      "name": "Yuhannoga ko'rsatilgan vahiy"
+      "name": "Yuhannoga ko'rsatilgan vahiy",
+      "shortName": "Vahiy"
     }
   ],
   "chapters": [
