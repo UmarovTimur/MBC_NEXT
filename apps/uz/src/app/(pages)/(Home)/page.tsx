@@ -6,6 +6,9 @@ import { BibleBooksSection, type BibleBooksSectionBook } from "@mbc/ui";
 export const dynamic = "force-static";
 
 const COMMENTARY_BIBLE = "mbc";
+// Prod serves uz under a base path (kitobook.com/mcdonald). next/link adds it
+// to links, but plain asset URLs like the MaskIcon src need it by hand.
+const BASE_PATH = process.env.BASE_PATH ? `/${process.env.BASE_PATH}` : "";
 const OT_MAX = 39;
 
 export default function HomePage() {
@@ -45,14 +48,14 @@ export default function HomePage() {
         <ContainerWidth>
           <BibleBooksSection
             title="Eski Ahd"
-            icon="/images/icons/book.svg"
+            icon={`${BASE_PATH}/images/icons/book.svg`}
             books={otBooks}
             variant="old-testament"
             uppercase={false}
           />
           <BibleBooksSection
             title="Yangi Ahd"
-            icon="/images/icons/sun-rays.svg"
+            icon={`${BASE_PATH}/images/icons/sun-rays.svg`}
             books={ntBooks}
             variant="new-testament"
             uppercase={false}
