@@ -1,5 +1,6 @@
 import { bibleManager } from "@/entities/bible/server";
 import { BibleOverviewPage } from "@/widgets/BibleOverviewPage";
+import { StoryBanner } from "@/widgets/StoryBanner";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -32,5 +33,10 @@ export default async function BibleOverviewPageRoute({ params }: Props) {
   const bible = bibleManager.getAll().find((b) => b.bibleName === bibleName);
   if (!bible?.isIndependent) notFound();
 
-  return <BibleOverviewPage bibleName={bibleName} bible={bible} />;
+  return (
+    <>
+      <BibleOverviewPage bibleName={bibleName} bible={bible} />
+      <StoryBanner />
+    </>
+  );
 }
